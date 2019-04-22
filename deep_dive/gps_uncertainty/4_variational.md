@@ -117,7 +117,7 @@ $$\mathcal{P}(\mathbf X|\mathbf Z) = \prod_{i=1}^{N}\mathcal{N}(\mathbf{x}_i |\m
 We will have a new variational bound now:
 
 $$\mathcal{F}=\langle \log \mathcal{P}(\mathbf{Y|X}) \rangle_{q(\mathbf X)} - \text{KL}\left( q(\mathbf X) || \mathcal{P}(\mathbf{X|Z}) \right)$$
-π
+
 #### Variational Back-Constraint
 
 We will introduce a variational constraint to encode the input uncertainty directly into the approximate posterior. 
