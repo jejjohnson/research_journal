@@ -141,6 +141,16 @@ So this is how far away our predictions are from our actual distribution.
 
 #### Gaussian Processes and Information Theory
 
+
+#### Information Theory
+
+
+* Information Theory Tutorial: The Manifold Things Information Measures - [YouTube](https://www.youtube.com/watch?v=34mONTTxoTE)
+* [On Measures of Entropy and Information](http://threeplusone.com/on_information.pdf) - 
+* [Understanding Interdependency Through Complex Information Sharing](https://pdfs.semanticscholar.org/de0b/e2001efc6590bf28f895bc4c42231c6101da.pdf) - Rosas et. al. (2016)
+* The Information Bottleneck of Deep Learning - [Youtube](https://www.youtube.com/watch?v=XL07WEc2TRI)
+
+
 ---
 ## Software
 
