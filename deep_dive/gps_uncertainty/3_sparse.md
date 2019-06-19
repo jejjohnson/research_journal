@@ -296,13 +296,14 @@ $$\mathcal P (y) = \int_u \mathcal P (y|u) \cdot \mathcal P (u|Z) du$$
 
 **Source**: 
 * [Nested Variational Compression in Deep Gaussian Processes](https://arxiv.org/pdf/1412.1370.pdf) - Hensman et. al. (2014)
-* James Hensman - [GPSS 2015](http://gpss.cc/gpss15/talks/talk_james.pdf)
+* James Hensman - [GPSS 2015](http://gpss.cc/gpss15/talks/talk_james.pdf) | [Aweseome Graphical Models](http://www.approximateinference.org/schedule/Hensman2015.pdf)
 
 The explicit form of the lower bound $\mathcal{P}(y)$ for is gives us:
 
 $$\log \mathcal P (y) \geq \log \mathcal{N} (y|\mathbf{y|K_{fu}^{-1}m, \sigma_y^2I}) - \frac{1}{2\sigma_y^2} \text{tr}\left(  \right)$$
 
-**Source**: [Nested Variational Compression in Deep Gaussian Processes](https://arxiv.org/pdf/1412.1370.pdf) - Hensman et. al. (2014)
+**Source**: 
+* [Nested Variational Compression in Deep Gaussian Processes](https://arxiv.org/pdf/1412.1370.pdf) - Hensman et. al. (2014)
 
 ### Stochastic Variational Inference
 
@@ -387,3 +388,7 @@ Often times the papers that people publish in conferences in Journals don't have
 ### Notes
 
 * [On the paper: Variational Learning of Inducing Variables in Sparse Gaussian Processees](http://mlg.eng.cam.ac.uk/thang/docs/talks/rcc_vargp.pdf) - Bui and Turner (2014)
+
+### Blogs
+
+* [Variational Free Energy for Sparse GPs](https://gonzmg88.github.io/blog/2018/04/19/VariationalFreeEnergy) - Gonzalo

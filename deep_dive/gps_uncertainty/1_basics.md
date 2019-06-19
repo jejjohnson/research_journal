@@ -195,15 +195,44 @@ $$\mathcal{P}(y|X, \theta)=\int_f \mathcal{P}(y|f,X)\cdot\mathcal{P}(f|X, \theta
 
 where:
 * $\mathcal{P}(y|f,X)=\mathcal{N}(y|f, \sigma_n^2\mathbf{I})$
-* $\mathcal{P}(f|X, \theta)=\mathcal{N}(f|\mu, K_\theta)$
+* $\mathcal{P}(f|X, \theta)=\mathcal{N}(f|m_\theta, K_\theta)$
 
 Note that all we're doing is simply describing each of these elements specifically because all of these quantities are Gaussian distributed.
 
-$$\mathcal{P}(y|X, \theta)=\int_f \mathcal{N}(y|f, \sigma_n^2\mathbf{I})\cdot \mathcal{N}(f|\mu, K_\theta)df$$
+$$\mathcal{P}(y|X, \theta)=\int_f \mathcal{N}(y|f, \sigma_n^2\mathbf{I})\cdot \mathcal{N}(f|m_\theta,, K_\theta)df$$
 
 So the product of two Gaussians is simply a Gaussian. That along with the notion that the integral of all the functions is a normal distribution with mean $\mu$ and covariance $K$.
 
-$$\mathcal{P}(y|X, \theta)=\mathcal{N}(y|\mu, K_\theta + \sigma_n^2 \mathbf{I})$$
+$$\mathcal{P}(y|X, \theta)=\mathcal{N}(y|m_\theta, K_\theta + \sigma_n^2 \mathbf{I})$$
+
+#### Proof:
+
+Using the Gaussian identities:
+
+
+
+$$\begin{aligned}
+p(x) &= \mathcal{N} (x | \mu, \Lambda^{-1}) \\
+p(y|x) &= \mathcal{N} (y | Ax+b, L^{-1}) \\
+p(y) &= \mathcal{N} (y|A\mu + b, L^{-1} + A \Lambda^{-1}A^T) \\
+p(x|y) &= \mathcal{N} (x|\Sigma \{ A^T L(y-b) + \Lambda\mu \}, \Sigma) \\
+\Sigma &= (\Lambda + A^T LA)^{-1}
+\end{aligned}$$
+
+So we can use the same reasoning to combine the prior and the likelihood to get the posterior
+
+$$\begin{aligned}
+p(f) &= \mathcal{N} (f | m_\theta, \mathbf{K}_\theta) \\
+p(y|X) &= \mathcal{N} (y | f(X), \sigma^2\mathbf{I}) \\
+p(y) &= \mathcal{N} (y|m_\theta, \sigma_y^2\mathbf{I} + \mathbf{K}_\theta) \\
+p(f|y) &= \mathcal{N} (f|\Sigma \{ K^{-1}y + \mathbf{K}_\theta m_\theta \}, \Sigma) \\
+\Sigma &= (K^{-1} + \sigma^{-2}\mathbf{I})^{-1}
+\end{aligned}$$
+
+**Source**: 
+
+* Alternative Derivation for Log Likelihood - [blog](http://jrmeyer.github.io/machinelearning/2017/08/18/mle.html)
+
 
 
 ---

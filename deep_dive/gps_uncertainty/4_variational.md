@@ -11,7 +11,75 @@ What links all of the strategies from uncertain GPs is how they approach the pro
 This approach has similar strategies that stem from the wave of methods that appeared using variational inference (VI). VI consists of creating a variational approximation of the posterior distribution $q(\mathbf u)\approx \mathcal{P}(\mathbf x)$. Under some assumptions and a baseline distribution for $q(\mathbf u)$,  we can try to approximate the complex distribution $\mathcal{P}(\mathbf x)$ by minimizing the distance between the two distributions, $D\left[q(\mathbf u)||\mathcal{P}(\mathbf x)\right]$. Many practioners believe that approximating the posterior and not the model is the better option when doing Bayesian inference; especially for large data ([example blog](https://www.prowler.io/blog/sparse-gps-approximate-the-posterior-not-the-model), [VFE paper]()). The variational family of methods that are common for GPs use the Kullback-Leibler (KL) divergence criteria between the GP posterior approximation $q(\mathbf u)$ and the true GP posterior $\mathcal{P}(\mathbf x)$. From the literature, this has been extended to many different problems related to GPs for regression, classification, dimensionality reduction and more.
 
 ---
-## Model
+## Variational Gaussian Process Model
+
+**Posterior Distribution:**
+$$p(Y|X) = \int_{\mathcal F} p(Y|F) P(F|X) dF$$
+
+**Derive the Lower Bound** (w/ Jensens Inequality):
+
+$$\log p(Y|X) = \log \int_{\mathcal F} p(Y|F) P(F|X) dF$$
+
+**importance sampling/identity trick**
+
+$$ = \log \int_{\mathcal F} p(Y|F) P(F|X) \frac{q(F)}{q(F)}dF$$
+
+**rearrange to isolate**: $p(Y|F)$ and shorten notation to $\langle \cdot \rangle_{q(F)}$.
+
+$$= \log \left\langle  \frac{p(Y|F)p(F|X)}{q(F)} \right\rangle_{q(F)}$$
+
+**Jensens inequality**
+
+$$\geq \left\langle \log \frac{p(Y|F)p(F|X)}{q(F)} \right\rangle_{q(F)}$$
+
+**Split the logs**
+
+
+$$\geq \left\langle \log p(Y|F) + \log \frac{p(F|X)}{q(F)} \right\rangle_{q(F)}$$
+
+**collect terms**
+
+$$\mathcal{L}_{1}(q)=\left\langle \log p(Y|F)\right\rangle_{q(F)} - D_{KL} \left( q(F) || p(F|X)\right) $$
+
+---
+## Variational GP Model w/ Prior
+
+**Posterior Distribution:**
+$$p(Y) = \int_{\mathcal X} p(Y|X) P(X) dX$$
+
+**Derive the Lower Bound** (w/ Jensens Inequality):
+
+$$\log p(Y) = \log \int_{\mathcal X} p(Y|X) P(X) dX$$
+
+**importance sampling/identity trick**
+
+$$ = \log \int_{\mathcal F} p(Y|X) P(X) \frac{q(X)}{q(X)}dF$$
+
+**rearrange to isolate**: $p(Y|X)$ and shorten notation to $\langle \cdot \rangle_{q(X)}$.
+
+$$= \log \left\langle  \frac{p(Y|X)p(X)}{q(X)} \right\rangle_{q(X)}$$
+
+**Jensens inequality**
+
+$$\geq \left\langle \log \frac{p(Y|X)p(X)}{q(X)} \right\rangle_{q(X)}$$
+
+**Split the logs**
+
+
+$$\geq \left\langle \log p(Y|X) + \log \frac{p(X)}{q(X)} \right\rangle_{q(X)}$$
+
+**collect terms**
+
+$$\mathcal{L}_{2}(q)=\left\langle \log p(Y|X)\right\rangle_{q(F)} - D_{KL} \left( q(X) || p(X)\right) $$
+
+**plug in other bound**
+
+$$\mathcal{L}_{2}(q)=\left\langle \mathcal{L}_{1}(q)\right\rangle_{q(F)} - D_{KL} \left( q(X) || p(X)\right) $$
+
+
+
+---
+## Sparse Model
 
 Let's build up the GP model from the variational inference perspective. We have the same GP prior as the standard GP regression model:
 
