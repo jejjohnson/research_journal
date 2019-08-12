@@ -7,7 +7,29 @@ In this report, I will be outlining what exactly Information theory is and what 
 
 This is a difficult definition as
 
-> The amount of surprise, i.e. I'm surprised when something that doesn't usually happen, happens.
+> The amount of surprise, i.e. I'm surprised when something that doesn't usually happen, happens. - *Jesus Malo, 2019*
+
+> In information theory, one variable provides information about another variable when knowledge of the first, on average, reduces uncertainty in the second. - *Cover & Thomas, 2006*
+
+
+#### Deterministic Perspective
+
+> The number of data points that one needs to represent a signal without an error. - *Gabor, 1946*
+
+$$\text{Information} \propto \Delta x \cdot \Delta f$$
+
+Units: Wavelets (Log ones)
+
+
+#### Probabilistic Perspective
+
+> The reduction in uncertainty that was caused by the knowledge of a signal. - *Shannon, 1948*
+
+$$\text{Information} \propto \int_{\mathcal{X}} p(x) \cdot \log_2 \frac{1}{p(x)} \cdot dx$$
+
+Units: Bits
+
+In this definition, the uncertainty is related to the volume of the PDF (more volume means more uncertainty).
 
 > Information theory makes statements about the shapes of probability distributions.
 > 
@@ -40,14 +62,33 @@ I often wonder why should one use information theory measures in the first place
    
    The units from IT measures are universal. No matter what the inputs are of the units, we will get the same amount of information in the output. This allows for easy comparisons between different variables under different transformations.
 
-   **Warning:** *The units are universal and absolute but it does not mean they convey meaning. I think it's important to look at them from a relative perspective, e.g. IT measure 1 has 2 bits which is higher than IT measure 2 which has only 1 bit.*
+   **Warning:** *The units are universal and absolute but it does not mean they convey meaning or understanding. I think it's important to look at them from a relative perspective, e.g. IT measure 1 has 2 bits which is higher than IT measure 2 which has only 1 bit.*
 
+Overall, we can see that IT measures can handle multi-dimension and multivariate data, are model-free and have universal units of comparison. They are dependent on accurate PDF estimates and this. They have a strong argument for preliminary analysis of variables and variable interactions as well as complex systems.
 
 [1]: Timme & Lapish, **A Tutorial for Information Theory in Neuroscience**, *eNeuro*, 2018
 
-### What can IT measures tell us?
+---
+## What can IT measures tell us?
 
 The authors from [1] also pose a good question for us to answer about why one should use IT measures. I agree with the authors that it is important to know what types of questions we can answer given some model or measurement. In the context of IT measures, they highlight a few things we can gain:
+
+1. IT measures can quantify uncertainty of one or more variables.
+   > It is possible to quantify how much a variable expected to vary as well as the expected noise that we use in the system.
+2. IT measures can be used to restrict the space of possible models.
+   
+   > I have personal experience with this as we used this to determine how many spatial-spectral-temporal features were necessary for inputs to a model. We also looked at the information content of different variables and could determine how well this did.
+
+
+We also can highlight things we cannot do:
+
+1. We cannot produce models that describe how a system functions.
+   > A good example is Mutual information. It can tell you how many bits of information is shared between data but not anything about **how** the system of variables are related; just that the variables are related to an extent.
+2. The output units are universal so they cannot be used to produce outputs in terms of the original input variables.
+   > In other words, I cannot use the outputs of the IT measures as outputs to a model as they make little sense in the real world.
+
+
+Again, the authors highlight (and I would like to highlight as well): IT measures can be a good way to help build your model, e.g. it can limit the amount of variables you would like to use based on expected uncertainty or mutual information content. It is a quantified measure in absolute relative units which can help the user make decisions in what variables to include or what transformations to use.
 
 
 
@@ -76,22 +117,38 @@ $$H(Y|X) = H(X,Y)-H(X)$$
 
 $$H(Y|X) = \int_{\mathcal{X}, \mathcal{Y}}p(x,y) \log \frac{p(x,y)}{p(x)}dxdy$$
 
+
+#### Examples
+
 **Example Pt II: Delta Function, Uniform Function, Binomial Curve, Gaussian Curve**
 
 #### Under Transformations
 
 In my line of work, we work with generative models that utilize the change of variable formulation in order to estimate some distribution with 
 
-$$H(Y) = H(X) + \mathbb{E}\left[ \log |\nabla f|\right]$$
+$$H(Y) = H(X) + \mathbb{E}\left[ \log |\nabla f(X)|\right]$$
 
 * Under rotation: Entropy is invariant
 * Under scale: Entropy is ...???
 * Computational Cost...?
 
 ---
-### Relative Entropy
+### Relative Entropy (Kullback Leibler Divergence)
 
-This is related to Entropy as it is the relative number of 
+This is the measure of the distance between two distributions. I like the term *relative entropy* because it offers a different perspective in relation to information theory measures.
+
+$$D_{KL}(p||q) = \int_{\mathcal{X}}p(x) \cdot \log \frac{p(x)}{q(x)} \cdot dx \geq 0$$
+
+If you've studied machine learning then you are fully aware that it is not a distance as this measure is not symmetric i.e. $D_{KL}(p||q) \neq D_{KL}(q||p)$.
+
+#### Under Transformations
+
+The KLD is invariance under invertible affine transformations, e.g. $b = \mu + Ga, \nabla F = G$
+
+---
+### Mutual Information
+
+This is the reduction of uncertainty of one random variable due to the knowledge of another (like the definition above). It is the amount of information one r.v. contains about another r.v..
 
 ---
 ### Total Correlation

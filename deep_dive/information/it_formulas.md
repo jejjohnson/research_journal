@@ -17,6 +17,33 @@ $$H(X) = - \sum_x p(x) \log p(x) = - \mathbb{E} \left[ \log(p(x)) \right]$$
 * This measures the expected uncertainty in $X$.
 * The entropy is basically how much information we learn on average from one instance of the r.v. $X$.
 
+
+#### Code - Step-by-Step
+
+1. Obtain all of the possible occurrences of the outcomes. 
+   ```python
+   values, counts = np.unique(labels, return_counts=True)
+   ```
+
+2. Normalize the occurrences to obtain a probability distribution
+   ```python
+   counts /= counts.sum()
+   ```
+
+3. Calculate the entropy using the formula above
+   ```python
+   H = - (counts * np.log(counts, 2)).sum()
+   ```
+
+As a general rule-of-thumb, I never try to reinvent the wheel so I look to use whatever other software is available for calculating entropy. The simplest I have found is from `scipy` which has an entropy function. We still need a probability distribution (the counts variable). From there we can just use the entropy function.
+
+2. Use Scipy Function
+   ```python
+   H = entropy(counts, base=base)
+   ```
+
+
+
 ### Two Random Variables
 
 If we have two random variables $X, Y$ jointly distributed according to the p.m.f. $p(x,y)$, we can come up with two more quantities for entropy.
