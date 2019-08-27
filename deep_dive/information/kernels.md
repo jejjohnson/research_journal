@@ -5,6 +5,15 @@ This post will be based off of the paper from the following papers:
 1. Measures of Entropy from Data Using Infinitely Divisible Kernels - Giraldo et. al. (2014)
 2. Multivariate Extension of Matrix-based Renyi's $\alpha$-order Entropy Functional - Yu et. al. (2018)
 
+## Short Overview
+
+The following IT measures are possible with the scheme mentioned above:
+
+1. Entropy
+2. Joint Entropy
+3. Conditional Entropy
+4. Mutual Information
+
 
 ## Kernel Matrices
 
