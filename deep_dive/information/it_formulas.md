@@ -6,7 +6,7 @@
 * Video Introduction - [Youtube](https://www.youtube.com/watch?v=ErfnhcEV1O8)
 
 ---
-## Entropy
+## Entropy (Shannon)
 
 ### One Random Variable
 
@@ -80,6 +80,14 @@ $$H(X|Y) = \sum_{x,y} p(x,y) \log p(x|y) =  - \mathbb{E} \left[ \log ( p(x|y)) \
 * **Monotonicity**: Conditioning always reduces entropy. *Information never hurts*.
 
     $$H(X|Y) \leq H(X)$$
+
+
+---
+## Entropy (Renyi)
+
+Above we looked at Shannon entropy which is a special case of Renyi's Entropy measure. But the generalized entropy formula actually is a generalization on entropy. Below is the given formula. 
+
+$$H_\alpha(x) = \frac{1}{1-\alpha} \log_2 \sum_{x \in \mathcal{X}} p^{\alpha}(x)$$
 
 ---
 ## Mutual Information
