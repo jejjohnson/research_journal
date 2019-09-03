@@ -32,13 +32,24 @@ There are many family of algorithms
 
 > This implementation uses ideas from random fourier features in conjunction with Deep GPs.
 
-[Paper](https://arxiv.org/abs/1610.04386) | [Video](https://vimeo.com/238221933) | [Code](https://github.com/mauriziofilippone/deep_gp_random_features)
+* [Paper I](https://arxiv.org/abs/1610.04386) | [Paper II](https://pdfs.semanticscholar.org/bafa/7e2d586e7bfe77d9a55ac1cff4eb2f6ff292.pdf) |  [Video](https://vimeo.com/238221933) | [Code](https://github.com/mauriziofilippone/deep_gp_random_features)
+* [Lecture I]() | [Slides]() | 
+* [Lecture (Maurizio)](https://www.youtube.com/watch?v=750fRY9-uq8&list=PLe5rNUydzV9QHe8VDStpU0o8Yp63OecdW&index=19&t=0s) | [Slides](http://www.eurecom.fr/~filippon/Talks/talk_deep_bayes_moscow_2019.pdf) | [Code](https://github.com/mauriziofilippone/deep_gp_random_features/blob/master/code/dgp_rff.py)
+
 
 
 
 ---
 
 ## Code
+
+---
+
+## Insights
+
+* Deep Gaussian Process Pathologies - [Paper](http://proceedings.mlr.press/v33/duvenaud14.pdf)
+  > This paper shows how some of the kernel compositions give very bad estimates of the functions between layers; similar to how residual NN do much better.
+* sd
 
 ---
 

@@ -1,6 +1,10 @@
 
 
 
+### Tutorials
+
+* RealNVP - [code I](https://github.com/bayesgroup/deepbayes-2019/blob/master/seminars/day3/nf/nf-solution.ipynb)
+
 
 ### Algorithms
 
