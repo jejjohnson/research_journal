@@ -150,6 +150,8 @@ This can be thought of the measure in information length.
 
 **Note**: The original cross-entropy uses $\log_2(\cdot)$ but in a supervised setting, we can use $\log_{10}$ because if we use log rules, we get the following relation $\log_2(\cdot) = \frac{\log_{10}(\cdot)}{\log_{10}(2)}$.
 
+---
+
 ## Kullback-Leibler Divergence (KL)
 
 Furthermore, the KL divergence is the difference between the cross-entropy and the entropy.
