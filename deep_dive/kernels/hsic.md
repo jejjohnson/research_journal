@@ -46,6 +46,14 @@ $$\text{MMD}_k(\mathbb{P}, \mathbb{Q}) \coloneqq || \mu_k(\mathbb{P}) - \mu_k(\m
 $$\text{HSIC}_k(\mathbb{P}) \coloneqq \text{MMD}_k(\mathbb{P}, \otimes_{m=1}^M \mathbb{P}_m)$$
 
 
+---
+### Linear Algebra
+
+**Norm** induced by the inner product: 
+
+$$||f||_{\mathcal{H}} \coloneqq \sqrt{\langle f,f \rangle_{\mathcal{H}}}$$
+
+
 
 ---
 ### Classical Information Theory
@@ -62,7 +70,12 @@ $$I(\mathbb{P})=D_{KL}\left( \mathbb{P}, \otimes_{m=1}^{M}\mathbb{P}_m \right)$$
 ---
 ### Tangent Kernel Alignment
 
+**HSIC**
 
+
+$$A(K_x, K_y) = 
+\left\langle H K_x, H K_y \right\rangle_{F}
+$$
 
 **Original Kernel Tangent Alignment**
 
@@ -74,8 +87,8 @@ The alignment can be seen as a similarity score based on the cosine of the angle
 
 **Centered Kernel Tangent Alignment**
 
-$$A(K_{cx}, K_{cy}) = 
-\frac{\left\langle K_{cx}, K_{cy} \right\rangle_{F}}{\sqrt{|| K_{cx}||_{F}|| K_{cy} ||_{F}}}
+$$A(H K_{x}, H K_{y}) = 
+\frac{\left\langle H K_{x}, H K_{y} \right\rangle_{F}}{\sqrt{|| H K_{x}||_{F}|| H K_{y} ||_{F}}}
 $$
 
 They add a normalization term to deal with some of the shortcomings of the original KTA algorithm which had some benefits e.g. a way to cancel out unbalanced class effects. The improvement over the original algorithm seems minor but there is a critical difference. Without the centering, the alignment does not correlate well to the performance of the learning machine. 
