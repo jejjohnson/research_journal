@@ -26,6 +26,29 @@ A collection of Python subpackages for processing spatio-temporal data.
 * eo-learn-registration
 * eo-learn-ml-tools
 
+### ESOWC 
+
+* [Fire](https://github.com/esowc/ml_fire) 
+* [Drought](https://github.com/esowc/ml_drought)
+* [Flood](https://github.com/esowc/ml_flood)
+
+
+### Packages
+
+* [EarthPy](https://github.com/earthlab/earthpy)
+
+
+---
+## Platforms
+
+### Pangeo
+
+This is an emerging product 
+
+* [Website](https://pangeo.io/)
+* Articles
+  * [Partnering with Cloud Providers](https://medium.com/pangeo/partnering-with-cloud-providers-c795b1203f1f)
+  * 
 
 
 ---
