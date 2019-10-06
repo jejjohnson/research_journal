@@ -7,6 +7,9 @@
 * https://www.simonwenkel.com/2018/09/09/Introduction-to-auto-sklearn.html#regression-example
 * https://medium.com/@MLJARofficial/automl-comparison-4b01229fae5e
 
+## FeatureTools
+
+* https://brendanhasz.github.io/2018/11/11/featuretools.html
 
 ## MLJAR
 

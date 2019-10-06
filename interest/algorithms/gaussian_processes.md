@@ -61,8 +61,6 @@ So according to [this paper]() the SSGP algorithm had a tendency to overfit. So 
 ---
 ### Review Papers
 
-* When GPs meet big data - [paper](https://arxiv.org/pdf/1807.01065.pdf)
-
 
 ## GPU Computing
 
@@ -108,6 +106,7 @@ So according to [this paper]() the SSGP algorithm had a tendency to overfit. So 
 ## Tutorials
 
 * [An Introduction to GPR](https://juanitorduz.github.io/gaussian_process_reg/)
+* http://krasserm.github.io/2018/03/19/gaussian-processes/
 
 
 ### Notebooks (outside of docs)

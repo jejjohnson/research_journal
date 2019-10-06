@@ -1,8 +1,9 @@
 
 
-## Insight
+## Bayesian
 
-* Pathologies of Factorised Gaussian and MC Dropout Posteriors in Bayesian Neural Networks - Foong et. al. (2019) - [Paper]()
+* http://krasserm.github.io/2019/02/23/bayesian-linear-regression/
+* http://krasserm.github.io/2018/03/19/gaussian-processes/
 
 
 ## Code
