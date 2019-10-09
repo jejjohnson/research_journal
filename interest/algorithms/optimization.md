@@ -1,5 +1,8 @@
 # Optimization
 
+## Bayesian Optimization
+
+* [Tuning Hyperparameters without Grad Students: Scalable and Robust Bayesian Optimisation with Dragonfly](https://arxiv.org/abs/1903.06694) - Kandasamy et. al. (2019)
 
 ## Stochastic Weighted Averaging
 

@@ -1,6 +1,28 @@
 
 
+## Curated Resources
 
+* [Github Repo](https://github.com/jphall663/awesome-machine-learning-interpretability)
+
+---
+## Books
+
+* Interpretable Machine Learning: A Guide for Making Black Box Models Explainable - Molnar et. al. (2019) - [Book](https://christophm.github.io/interpretable-ml-book/)
+
+---
+## Full Suite
+
+* [Guide towards algorithm explainability in machine learning | PyData London 2019](https://www.youtube.com/watch?v=vq8mDiDODhc&list=PLGVZCDnMOq0ocea1dd0it7jX7HgvZCjSW&index=15) | [Repo](https://github.com/EthicalML/explainability-and-bias/)
+
+---
+## Talks
+
+
+
+### SHAP
+
+* [SHAP and Beyond | PyData Amsterdam 2019](https://www.youtube.com/watch?v=xwl8WhtJNs0&list=PLGVZCDnMOq0q7_6SdrC2wRtdkojGBTAht&index=23)
+* [Interpretable AI or How I Learned to Stop Worrying and Trust AI | PyData London 2019](https://www.youtube.com/watch?v=RqH4KkXPlpk&list=PLGVZCDnMOq0ocea1dd0it7jX7HgvZCjSW&index=26)
 
 ### Snippets
 
