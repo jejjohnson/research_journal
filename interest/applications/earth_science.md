@@ -32,6 +32,9 @@ A collection of Python subpackages for processing spatio-temporal data.
 * [Drought](https://github.com/esowc/ml_drought)
 * [Flood](https://github.com/esowc/ml_flood)
 
+### NCAR
+
+* [Numerical and Sci Computing with Python Tutorial](https://github.com/NCAR/ncar-python-tutorial)
 
 ### Packages
 
