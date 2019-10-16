@@ -53,14 +53,20 @@ This is an emerging product
   * [Partnering with Cloud Providers](https://medium.com/pangeo/partnering-with-cloud-providers-c795b1203f1f)
   * 
 
+---
+## Coding Tips
+
+* [Select time ranges in multidimensional arrays with pandas](http://earthpy.org/pandas_netcdf.html)
 
 ---
 ## Data
 
 ### GeoPedia - Open Source Labels
 
-* [Website](http://www.geopedia.world/)
-
+* [Multidimensional Selection of Time Arrays](http://www.geopedia.world/)
+* [IPyhton interact and widgets (or how to write python version of ncview in about 3 lines of code)](http://earthpy.org/pyncview_pm.html)
+* [Interpolation Between Grids with cKDTree](http://earthpy.org/tag/scipy.html)
+* [Converto geodetic coordinates to geocentric (cartesian)](https://codereview.stackexchange.com/questions/195933/convert-geodetic-coordinates-to-geocentric-cartesian)
 
 ### Sentinal-Hub
 

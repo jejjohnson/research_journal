@@ -3,6 +3,18 @@
 
 ## Custom
 
+* [Matplotlib Guide](https://matplotlib.org/3.1.1/tutorials/introductory/usage.html)
+* [Plotting w. Python n Pandas](https://www.shanelynn.ie/plotting-with-python-and-pandas-libraries-for-data-visualisation/)
+* [Data-to-Viz](https://www.data-to-viz.com/)
+* [Matplotlib w. Tinker](https://datatofish.com/matplotlib-charts-tkinter-gui/)
+
+### Hitchhikers Guide to d3.js
+
+* [Hitchhikers Guide](https://medium.com/@enjalot/the-hitchhikers-guide-to-d3-js-a8552174733a)
+* [d3.js](https://www.fullstackpython.com/d3-js.html)
+* [D3.js Gallery](https://www.d3-graph-gallery.com/interactivity.html)
+
+
 ### Plot 2-3 Plots Next to One another
 
 * [One Under the Other](https://python-graph-gallery.com/24-histogram-with-a-boxplot-on-top-seaborn/)
@@ -11,7 +23,7 @@
 ## Plot Galleries
 
 * [Top 50 Visualizations](https://www.machinelearningplus.com/plots/top-50-matplotlib-visualizations-the-master-plots-python/#6.-Marginal-Histogram)
-
+* [Python plot Gallery](https://python-graph-gallery.com/)
 
 ## GeoPlotting
 
@@ -29,6 +41,9 @@
 ## Interactive Plotting
 
 * [El Niño / Southern Oscillation (ENSO) from Sea Surface Temperature (SST)](https://github.com/NCAR/ncar-python-tutorial/blob/master/notebooks/workflows/noaa_ersst_variability/noaa_ersst_variability.ipynb)
+* [5 Python Libraries for Createive Interactive Plotting](https://mode.com/blog/python-interactive-plot-libraries)
+* [Plotly Galleries](https://plot.ly/python/)
+* [Interactive Data Visualization in Python with Bokeh](https://realpython.com/python-data-visualization-bokeh/)
 
 ## Specific Issues
 

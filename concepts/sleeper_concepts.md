@@ -183,6 +183,7 @@ $$\text{KL}\left[ q(\mathbf x) || \mathcal{P}(\mathbf x)\right] = -
   * [Reverse Vs Forward KL](http://www.tuananhle.co.uk/notes/reverse-forward-kl.html)
   * [KL-Divergence as an Objective Function](https://timvieira.github.io/blog/post/2014/10/06/kl-divergence-as-an-objective-function/)
   * [NF Slides (MLE context)](https://github.com/kmkolasinski/deep-learning-notes/blob/master/seminars/2018-09-Introduction-to-Normalizing-Flows/slides.pdf)
+  * [Edward](http://edwardlib.org/tutorials/klqp)
 * Class Notes
   * Stanford - [MLE](https://web.stanford.edu/class/stats200/Lecture13.pdf) | [Consistency and Asymptotic Normality of the MLE](https://web.stanford.edu/class/stats200/Lecture14.pdf) | [Fisher Information, Cramer-Raw LB](https://web.stanford.edu/class/stats200/Lecture15.pdf) | [MLE Model Mispecification](https://web.stanford.edu/class/stats200/Lecture16.pdf)
 * Code

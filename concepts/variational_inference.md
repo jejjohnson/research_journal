@@ -133,10 +133,20 @@ You'll see that $-\frac{1}{x^2}\leq 0$ for $x \in [0, \infty)$. This means that 
 * MIT OpenCourseWare - [Intro Prob.](https://www.youtube.com/watch?v=GDJFLfmyb20) | [Inequalitiese, Convergence and Weak Law of Large Numbers](https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/)
 
 
+
+
 ---
 ## Resources
 
 * Tutorial Series - [Why?](https://chrisorm.github.io/VI-Why.html) | [ELBO](https://chrisorm.github.io/VI-ELBO.html) | [MC ELBO](https://chrisorm.github.io/VI-MC.html) | [Reparameterization](https://chrisorm.github.io/VI-reparam.html) | [MC ELBO unBias](https://chrisorm.github.io/VI-ELBO-MC-approx.html) | [MC ELBO PyTorch](https://chrisorm.github.io/VI-MC-PYT.html) | [Talk](https://chrisorm.github.io/pydata-2018.html)
+* Blog Posts: Neural Variational Inference
+  * [Classical Theory](http://artem.sobolev.name/posts/2016-07-01-neural-variational-inference-classical-theory.html)
+  * [Scaling Up](http://artem.sobolev.name/posts/2016-07-04-neural-variational-inference-stochastic-variational-inference.html)
+  * [BlackBox Mode](http://artem.sobolev.name/posts/2016-07-05-neural-variational-inference-blackbox.html)
+  * [VAEs and Helmholtz Machines](http://artem.sobolev.name/posts/2016-07-11-neural-variational-inference-variational-autoencoders-and-Helmholtz-machines.html)
+  * [Importance Weighted AEs](http://artem.sobolev.name/posts/2016-07-14-neural-variational-importance-weighted-autoencoders.html)
+  * [Neural Samplers and Hierarchical VI](http://artem.sobolev.name/posts/2019-04-26-neural-samplers-and-hierarchical-variational-inference.html)
+  * [Importance Weighted Hierarchical VI](http://artem.sobolev.name/posts/2019-05-10-importance-weighted-hierarchical-variational-inference.html) | [Video](https://www.youtube.com/watch?v=pdSu7XfGhHw&feature=youtu.be)
 
 * Normal Approximation to the Posterior Distribution - [blog](http://bjlkeng.github.io/posts/normal-approximations-to-the-posterior-distribution/)
 
@@ -145,6 +155,9 @@ You'll see that $-\frac{1}{x^2}\leq 0$ for $x \in [0, \infty)$. This means that 
 * [Understaing the Variational Lower Bound](http://legacydirs.umiacs.umd.edu/~xyang35/files/understanding-variational-lower.pdf)
 * [Deriving the Variational Lower Bound](http://paulrubenstein.co.uk/deriving-the-variational-lower-bound/)
 
+**Summaries**
+
+* [Advances in Variational Inference](https://arxiv.org/pdf/1711.05597.pdf)
 
 **Presentations**
 
@@ -168,3 +181,8 @@ You'll see that $-\frac{1}{x^2}\leq 0$ for $x \in [0, \infty)$. This means that 
   * [GMM PyTorch](https://github.com/ldeecke/gmm-torch) | [PyTorch](https://angusturner.github.io/generative_models/2017/11/03/pytorch-gaussian-mixture-model.html) | [PyTorchy](https://github.com/RomainSabathe/dagmm/blob/master/gmm.py)
 
 **Code**
+
+
+**Extensions**
+
+* [Neural Samplers and Hierarchical Variational Inference](http://artem.sobolev.name/posts/2019-04-26-neural-samplers-and-hierarchical-variational-inference.html)
