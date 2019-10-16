@@ -94,11 +94,11 @@ $\mathcal{L}(\theta)= \frac{N}{2}\log 2\pi + \underbrace{\frac{1}{2} \log\left| 
 The **data fit** term penalizes the data lying outside the covariance ellipse, the **complexity penalty** is the integral of the data fit term over all possible observations $\mathbf{y}$ which characterizes the volume of possible datasets, the **trace term** ensures the objective function is a true lower bound to the MLE of the full GP. Now, below is a table that shows the differences between each of the methods. 
 
 
-| Algorithm |                           $\mathbf{G}$                          |            $\mathbf{T}$           |
-|:---------:|:---------------------------------------------------------------:|:---------------------------------:|
-| FITC      | diag $(\mathbf{K}_{ff}-\mathbf{Q}_{ff}) + \sigma_n^2\mathbf{I}$ |                 0                 |
-| VFE       |                     $\sigma_n^2 \mathbf{I}$                     | $\mathbf{K}_{ff}-\mathbf{Q}_{ff}$ |
-| DTC       |                     $\sigma_n^2 \mathbf{I}$                     |                 0                 |
+| Algorithm |                          $\mathbf{G}$                           |           $\mathbf{T}$            |
+| :-------: | :-------------------------------------------------------------: | :-------------------------------: |
+|   FITC    | diag $(\mathbf{K}_{ff}-\mathbf{Q}_{ff}) + \sigma_n^2\mathbf{I}$ |                 0                 |
+|    VFE    |                     $\sigma_n^2 \mathbf{I}$                     | $\mathbf{K}_{ff}-\mathbf{Q}_{ff}$ |
+|    DTC    |                     $\sigma_n^2 \mathbf{I}$                     |                 0                 |
 
 Another thing to keep in mind is that the FITC algorithm approximates the model whereas the VFE algorithm approximates the inference step (the posterior). So here we just a have a difference in philosophy in how one should approach this problem. Many people in the Bayesian community will [argue](https://www.prowler.io/blog/sparse-gps-approximate-the-posterior-not-the-model) for approximating the inference but I think it's important to be pragmatic about these sorts of things.
 
