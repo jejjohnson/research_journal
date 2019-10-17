@@ -1,9 +1,34 @@
 # Uncertain Inputs GPs - Variational Strategies
 
 
+##
+
 This post is a follow-up from my previous post where I walk through the literature talking about the different strategies of account for input error in Gaussian processes. In this post, I will be discussing how we can use variational strategies to account for input error.
 
----
+--- 
+
+- [Uncertain Inputs GPs - Variational Strategies](#uncertain-inputs-gps---variational-strategies)
+  - [Posterior Approximations](#posterior-approximations)
+  - [Variational Gaussian Process Model](#variational-gaussian-process-model)
+  - [Variational GP Model w/ Prior](#variational-gp-model-w-prior)
+  - [Sparse Model](#sparse-model)
+    - [Evidence Lower Bound (ELBO)](#evidence-lower-bound-elbo)
+  - [Uncertain Inputs](#uncertain-inputs)
+    - [I - Strong Prior](#i---strong-prior)
+    - [II - Regularized Strong Prior](#ii---regularized-strong-prior)
+    - [III - Prior with Openness](#iii---prior-with-openness)
+      - [IV - Bonus, Conservative Freedom](#iv---bonus-conservative-freedom)
+      - [Summary of Options](#summary-of-options)
+  - [Supplementary Material](#supplementary-material)
+    - [Jensen's Inequality](#jensens-inequality)
+    - [Identity Trick](#identity-trick)
+    - [Variational Inference in a Nutshell](#variational-inference-in-a-nutshell)
+  - [Resources](#resources)
+      - [Important Papers](#important-papers)
+      - [Summary Thesis](#summary-thesis)
+      - [Talks](#talks)
+
+
 ## Posterior Approximations
 
 What links all of the strategies from uncertain GPs is how they approach the problem of uncertain inputs: approximating the posterior distribution. The methods that use moment matching on stochastic trial points are all using various strategies to construct some posterior approximation. They define their GP model first and then approximate the posterior by using some approximate scheme to account for uncertainty. The NIGP however does change the model which is a product of the Taylor series expansion employed. From there, the resulting posterior is either evaluated or further approximated. My method actually is related because I also avoid changing the model and just attempt to approximate the posterior predictive distribution by augmenting the predictive variance function only (**???**).
@@ -159,34 +184,66 @@ If we optimize $\mathcal{F}$ with respect to $q(\mathbf x)$, the KL is minimized
 ---
 ## Uncertain Inputs
 
-So how does this relate to uncertain inputs exactly?
+So how does this relate to uncertain inputs exactly? Let's look again at our problem setting.
 
 $$\begin{aligned}
 y &= f(x) + \epsilon_y \\
-x &= z + \epsilon_x \\
+x &\sim \mathcal{N}(\mu_x, \Sigma_x) \\
 \end{aligned}$$
 
 where:
 
-* $z$ - noise-corrupted training inputs
-* $x$ - latent variables
-  * $\epsilon_x \sim \mathcal{N}(0, \Sigma_x)$
-* $f(x)$ - function with noisy-inputs
-* $y$ - noise-corrupted outputs
-  * $\epsilon_y \sim \mathcal{N}(0, \sigma^2_y)$
+* $y$ - noise-corrupted outputs which have a noise parameter characterized by $\epsilon_y \sim \mathcal{N}(0, \sigma^2_y)$
+* $f(x)$ - is the standard GP function
+* $x$ - "latent variables" but we assume that the come from a normal distribution, $x \sim \mathcal{N}(\mu_x, \Sigma_x)$ where you have some observations $\mu_x$ but you also have some prior uncertainty $\Sigma_x$ that you would like to incorporate.
+
+Now the ELBO that we want to minimize has the following form:
+
+$$\mathcal{F}(q)=\mathbb{E}_{q(\mathbf x | m_{p_z}, S_{p_z})}\left[ \log \mathcal{P}(y|\mathbf x, \theta) \right] - \text{D}_\text{KL}\left[ q(\mathbf x | m_{p_z}, S_{p_z}) || \mathcal{P}(\mathbf x | m_{p_x}, S_{p_x}) \right]$$
+
+Notice that I have expanded the parameters for $p(X)$ and $q(X)$ so that we are clear about where the parameters. We would like to figure out a way to incorporate our uncertainties in the $m_{p_x}$, $S_{p_x}$, $m_{p_z}$, and $S_{p_z}$. The author had two suggestions about how to account for noise in the inputs but the original formulation assumed that these parameters were unknown. In my problem setting, we know that there is noise in the inputs so the problems that the original formulations had will change. I will outline the formulations below for both known and unknown uncertainties.
 
 
-#### Latent Variables - Prior Distribution 
+### I - Strong Prior
 
-We can directly assume a prior distribution for the latent variables that depend on the noisy observations.
+**Prior**, $p(X)$
 
-$$\mathcal{P}(\mathbf X|\mathbf Z) = \prod_{i=1}^{N}\mathcal{N}(\mathbf{x}_i |\mathbf z_i,\mathbf \Sigma_\mathbf{x_i})$$
+We can directly assume that we know the parameters for the prior distribution. So we let $\mu_x$ be our noisy observations and we let $\Sigma_x$ be our known covariance matrix for $X$. These parameters are fixed as we assume we know them and we would like this to be our prior. This seems to be the most natural as is where we have information and we would like to use it. So now our prior is in the form of:
 
-We will have a new variational bound now:
+$$\mathcal{P}(\mathbf X|\mu_x, \Sigma_x) = \prod_{i=1}^{N}\mathcal{N}(\mathbf{x}_i |\mathbf \mu_{\mathbf{x}_i},\mathbf \Sigma_\mathbf{x_i})$$
 
-$$\mathcal{F}=\langle \log \mathcal{P}(\mathbf{Y|X}) \rangle_{q(\mathbf X)} - \text{KL}\left( q(\mathbf X) || \mathcal{P}(\mathbf{X|Z}) \right)$$
+and this will be our regularization that we use for the KL divergence term.
 
-#### Variational Back-Constraint
+**Variational**, $q(X)$
+
+However, the variational parameters $m$ and $S$ are also important because that is being directly evaluated with the KL divergence term and the likelihood function $\log p(y|X, \theta)$. So ideally we would also like to constrain this as well if we know something. The first thing to do would be to fix them as well to what we know about our data, $m=\mu_x$ and $S_{p_z} = \Sigma_x$. So our prior for our variational distribution will be:
+
+$$q(\mathbf X|\mu_x, \Sigma_x) = \prod_{i=1}^{N}\mathcal{N}(\mathbf{x}_i |\mathbf \mu_{\mathbf{x}_i},\mathbf \Sigma_\mathbf{x_i})$$
+
+
+We now have our variational bound with the assumed parameters:
+
+$$\mathcal{F}=\langle \log \mathcal{P}(\mathbf{Y|X}) \rangle_{q(\mathbf X|\mu_x, \Sigma_x)} - \text{KL}\left( q(\mathbf X|\mu_x, \Sigma_x) || p(\mathbf X|\mu_x, \Sigma_x)  \right)$$
+
+**Assessment**
+
+So this is a very strong belief over our parameters. The KL divergence term will be zero because the distributions will be the same and we would have probably done some extra computations for no reason; we do need this in order to make the likelihood tractable but it doesn't make sense if we're not learning anything. But this is absolute because we have no reason to change anything. It's worth testing to see how this goes.
+
+### II - Regularized Strong Prior
+
+This is similar to the above statement, however we would be reducing the prior parameters to a standard 0 mean and 1 standard deviation. So our prior function will look like this
+
+$$\mathcal{P}(\mathbf X|0, 1) = \prod_{i=1}^{N}\mathcal{N}(\mathbf{x}_i |0, 1)$$
+
+This would allow the KL-Divergence criteria extra penalization for the loss function. It might change some of the parameters learned for the other regions of the ELBO. So our final loss function is:
+
+$$\mathcal{F}=\langle \log \mathcal{P}(\mathbf{Y|X}) \rangle_{q(\mathbf X|\mu_x, \Sigma_x)} - \text{KL}\left( q(\mathbf X|\mu_x, \Sigma_x) || p(\mathbf X|0, 1)  \right)$$
+
+### III - Prior with Openness
+
+The last option I think is the most interesting. It seems to incorporate the prior but also allow for some flexibility. In this option, 
+
+We can pivot off of what the factor that the KL divergence term is simply a regularizer. So we could also go with a more conservative approach where we 
 
 We will introduce a variational constraint to encode the input uncertainty directly into the approximate posterior. 
 
@@ -194,9 +251,30 @@ $$q(\mathbf X|\mathbf Z) = \prod_{i=1}^{N}\mathcal{N}(\mathbf{x}_i |\mathbf z_i,
 
 We will have a new variational bound now:
 
+$$\mathcal{F}=\langle \log \mathcal{P}(\mathbf{Y|X}) \rangle_{q(\mathbf X|\mu_x, S)} - \text{KL}\left( q(\mathbf X|\mu_x, S) || p(\mathbf X|\mu_x, \Sigma_x)  \right)$$
+
+So the only free parameter in the variational bound is the actual variance of our inputs $S$ that stems from our variational distribution $q(X)$. Again, this seems like a nice balanced approach where we can incorporate prior information within our model but at the same time allow for some freedom to maybe find a better distribution to represent the noise. 
+
+#### IV - Bonus, Conservative Freedom
+
+Ok, so the true last option would be to try and see how the algorithm thinks the results should be. We 
+
+
 $$\mathcal{F}=\langle \log \mathcal{P}(\mathbf{Y|X}) \rangle_{q(\mathbf{X|Z})} - \text{KL}\left( q(\mathbf{X|Z}) || \mathcal{P}(\mathbf{X}) \right)$$
 
----
+#### Summary of Options
+
+<center>
+
+|          Options          | $m_{p_x}$ | $S_{p_x}$  | $m_{p_z}$ | $S_{p_z}$  |
+| :-----------------------: | :-------: | :--------: | :-------: | :--------: |
+| Conservative Strong Prior |     0     |     1      |  $\mu_x$  | $\Sigma_x$ |
+|       Strong Prior        |  $\mu_x$  | $\Sigma_x$ |  $\mu_x$  | $\Sigma_x$ |
+|         Bayesian          |  $\mu_x$  | $\Sigma_x$ |  $\mu_x$  |    S_z     |
+|   Conservative Freedom    |     0     |     1      |  $\mu_x$  |    S_z     |
+
+</center>
+
 ---
 ## Supplementary Material
 
@@ -272,7 +350,6 @@ Examples:
 
 
 
----
 --- 
 ## Resources
 

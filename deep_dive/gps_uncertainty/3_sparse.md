@@ -1,5 +1,33 @@
 # Sparse Gaussian Processes
 
+- [Sparse Gaussian Processes](#sparse-gaussian-processes)
+  - [Methods](#methods)
+  - [Subset of Data](#subset-of-data)
+  - [Kernel Approximations](#kernel-approximations)
+  - [Inducing Points](#inducing-points)
+  - [Sparse GPs - Inducing Points Summary](#sparse-gps---inducing-points-summary)
+    - [Observations about the Sparse GPs](#observations-about-the-sparse-gps)
+    - [Variational Compression](#variational-compression)
+      - [Joint Distribution - Augmented Space $\mathcal{P}(f,u)$](#joint-distribution---augmented-space-mathcalpfu)
+      - [Conditional Distribution - $\mathcal{P}(y|u)$](#conditional-distribution---mathcalpyu)
+      - [Variational Bound on $\mathcal P (y|u)$](#variational-bound-on-mathcal-p-yu)
+      - [Titsias Innovation: et $q(f) = \mathcal{P}(f|u)$.](#titsias-innovation-et-qf--mathcalpfu)
+  - [ELBOs](#elbos)
+    - [Lower Bound](#lower-bound)
+      - [Variational Bound on $\mathcal P (y)$](#variational-bound-on-mathcal-p-y)
+    - [Stochastic Variational Inference](#stochastic-variational-inference)
+  - [Supplementary Material](#supplementary-material)
+    - [Important Formulas](#important-formulas)
+      - [Nystrom Approximation](#nystrom-approximation)
+      - [Sherman-Morrison-Woodbury Formula](#sherman-morrison-woodbury-formula)
+      - [Sylvester Determinant Theorem](#sylvester-determinant-theorem)
+  - [Resources](#resources)
+    - [Papers](#papers)
+      - [Thesis Explain](#thesis-explain)
+    - [Presentations](#presentations)
+    - [Notes](#notes)
+    - [Blogs](#blogs)
+
 ## Methods
 
 * Approximation by Subset of Data
@@ -58,7 +86,6 @@ model = GPR()
 model.fit(X_transformed, y)
 ```
 
----
 ---
 ## Kernel Approximations 
 
@@ -310,7 +337,6 @@ $$\log \mathcal P (y) \geq \log \mathcal{N} (y|\mathbf{y|K_{fu}^{-1}m, \sigma_y^
 
 
 ---
----
 ## Supplementary Material
 
 ---
@@ -336,7 +362,6 @@ $$\left|\mathbf K_{NN} + \sigma_y^2 \mathbf I_N \right| \approx |\mathbf \Lambda
 
 
 
----
 ---
 ## Resources
 
