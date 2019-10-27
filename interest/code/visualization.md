@@ -30,7 +30,15 @@
 * Plotting with CartoPy and GeoPandas - [GeoPandas](http://geopandas.org/gallery/cartopy_convert.html) | [Lab](http://darribas.org/gds15/content/labs/lab_03.html)
   * [GeoPandas 101: Plot any data with a latitude and longitude on a map](https://towardsdatascience.com/geopandas-101-plot-any-data-with-a-latitude-and-longitude-on-a-map-98e01944b972)
 * geoplot: geospatial data visualization - [Geoplot](https://residentmario.github.io/geoplot/index.html) | [Plotting w. GeoPLot](http://geopandas.org/gallery/plotting_with_geoplot.html)
+  
+## GeoViews
 
+* [Maps with Bars](https://nbviewer.jupyter.org/github/tusharkh/cmip6-outreach-tool/blob/master/notebooks/dashboard.ipynb)
+
+## hvplot
+
+* [Basic Dashboard](https://nbviewer.jupyter.org/github/tusharkh/cmip6-outreach-tool/blob/master/notebooks/Basic_dashboard_real_data.ipynb)
+* [Plot w. Widgets](https://nbviewer.jupyter.org/github/tusharkh/cmip6-outreach-tool/blob/master/notebooks/Single_Model_Dash.ipynb)
 
 ## Plot Tutorials
 
