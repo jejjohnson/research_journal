@@ -268,10 +268,11 @@ $$\mathcal{F}=\langle \log \mathcal{P}(\mathbf{Y|X}) \rangle_{q(\mathbf{X|Z})} -
 
 |          Options          | $m_{p_x}$ | $S_{p_x}$  | $m_{p_z}$ | $S_{p_z}$  |
 | :-----------------------: | :-------: | :--------: | :-------: | :--------: |
-| Conservative Strong Prior |     0     |     1      |  $\mu_x$  | $\Sigma_x$ |
+|         No Prior          |  $\mu_x$  |     1      |  $\mu_x$  |    S_z     |
+| Strong Conservative Prior |  $\mu_x$  |     1      |  $\mu_x$  | $\Sigma_x$ |
 |       Strong Prior        |  $\mu_x$  | $\Sigma_x$ |  $\mu_x$  | $\Sigma_x$ |
-|         Bayesian          |  $\mu_x$  | $\Sigma_x$ |  $\mu_x$  |    S_z     |
-|   Conservative Freedom    |     0     |     1      |  $\mu_x$  |    S_z     |
+|      Bayesian Prior       |  $\mu_x$  | $\Sigma_x$ |  $\mu_x$  |    S_z     |
+
 
 </center>
 

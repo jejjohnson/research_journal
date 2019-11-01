@@ -2,6 +2,18 @@
 
 
 ---
+## Concepts
+
+**Repeatability**: Same team, same experimental setup
+
+**Replicability**: different team, same experimental setup
+
+**Reproducibility**: different team, different experimental set up
+
+**Source**: Association for Computing Machinery (2016)
+
+
+---
 ## Blog Posts
 
 

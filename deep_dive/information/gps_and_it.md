@@ -6,17 +6,22 @@ In this summary, I will be exploring what makes Gaussian distributions so specia
 ### GPs, Entropy, Residuals
 
 
-> Easy to compute stuff out of a GP (which is a joint multivariate Gaussian with covariance K) would be:
-> 1) Differential) entropy from the GP:
-> $$H(X) = 0.5* log( (2*\pi*e)^n * \text{det}(K_x) )$$
+Easy to compute stuff out of a GP (which is a joint multivariate Gaussian with covariance K) would be:
+1) Differential) entropy from the GP:
+
+$$\begin{aligned}
+H(X) &= 0.5 \cdot log( (2 \cdot \pi \cdot e)^n \cdot \text{det}(K_x) ) \\
+H(X) &= \frac{N}{2} \cdot \log(2 \cdot \pi \cdot e) +  \log |K_x| 
+\end{aligned}
+$$
+
 > 
 > where K_x is the kernel matrix (a covariance after all in feature space).
-> https://en.wikipedia.org/wiki/Differential_entropy#Properties_of_differential_entropy
-> http://www.gaussianprocess.org/gpml/chapters/RW.pdf  (see e.g. A.5, eq. A.20, etc)
+> [Wiki](https://en.wikipedia.org/wiki/Differential_entropy#Properties_of_differential_entropy) | [GP Book](http://www.gaussianprocess.org/gpml/chapters/RW.pdf)  (see e.g. A.5, eq. A.20, etc)
 > 
 > 2) And then I remembered that the LS error estimate could be bounded, and since a GP is after all LS regression in feature space, maybe we could check if the formula is right:
 > 
-> $$MSE = E[(Y-\hat Y)^2] >= 1/(2*pi*e) * exp(H(Y|X))$$
+> $$MSE = E[(Y-\hat Y)^2] >= 1/(2 \cdot pi \cdot e) * exp(H(Y|X))$$
 > 
 > https://en.wikipedia.org/wiki/Conditional_entropy
 > that is, MSE obtained with the GP is lower bounded by that conditional entropy estimate from RBIG.
