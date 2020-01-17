@@ -1,10 +1,17 @@
 # Variational Inference
 
-
 ---
 ## Motivations
 
 Variational inference is the most scalable inference method the machine learning community has (as of 2019).
+
+**Tutorials**
+
+* https://www.ritchievink.com/blog/2019/06/10/bayesian-inference-how-we-are-able-to-chase-the-posterior/
+* https://www.ritchievink.com/blog/2019/09/16/variational-inference-from-scratch/
+* 
+
+* * 
 
 ---
 ## ELBO - Derivation
@@ -101,7 +108,6 @@ If we optimize $\mathcal{F}$ with respect to $q(\mathbf x)$, the KL is minimized
 * Under-estimates the variance of posterior
 * Limited theory and guarantees for variational mehtods
 
-
 ---
 ## Supplementary
 
@@ -131,7 +137,6 @@ You'll see that $-\frac{1}{x^2}\leq 0$ for $x \in [0, \infty)$. This means that 
 * [DIT Package](https://dit.readthedocs.io/en/latest/measures/divergences/jensen_shannon_divergence.html)
 * Ox Educ - [Intuition](https://www.youtube.com/watch?v=HfCb1K4Nr8M) | [Proof](https://www.youtube.com/watch?v=10xgmpG_uTs)
 * MIT OpenCourseWare - [Intro Prob.](https://www.youtube.com/watch?v=GDJFLfmyb20) | [Inequalitiese, Convergence and Weak Law of Large Numbers](https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/part-ii-inference-limit-theorems/)
-
 
 
 

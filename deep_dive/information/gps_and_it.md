@@ -1,4 +1,4 @@
-# Gaussians and Gaussian Processes
+# Gaussian Dists. and GPs
 
 In this summary, I will be exploring what makes Gaussian distributions so special as well as the relation they have with IT measures. I'll also look at some extensions to Gaussian Processes (GPs) and what connection they have have with IT measures.
 

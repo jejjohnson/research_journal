@@ -44,8 +44,8 @@ In a Machine Learning problem, we almost always have the following components:
 
 The Bayesian framework works best when you think about it from a probabilistic standpoint. 
 
-$$P(\text{ Model }|\text{ Data })=
-\frac{P(\text{ Data }|\text{ Model })P(\text{ Model })}{P(\text{ Data })}$$
+$$\begin{aligned}P(\text{ Model }|\text{ Data })=
+\frac{P(\text{ Data }|\text{ Model })P(\text{ Model })}{P(\text{ Data })}\end{aligned}$$
 
 > I've seen some people ([here](https://work.caltech.edu/library/012.html), [here](https://youtu.be/5KdWhDpeQvU?t=1310)) have some sort of equivalence between Model, $\mathcal{M}$ and Hypothesis, $\mathcal{H}$. In this particular instance, think of the $\mathcal{M}$ as the best possible outcome that we can achieve to map $x$ to $y$ **correctly**. And think of $\mathcal{H}$ as a set of possible formulas we could use; like in a Universe where we have all of the possible formulas and collection of parameters. I quite like the term Hypothesis because it adds another level of abstraction when thinking about the problem. But at the same time I feel like this extra layer of abstraction is not something I like to think about all of the time.
 
@@ -64,12 +64,16 @@ $$P(\theta | \mathcal{D}, \mathcal{M})=
 
 where:
 * $P(\mathcal{D}|\theta, \mathcal{M})$ - Likelihood of the parameters, $\theta$ in model $\mathcal{M}$
+  
   > Likelihood of the parameters (**not of the data**). For every set of parameters, I can assign a probability to some observable data.
 * $P(\theta | \mathcal{M})$ - prior probability of $\theta$
+  
   > This expresses the distribution and the uncertainty of the parameters that define my model. It's a way of constraining the range of values that can occur. Expert knowledge in this area is crucial if you would like Physics-aware machine learning models.
 * $P(\mathcal{D}|\mathcal{M})$ - The normalization constant (the marginal likelihood)
+  
   > This term seems to give us a lot of problems **???** but this is an artifact of Bayes Rule where in order to obtain my Posterior, I need to renormalize.
 * $P(\theta | \mathcal{D,M})$ - Posterior of $\theta$ given data $\mathcal{D}$
+  
   > T
 
 There are few things that are different. First of all, every single component is conditioned on a model $\mathcal{M}$. This is to say, given that I have described my model, here are the configurations that this model requires. So we're really staying true to the model based Machine Learning instead of the Toolbox method. Also, I've changed the data to be denoted as $\mathcal{D}$ where $\mathcal{D}=\left\{ (x_1, y_1), \ldots, (x_N, y_N) \right\}^{N}_{1}$. 

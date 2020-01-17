@@ -1,39 +1,8 @@
 # Sparse Gaussian Processes
 
-- [Sparse Gaussian Processes](#sparse-gaussian-processes)
-  - [Methods](#methods)
-  - [Subset of Data](#subset-of-data)
-  - [Kernel Approximations](#kernel-approximations)
-  - [Inducing Points](#inducing-points)
-  - [Sparse GPs - Inducing Points Summary](#sparse-gps---inducing-points-summary)
-    - [Observations about the Sparse GPs](#observations-about-the-sparse-gps)
-    - [Variational Compression](#variational-compression)
-      - [Joint Distribution - Augmented Space $\mathcal{P}(f,u)$](#joint-distribution---augmented-space-mathcalpfu)
-      - [Conditional Distribution - $\mathcal{P}(y|u)$](#conditional-distribution---mathcalpyu)
-      - [Variational Bound on $\mathcal P (y|u)$](#variational-bound-on-mathcal-p-yu)
-      - [Titsias Innovation: et $q(f) = \mathcal{P}(f|u)$.](#titsias-innovation-et-qf--mathcalpfu)
-  - [ELBOs](#elbos)
-    - [Lower Bound](#lower-bound)
-      - [Variational Bound on $\mathcal P (y)$](#variational-bound-on-mathcal-p-y)
-    - [Stochastic Variational Inference](#stochastic-variational-inference)
-  - [Supplementary Material](#supplementary-material)
-    - [Important Formulas](#important-formulas)
-      - [Nystrom Approximation](#nystrom-approximation)
-      - [Sherman-Morrison-Woodbury Formula](#sherman-morrison-woodbury-formula)
-      - [Sylvester Determinant Theorem](#sylvester-determinant-theorem)
-  - [Resources](#resources)
-    - [Papers](#papers)
-      - [Thesis Explain](#thesis-explain)
-    - [Presentations](#presentations)
-    - [Notes](#notes)
-    - [Blogs](#blogs)
+[toc]
 
-## Methods
-
-* Approximation by Subset of Data
-* Inducing Points
-* FITC
-* VFE
+---
 
 Sparse GPs refer to a family of methods that seek to take a subset of points in order to approximate the full dataset. Typically we can break them down into 5 categories:
 
@@ -44,7 +13,6 @@ Sparse GPs refer to a family of methods that seek to take a subset of points in 
 * Approximate Inference (Variational Methods)
 
 Each of these methods ultimately augment the model so that the largest computation goes from $\mathcal{O}(N^3)$ to $\mathcal{O}(MN^2)$ where $M<<N$.
-
 
 ---
 ## Subset of Data
@@ -106,7 +74,6 @@ Now the matrix that we need to invert is $(K_{zz}+\sigma^{-2}K_z^{\top}K_z)^{-1}
 * Deisenroth - GPs for Big Data - [MLSS2015](https://www.doc.ic.ac.uk/~mpd37/teaching/tutorials/2015-04-14-mlss.pdf)
 * Dai - Scalable GPs - [MLSS2018](http://zhenwendai.github.io/slides/gpss2018_slides.pdf)
 
-
 ---
 ## Sparse GPs - Inducing Points Summary
 
@@ -166,7 +133,6 @@ An interesting solution to find good hyperparameters for VFE:
 
 <p align="center">
   <img src="pics/variational_compression.png" alt="drawing" width="500"/>
-  
 </p>
 
 **Figure**: This graphical model shows the relationship between the data $X$, the labels $y$ and the augmented labels $z$.
@@ -248,7 +214,8 @@ $$\mathcal{P}(y|u)=\int_f \mathcal P (y|f) \cdot \mathcal{P}(f|u) \cdot df$$
 I'll do the 4.5 classic steps in order to arrive at a variational lower bound:
 
 1. Given an **integral problem**, take the $\log$ of both sides of the function.
-   
+  
+
 $$\log \mathcal P (y|u) = \log \int_f \mathcal P (y|f) \cdot \mathcal{P}(f|u) \cdot df$$
 
 2. Introduce the variational parameter $q(f)$ as a **proposal** with the Identity trick.
@@ -368,6 +335,7 @@ $$\left|\mathbf K_{NN} + \sigma_y^2 \mathbf I_N \right| \approx |\mathbf \Lambda
 ### Papers
 
 * Nystrom Approximation
+  
   * [Using Nystrom to Speed Up Kernel Machines](https://papers.nips.cc/paper/1866-using-the-nystrom-method-to-speed-up-kernel-machines.pdf) - Williams & Seeger (2001)
 * Fully Independent Training Conditional (FITC)
   * [Sparse Gaussian Processes Using Pseudo-Inputs](http://www.gatsby.ucl.ac.uk/~snelson/SPGP_up.pdf) - Snelson and Ghahramani (2006)
@@ -383,8 +351,10 @@ $$\left|\mathbf K_{NN} + \sigma_y^2 \mathbf I_N \right| \approx |\mathbf \Lambda
   * [Prediction under Uncertainty in SSGPs w/ Applications to Filtering and Control](http://proceedings.mlr.press/v70/pan17a/pan17a.pdf) - Pan et. al. (2017)
   * [Variational Fourier Features for GPs](http://www.jmlr.org/papers/volume18/16-579/16-579.pdf) - Hensman (2018)
 * [Understanding Probabilistic Sparse GP Approx](https://arxiv.org/pdf/1606.04820.pdf) - Bauer et. al. (2016)
+  
   > A good paper which highlights some import differences between the FITC, DTC and VFE. It provides a clear notational differences and also mentions how VFE is a special case of DTC.
 * [A Unifying Framework for Gaussian Process Pseudo-Point Approximations using Power Expectation Propagation](http://jmlr.org/papers/volume18/16-603/16-603.pdf) - Bui (2017)
+  
   > A good summary of all of the methods under one unified framework called the Power Expectation Propagation formula.
 
 
@@ -417,3 +387,7 @@ Often times the papers that people publish in conferences in Journals don't have
 ### Blogs
 
 * [Variational Free Energy for Sparse GPs](https://gonzmg88.github.io/blog/2018/04/19/VariationalFreeEnergy) - Gonzalo
+
+
+
+* https://github.com/Alaya-in-Matrix/SparseGP

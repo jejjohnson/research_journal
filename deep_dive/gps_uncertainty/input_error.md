@@ -159,7 +159,6 @@ $$\tilde{\nu}^2_*= \xi - \text{tr}\left(\left( \left(\mathbf K + \sigma_y^2\math
 
 where $\xi$ and $\Phi$ are also kernel expectations. This final expression is not intuitive but it works fine for many applications; most notably the [PILCO](http://mlg.eng.cam.ac.uk/pub/pdf/DeiRas11.pdf) problem. The derivation in its entirety can be found [here](), [here](), and [here]() if you're interested. It's worth noting that I don't this method is suitable for big data without further approximations to the terms in this equation as at first site it looks very inefficient and with complex and expensive calculations.
 
-
 ---
 ## Stochastic Measurements
 
@@ -438,7 +437,6 @@ $$y \approx f(x) + $$
 
 
 
-
 ---
 ### NIGP - Propagating Variances
 
@@ -498,9 +496,8 @@ y &= f(\mathbf x) + \frac{\partial f(\mathbf x)}{\partial x}\Sigma_x \left( \fra
 
 **Figure**: GP Variance Estimates account for input errors.
 
-
 ---
---- 
+---
 ## Resources
 
 
