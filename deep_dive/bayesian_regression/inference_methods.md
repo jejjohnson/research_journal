@@ -25,6 +25,8 @@ We can produce samples from the exact posterior by defining a specific Monte Car
 
 We actually do this in practice with NNs because of the stochastic training regimes. We modify the SGD algorithm to define a scalable MCMC sampler.
 
+[Here](https://chi-feng.github.io/mcmc-demo/) is a visual demonstration of some popular MCMC samplers.
+
 
 
 ## Variational Inference

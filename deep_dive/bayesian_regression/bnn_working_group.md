@@ -14,10 +14,10 @@ This document is a list of resources that I would like to go through for our Bay
 
 ### Papers
 
-* DropOut as Bayesian Approximation - [Paper](https://arxiv.org/pdf/1506.02142.pdf) | [Code]() | [Tutorial](https://xuwd11.github.io/Dropout_Tutorial_in_PyTorch/)
+
 * Uncertainty Decomposition in BNNs with Latent Variables - [arxiv](https://arxiv.org/abs/1706.08495)
-* Practical Deep Learning with Bayesian Principles - [arxiv](https://arxiv.org/abs/1906.02506)
-* Pathologies of Factorised Gaussian and MC Dropout Posteriors in Bayesian Neural Networks - Foong et. al. (2019) - [Paper]()
+
+
 * Probabilistic Numerics and Uncertainty in Computations - [Paper](https://arxiv.org/pdf/1506.01326.pdf)
 * Bayesian Inference of Log Determinants - [Paper](https://arxiv.org/pdf/1704.01445.pdf)
 
@@ -29,7 +29,7 @@ This document is a list of resources that I would like to go through for our Bay
 
 #### Convolutions
 
-* A Comprehensive guide to Bayesian Convolutional NeuralNetwork with Variational Inference - Shridhar et. al. (2018) - [arxiv](https://arxiv.org/pdf/1901.02731.pdf) | [code (PyTorch)](https://github.com/kumar-shridhar/PyTorch-BayesianCNN)
+
 * 
 
 
@@ -64,11 +64,11 @@ This document is a list of resources that I would like to go through for our Bay
 
 ### Videos
 
-* [Deep Learning Fundamentals](https://ericmjl.github.io/teaching/deep-learning-fundamentals/) - Eric Ma (2019) - Scipy2019 - [Notebook](https://github.com/ericmjl/dl-workshop) 
+
 
   > Implements deep learning architecture from scratch using JAX.
 
-* Bayesian Neural Networks: A function space Tour - GPSS 2019 - [Video](https://www.youtube.com/watch?v=bjnhfoqz-eA) | [Slides](http://gpss.cc/gpss19/slides/Li2019.pdf)
+
 
 ### Blogs
 
