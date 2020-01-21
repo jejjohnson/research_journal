@@ -191,3 +191,12 @@ You'll see that $-\frac{1}{x^2}\leq 0$ for $x \in [0, \infty)$. This means that 
 **Extensions**
 
 * [Neural Samplers and Hierarchical Variational Inference](http://artem.sobolev.name/posts/2019-04-26-neural-samplers-and-hierarchical-variational-inference.html)
+
+
+#### From Scratch
+
+* Programming a Neural Network from Scratch - Ritchie Vink (2017) - [blog](https://www.ritchievink.com/blog/2017/07/10/programming-a-neural-network-from-scratch/)
+* An Introduction to Probability and Computational Bayesian Statistcs - Eric Ma 0[Blog](https://ericmjl.github.io/essays-on-data-science/machine-learning/computational-bayesian-stats/)
+* Variational Inference from Scratch - Ritchie Vink (2019) - [blog](https://www.ritchievink.com/blog/2019/09/16/variational-inference-from-scratch/)
+* Bayesian inference; How we are able to chase the Posterior - Ritchie Vink (2019) - [blog](Bayesian inference; How we are able to chase the Posterior)
+* Algorithm Breakdown: Expectation Maximization - [blog](https://www.ritchievink.com/blog/2019/05/24/algorithm-breakdown-expectation-maximization/)
