@@ -164,6 +164,8 @@ Bayesian - hard to make it work but sometimes makes more sense.
 * Learning From Data - [Website](https://work.caltech.edu/telecourse)
 TODO: FlowChart of [Learning](https://work.caltech.edu/library/012.html) and [Probabilistic Learning](https://work.caltech.edu/library/025.html)
 * [Linear Regression Experiments](http://blog.booleanbiotech.com/linear_regression_experiments.html)
+* A Probabilistic View of Linear Regression - Keng (2016) - [blog](http://bjlkeng.github.io/posts/a-probabilistic-view-of-regression/)
+* A Probabilistic Interpretation of Regularization - Brian Keng (2016) - [blog](http://bjlkeng.github.io/posts/probabilistic-interpretation-of-regularization/)
 
 **Code**:
 

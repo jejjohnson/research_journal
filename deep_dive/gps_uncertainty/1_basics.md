@@ -219,7 +219,8 @@ p(y|X, \theta)=\mathcal{N}(y|m_\theta, K_\theta + \sigma_n^2 \mathbf{I})
 $$
 
 
-#### Proof:
+<details>
+    <summary>Proof: Click to Expand</summary>
 
 Using the Gaussian identities:
 
@@ -246,6 +247,8 @@ p(f|y) &= \mathcal{N} (f|\Sigma \{ K^{-1}y + \mathbf{K}_\theta m_\theta \}, \Sig
 **Source**: 
 
 * Alternative Derivation for Log Likelihood - [blog](http://jrmeyer.github.io/machinelearning/2017/08/18/mle.html)
+
+</details>
 
 
 
