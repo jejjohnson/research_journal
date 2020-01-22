@@ -124,16 +124,25 @@
 ---
 ### 2.2 Density Estimation
 
-* Classical (Binning, Kernel, Adaptive | KNN)
-* Change of Variables (NF, Density Destructor, Gaussianization)
-* Conditional
+* Parametric
+  * Gaussian
+  * Mixture of Gaussians
+* Classical
+  * Binning (Histogram) - 
+  * Kernel - Smooth
+  * kNN - Adaptive
+* Neural Density Estimation
+  * Normalizing Flows
+  * Density Destructor
+  * Gaussianization
+* Conditional Density Estimation
 
 ---
 ### 2.3 Neural Networks
 
-* Discriminative
-* Probabilistic
-* Bayesian
+* Discriminative Neural Networks
+* Probabilistic Neural Networks
+* Fully Bayesian Neural Networks
 
 ---
 ### 2.4 Other
@@ -340,20 +349,6 @@
 
 
 ---
-## Quotes
-
-**Explanations**
-> If you can't explain it simply, then you don't understand it enough - Einstein
-
-**Code Snippets**
-> Talk is cheap. Show me the code - Linus Torvald
-
-**Lab Notebooks**
-> OK. But how does it work in practice?
-> AutoDiff all the things!
-
-**Sleeper Theorems**
-> I'll leave it up to the user as an exercise | It's easy to show that | as seen in [1] 
 
 
 ---
