@@ -10,6 +10,7 @@
       - [Epistemic Uncertainty, $\nu_{**}^2$](#epistemic-uncertainty-mathsemanticsmrowmsubsupmi%ce%bdmimrowmo%e2%88%97momo%e2%88%97momrowmn2mnmsubsupmrowannotation-encoding%22applicationx-tex%22nu2annotationsemanticsmath%ce%bd%e2%88%97%e2%88%972%e2%80%8b)
       - [Uncertainty in the Error Generalization](#uncertainty-in-the-error-generalization)
     - [Uncertainty Over Functions](#uncertainty-over-functions)
+  - [Distribution Shift](#distribution-shift)
 
 ---
 
@@ -38,7 +39,7 @@ Before we talk about the types of neural networks that handle uncertainty, we fi
   * model/reducible uncertainty
   * when the output depends determininstically on the input, but there is uncertainty due to lack of observations - IWSDGP
   * 
-* Out-of-Distribution 
+* Out-of-Distribution, Distribution Shift 
   * when the distribution we learn from is different from the testing data.
 * Expected Uncertainty
 
@@ -163,3 +164,12 @@ where:
 
 Strictly speaking from the predictive uncertainty formulation above, uncertainty has two components: the variance from the likelihood term $\sigma^2$ and the variance from the posterior term $\nu_{**}^2$. 
 
+---
+
+## Distribution Shift
+
+In ML, we typically assume that our data is stationary; meaning that it will always come from the same distribution. This is not always the case as sometimes we just only observed a portion of the data, e.g. space and time.
+
+**Need Example**: Earth science, in time and space?
+
+This is also essential in the causality realm where such a bad assumption could lead to incorrect causal graphs.
