@@ -20,7 +20,7 @@ $$
 Let's demonstrate this by generating N data points from the true distribution.
 
 <p float='center'> 
-   <img src="pics/lin_reg_sample.png" width="300" />
+  <img src="pics/lin_reg_sample.png" width="300" />
   <img src="pics/lin_reg_weight.png" width="300" />
 </p>
 
