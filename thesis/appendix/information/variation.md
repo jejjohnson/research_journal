@@ -32,9 +32,9 @@ Another way to measure similarity would be in the family of Information Theory M
 We will be using Anscombe example. This is a dataset that has the same attributes statistically, but measures like mean, variance and correlation seem to be the same. A classic dataset to show that linear methods will fail for nonlinear datasets.
 
 <p float='center'> 
-  <img src="pics/vi/demo_caseI.png" width="200" />
-  <img src="pics/vi/demo_caseII.png" width="200" />
-  <img src="pics/vi/demo_caseIII.png" width="200" />
+  <img src="./pics/vi/demo_caseI.png" width="200" />
+  <img src="./pics/vi/demo_caseII.png" width="200" />
+  <img src="./pics/vi/demo_caseIII.png" width="200" />
 </p>
 
 **Caption**: (a) Obviously linear dataset with noise, (b) Nonlinear dataset, (c) linear dataset with an outlier.
@@ -53,15 +53,19 @@ There are a few important quantities to consider when we need to represent the s
 
 The covariance is a measure to determine how much two variances change. The covariance between X and Y is given by:
 
-$$C(X,Y)=\frac{1}{N}\sum_{i=1}^N (x_i - \mu_x)(y_i - \mu_i)$$
+$$
+C(X,Y)=\frac{1}{N}\sum_{i=1}^N (x_i - \mu_x)(y_i - \mu_i)
+$$
+
 
 where $N$ is the number of elements in both datasets. Notice how this formula assumes that the number of samples for X and Y are equivalent. This measure is unbounded as it can have a value between $-\infty$ and $\infty$. Let's look at an example of how to calculate this below.
 
 <details>
-
 We can remove the loop by doing a matrix multiplication.
 
-$$C(X,Y)=\frac{1}{N} (X-X_\mu)^\top (Y-Y_\mu)$$
+$$
+C(X,Y)=\frac{1}{N} (X-X_\mu)^\top (Y-Y_\mu)
+$$
 
 where $X,Y \in \mathbb{R}^{N\times 1}$
 
@@ -90,7 +94,7 @@ With this normalization, we now have a measure that is bounded between -1 and 1.
 #### Example
 
 <p float='center'> 
-  <img src="pics/vi/demo_corr.png" width="500" />
+  <img src="./pics/vi/demo_corr.png" width="500" />
 </p>
 
 An easier number to interpret. But it will not distinguish the datasets.
@@ -106,9 +110,8 @@ $$RMSE(X,Y)=\sqrt{\frac{1}{N}\sum_{i=1}^N \left((x_i - \mu_x)-(y_i - \mu_i)\righ
 #### Example
 
 <p float='center'> 
-  <img src="pics/vi/demo_rmse.png" width="500" />
+  <img src="./pics/vi/demo_rmse.png" width="500" />
 </p>
-
 
 ---
 
@@ -134,7 +137,7 @@ So, the important quantities needed to be able to plot points on the Taylor diag
 #### Example
 
 <p float='center'> 
-  <img src="pics/vi/demo_taylor.png" width="500" />
+  <img src="./pics/vi/demo_taylor.png" width="500" />
 </p>
 
 We see that the points are on top of each other. Makes sense seeing as how all of the other measures were also equivalent.
@@ -170,7 +173,7 @@ $$I(X,Y)=H(X) + H(Y) - H(X,Y)$$
 #### Example
 
 <p float='center'> 
-  <img src="pics/vi/demo_kde.png" width="500" />
+  <img src="./pics/vi/demo_kde.png" width="500" />
 </p>
 
 Now we finally see some differences between the distributions. 
@@ -192,7 +195,7 @@ This method acts as a pure normalization.
 **Note**: one thing that strikes me as a flaw is the idea that we can get negative entropy values for differential entropy. This may cause problems if the entropy measures have opposite signs. 
 
 <p float='center'> 
-  <img src="pics/vi/demo_nkde.png" width="500" />
+  <img src="./pics/vi/demo_nkde.png" width="500" />
 </p>
 
 This is definitely much easier to interpret. The relative values are also the same.
@@ -204,7 +207,7 @@ This is a symmetric version of the normalized MI measure.
 $$R=2\frac{I(X,Y)}{H(X) + H(Y)}$$
 
 <p float='center'> 
-  <img src="pics/vi/demo_rkde.png" width="500" />
+  <img src="./pics/vi/demo_rkde.png" width="500" />
 </p>
 
 Interestingly, the relative magnitudes are not as similar anymore.
@@ -228,7 +231,7 @@ This is a metric that satisfies the properties such as
 And because the properties are satisfied, we can use it in the Taylor Diagram scheme.
 
 <p float='center'> 
-  <img src="pics/vi/demo_vikde.png" width="500" />
+  <img src="./pics/vi/demo_vikde.png" width="500" />
 </p>
 
 I'm not sure how to interpret this...
@@ -259,15 +262,16 @@ So, the important quantities needed to be able to plot points on the Taylor diag
 
 
 <p float='center'> 
-  <img src="pics/vi/demo_vi.png" width="500" />
+  <img src="./pics/vi/demo_vi.png" width="500" />
 </p>
 
 The nice thing is that the relative magnitudes are preserved and it definitely captures the correlations. I just need to figure out the labels of the chart...
 
 <p float='center'> 
-  <img src="pics/vi/demo_taylor.png" width="300" />
-  <img src="pics/vi/demo_vi.png" width="300" />
+  <img src="./pics/vi/demo_taylor.png" width="300" />
+  <img src="./pics/vi/demo_vi.png" width="300" />
 </p>
+
 
 Relative comaprison.
 
