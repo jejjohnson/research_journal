@@ -30,7 +30,7 @@ A very common mechanism to measure the differences between datasets is to measur
 </p> -->
 
 <p align="center">
-  <img src="./pics/demo_caseI_reg.png" alt="drawing" width="175"/>
+  <img src="https://raw.github.com/jejjohnson/research_journal/blob/master/docs/thesis/appendix/kernels/pics/demo_caseI_reg.png" alt="drawing" width="175"/>
   <img src="./pics/demo_caseII_reg.png" alt="drawing" width="175"/>
   <img src="./pics/demo_caseIII_reg.png" alt="drawing" width="175"/>
   <img src="./pics/demo_caseIV_reg.png" alt="drawing" width="175"/>
