@@ -30,10 +30,10 @@ A very common mechanism to measure the differences between datasets is to measur
 </p> -->
 
 <p align="center">
-  <img src="https://raw.github.com/jejjohnson/research_journal/blob/master/docs/thesis/appendix/kernels/pics/demo_caseI_reg.png" alt="drawing" width="175"/>
-  <img src="./pics/demo_caseII_reg.png" alt="drawing" width="175"/>
+  <img src="thesis/appendix/kernels/pics/demo_caseI_reg.png" alt="drawing" width="175"/>
+  <img src="thesis/appendix/kernels/pics/demo_caseII_reg.png" alt="drawing" width="175"/>
   <img src="thesis/appendix/kernels/pics/demo_caseIII_reg.png" alt="drawing" width="175"/>
-  <img src="docs/thesis/appendix/kernels/pics/demo_caseIV_reg.png" alt="drawing" width="175"/>
+  <img src="thesis/appendix/kernels/pics/demo_caseIV_reg.png" alt="drawing" width="175"/>
 </p>
 
 This means measures like the covariance and correlation become useless because they will yield the same result. This requires us to have more robust methods or to do some really good preprocessing to make models easier.
