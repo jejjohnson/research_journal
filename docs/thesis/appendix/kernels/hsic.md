@@ -22,11 +22,18 @@ We use the Hilbert-Schmidt Independence Criterion (HSIC) measure independence be
 
 A very common mechanism to measure the differences between datasets is to measure the variability. The easiest way is the measure the covariance between the two datasets. However, this is limited to datasets with linear relationships and with not many outliers. Anscombe's classic dataset is an example where we have datasets with the same mean and standard deviation. 
 
-<p align="center">
-  <img src="./pics/demo_caseI_reg.png" alt="drawing" width="175"/>
+<!-- <p align="center">
+  <img src=".pics/demo_caseI_reg.png" alt="drawing" width="175"/>
   <img src="./pics/demo_caseII_reg.png" alt="drawing" width="175"/>
   <img src="./pics/demo_caseIII_reg.png" alt="drawing" width="175"/>
   <img src="./pics/demo_caseIV_reg.png" alt="drawing" width="175"/>
+</p> -->
+
+<p align="center">
+  <img src="../../thesis/appendix/kernels/pics/demo_caseI_reg.png" alt="drawing" width="175"/>
+  <img src="../../thesis/appendix/kernels/pics/demo_caseII_reg.png" alt="drawing" width="175"/>
+  <img src="../../thesis/appendix/kernels/pics/demo_caseIII_reg.png" alt="drawing" width="175"/>
+  <img src="../../thesis/appendix/kernels/pics/demo_caseIV_reg.png" alt="drawing" width="175"/>
 </p>
 
 This means measures like the covariance and correlation become useless because they will yield the same result. This requires us to have more robust methods or to do some really good preprocessing to make models easier.
@@ -65,14 +72,15 @@ In the case of multidimensional datasets, this calculation because a bit more co
 We can empirically calculate this by doing the matrix multiplication of two vectors.
 
 
-<details >
-    <summary>
-    <font color="blue">Code</font>
-	</summary>
 
-    $$
-    C_{xy} = X^\top X
-    $$
+<details >
+<summary>
+    <font color="blue">Code</font>
+</summary>
+
+```python
+C_xy = X.T @ X
+```
 
 </details>
 
@@ -87,8 +95,6 @@ We can empirically calculate this by doing the matrix multiplication of two vect
 
 This is the covariance between different datasets
 
-$$C_{xy} = X^\top Y$$
-
 <details>
 <summary>
     <font color="blue">Code
@@ -98,6 +104,7 @@ $$C_{xy} = X^\top Y$$
 ```python
 c_xy = X.T @ Y
 ```
+
 </details>
 
 ---
@@ -132,38 +139,38 @@ $$||C_{xy}||_{\mathcal{F}}^2 = \sum_i \lambda_i^2 = \text{tr}\left[ C_{xy}^\top 
  
 
 <details>
-    <summary>
-        <font color="blue">Code
-        </font>
-    </summary>
+<summary>
+    <font color="blue">Code
+    </font>
+</summary>
 
-    This is very easy to compute in practice. One just needs to calculate the Frobenius Norm (Hilbert-Schmidt Norm) of a covariance matrix This boils down to computing the trace of the matrix multiplication of two matrices: $tr(C_{xy}^\top C_{xy})$. So in algorithmically that is:
+This is very easy to compute in practice. One just needs to calculate the Frobenius Norm (Hilbert-Schmidt Norm) of a covariance matrix This boils down to computing the trace of the matrix multiplication of two matrices: $tr(C_{xy}^\top C_{xy})$. So in algorithmically that is:
 
-    ```python
-    hsic_score = np.sqrt(np.trace(C_xy.T * C_xy))
-    ```
-    We can make this faster by using the `sum` operation
+```python
+hsic_score = np.sqrt(np.trace(C_xy.T * C_xy))
+```
+We can make this faster by using the `sum` operation
 
-    ```python
-    # Numpy
-    hsic_score = np.sqrt(np.sum(C_xy * C_xy))
-    # PyTorch
-    hsic_score = (C_xy * C_xy).sum().sum()
-    ```
+```python
+# Numpy
+hsic_score = np.sqrt(np.sum(C_xy * C_xy))
+# PyTorch
+hsic_score = (C_xy * C_xy).sum().sum()
+```
 
-    **Refactor**
+**Refactor**
 
-    There is a built-in function to be able to to speed up this calculation by a magnitude.
+There is a built-in function to be able to to speed up this calculation by a magnitude.
 
-    ```python
-    hs_score = np.linalg.norm(C_xy, ord='fro')
-    ```
+```python
+hs_score = np.linalg.norm(C_xy, ord='fro')
+```
 
-    and in PyTorch
+and in PyTorch
 
-    ```python
-    hs_score = torch.norm(C_xy, p='fro)
-    ```
+```python
+hs_score = torch.norm(C_xy, p='fro)
+```
 </details>
 
 And also just like the correlation, we can also do a normalization scheme that allows us to have an interpretable scalar value. This is similar to the correlation coefficient except it can now be applied to multi-dimensional data.
@@ -244,6 +251,15 @@ $$
 + \frac{1}{N^2} \sum_{r,s=1}^N K_s
 \end{aligned}
 $$
+
+
+</details>
+
+<details>
+<summary>
+    <font color="blue">Code
+    </font>
+</summary>
 
 On a more practical note, this can be done easily by:
 

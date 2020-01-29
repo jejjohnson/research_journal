@@ -85,7 +85,6 @@ We only need a few elements to define a Gaussian process in itself. Just a mean 
     </font>
 </summary>
 
-
 ```python
 class GPR:
     def __init__(self, mu, kernel, X, y, noise_variance=1e-6):
@@ -95,9 +94,6 @@ class GPR:
         self.y_train = y_train
         self.noise_variance = noise_variance
 ```
-
-In the above script, we are
-
 </details>
 
 ---
