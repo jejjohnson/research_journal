@@ -3,7 +3,7 @@
 * [Home Page](README.md)
 
 **Thesis**
-* [Outline](docs/thesis/README.md)
+* [Outline](thesis/README.md)
 
 **Posts**
 * [HSIC](thesis/appendix/kernels/hsic.md)
