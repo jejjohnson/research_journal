@@ -109,30 +109,6 @@ If we optimize $\mathcal{F}$ with respect to $q(\mathbf x)$, the KL is minimized
 * Limited theory and guarantees for variational mehtods
 
 ---
-## Supplementary
-
----
-### Jensens Inequality
-
-This theorem is one of those [sleeper theorems](https://www.johndcook.com/blog/2012/12/10/sleeper-theorems/) which comes up in a big way in many machine learning problems. 
-
-The Jensen inequality theorem states that for a convex function $f$, 
-
-$$\mathbb{E} [f(x)] \geq f(\mathbb{E}[x])$$
-
-A convex function (or concave up) is when there exists a minimum to that function. If we take two points on any part of the graph and draw a line between them, we will be above or at (as a limit) the minimum point of the graph. We can flip the signs for a concave function. But we want the convex property because then it means it has a minimum value and this is useful for minimization strategies. Recall from Calculus class 101: let's look at the function $f(x)=\log x$.
-
-We can use the second derivative test to find out if a function is convex or not. If $f'(x) \geq 0$ then it is concave up (or convex). I'll map out the derivatives below:
-
-$$f'(x) = \frac{1}{x}$$
-$$f''(x) = -\frac{1}{x^2}$$
-
-You'll see that $-\frac{1}{x^2}\leq 0$ for $x \in [0, \infty)$. This means that $\log x$ is a concave function. So, the solution to this if we want a convex function is to take the negative $\log$ (which adds intuition as to why we typically take the negative log likelihood of many functions).
-
-
-
-
----
 ## Resources
 
 * Tutorial Series - [Why?](https://chrisorm.github.io/VI-Why.html) | [ELBO](https://chrisorm.github.io/VI-ELBO.html) | [MC ELBO](https://chrisorm.github.io/VI-MC.html) | [Reparameterization](https://chrisorm.github.io/VI-reparam.html) | [MC ELBO unBias](https://chrisorm.github.io/VI-ELBO-MC-approx.html) | [MC ELBO PyTorch](https://chrisorm.github.io/VI-MC-PYT.html) | [Talk](https://chrisorm.github.io/pydata-2018.html)

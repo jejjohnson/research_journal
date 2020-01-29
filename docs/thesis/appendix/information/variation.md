@@ -270,7 +270,7 @@ So, the important quantities needed to be able to plot points on the Taylor diag
 
 
 <p float='center'> 
-  <img src="../../thesis/appendix/information/pics/vi/demo_vi.png" width="500" />
+  <img src="thesis/appendix/information/pics/vi/demo_vi.png" width="500" />
 </p>
 
 The nice thing is that the relative magnitudes are preserved and it definitely captures the correlations. I just need to figure out the labels of the chart...
