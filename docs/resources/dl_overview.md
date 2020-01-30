@@ -6,6 +6,18 @@
 
 ---
 
+- [What is Deep Learning?](#what-is-deep-learning)
+- [Anatomy of good DL software](#anatomy-of-good-dl-software)
+- [Convergence of the Libraries](#convergence-of-the-libraries)
+- [So what to choose?](#so-what-to-choose)
+- [List of Software](#list-of-software)
+  - [Core Packages](#core-packages)
+    - [TensorFlow (TF)](#tensorflow-tf)
+    - [PyTorch](#pytorch)
+  - [Other Packages](#other-packages)
+
+---
+
 ## What is Deep Learning?
 
 Before we get into the software, I just wanted to quickly define deep learning. A recent debate on [twitter](https://twitter.com/yudapearl/status/1215174538087948288) got me thinking about an appropriate definition and it helped me think about how this definition relates to the software. It gave me perspective.
@@ -72,7 +84,7 @@ Originally, there was a lot of differences between the deep learning libraries, 
 <details>
 
 |         |            |
-|---------|------------|
+| ------- | ---------- |
 | Gluon   | TensorFlow |
 | PyTorch | Chainer    |
 

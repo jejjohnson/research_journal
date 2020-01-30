@@ -12,7 +12,13 @@ This is my research journal of various topics that I'm interested in for my rese
 
 <!-- ### [Project Webpages](projects/README.md) -->
 
-### [Talks](talks/README.md)
+#### [**My Talks**](talks/README.md)
+
+> Some talks that I have done along with code and slides.
+
+#### [**My Resources**](resources/README.md)
+
+> My resources for all things python and tech. I like to tinker with different packages so I try to document my findings.
 
 <!-- ### [Thesis](thesis/README.md) -->
 

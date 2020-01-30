@@ -1,5 +1,31 @@
 # GPs and Uncertain Inputs through the Ages
 
+- [Summary](#summary)
+- [Standard GP Formulation](#standard-gp-formulation)
+  - [Stochastic Test Points](#stochastic-test-points)
+    - [Setup](#setup)
+    - [GP Predictive Distribution](#gp-predictive-distribution)
+    - [Numerical Integration](#numerical-integration)
+    - [Approximate Gaussian Distribution](#approximate-gaussian-distribution)
+- [Stochastic Measurements](#stochastic-measurements)
+  - [Noisy-Input GP (NIGP)](#noisy-input-gp-nigp)
+    - [Expected Derivative](#expected-derivative)
+    - [Moment Matching](#moment-matching)
+- [Variational Strategies](#variational-strategies)
+- [My Method - Marriage of Two Strategies](#my-method---marriage-of-two-strategies)
+  - [Model](#model)
+  - [Inference](#inference)
+- [Supplementary Material](#supplementary-material)
+  - [Moment Matching](#moment-matching-1)
+  - [Kernel Expectations](#kernel-expectations)
+  - [Propagation of Variances](#propagation-of-variances)
+  - [NIGP - Propagating Variances](#nigp---propagating-variances)
+- [Real Results with Variance Estimates](#real-results-with-variance-estimates)
+- [Resources](#resources)
+  - [Papers](#papers)
+    - [Thesis Explain](#thesis-explain)
+    - [Important Papers](#important-papers)
+
 
 ## Summary
 
@@ -337,7 +363,7 @@ where $\mathcal{K}_\theta=\mathbf K + \mathbf{\tilde \Sigma_\mathbf{x}} + \sigma
 What links all of the strategies above is how they approach the problem of uncertain inputs: approximating the posterior distribution. The methods that use moment matching on stochastic trial points are all using various strategies to construct some posterior approximation. They define their GP model first and then approximate the posterior by using some approximate scheme to account for uncertainty. The NIGP however does change the model which is a product of the Taylor series expansion employed. From there, the resulting posterior is either evaluated or further approximated. My method actually is related because I also avoid changing the model and just attempt approximate the posterior predictive distribution by augmenting the variance method only (**???**).
 
 ---
----
+
 ## My Method - Marriage of Two Strategies
 
 I looked at both strategies of stochastic trial points versus stochastic inputs to see how would it work in real applications. One thing that was very limiting in almost all of these methods was how expensive they were. When it comes to real data, calculating higher order derivatives can be very costly. It seemed like the more sophisticated the model, the more expensive the method is. An obvious example the NIGP where it requires multiple iterations in conjunction with multiple restarts to avoid local minimum. I just don't see it happening when dealing with 2,000+ points. However, I support the notion of using posterior information by the use of gradients of the predictive mean function as I think this is valuable information which GPs give you access to. With big data as my limiting factor, I chose to keep the training procedure the same but modify the predictive variance using the methodology from the NIGP paper. I don't really do anything new that cannot be found from the above notions but I tried to take the best of both worlds given my problem. I briefly outline it below.
@@ -384,10 +410,10 @@ I did an experiment where I was trying to predict temperature from radiances for
 * Accounting for Input Noise in GP Parameter Retrieval - [letter]()
 
 ---
----
+
 ## Supplementary Material
 
----
+
 ### Moment Matching
 
 In a nutshell, we can calculate the approximations of any distribution $f$ by simply taking the moments of that distribution. Each moment is defined by an important statistic that most of us are familiar with:
@@ -496,7 +522,6 @@ y &= f(\mathbf x) + \frac{\partial f(\mathbf x)}{\partial x}\Sigma_x \left( \fra
 
 **Figure**: GP Variance Estimates account for input errors.
 
----
 ---
 ## Resources
 
