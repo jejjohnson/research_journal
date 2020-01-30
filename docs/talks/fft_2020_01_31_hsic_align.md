@@ -14,9 +14,11 @@
 
 ### Abstract
 
-Kernel methods are class of machine learning algorithms solve complex nonlinear functions by a transformation facilitated by flexible, and expressive representations through kernel functions. For classes of problems such as regression and classification, there is an objective which allows provides a criteria for selecting the kernel parameters. However, in unsupervised settings such as dependence estimation where we compare two separate variables, there is no objective function to minimize or maximize except for the measurement itself. Alternatively one can choose the kernel parameters by a means of a heuristic but it is unclear which heuristic is appropriate for which application. 
+When we have lots of data and want to make comparisons, we need methods to give us an overall summary. A very popular method is to measure the covariance and/or correlation which tackles this problem from a variability perspective. It's good but there are limitations to this method: 1) It can only handle linear relationships and 2) It's not clear how it applies to multivariate/multi-dimensional data. 
 
-The Hilbert-Schmidt Independence Criterion (HSIC) is one of the most widely used kernel methods for estimating dependence but it is not invariant to isotropic scaling for some kernels and it is difficult to interpret because there is no upper bound. The Kernel Alignment (KA) method is a normalized version of HSIC which alleviates the isotropic scaling issue as well as gives a more interpretable output value.  In this work we demonstrate how the kernel parameter for maximum value of the HSIC measures changes depending on the toy dataset and the amount of noise present. We also demonstrate how the methods compare when evaluated on known distributions where the analytical mutual information is available.
+We can use a nonlinear kernel function on this covariance matrix which addresses some of the limitations that the covariance/correlation measures exhibit. However, there is a problem that all kernel methods have: the parameters of the kernel function. For a supervised learning problem such as regression or classification, you have an objective that you want to minimize so it's clear which parameters you should use. However in unsupervised settings, there is no objective so it's not clear how we pick the parameters for the kernel function.  
+
+We do a detailed empirical analysis using different kernel parameter initialization schemes, for different toy datasets, and with different sample and dimension sizes. The obvious question we want to answer is: which kernel parameter should I use? And the answers that we found was as expected: it depends... But the nevertheless, the results are reassuring. 
 
 
 ---
