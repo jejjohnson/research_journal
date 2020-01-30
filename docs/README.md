@@ -12,9 +12,9 @@ This is my research journal of various topics that I'm interested in for my rese
 
 ### [Project Webpages](projects/README.md)
 
-### [Thesis](thesis/README.md)
+<!-- ### [Thesis](thesis/README.md) -->
 
-### [Ideas](ideas.md)
+<!-- ### [Ideas](ideas.md) -->
 
 
 ---

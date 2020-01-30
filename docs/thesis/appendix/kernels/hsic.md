@@ -213,7 +213,7 @@ $$
 
 ### Kernel Trick
 
-So now, we have only had a linear dot-similarity between the samples. 
+So now, we have only had a linear dot-similarity in the sample space of $\mathcal{X}$ and $\mathcal{Y}$. This is good but we can easily extend this to a non-linear transformation where we add an additional function $\psi$ for each of the kernel functions.
 
 $$\langle C_{\mathbf{xx^\top }}, C_{\mathbf{yy^\top}}\rangle_{\mathcal{F}} 
 =
