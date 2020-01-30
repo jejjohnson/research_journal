@@ -5,6 +5,7 @@
 * [Logistics](thesis/logistics.md)
 * [Quotes](thesis/quotes.md)
 * [Reproducibility](thesis/reproducibility.md)
+* [Scratch](thesis/scratch.md)
 
 ---
 

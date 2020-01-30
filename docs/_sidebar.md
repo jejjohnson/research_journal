@@ -2,4 +2,5 @@
 
 * [Home Page](README.md)
 * [Talks](talks/README.md)
+* [My Resources](resources/README.md)
 <!-- * [Thesis](thesis/README.md) -->

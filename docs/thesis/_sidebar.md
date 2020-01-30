@@ -1,5 +1,8 @@
 
 * [Home Page](README.md)
+* [Talks](talks/README.md)
+* [Projects](projects/README.md)
+* [Thesis](thesis/README.md)
 
 **Overview**
 * [Outline](thesis/README.md)
