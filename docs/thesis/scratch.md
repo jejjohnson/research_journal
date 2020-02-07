@@ -2,6 +2,13 @@
 
 These are some scratch notes for organizing my thesis.
 
+
+---
+
+## IDEAS to Add
+
+* Two Views on Regression with PyMC3 and sklearn - [prezi](https://colcarroll.github.io/pydata_nyc2017/)
+
 ---
 
 ## Main Idea
