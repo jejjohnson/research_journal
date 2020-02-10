@@ -10,3 +10,7 @@
 ## Software Engineering
 
 * [Awesome SWE 4 ML](https://github.com/SE-ML/awesome-seml)
+
+## XArray
+
+* [XBatcher](https://github.com/rabernat/xbatcher)
