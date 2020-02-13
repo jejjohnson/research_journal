@@ -25,9 +25,12 @@ These are a few simple tools that can be helpful with dealing spatial-temporal a
 
 <center>
 <img src="http://xarray.pydata.org/en/stable/_images/dataset-diagram.png" width="600">
-</center>
 
 **Source**: [Xarray Data Structure documentation](http://xarray.pydata.org/en/stable/data-structures.html)
+
+</center>
+
+
 
 This image says a lot: is the default package for handling spatial-temporal-variable datasets. This alone has helped me contain data where I care about the meta-data as well. Numpy Arrays are great but they are limited in their retention of meta-data. In addition, it has many features that allow you to work with it from a numpy array perspective and even better from a pandas perspective. It makes the whole ordeal a lot easier.
 

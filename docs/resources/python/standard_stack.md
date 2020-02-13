@@ -98,6 +98,7 @@ This is the default plotting library for python. Most people have a love-hate re
 
 * [Matplotlib Gallery](https://matplotlib.org/gallery/index.html)
 * [Anatomy of Matplotlib](https://github.com/matplotlib/AnatomyOfMatplotlib)
+* [An Inquiry Into Matplotlib's Figures](https://matplotlib.org/matplotblog/posts/an-inquiry-into-matplotlib-figures/)
 * [Python Plotting with Matplotlib](https://realpython.com/python-matplotlib-guide/) - Real Python
 * [Python Data Science Handbook](https://jakevdp.github.io/PythonDataScienceHandbook/04.00-introduction-to-matplotlib.html) - Jake Vanderplas - Chapter 4 - Visualization with Matplotlib
 * [Creating Publication-Quality Figures with Matplotlib](https://github.com/jbmouret/matplotlib_for_papers)
