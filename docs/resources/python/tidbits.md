@@ -14,3 +14,14 @@
 ## XArray
 
 * [XBatcher](https://github.com/rabernat/xbatcher)
+
+## Saving and Loading Models
+
+
+### sklearn
+
+* [Sklearn Docs](https://scikit-learn.org/stable/modules/model_persistence.html)
+* ONNX
+  * [sklearn-onnx](http://onnx.ai/sklearn-onnx/)
+  * Deploying an Sklearn model with onnx and fast-api - [blog](https://medium.com/@nico.axtmann95/deploying-a-scikit-learn-model-with-onnx-und-fastapi-1af398268915)
+  * [Deployment](http://www.xavierdupre.fr/app/jupytalk/helpsphinx/notebooks/onnx_sklearn_consortium.html)
