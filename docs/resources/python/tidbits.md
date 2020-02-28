@@ -11,6 +11,10 @@
 
 * [Awesome SWE 4 ML](https://github.com/SE-ML/awesome-seml)
 
+### Testing
+
+* Annotating Code Tests and Selectively Running Tests - [Blog](https://ericmjl.github.io/blog/2018/2/25/annotating-code-tests-and-selectively-running-tests/)
+
 ## XArray
 
 * [XBatcher](https://github.com/rabernat/xbatcher)

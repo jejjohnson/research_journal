@@ -7,5 +7,10 @@
 * [Python IDEs](resources/python/ides.md)
 * [Earth Sci Stack](resources/python/earthsci.md)
 
+**Code**
+* [Good Programming](resources/code/good_code.md)
+* [Cheat Sheets](resources/tips/README.md)
+* [Snippets](resources/snippets/README.md)
+
 **Deep Learning**
 * [Overview](resources/dl_overview.md)
