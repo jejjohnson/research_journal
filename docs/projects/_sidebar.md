@@ -3,7 +3,7 @@
 * [Projects](projects/README.md)
 * [Thesis](thesis/README.md)
 * [My Resources](resources/README.md)
-
+* [Thesis](thesis/README.md)
   
 **Main Projects**
 * [Kernel Derivatives and Applications](/)

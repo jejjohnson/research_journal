@@ -1,7 +1,11 @@
 * [Home Page](README.md)
 * [Talks](talks/README.md)
+* [Projects](projects/README.md)
+* [Thesis](thesis/README.md)
 * [My Resources](resources/README.md)
-  
+* [Thesis](thesis/README.md)
+
+
 **Python**
 * [Standard Python Stack](resources/python/standard_stack.md)
 * [Python IDEs](resources/python/ides.md)

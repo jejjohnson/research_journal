@@ -12,17 +12,27 @@ This is my research journal of various topics that I'm interested in for my rese
 
 <!-- ### [Project Webpages](projects/README.md) -->
 
-#### [**My Talks**](talks/README.md)
+### [**My Talks**](talks/README.md)
 
 > Some talks that I have done along with code and slides.
 
-#### [**My Resources**](resources/README.md)
+### [**My Resources**](resources/README.md)
 
 > My resources for all things python and tech. I like to tinker with different packages so I try to document my findings.
 
-<!-- ### [Thesis](thesis/README.md) -->
 
-<!-- ### [Ideas](ideas.md) -->
+### [**My Projects**](projects/README.md)
+
+> My projects that I am involved in mostly related to academia.
+
+
+### [**My Thesis**](thesis/README.md)
+
+> My Thesis and everything related to it. I decided to compile all of my notes in markdown and of course the final product will be available in LaTeX format.
+
+### [**My Tutorials**](thesis/README.md)
+
+> I do like to give back to the community. So I have compiled some tutorials that will hopefully be helpful to other people.
 
 
 ---
