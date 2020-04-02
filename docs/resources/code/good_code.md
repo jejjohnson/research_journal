@@ -3,6 +3,7 @@
 - [Logging](#logging)
 - [Testing](#testing)
 - [Repository Organization](#repository-organization)
+- [Packaging](#packaging)
 - [Type Checking](#type-checking)
 - [Continuous Integration](#continuous-integration)
 - [WorkFlow](#workflow)
@@ -67,6 +68,11 @@ Something that we all should do but don't always do. It's important for the long
 
 ## Repository Organization
 
+## Packaging
+
+**Source**:
+* [PyPA](https://packaging.python.org/)
+* [How to Package Your Python Code](https://python-packaging.readthedocs.io/en/latest/)
 
 
 ## Type Checking
