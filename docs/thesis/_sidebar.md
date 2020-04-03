@@ -4,7 +4,7 @@
 * [Projects](projects/README.md)
 * [Thesis](thesis/README.md)
 * [My Resources](resources/README.md)
-* [Thesis](thesis/README.md)
+* [Tutorials](tutorials/README.md)
 
 **Overview**
 * [Outline](thesis/README.md)

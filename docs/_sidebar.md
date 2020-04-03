@@ -5,6 +5,5 @@
 * [Projects](projects/README.md)
 * [Thesis](thesis/README.md)
 * [My Resources](resources/README.md)
-* [Thesis](thesis/README.md)
+* [My Tutorials](tutorials/README.md)
 
-<!-- * [Thesis](thesis/README.md) -->

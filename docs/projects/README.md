@@ -1,34 +1,37 @@
 # Project Webpages
 
----
+## Main Projects
 
-#### Bayesian Neural Networks
-
----
-
-#### HSIC Similarity
+### [HSIC Similarity](/projects/similarity/README.md)
 
 * Empirical Study
 * Information BottleNeck & Neural Networks
 
-#### Input Uncertainty
 
-* Error GP, Sparse Error GP
-* EGP
-* EGP + Kalman Filter
 
-#### Machine Learning for Multi-Output Ocean Applications
+### [Input Uncertainty](projects/egps/README.md)
+
+* Assuming Input Error in the methods
+* Extensive Literature review
+* Looking at linearized and variational methods to propagate the errors through the GPs
+* Applications to IASI satellite data and prediction
+* Explore some relations to Kalman Filtering
+
+### [Applied Gaussianization for Earth Observation](projects/rbig/README.md)
+
+---
+
+## Side Projects
+
+
+### Machine Learning for Multi-Output Ocean Applications
 
 * Multi-Output Gaussian Processes
 * High-Dimensional, Multi-Output Data
 
 ---
 
-#### RBIG 4 Spatial-Temporal Earth Observation Data
 
-* Spatial-Temporal Explorations
-* Drought Indicators
-* Climate Models
 
 #### SAKAME
 

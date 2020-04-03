@@ -1,7 +1,12 @@
-* [Home Page](README.md)
-* [Thesis](thesis/README.md)
 
-**Appendices**
+* [Home Page](README.md)
+* [Talks](talks/README.md)
+* [Projects](projects/README.md)
+* [Thesis](thesis/README.md)
+* [My Resources](resources/README.md)
+* [Tutorials](tutorials/README.md)
+
+**Thesis Appendices**
 * Bayesian
   * [Introduction](thesis/appendix/concepts/bayesian/intro.md)
   * [Regression](thesis/appendix/concepts/bayesian/regression.md)
@@ -16,6 +21,9 @@
   * [Information](thesis/appendix/gps/gps_and_it.md)
 * Kernels
    * [HSIC](thesis/appendix/kernels/hsic.md)
+   * [Similarity](thesis/appendix/kernels/similarity.md)
+   * [distances](thesis/appendix/kernels/distances.md)
+   * [Information](thesis/appendix/kernels/kernels_it.md)
 * Information Theory
   * [Formulas](thesis/appendix/information/it_formulas.md)
   * [Variation of Information](thesis/appendix/information/variation.md)
