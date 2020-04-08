@@ -8,8 +8,9 @@
   - [Built-In](#built-in)
   - [Dedicated Plotting Libraries](#dedicated-plotting-libraries)
 - [Other Useful Utilities](#other-useful-utilities)
-  - [Regridding: **xESMF**](#regridding-xesmf)
-  - [Geometries: **rioxarray**](#geometries-rioxarray)
+    - [Regridding: **xESMF**](#regridding-xesmf)
+    - [Geometries: **rioxarray**](#geometries-rioxarray)
+    - [**Rasterio**](#rasterio)
 
 ---
 
@@ -102,15 +103,24 @@ These are packages where the routine is built-in as a side option and not a full
 
 This has been recommended for large scale datasets with [millions of points](http://holoviews.org/user_guide/Large_Data.html)! They have some tutorials for [polygons](http://holoviews.org/user_guide/Geometry_Data.html) and xarray [grids](http://holoviews.org/user_guide/Gridded_Datasets.html).
 
+[**geoviews**]()
+
+[**kepler.gl**]()
+
+[**pyviz**]()
+
 ---
 
 ## Other Useful Utilities
 
-### Regridding: [**xESMF**](https://xesmf.readthedocs.io/en/latest/why.html)
+#### Regridding: [**xESMF**](https://xesmf.readthedocs.io/en/latest/why.html)
   > Ever had one dataset in xarray that had one lat,lon resolution and then you have another dataset with a different lat,lon resolution? Well, you can use this package to easily move from one coordinate grid reference to another. It removes a lot of the difficulty and it is relatively fast for small-medium sized datasets.
 
 
-### Geometries: [**rioxarray**](https://corteva.github.io/rioxarray/html/index.html)
+#### Geometries: [**rioxarray**](https://corteva.github.io/rioxarray/html/index.html)
   > A useful package that allows you to couple geometries with xarray. You can 
     mask or reproject data. I like this package because it's simple and it 
     focuses on what it is good at and nothing else.
+
+
+#### [**Rasterio**]()

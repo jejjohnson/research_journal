@@ -5,7 +5,9 @@
 * [Projects](projects/README.md)
 * [Thesis](thesis/README.md)
 * [My Resources](resources/README.md)
-* [Thesis](thesis/README.md)
+* [My Tutorials](tutorials/README.md)
+* [Snippets](snippets/README.md)
+
 
 [**Talks**](talks/README.md)
 * [2018 KERMES](talks/2018_kermes_egp.md)

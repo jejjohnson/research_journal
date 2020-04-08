@@ -8,3 +8,7 @@
 * [My Tutorials](tutorials/README.md)
 * [Snippets](snippets/README.md)
 
+**Bash Snippets**
+* [Subsequent Scripts](snippets/bash/run_scripts.md)
+* [Loops](snippets/bash/loops.md)
+* [Args](snippets/bash/args.md)

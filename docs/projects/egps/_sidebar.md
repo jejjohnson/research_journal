@@ -5,8 +5,11 @@
 * [Projects](projects/README.md)
 * [Thesis](thesis/README.md)
 * [My Resources](resources/README.md)
+* [My Tutorials](tutorials/README.md)
+* [Snippets](snippets/README.md)
 
 **Background**
+* [Overview](projects/egps/overview.md)
 * [Uncertainty](projects/egps/uncertainty.md)
 * [GP Basics](projects/egps/basics.md)
 * [Error Propagation](projects/egps/error_propagation.md)

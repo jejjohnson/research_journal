@@ -1,15 +1,14 @@
 # Project Webpages
 
-## Main Projects
 
-### [HSIC Similarity](/projects/similarity/README.md)
+## [HSIC Similarity](/projects/similarity/README.md)
 
 * Empirical Study
 * Information BottleNeck & Neural Networks
 
 
 
-### [Input Uncertainty](projects/egps/README.md)
+## [Input Uncertainty](projects/egps/README.md)
 
 * Assuming Input Error in the methods
 * Extensive Literature review
@@ -17,7 +16,9 @@
 * Applications to IASI satellite data and prediction
 * Explore some relations to Kalman Filtering
 
-### [Applied Gaussianization for Earth Observation](projects/rbig/README.md)
+## [Applied Gaussianization for Earth Observation](projects/rbig/README.md)
+
+
 
 ---
 

@@ -70,9 +70,13 @@ def rbf_kernel(X, Y=None, signal_variance=1.0, length_scale=1.0):
     """
     X, Y = check_pairwise_arrays(X, Y)
 
-    K = euclidean_distances(X, Y, squared=True)
-    K *= - 1 / (length_scale**2)
+    X /= length_scale
+    Y /= length_scale
+
+    K = - 0.5 * euclidean_distances(X, Y, squared=True)
+
     np.exp(K, K)                # exponentiate K in-place
+    
     K *= signal_variance        # multiply by signal_variance
     return K
 

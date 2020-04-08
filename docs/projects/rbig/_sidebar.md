@@ -5,6 +5,8 @@
 * [Projects](projects/README.md)
 * [Thesis](thesis/README.md)
 * [My Resources](resources/README.md)
+* [My Tutorials](tutorials/README.md)
+* [Snippets](snippets/README.md)
 
 **Theory**
 * [Gaussianization](projects/rbig/theory/gaussianization.md)

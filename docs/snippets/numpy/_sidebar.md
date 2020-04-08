@@ -8,3 +8,7 @@
 * [My Tutorials](tutorials/README.md)
 * [Snippets](snippets/README.md)
 
+**Numpy Snippets**
+* [Euclidean Distance](snippets/numpy/euclidean.md)
+* [RBF Kernel](snippets/numpy/rbf_kernel.md)
+* [Sum every n elements](snippets/numpy/group_sum.md)

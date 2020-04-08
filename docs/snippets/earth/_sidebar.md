@@ -8,3 +8,6 @@
 * [My Tutorials](tutorials/README.md)
 * [Snippets](snippets/README.md)
 
+
+[**Earth Sci**](snippets/earth/README.md)
+* [Geo & Cartesian](snippets/earth/cart_geo.md)

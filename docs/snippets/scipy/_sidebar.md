@@ -8,3 +8,6 @@
 * [My Tutorials](tutorials/README.md)
 * [Snippets](snippets/README.md)
 
+
+[**Scipy**](snippets/scipy/README.md)
+* [Cholesky Decomposition](snippets/scipy/cholesky.md)

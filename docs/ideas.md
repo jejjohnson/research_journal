@@ -2,6 +2,42 @@
 
 I would like to do some blog posts for my academic blog. There are tons of things I would like to do but I don't really have time to do it all. So I would like to try a concept: combine scientific exploration with some programming concept exploration. For example, instead of doing a segment on Object-Oriented Programming and then a separate segment on Gaussian Process regression (GPR), I would combine the two.
 
+
+### Programming
+
+
+
+### Packages
+
+* GPyTorch - DKL, 
+* Pyro
+* GPFlow
+* geopandas
+* xarray
+* 
+
+
+### Algorithms
+
+* Optimized Kernel Ridge Regression (OKRR)
+  * Jax
+* Optimized Kernel Entropy Components Analysis (OKECA)
+  * Jax
+* Rotation-Based Iterative Gaussianization (RBIG)
+* Gaussian Process Regression
+* Variational Gaussian Process Regression
+* Variational Inference
+  * Jax
+  * Bayesian Neural Networks
+* Deep Kernel Learning
+  * GPyTorch - Gaussian Processes
+  * PyTorch - Neural Networks
+  * Data - Ocean Water Quality
+
+
+
+### Unsorted
+
 * Bayesian Formulas + Plotly
 * OOP + GPR from Scratch
 * Kernel Functions (K, GPR, KRR) + Derivatives + AutoGrad
@@ -68,3 +104,23 @@ These are notebooks that I decided to investigate because either I sucked at in 
   * Dask
 * Remote Computing
 
+**xarray**
+
+* Shape Files
+* Region Masks
+* Large Scale ML - PCA, LR, KMeans, XGBoost
+* Dask
+* 
+
+
+
+**Jax**
+
+* Kernel methods
+  * kernels
+  * regression - krr, rff
+  * bayesian regression - gp, sgps
+  * classification - svm
+  * dependence estimation - hsic
+  * dimension reduction - okeca)
+* Gaussianization flows

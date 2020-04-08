@@ -9,56 +9,46 @@ and we can also calculate the log probability like so:
 
 $$\log p_\theta(x) = \log p_z(z) + \log |\nabla_x \mathcal{G}_\theta(x)|$$
 
-
 where $z=\mathcal{G}_\theta(x)$.
 
 ---
 
 ### Negative Log-Likelihood
 
-$$\mathbb{E}_\mathbf{x}\left[  p_\theta(x)\right] =
-\mathbb{E}_x \left[ \log p_z(\mathcal{G}_\theta(x)) + \log |\nabla_x \mathcal{G}_\theta (x)| \right]$$
+$$-\mathbb{E}_\mathbf{x}\left[  \log p_\theta(x)\right] =
+- \mathbb{E}_x \left[ \log p_z(\mathcal{G}_\theta(x)) + \log |\nabla_x \mathcal{G}_\theta (x)| \right]$$
 
 Empirically, this can be calculated by:
 
 $$
-\mathbb{E}_\mathbf{x}\left[  p_\theta(x)\right] =
-\frac{1}{N} \sum_{i=1}^N \log p_z(\mathcal{G}_\theta(x_i)) + 
-\frac{1}{N} \sum_{i=1}^N \log |\nabla_x \mathcal{G}_\theta (x_i)| 
+-\mathbb{E}_\mathbf{x}\left[  \log p_\theta(x)\right] =
+-\frac{1}{N} \sum_{i=1}^N \log p_z(\mathcal{G}_\theta(x_i)) -
+\frac{1}{N} \sum_{i=1}^N \log |\nabla_x \mathcal{G}_\theta (x_i)|
 $$
 
 ---
 
-### Non-Gaussianity
+#### Non-Gaussianity
+
+Another perspective is the "Non-Gaussianity" of your data.
 
 $$J(p_y) = \mathbb{E}_x \left[  \log p_x(x) - \log \left| \nabla_x \mathcal{G}_\theta(x)  \right| - \log \mathcal{N}\left(\mathcal{G}_\theta(x)\right)\right]
 $$
 
+If we assume that the probability of $p_x(x)=c$ because it will never change, it means that the only thing we have to do is minimize the 2nd and 3rd terms.
+
 $$
 \begin{aligned}
 J(p_y) &=
-\mathbb{E}_x \left[  \log p_x(x) \right] -
-\mathbb{E}_x \left[  \log \left| \nabla_x \mathcal{G}_\theta(x)  \right| \right] -
+- \mathbb{E}_x \left[  \log \left| \nabla_x \mathcal{G}_\theta(x)  \right| \right] -
 \mathbb{E}_x \left[  \log \mathcal{N}\left(\mathcal{G}_\theta(x)\right) \right] \\
-&=
-\mathbb{E}_x \left[ \log p_z(\mathcal{G}_\theta(x)) 
-\right] +
-\mathbb{E}_x \left[ \log |\nabla_x \mathcal{G}_\theta (x)| \right] -
-\mathbb{E}_x \left[  \log \left| \nabla_x \mathcal{G}_\theta(x)  \right| \right] -
-\mathbb{E}_x \left[  \log \mathcal{N}\left(\mathcal{G}_\theta(x)\right) \right]
-\\
-&=
-\mathbb{E}_x \left[ \log p_z(\mathcal{G}_\theta(x)) 
-\right] -
-\mathbb{E}_x \left[  \log \mathcal{N}\left(\mathcal{G}_\theta(x)\right) \right]
-\\
 \end{aligned}
 $$
 
 which we can find empirically:
 
 $$J(p_y) = 
-\sum_{i=1}^N \log p_z(\mathcal{G}_\theta(x_i)) -
+\sum_{i=1}^N \log \left| \nabla_x \mathcal{G}_\theta(x)  \right| -
 \sum_{i=1}^N \log \mathcal{N}\left(\mathcal{G}_\theta(x_i)\right)
 $$
 

@@ -8,3 +8,5 @@
 * [My Tutorials](tutorials/README.md)
 * [Snippets](snippets/README.md)
 
+**Python Snippets**
+* [**Tricks with Lists**](snippets/python/lists_tricks.md)
