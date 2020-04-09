@@ -68,6 +68,7 @@ basically mirror opposites of each other. But this might be useful to know later
 * Sampling from a Normal Distribution - [blog](https://juanitorduz.github.io/multivariate_normal/)
   > A really nice blog with nice plots of joint distributions.
 * Two was to derive the conditional distributions - [stack](https://stats.stackexchange.com/questions/30588/deriving-the-conditional-distributions-of-a-multivariate-normal-distribution?noredirect=1&lq=1)
+* How to generate Gaussian samples = [blog](https://medium.com/mti-technology/how-to-generate-gaussian-samples-347c391b7959s)
 
 
 Multivariate Gaussians and Detereminant - [Lecturee Notes](http://courses.washington.edu/b533/lect4.pdf)

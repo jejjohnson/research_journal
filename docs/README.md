@@ -30,9 +30,13 @@ This is my research journal of various topics that I'm interested in for my rese
 
 > My Thesis and everything related to it. I decided to compile all of my notes in markdown and of course the final product will be available in LaTeX format.
 
-### [**My Tutorials**](thesis/README.md)
+### [**My Tutorials**](tutorials/README.md)
 
 > I do like to give back to the community. So I have compiled some tutorials that will hopefully be helpful to other people.
+
+### [**My Snippets**](snippets/README.md)
+
+> I write lots of bits of code everywhere and it tends to be disorganized. I'm trying to organize my bits of code everywhere into digestable snippets; kind of like a personal reference.
 
 
 ---
