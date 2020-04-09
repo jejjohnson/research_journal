@@ -33,8 +33,19 @@ I would like to do some blog posts for my academic blog. There are tons of thing
   * GPyTorch - Gaussian Processes
   * PyTorch - Neural Networks
   * Data - Ocean Water Quality
+* Gaussian Processes
+  * Exact
+  * Variational
+  * Sparse
+  * Sparse Variational
+  * Deep
 
 
+
+### Packages
+
+
+* Edward2 - Bayesian Layers (the future)
 
 ### Unsorted
 

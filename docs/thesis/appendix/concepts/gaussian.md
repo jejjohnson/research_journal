@@ -72,3 +72,21 @@ basically mirror opposites of each other. But this might be useful to know later
 
 
 Multivariate Gaussians and Detereminant - [Lecturee Notes](http://courses.washington.edu/b533/lect4.pdf)
+
+
+---
+
+### Bandwidth Selection
+
+
+**Scotts**
+
+```python
+sigma = np.power(n_samples, -1.0 / (d_dimensions + 4))
+```
+
+**Silverman**
+
+```python
+sigma = np.power(n_samples * (d_dimensions + 2.0) / 4.0, -1.0 / (d_dimensions + 4)
+```

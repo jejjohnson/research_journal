@@ -8,8 +8,18 @@ Author: J. Emmanuel Johnson
 
 My package where I do code for different similarity measures. This repository will be didactic and will focus on readability and understanding the implementations rather than the speed or optimization; so it will be comment-heavy.
 
+### Contents
 
-### Installation 
+* [PySim](projects/similarity/README.md)
+* [HSIC Alignment: RBF Params Exploration](projects/similarity/rbf_params/README.md)
+
+
+## Software
+
+
+### PySim
+
+**Installation **
 
 1. Make sure [miniconda] is installed.
 2. Clone the git repository.
@@ -21,3 +31,5 @@ My package where I do code for different similarity measures. This repository wi
    conda env create -f environment.yml
    conda activate [package]
    ```
+
+### HSIC Alignment Paper (RBF Params)
