@@ -6,9 +6,8 @@
 * [Thesis](thesis/README.md)
 * [My Resources](resources/README.md)
 * [My Tutorials](tutorials/README.md)
+* [My Appendices](appendix/README.md)
 * [Snippets](snippets/README.md)
-
-
 
 **Python**
 * [Standard Python Stack](resources/python/standard_stack.md)

@@ -4,26 +4,25 @@ My projects involve trying to compare the outputs of different climate models. T
 
 Another way to measure similarity would be in the family of Information Theory Measures (ITMs). Instead of directly measuring first-order output statistics, these methods summarize the information via a probability distribution function (PDF) of the dataset. These can measure non-linear relationships and are naturally multivariate that offers solutions to the shortcomings of the standard methods. I would like to explore this and see if this is a useful way of summarizing information.
 
-- [Variation of Information](#variation-of-information)
-  - [Example Data](#example-data)
-  - [Standard Methods](#standard-methods)
-    - [Covariance](#covariance)
-      - [Example](#example)
-    - [Correlation](#correlation)
-      - [Example](#example-1)
-    - [Root Mean Squared](#root-mean-squared)
-      - [Example](#example-2)
-    - [Taylor Diagram](#taylor-diagram)
-      - [Example](#example-3)
-  - [Information Theory](#information-theory)
-    - [Entropy](#entropy)
-    - [Mutual Information](#mutual-information)
-      - [Example](#example-4)
-      - [Normalized Mutual Information](#normalized-mutual-information)
-    - [Variation of Information](#variation-of-information-1)
-    - [RVI-Based Diagram](#rvi-based-diagram)
-      - [Example](#example-5)
-    - [VI-Based Diagram](#vi-based-diagram)
+- [Example Data](#example-data)
+- [Standard Methods](#standard-methods)
+  - [Covariance](#covariance)
+    - [Example](#example)
+  - [Correlation](#correlation)
+    - [Example](#example-1)
+  - [Root Mean Squared](#root-mean-squared)
+    - [Example](#example-2)
+  - [Taylor Diagram](#taylor-diagram)
+    - [Example](#example-3)
+- [Information Theory](#information-theory)
+  - [Entropy](#entropy)
+  - [Mutual Information](#mutual-information)
+    - [Example](#example-4)
+    - [Normalized Mutual Information](#normalized-mutual-information)
+  - [Variation of Information](#variation-of-information)
+  - [RVI-Based Diagram](#rvi-based-diagram)
+    - [Example](#example-5)
+  - [VI-Based Diagram](#vi-based-diagram)
 
 ---
 
@@ -38,9 +37,9 @@ We will be using Anscombe example. This is a dataset that has the same attribute
 </p> -->
 
 <p float='center'> 
-  <img src="thesis/appendix/information/pics/vi/demo_caseI.png" width="200" />
-  <img src="thesis/appendix/information/pics/vi/demo_caseII.png" width="200" />
-  <img src="thesis/appendix/information/pics/vi/demo_caseIII.png" width="200" />
+  <img src="appendix/information/pics/vi/demo_caseI.png" width="200" />
+  <img src="appendix/information/pics/vi/demo_caseII.png" width="200" />
+  <img src="appendix/information/pics/vi/demo_caseIII.png" width="200" />
 </p>
 
 
@@ -84,7 +83,7 @@ where $X,Y \in \mathbb{R}^{N\times 1}$
 If we calculate the covariance for the sample dataset, we get the following:
 
 <p float='center'> 
-  <img src="thesis/appendix/information/pics/vi/demo_cov.png" width="500" />
+  <img src="appendix/information/pics/vi/demo_cov.png" width="500" />
 </p>
 
 As you can see, we have the same statistics.
@@ -102,7 +101,7 @@ With this normalization, we now have a measure that is bounded between -1 and 1.
 #### Example
 
 <p float='center'> 
-  <img src="thesis/appendix/information/pics/vi/demo_corr.png" width="500" />
+  <img src="appendix/information/pics/vi/demo_corr.png" width="500" />
 </p>
 
 An easier number to interpret. But it will not distinguish the datasets.
@@ -118,7 +117,7 @@ $$RMSE(X,Y)=\sqrt{\frac{1}{N}\sum_{i=1}^N \left((x_i - \mu_x)-(y_i - \mu_i)\righ
 #### Example
 
 <p float='center'> 
-  <img src="thesis/appendix/information/pics/vi/demo_rmse.png" width="500" />
+  <img src="appendix/information/pics/vi/demo_rmse.png" width="500" />
 </p>
 
 ---
@@ -145,7 +144,7 @@ So, the important quantities needed to be able to plot points on the Taylor diag
 #### Example
 
 <p float='center'> 
-  <img src="thesis/appendix/information/pics/vi/demo_taylor.png" width="500" />
+  <img src="appendix/information/pics/vi/demo_taylor.png" width="500" />
 </p>
 
 We see that the points are on top of each other. Makes sense seeing as how all of the other measures were also equivalent.
@@ -181,7 +180,7 @@ $$I(X,Y)=H(X) + H(Y) - H(X,Y)$$
 #### Example
 
 <p float='center'> 
-  <img src="thesis/appendix/information/pics/vi/demo_kde.png" width="500" />
+  <img src="appendix/information/pics/vi/demo_kde.png" width="500" />
 </p>
 
 Now we finally see some differences between the distributions. 
@@ -203,7 +202,7 @@ This method acts as a pure normalization.
 **Note**: one thing that strikes me as a flaw is the idea that we can get negative entropy values for differential entropy. This may cause problems if the entropy measures have opposite signs. 
 
 <p float='center'> 
-  <img src="thesis/appendix/information/pics/vi/demo_nkde.png" width="500" />
+  <img src="appendix/information/pics/vi/demo_nkde.png" width="500" />
 </p>
 
 This is definitely much easier to interpret. The relative values are also the same.
@@ -215,7 +214,7 @@ This is a symmetric version of the normalized MI measure.
 $$R=2\frac{I(X,Y)}{H(X) + H(Y)}$$
 
 <p float='center'> 
-  <img src="thesis/appendix/information/pics/vi/demo_rkde.png" width="500" />
+  <img src="appendix/information/pics/vi/demo_rkde.png" width="500" />
 </p>
 
 Interestingly, the relative magnitudes are not as similar anymore.
@@ -239,7 +238,7 @@ This is a metric that satisfies the properties such as
 And because the properties are satisfied, we can use it in the Taylor Diagram scheme.
 
 <p float='center'> 
-  <img src="thesis/appendix/information/pics/vi/demo_vikde.png" width="500" />
+  <img src="appendix/information/pics/vi/demo_vikde.png" width="500" />
 </p>
 
 I'm not sure how to interpret this...
@@ -270,14 +269,14 @@ So, the important quantities needed to be able to plot points on the Taylor diag
 
 
 <p float='center'> 
-  <img src="thesis/appendix/information/pics/vi/demo_vi.png" width="500" />
+  <img src="appendix/information/pics/vi/demo_vi.png" width="500" />
 </p>
 
 The nice thing is that the relative magnitudes are preserved and it definitely captures the correlations. I just need to figure out the labels of the chart...
 
 <p float='center'> 
-  <img src="thesis/appendix/information/pics/vi/demo_taylor.png" width="300" />
-  <img src="thesis/appendix/information/pics/vi/demo_vi.png" width="300" />
+  <img src="appendix/information/pics/vi/demo_taylor.png" width="300" />
+  <img src="appendix/information/pics/vi/demo_vi.png" width="300" />
 </p>
 
 
