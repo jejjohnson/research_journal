@@ -58,11 +58,10 @@ $$
 
 With this simple change I can talk about each of the parts individually. Now using log rules we can break apart the likelihood and the quotient. The quotient will be needed for the KL divergence.
 
-<!-- $$
+$$
 \mathcal{F}(q) =
-\underbrace{\int_\mathcal{X} q(\mathbf x) \cdot \log  \mathcal{P}(y|\mathbf x, \theta) \cdot d\mathbf x}_{{\mathbb{E}_{q(\mathbf{x})}}} +  
 \underbrace{\int_\mathcal{X} q(\mathbf x) \log  \frac{\mathcal{P}(\mathbf x)}{q(\mathbf x)}   \cdot d\mathbf x}_{\text{KL}}
-$$ -->
+$$
 
 
 
