@@ -1,5 +1,4 @@
-# Rotation-Based Iterative Gaussianization
-
+# RBIG
 
 A method that provides a transformation scheme from any distribution to a gaussian distribution. This repository will facilitate translating the original MATLAB code into a python implementation compatible with the scikit-learn framework.
 

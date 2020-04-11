@@ -2,38 +2,22 @@
 
 * Author: J. Emmanuel Johnson
 
----
-
-**Table Of Contents**
-
-- [Similarity Measures](#similarity-measures)
-  - [Main Projects](#main-projects)
-  - [Software](#software)
-  - [Applications](#applications)
-- [Uncertainty Quantification](#uncertainty-quantification)
-  - [Main Projects](#main-projects-1)
-  - [Software](#software-1)
-  - [Applications](#applications-1)
-- [Derivatives of Kernel Methods](#derivatives-of-kernel-methods)
-  - [Main Project](#main-project)
-  - [Applications](#applications-2)
-- [Side Projects](#side-projects)
 
 ---
 
-## [Similarity Measures](/projects/similarity/README.md)
+## Similarity Measures
 
 ### Main Projects
 
 
-**[HSIC and Kernel Parameters](projects/similarity/rbf_params/README.md)**
+**HSIC and Kernel Parameters**
 
 
 In this study, I investigate the kernel parameters and the different methods we can use to estimate the kernels of these dependence measures. I assess the validity of each one by doing a full empirical study on 1D distributions and on N-D distributions. 
 
-* [Main Project](projects/similarity/rbf_params/README.md)
-* [HSIC Implementations](projects/similarity/README.md)
-* [Visualization](projects/similarity/README.md)
+* Main Project
+* HSIC Implementations
+* Visualization
 
 ---
 
@@ -61,7 +45,7 @@ A python package that I use as my base in order to explore different aspects of 
 ### Main Projects
 
 
-**[Input Uncertainty](projects/egps/README.md)**
+**Input Uncertainty**
 
 * Assuming Input Error in the methods
 * Extensive Literature review
@@ -73,7 +57,7 @@ A python package that I use as my base in order to explore different aspects of 
 **Gaussianization**
 
 
-* [Main Project](projects/rbig/README.md)
+* Main Project
   
 ---
 
@@ -98,7 +82,7 @@ This is the next iteration for Gaussianization to allow one to train it on GPUs.
 ### Applications
 
 
-**[Spatial-Temporal Representations](projects/rbig/README.md)**
+**Spatial-Temporal Representations**
 
 **CMIP5 Climate Model Comparisons**
 

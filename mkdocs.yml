@@ -1,0 +1,54 @@
+# Project information
+site_name: Research Journal
+site_description: My Personal Research Journal
+site_author: J. Emmanuel Johnson
+site_url: https://jejjohnson.github.io/research_journal
+
+# Repository
+repo_name: jejjohnson/lab_notebook
+repo_url: https://github.com/jejjohnson/research_journal
+
+# Configuration
+theme:
+  name: material
+  language: en
+  palette:
+    primary: indigo
+    accent: indigo
+  font:
+    text: source code pro
+    code: source code pro
+
+plugins:
+  - search
+  - mknotebooks:
+      execute: false
+      write_markdown: true
+      timeout: 600
+
+# Copyright
+copyright: Copyright &copy; 2020 J. Emmanuel Johnson
+
+markdown_extensions:
+  - codehilite
+  - pymdownx.arithmatex
+  - pymdownx.details
+  - pymdownx.superfences
+  - markdown.extensions.attr_list
+
+extra_javascript:
+    - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+
+extra:
+  social:
+    # - type: 'envelope'
+    #   link: 'http://www.shortwhale.com/ericmjl'
+    - icon: fontawesome/brands/github
+      link: 'https://github.com/jejjohnson'
+    - icon: fontawesome/brands/twitter
+      link: 'https://twitter.com/jejjohnson'
+    - icon: fontawesome/brands/linkedin
+      link: 'https://linkedin.com/in/jejjohnson'
+    - icon: fontawesome/solid/globe
+      link: 'https://jejjohnson.netlify.com'
+      

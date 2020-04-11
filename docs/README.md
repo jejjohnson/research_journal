@@ -1,4 +1,4 @@
-# Research Journal
+# Overview
 
 * Author: J. Emmanuel Johnson
 * Email: jemanjohnson34@gmail.com
@@ -38,31 +38,3 @@ This is my research journal of various topics that I'm interested in for my rese
 
 > I write lots of bits of code everywhere and it tends to be disorganized. I'm trying to organize my bits of code everywhere into digestable snippets; kind of like a personal reference.
 
-
----
-<!-- ## Topics
-
-#### ML Concepts:
-
-* Bayesian Methods
-* Information Theory
-* Sleeper Concepts
-* Variational Inference
-
-#### Kernel Methods:
-
-* Basics
-* Gradients and Sensitivity
-
-#### Gaussian Processes:
-
-* Vanilla
-* Input Error Estimation
-* Sparse GPs
-* Variational GPs
-
-#### Invertible Flows:
-
-* Parametric Gaussianization
-* Normalizing Flows (TODO)
-* Generalized Divisive Normalization (TODO) -->
