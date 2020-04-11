@@ -46,18 +46,23 @@ So now finally we have both terms in the inequality. Summarizing everything we h
 
 $$log \mathcal{P}(y|\theta) = \log \int_\mathcal{X} \mathcal{P}(y|\mathbf x, \theta) \cdot  q(\mathbf x) \cdot \frac{\mathcal{P}(\mathbf x)}{q(\mathbf x)} \cdot d\mathbf x $$
 
-$$\log \mathcal{P}(y|\theta) \geq  \int_\mathcal{X} \left[\log  \mathcal{P}(y|\mathbf x, \theta) \cdot \frac{\mathcal{P}(\mathbf x)}{q(\mathbf x)} \right] q(\mathbf x) \cdot d\mathbf x$$
+$$
+\log \mathcal{P}(y|\theta) \geq  \int_\mathcal{X} \left[\log  \mathcal{P}(y|\mathbf x, \theta) \cdot \frac{\mathcal{P}(\mathbf x)}{q(\mathbf x)} \right] q(\mathbf x) \cdot d\mathbf x
+$$
 
 I'm going to switch up the terminology just to make it easier aesthetically. I'm going to let $\mathcal{L}(\theta)$ be $\log \mathcal{P}(y|\theta)$ and $\mathcal{F}(q, \theta) \leq \mathcal{L}(\theta)$. So basically:
 
-
-$$\mathcal{L}(\theta) =\log \mathcal{P}(y|\theta) \geq  \int_\mathcal{X} \left[\log  \mathcal{P}(y|\mathbf x, \theta) \cdot \frac{\mathcal{P}(\mathbf x)}{q(\mathbf x)} \right] q(\mathbf x) \cdot d\mathbf x = \mathcal{F}(q, \theta)$$
+$$
+\mathcal{L}(\theta) =\log \mathcal{P}(y|\theta) \geq  \int_\mathcal{X} \left[\log  \mathcal{P}(y|\mathbf x, \theta) \cdot \frac{\mathcal{P}(\mathbf x)}{q(\mathbf x)} \right] q(\mathbf x) \cdot d\mathbf x = \mathcal{F}(q, \theta)
+$$
 
 With this simple change I can talk about each of the parts individually. Now using log rules we can break apart the likelihood and the quotient. The quotient will be needed for the KL divergence.
 
-$$\mathcal{F}(q) = 
-\underbrace{\int_\mathcal{X} q(\mathbf x) \cdot \log  \mathcal{P}(y|\mathbf x, \theta) \cdot d\mathbf x}_{{\mathbb{E}_{q(\mathbf x)}}} +  
-\underbrace{\int_\mathcal{X} q(\mathbf x) \log  \frac{\mathcal{P}(\mathbf x)}{q(\mathbf x)}   \cdot d\mathbf x}_{\text{KL}}$$
+<!-- $$
+\mathcal{F}(q) =
+\underbrace{\int_\mathcal{X} q(\mathbf x) \cdot \log  \mathcal{P}(y|\mathbf x, \theta) \cdot d\mathbf x}_{{\mathbb{E}_{q(\mathbf{x})}}} +  
+\underbrace{\int_\mathcal{X} q(\mathbf x) \log  \frac{\mathcal{P}(\mathbf x)}{q(\mathbf x)}   \cdot d\mathbf x}_{\text{KL}}
+$$ -->
 
 
 
