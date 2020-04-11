@@ -1,12 +1,4 @@
-# Gaussian Process Basics
-
-- [Data](#data)
-- [Model](#model)
-- [Posterior](#posterior)
-  - [Deterministic Inputs](#deterministic-inputs)
-  - [Probabilistic Inputs](#probabilistic-inputs)
-- [Variational GP Models](#variational-gp-models)
-- [Sparse GP Models](#sparse-gp-models)
+# Basics
 
 ## Data
 
@@ -22,25 +14,25 @@ Let's assume we have inputs with an additive noise term $\epsilon_y$ and let's a
 
 Given some training data $\mathbf{X},y$, we are interested in the Bayesian formulation:
 
-$$p(f| \mathbf{X},y) = \frac{{\color{blue}{
-p(y| f, \mathbf{X}) } \,\color{darkgreen} {p(f)}}}{\color{red}{
+$$p(f| \mathbf{X},y) = 
+\frac{\color{blue}{p(y| f, \mathbf{X})}  \,\color{darkgreen}{p(f)}}{\color{red}{
 p(y|  \mathbf{X}) }}$$
 
 where we have:
 
-* **GP Prior**, ${\color{darkgreen} {p(f) = \mathcal{GP}(m, k)}}$
+* **GP Prior**, $\color{darkgreen}{p(f) = \mathcal{GP}(m, k)}$
 
 We specify a mean function, $m$ and a covariance function $k$.
 
-* **Likelihood**, ${\color{blue}{
+* **Likelihood**, $\color{blue}{
 p(y| f, \mathbf{X}) = \mathcal{N}(f(\mathbf{X}), \sigma_y^2\mathbf{I})
-}}$
+}$
 
 which describes the dataset
 
-* **Marginal Likelihood**, ${\color{red}{
+* **Marginal Likelihood**, $\color{red}{
 p(y|  \mathbf{X}) = \int_f p(y|f, \mathbf{X}) \, p(f|\mathbf{X}) \, df
-}}$
+}$
 
 * **Posterior**, $p(f| \mathbf{X},y) = \mathcal{GP}(\mu_\text{GP}, \nu^2_\text{GP})$
 

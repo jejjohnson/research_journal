@@ -34,9 +34,26 @@ markdown_extensions:
   - pymdownx.arithmatex
   - pymdownx.details
   - pymdownx.superfences
-  - markdown.extensions.attr_list
+  # - markdown.extensions.attr_list
+  # - pymdownx.betterem:
+  #     smart_enable: all
+  # - pymdownx.caret
+  # - pymdownx.critic
+  # - pymdownx.emoji:
+  #     emoji_index: !!python/name:pymdownx.emoji.twemoji
+  #     emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  # - pymdownx.inlinehilite
+  # - pymdownx.magiclink
+  # - pymdownx.mark
+  # - pymdownx.smartsymbols
+  # - pymdownx.tasklist:
+  #     custom_checkbox: true 
+  - pymdownx.tabbed
+  # - pymdownx.tilde
 
 extra_javascript:
+      # - https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.0.5/MathJax.js
+      # - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML
     - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 
 extra:
