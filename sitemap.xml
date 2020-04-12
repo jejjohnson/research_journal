@@ -1,1055 +1,979 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>https://jejjohnson.github.io/research_journal/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/appendix/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/appendix/bayesian/exponential/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/appendix/bayesian/gaussian/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/appendix/bayesian/inference/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/appendix/bayesian/intro/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/appendix/bayesian/kde/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/appendix/bayesian/kl_divergence/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/appendix/bayesian/mixtures/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/appendix/bayesian/monte_carlo/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/appendix/bayesian/pdf_est/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/appendix/bayesian/pdf_estimation/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/appendix/bayesian/regression/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/appendix/bayesian/uniform/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/appendix/bayesian/variational_inference/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/appendix/concepts/frameworks/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/appendix/concepts/matrix_tricks/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/appendix/concepts/sleeper_concepts/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/appendix/concepts/splines/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/appendix/concepts/calculus/autograd/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/appendix/concepts/calculus/change_of_variables/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/appendix/concepts/calculus/identity_trick/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/appendix/concepts/calculus/inverse_function/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/appendix/concepts/calculus/jensens/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/appendix/density/</loc>
-     <lastmod>2020-04-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/appendix/density/_sidebar/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/appendix/density/histograms/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/appendix/density/logistic/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/appendix/density/flows/mixture_cdfs/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/appendix/gps/1_introduction/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/appendix/gps/2_sparse_gps/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/appendix/gps/3_input_error/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/appendix/gps/3_taylor_expansion/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/appendix/gps/4_variational/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/appendix/gps/gps_and_it/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/appendix/information/entropy/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://jejjohnson.github.io/research_journal/appendix/information/expf/</loc>
+     <lastmod>2020-04-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://jejjohnson.github.io/research_journal/appendix/information/info/</loc>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/appendix/information/information/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/appendix/information/information_bottleneck/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/appendix/information/it_estimators/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/appendix/information/it_formulas/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://jejjohnson.github.io/research_journal/appendix/information/knn/</loc>
+     <lastmod>2020-04-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://jejjohnson.github.io/research_journal/appendix/information/main/</loc>
+     <lastmod>2020-04-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://jejjohnson.github.io/research_journal/appendix/information/mi/</loc>
+     <lastmod>2020-04-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://jejjohnson.github.io/research_journal/appendix/information/pdf_est/</loc>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/appendix/information/variation/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://jejjohnson.github.io/research_journal/appendix/information/vi/</loc>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/appendix/kernels/distances/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/appendix/kernels/hsic/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <loc>https://jejjohnson.github.io/research_journal/appendix/kernels/kernel/</loc>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/appendix/kernels/kernels_it/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <loc>https://jejjohnson.github.io/research_journal/appendix/kernels/similarity/dist/</loc>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/appendix/kernels/similarity/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <loc>https://jejjohnson.github.io/research_journal/appendix/kernels/similarity/hsic/</loc>
+     <lastmod>2020-04-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://jejjohnson.github.io/research_journal/appendix/kernels/similarity/kernels_it/</loc>
+     <lastmod>2020-04-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://jejjohnson.github.io/research_journal/appendix/kernels/similarity/lin_alg/</loc>
+     <lastmod>2020-04-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://jejjohnson.github.io/research_journal/appendix/kernels/similarity/mmd/</loc>
+     <lastmod>2020-04-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://jejjohnson.github.io/research_journal/appendix/kernels/similarity/rv/</loc>
+     <lastmod>2020-04-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://jejjohnson.github.io/research_journal/appendix/kernels/similarity/similarity/</loc>
+     <lastmod>2020-04-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://jejjohnson.github.io/research_journal/appendix/kernels/similarity/visualization/distances/</loc>
+     <lastmod>2020-04-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://jejjohnson.github.io/research_journal/appendix/kernels/similarity/visualization/taylor/</loc>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/appendix/neural/rbig/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/blogs/ideas/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/projects/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/projects/BNNs/</loc>
-     <lastmod>2020-04-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/projects/BNNs/_sidebar/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/projects/BNNs/sidebar/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/projects/BNNs/code/jax/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/projects/BNNs/code/pyro/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/projects/BNNs/code/pytorch/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/projects/BNNs/code/resources/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/projects/BNNs/code/software/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/projects/BNNs/code/tensorflow/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/projects/BNNs/code/my_notes/tensorflow/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/projects/BNNs/other/explorers_2020_01_tf/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/projects/BNNs/other/people/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/projects/BNNs/other/polemica/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/projects/BNNs/other/videos/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/projects/BNNs/prezis/test/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/projects/BNNs/theory/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/projects/BNNs/theory/optimization/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/projects/BNNs/theory/papers/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/projects/BNNs/theory/prob_nn/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/projects/BNNs/theory/resources/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/projects/BNNs/theory/sota/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/projects/BNNs/theory/videos/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/projects/ErrorGPs/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/projects/ErrorGPs/Code/software/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/projects/ErrorGPs/Overview/basics/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/projects/ErrorGPs/Overview/literature/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/projects/ErrorGPs/Overview/next/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/projects/ErrorGPs/Taylor%20Expansion/error_propagation/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/projects/ErrorGPs/Taylor%20Expansion/taylor/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/projects/ErrorGPs/Variational/vi/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/projects/ML4OCN/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/projects/ML4OCN/ARGO%20Project/Global%20Data/1_load_processed_data/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/projects/ML4OCN/ARGO%20Project/Global%20Data/2_ml_algorithms/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/projects/RBIG/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/projects/RBIG/Applications/climate/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/projects/RBIG/Applications/demo_innf/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/projects/RBIG/Applications/drought/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/projects/RBIG/Applications/spatial_temporal/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/projects/RBIG/Applications/earth_observation/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/projects/RBIG/Software/coupling/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/projects/RBIG/Software/losses/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/projects/RBIG/Software/marginal_gauss/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/projects/RBIG/Software/marginal_uni/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/projects/RBIG/Software/refactor/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/projects/RBIG/Software/rotation/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/projects/RBIG/Software/RBIG2.0/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/projects/RBIG/Software/RBIG2.0/ideas/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/projects/RBIG/Theory/gaussianization/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/projects/RBIG/Theory/itm/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/projects/RBIG/Theory/literature/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/projects/RBIG/Theory/related/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/projects/Similarity/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <loc>https://jejjohnson.github.io/research_journal/projects/similarity/</loc>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/projects/Similarity/Kernel/hsic/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <loc>https://jejjohnson.github.io/research_journal/projects/similarity/kernel_alignment_params/</loc>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/projects/Similarity/Kernel/kernel/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <loc>https://jejjohnson.github.io/research_journal/projects/similarity/kernel_alignment_params/1.0_motivation/</loc>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/projects/Similarity/Kernel/mmd/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <loc>https://jejjohnson.github.io/research_journal/projects/similarity/kernel_alignment_params/1d_example/overview/</loc>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/projects/Similarity/Linear/dist/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <loc>https://jejjohnson.github.io/research_journal/projects/similarity/kernel_alignment_params/1d_example/notebooks/1d_example/</loc>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/projects/Similarity/Linear/lin_alg/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <loc>https://jejjohnson.github.io/research_journal/projects/similarity/kernel_alignment_params/1d_example/notebooks/motivation/</loc>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/projects/Similarity/Linear/rv/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <loc>https://jejjohnson.github.io/research_journal/projects/similarity/kernel_alignment_params/Multivariate%20Distributions/dist_explore/</loc>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/projects/Similarity/Linear/similarity/</loc>
-     <lastmod>2020-04-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/projects/Similarity/RBF%20Params/</loc>
-     <lastmod>2020-04-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/projects/Similarity/RBF%20Params/1d_example/</loc>
-     <lastmod>2020-04-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/projects/Similarity/RBF%20Params/_sidebar/</loc>
-     <lastmod>2020-04-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/projects/Similarity/RBF%20Params/dist_explore/</loc>
-     <lastmod>2020-04-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/projects/Similarity/RBF%20Params/dist_vs_mi/</loc>
-     <lastmod>2020-04-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/projects/Similarity/RBF%20Params/motivation/</loc>
-     <lastmod>2020-04-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/projects/Similarity/Visualization/distances/</loc>
-     <lastmod>2020-04-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/projects/Similarity/Visualization/taylor/</loc>
-     <lastmod>2020-04-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/projects/Similarity/information/entropy/</loc>
-     <lastmod>2020-04-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/projects/Similarity/information/expf/</loc>
-     <lastmod>2020-04-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/projects/Similarity/information/info/</loc>
-     <lastmod>2020-04-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/projects/Similarity/information/knn/</loc>
-     <lastmod>2020-04-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/projects/Similarity/information/main/</loc>
-     <lastmod>2020-04-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/projects/Similarity/information/mi/</loc>
-     <lastmod>2020-04-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/projects/Similarity/information/pdf_est/</loc>
-     <lastmod>2020-04-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/projects/Similarity/information/vi/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <loc>https://jejjohnson.github.io/research_journal/projects/similarity/kernel_alignment_params/Multivariate%20Distributions/dist_vs_mi/</loc>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/resources/</loc>
-     <lastmod>2020-04-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/resources/_sidebar/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/resources/dl_overview/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://jejjohnson.github.io/research_journal/resources/mkdocs/</loc>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/resources/my_workflow/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/resources/reproducibility/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/resources/ml/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <loc>https://jejjohnson.github.io/research_journal/resources/machine_learning/</loc>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/resources/ml/books/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <loc>https://jejjohnson.github.io/research_journal/resources/machine_learning/books/</loc>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/resources/ml/deep_learning/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <loc>https://jejjohnson.github.io/research_journal/resources/machine_learning/deep_learning/</loc>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/resources/ml/interpretability/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <loc>https://jejjohnson.github.io/research_journal/resources/machine_learning/interpretability/</loc>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/resources/ml/physics/</loc>
-     <lastmod>2020-04-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/resources/python/dl_software/</loc>
-     <lastmod>2020-04-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/resources/python/earthsci/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <loc>https://jejjohnson.github.io/research_journal/resources/machine_learning/physics/</loc>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/resources/python/ides/</loc>
-     <lastmod>2020-04-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/resources/python/plotting/</loc>
-     <lastmod>2020-04-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/resources/python/python_stack/</loc>
-     <lastmod>2020-04-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/resources/python/standard_stack/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/resources/python/tidbits/</loc>
-     <lastmod>2020-04-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/resources/python/code/</loc>
-     <lastmod>2020-04-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/resources/python/code/_sidebar/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/resources/python/code/einsum/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/resources/python/code/large_scale/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/resources/python/good_code/</loc>
-     <lastmod>2020-04-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/resources/python/good_code/_sidebar/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/resources/python/good_code/documentation/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/resources/python/good_code/experiments/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/resources/python/good_code/git/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/resources/python/good_code/good_code/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/resources/python/good_code/pip/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/resources/python/good_code/typing/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/resources/python/packages/geospatial/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/resources/python/packages/jax/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/resources/python/packages/logging/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/resources/python/packages/pandas/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/resources/python/packages/parallel/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/resources/python/packages/pytorch/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/resources/python/packages/sql/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://jejjohnson.github.io/research_journal/resources/python/software_stacks/dl_software/</loc>
+     <lastmod>2020-04-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://jejjohnson.github.io/research_journal/resources/python/software_stacks/earthsci/</loc>
+     <lastmod>2020-04-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://jejjohnson.github.io/research_journal/resources/python/software_stacks/python_stack/</loc>
+     <lastmod>2020-04-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://jejjohnson.github.io/research_journal/resources/python/software_stacks/standard_stack/</loc>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/resources/tips/</loc>
-     <lastmod>2020-04-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/resources/tips/_sidebar/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/resources/tips/conda/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/resources/tips/github/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/resources/tips/sklearn/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/snippets/</loc>
-     <lastmod>2020-04-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/snippets/_sidebar/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/snippets/xarray/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/snippets/bash/</loc>
-     <lastmod>2020-04-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/snippets/bash/_sidebar/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/snippets/bash/args/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/snippets/bash/loops/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/snippets/bash/run_scripts/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/snippets/bayesian/sklearn_egp/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/snippets/earth/</loc>
-     <lastmod>2020-04-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/snippets/earth/_sidebar/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/snippets/earth/cart_geo/</loc>
-     <lastmod>2020-04-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/snippets/ml/_sidebar/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/snippets/ml/anomaly/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/snippets/numpy/</loc>
-     <lastmod>2020-04-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/snippets/numpy/_sidebar/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/snippets/numpy/bisection/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/snippets/numpy/euclidean/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/snippets/numpy/group_sum/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/snippets/numpy/rbf_kernel/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/snippets/python/</loc>
-     <lastmod>2020-04-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/snippets/python/_sidebar/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/snippets/python/conda/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/snippets/python/conda_envs/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/snippets/python/lists_tricks/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/snippets/python/setup/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/snippets/pytorch/</loc>
-     <lastmod>2020-04-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/snippets/pytorch/_sidebar/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/snippets/pytorch/device/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/snippets/pytorch/histograms/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/snippets/pytorch/interp/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/snippets/pytorch/keops/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/snippets/pytorch/loops_tqdm/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/snippets/pytorch/multi_kernel/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/snippets/pytorch/numpy/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/snippets/pytorch/rbf_kernel/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/snippets/scipy/</loc>
-     <lastmod>2020-04-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/snippets/scipy/_sidebar/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/snippets/scipy/cholesky/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://jejjohnson.github.io/research_journal/snippets/testing/pytest/</loc>
+     <lastmod>2020-04-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://jejjohnson.github.io/research_journal/snippets/testing/tips/</loc>
+     <lastmod>2020-04-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://jejjohnson.github.io/research_journal/snippets/visualization/matplotlib/colorbars/</loc>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/talks/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/talks/2018_kermes_egp/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/talks/2019_agu_rbigclima/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/talks/2019_phiweek_gpsens/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/talks/2019_phiweek_rbigad/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/talks/2020_fft_01_31_hsic_align/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/talks/2020_kermes_egp/</loc>
-     <lastmod>2020-04-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/talks/_sidebar/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/talks/fft_2020_01_31_hsic_align/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/thesis/</loc>
-     <lastmod>2020-04-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/thesis/_sidebar/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/thesis/contribution/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/thesis/logistics/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/thesis/outline/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/thesis/quotes/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/thesis/reproducibility/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/thesis/scratch/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/thesis/toc/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/thesis/chapters/1_introduction/1.1_earth_sci/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/thesis/chapters/1_introduction/1.2_ml_problems/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/thesis/chapters/1_introduction/1.3_thesis/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/thesis/chapters/2_key_ideas/1_uncertainty/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/thesis/chapters/2_key_ideas/2_similarity/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/thesis/chapters/2_key_ideas/3_sensitivity/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/thesis/chapters/3_data_representation/hybrid/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/thesis/chapters/3_data_representation/kernels/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/thesis/chapters/3_data_representation/neural_nets/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/thesis/chapters/3_data_representation/random_kernels/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/thesis/chapters/4_information/density/0_overview/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/thesis/chapters/4_information/density/classical/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/thesis/chapters/4_information/density/gaussianization/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/thesis/chapters/4_information/density/nfs/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/thesis/chapters/4_information/density/parametric/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/thesis/chapters/4_information/density/rbig/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/thesis/chapters/4_information/information/1_information/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/thesis/chapters/4_information/information/2_rbig/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/thesis/chapters/5_applications/sensitivity/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/thesis/chapters/5_applications/similarity/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/thesis/chapters/5_applications/uncertainty/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/tutorials/</loc>
-     <lastmod>2020-04-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/tutorials/_sidebar/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/tutorials/gaussian_processes/_ideas/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/tutorials/jax/</loc>
-     <lastmod>2020-04-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/tutorials/jax/_sidebar/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/tutorials/jax/egps/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/tutorials/jax/ideas/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/tutorials/jupyter_vscode/vscode_jupyter/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/tutorials/manifold_learning/3_ssma/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/tutorials/manifold_learning/6_laplacian_eigenmaps/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/tutorials/pytorch_nns/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/tutorials/pytorch_nns/1_nn_from_scratch/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/tutorials/pytorch_nns/2_refactor/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/tutorials/pytorch_nns/3_subclass/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/tutorials/pytorch_nns/4_wrapping/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/tutorials/pytorch_nns/5_extras/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/tutorials/pytorch_nns/_ideas/</loc>
-     <lastmod>2020-04-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/tutorials/pytorch_nns/_sidebar/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/tutorials/tf2/slides/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/tutorials/tf2/docs/css/theme/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/tutorials/tf2/docs/plugin/markdown/example/</loc>
-     <lastmod>2020-04-11</lastmod>
+     <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
