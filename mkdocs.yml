@@ -5,7 +5,7 @@ site_author: J. Emmanuel Johnson
 site_url: https://jejjohnson.github.io/research_journal
 
 # Repository
-repo_name: jejjohnson/lab_notebook
+repo_name: jejjohnson/research_journal
 repo_url: https://github.com/jejjohnson/research_journal
 
 # Configuration
@@ -30,10 +30,24 @@ plugins:
 copyright: Copyright &copy; 2020 J. Emmanuel Johnson
 
 markdown_extensions:
-  - codehilite
-  - pymdownx.arithmatex
-  - pymdownx.details
-  - pymdownx.superfences
+  - codehilite:
+      guess_lang: false
+      linenums: true
+  - admonition
+  - pymdownx.tilde
+  - pymdownx.superfences    # Adds support for nested blocks
+  - pymdownx.arithmatex     # Adss support for mathjax
+  - pymdownx.details        # adds support for collapsible blocks
+  - pymdownx.tabbed         # enables tabbed code blocks
+  - pymdownx.mark
+  - pymdownx.tasklist:
+      custom_checkbox: true 
+  - pymdownx.betterem:
+      smart_enable: all
+  - meta                    # enables meta data at the top of document
+  - toc:
+      permalink: True
+  # - pymdownx.inlinehilite
   # - markdown.extensions.attr_list
   # - pymdownx.betterem:
   #     smart_enable: all
@@ -44,19 +58,17 @@ markdown_extensions:
   #     emoji_generator: !!python/name:pymdownx.emoji.to_svg
   # - pymdownx.inlinehilite
   # - pymdownx.magiclink
-  # - pymdownx.mark
+  
   # - pymdownx.smartsymbols
   # - pymdownx.tasklist:
   #     custom_checkbox: true 
-  - pymdownx.tabbed
   # - pymdownx.tilde
 
 extra_javascript:
-      # - https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.0.5/MathJax.js
-      # - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML
     - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 
 extra:
+  # disqus: XHR39t5kZv
   social:
     # - type: 'envelope'
     #   link: 'http://www.shortwhale.com/ericmjl'
@@ -68,4 +80,5 @@ extra:
       link: 'https://linkedin.com/in/jejjohnson'
     - icon: fontawesome/solid/globe
       link: 'https://jejjohnson.netlify.com'
+    
       
