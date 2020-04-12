@@ -1,12 +1,5 @@
 # Good Code
 
-- [Logging](#logging)
-- [Testing](#testing)
-- [Repository Organization](#repository-organization)
-- [Packaging](#packaging)
-- [Type Checking](#type-checking)
-- [Continuous Integration](#continuous-integration)
-- [WorkFlow](#workflow)
 
 
 ## Logging

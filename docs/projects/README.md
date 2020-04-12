@@ -1,121 +1,94 @@
-# Project Webpages
-
-* Author: J. Emmanuel Johnson
-
+---
+title: Overview
+description: All of my projects
+authors:
+    - J. Emmanuel Johnson
+path: docs/projects
+source: README.md
+---
+# Main Projects
 
 ---
 
 ## Similarity Measures
 
-### Main Projects
+!!! abstract "Summary"
+    I am very interested in the notion of similarity: what it means, how can we estimate similarity and how does it work in practice. Below are some of the main projects I have been working on which include an empirical study, some applications and some software that was developed.
+
+??? info "Kernel Parameter Estimation"
+    <!-- !!! abstract "Summary" -->
+    In this project, I look at how we one can estimate the parameters of the RBF kernel for various variations of the HSIC method; kernel alignment and centered kernel alignment. Unsupervised kernel methods can suffer if the parameters are not estimated correctly. So I go through and empirically look at different ways we can represent our data and different ways we can estimate the parameters for the unsupervised kernel method.
+
+    I investigate the following questions:
+
+    * Will **standardizing** the data beforehand affect the results?
+    * How does the **parameter estimator** affect the results?
+    * Which **variation of HSIC** gives the best representation of the similarity (center the kernel, normalize the score)?
+    * How does this all compare to **mutual information** for known high-dimensional, multivariate distributions?
+
+    **Important Links**:
+
+    * [Main Project Page](kernel_alignment_params/README.md)
+    * [LaTeX Doc](/)
+    * [FFT Talk](../talks/2020_fft_01_31_hsic_align.md)
+
+??? info "Information Measures for Climate Model Comparisons"
+    <!-- !!! abstract "Summary" -->
+    In this project, I used a Gaussianization model to look compare some CMIP5 models the spatial-temporal repre
+
+    **Important Links**:
+
+    * [Main Projecct Page](/)
+    * [LaTeX Doc](/)
+    * [FFT Talk](../../talks/2019_agu_rbigclima.md)
 
 
-**HSIC and Kernel Parameters**
+??? info "Information Measures for Drought Factors"
+    **Important Links**:
+
+    * [Main Projecct Page](/)
+    * [LaTeX Doc](/)
+    * Paper: [Climate Informatics](/)
+    * Poster: [Climate Informatics](/)
+    * [Phi-Week Talk](../../talks/2019_phiweek_rbigad.md)
 
 
-In this study, I investigate the kernel parameters and the different methods we can use to estimate the kernels of these dependence measures. I assess the validity of each one by doing a full empirical study on 1D distributions and on N-D distributions. 
+??? info "PySim"
+    Some highlights include:
 
-* Main Project
-* HSIC Implementations
-* Visualization
+    * Scikit-Learn Format to allow for pipeline, cross-validation and scoring
+    * The HSIC and all of it's variations including the randomized implementation
+    * Some basics for visualizations using the Taylor Diagram
+    * Some other methods for estimating similarity
 
----
+    **Important Links**:
 
-### [Software]()
-
-
-**PySim**
-
-A python package that I use as my base in order to explore different aspects of similarity measures. Some highlights include entropy, mutual information and KL-Divergence. I explore a few methods including K-Nearest Neighbors, kernel density estimation, Hilbert-Schmidt Criterion and Gaussianization methods.
-
----
-
-### [Applications]()
-
-**Drought Factors**
-
-
-**Information Plane in Neural Networks**
+      * [Github Repository](https://github.com/jejjohnson/pysim.git)
 
 ---
 
 ## Uncertainty Quantification
 
-
-### Main Projects
-
-
-**Input Uncertainty**
-
-* Assuming Input Error in the methods
-* Extensive Literature review
-* Looking at linearized and variational methods to propagate the errors through the GPs
-* Applications to IASI satellite data and prediction
-* Explore some relations to Kalman Filtering
-
-
-**Gaussianization**
-
-
-* Main Project
-  
----
-
-### Software
-
-**RBIG 1.1**
-
-This is a python package which a revamped API that makes it easier to prototype and try out different methods of Gaussianization. It is based off of the [deep-density-destructors]() repository but much simpler and scaled down for my needs. It's open source to allow other researchers to take a look at how one can do Gaussianization.
-
-* [Github Repo]()
-
-
-**RBIG 2.0**
-
-This is the next iteration for Gaussianization to allow one to train it on GPUs. In this, I explore different ways we can use the normalizing flows architecture to do Gaussianization transformations.
-
-* [Github Repo]()
-
+!!! info "Projects"
+    * [Input Uncertainty for Gaussian Processes](/)
+    * [Gaussianization Models in Eath Science Applications](/)
+    * [Gaussian Process Model Zoo](/)
+    * [RBIG 1.1 Python Package](/)
+    * [RBIG 2.0 Python Package](/)
 
 ---
 
-### Applications
+## Kernel Methods and Derivatives
 
-
-**Spatial-Temporal Representations**
-
-**CMIP5 Climate Model Comparisons**
-
+!!! info "Projects"
+    * [Kernel Derivatives Applied to Earth Science Data Cubes](/)
+    * [Derivatives for Sensitivity Analysis in Gaussian Processes applied to Emulation](/)
 
 ---
 
-## Derivatives of Kernel Methods
+## Machine Learning for Ocean Applications
 
-### Main Project
-
-
-* [Main Project Page]()
-* [Github Repository]()
-* [Jax Tutorial for Kernel Methods]()
-* [Application to GP input Uncertainty]()
-
----
-
-### Applications
-
-**Sensitivity Analysis for Emulation**
-
----
-
-## Side Projects
-
-**Machine Learning for Multi-Output Ocean Applications**
-
-* Multi-Output Gaussian Processes
-* High-Dimensional, Multi-Output Data
-
----
-
-
-
-
+!!! info "Projects"
+    * [ARGO Floats MultiOutput Models](/)
+    * [Ocean Water Types Regression](/)
+    * [Ocean Water Types Classification](/)

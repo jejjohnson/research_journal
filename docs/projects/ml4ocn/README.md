@@ -4,9 +4,10 @@ I present some of my findings for working on machine learning applied to ocean a
 
 ## Documents
 
-**Global Database**
+### Global Data
 
-* Notebook I - Loading the Preprocessed Data - [ipynb](projects/ml4ocn/global/1_load_processed_data.md)
+* Notebook I - Loading the Preprocessed Data - [ipynb](ARGO_project/global_data/1_load_processed_data.md)
+* Notebook II - Loading the Preprocessed Data - [ipynb](ARGO_project/global_data/2_ml_algorithms.md)
 
 ---
 
