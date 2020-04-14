@@ -454,6 +454,10 @@ $$I(X,Y) = - \frac{1}{2} \log (1- \rho^2)$$
   > A great document that really breaks down the differences between the RV coefficient and the Congruence coefficient.
 * Tucker's Congruence Coefficient as a Meaningful Index of Factor Similarity [PDF](https://openpsych.net/forum/attachment.php?aid=364) - Lorenzo-Seva & Berge (2006) - Methodology
   > More details relating to the Congruences coefficient and some reasoning as why one would use it.
+* Measuring Multivariate Association and Beyond [PDF](https://projecteuclid.org/download/pdfview_1/euclid.ssu/1479351622) - Josse & Holmes (2016) - Statistics Surveys
+  > An Excellent review for how we can get $\rho$V-Coefficients and some of the modified versions. They also go into some other distance measures like the Graph, Mantel, Kernel and other.
+* Average Distance of Random Points in a Unit Hypercube [[Blog](https://martin-thoma.com/curse-of-dimensionality/)] - Martin Thoma
+  > A really nice blog post showing some empirical evidence for how these distance measures fail in high-dimensions.
 
 ---
 

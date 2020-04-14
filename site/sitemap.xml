@@ -248,7 +248,15 @@
      <lastmod>2020-04-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/blogs/ideas/</loc>
+     <loc>https://jejjohnson.github.io/research_journal/blogs/</loc>
+     <lastmod>2020-04-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://jejjohnson.github.io/research_journal/blogs/ideas/concrete/</loc>
+     <lastmod>2020-04-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://jejjohnson.github.io/research_journal/blogs/ideas/scratch/</loc>
      <lastmod>2020-04-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
@@ -645,6 +653,10 @@
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/resources/tips/github/</loc>
+     <lastmod>2020-04-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://jejjohnson.github.io/research_journal/resources/tips/markdown/</loc>
      <lastmod>2020-04-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
