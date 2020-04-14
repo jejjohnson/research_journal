@@ -68,6 +68,10 @@
      <lastmod>2020-04-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
+     <loc>https://jejjohnson.github.io/research_journal/appendix/concepts/lin_alg/</loc>
+     <lastmod>2020-04-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
      <loc>https://jejjohnson.github.io/research_journal/appendix/concepts/matrix_tricks/</loc>
      <lastmod>2020-04-14</lastmod>
      <changefreq>daily</changefreq>
@@ -188,10 +192,6 @@
      <lastmod>2020-04-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/appendix/information/vi/</loc>
-     <lastmod>2020-04-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
      <loc>https://jejjohnson.github.io/research_journal/appendix/kernels/distances/</loc>
      <lastmod>2020-04-14</lastmod>
      <changefreq>daily</changefreq>
@@ -200,27 +200,7 @@
      <lastmod>2020-04-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/appendix/kernels/similarity/dist/</loc>
-     <lastmod>2020-04-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/appendix/kernels/similarity/hsic/</loc>
-     <lastmod>2020-04-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
      <loc>https://jejjohnson.github.io/research_journal/appendix/kernels/similarity/kernels_it/</loc>
-     <lastmod>2020-04-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/appendix/kernels/similarity/lin_alg/</loc>
-     <lastmod>2020-04-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/appendix/kernels/similarity/mmd/</loc>
-     <lastmod>2020-04-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/appendix/kernels/similarity/rv/</loc>
      <lastmod>2020-04-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
@@ -228,15 +208,43 @@
      <lastmod>2020-04-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/appendix/kernels/similarity/visualization/distances/</loc>
-     <lastmod>2020-04-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/appendix/kernels/similarity/visualization/taylor/</loc>
-     <lastmod>2020-04-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
      <loc>https://jejjohnson.github.io/research_journal/appendix/neural/rbig/</loc>
+     <lastmod>2020-04-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://jejjohnson.github.io/research_journal/appendix/similarity/</loc>
+     <lastmod>2020-04-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://jejjohnson.github.io/research_journal/appendix/similarity/definition/</loc>
+     <lastmod>2020-04-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://jejjohnson.github.io/research_journal/appendix/similarity/distance/</loc>
+     <lastmod>2020-04-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://jejjohnson.github.io/research_journal/appendix/similarity/hsic/</loc>
+     <lastmod>2020-04-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://jejjohnson.github.io/research_journal/appendix/similarity/mmd/</loc>
+     <lastmod>2020-04-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://jejjohnson.github.io/research_journal/appendix/similarity/rv/</loc>
+     <lastmod>2020-04-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://jejjohnson.github.io/research_journal/appendix/similarity/taylor/</loc>
+     <lastmod>2020-04-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://jejjohnson.github.io/research_journal/appendix/similarity/taylor_2d/</loc>
+     <lastmod>2020-04-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://jejjohnson.github.io/research_journal/appendix/similarity/vi/</loc>
      <lastmod>2020-04-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
@@ -520,6 +528,10 @@
      <lastmod>2020-04-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
+     <loc>https://jejjohnson.github.io/research_journal/resources/machine_learning/nns/</loc>
+     <lastmod>2020-04-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
      <loc>https://jejjohnson.github.io/research_journal/resources/machine_learning/physics/</loc>
      <lastmod>2020-04-14</lastmod>
      <changefreq>daily</changefreq>
@@ -585,6 +597,10 @@
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/resources/python/packages/parallel/</loc>
+     <lastmod>2020-04-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://jejjohnson.github.io/research_journal/resources/python/packages/pathlib/</loc>
      <lastmod>2020-04-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
@@ -657,6 +673,18 @@
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/snippets/earth/cart_geo/</loc>
+     <lastmod>2020-04-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://jejjohnson.github.io/research_journal/snippets/latex/pseudocode/</loc>
+     <lastmod>2020-04-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://jejjohnson.github.io/research_journal/snippets/latex/tables/</loc>
+     <lastmod>2020-04-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://jejjohnson.github.io/research_journal/snippets/markdown/figures/</loc>
      <lastmod>2020-04-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
@@ -749,6 +777,14 @@
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/snippets/visualization/matplotlib/colorbars/</loc>
+     <lastmod>2020-04-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://jejjohnson.github.io/research_journal/snippets/visualization/matplotlib/legends/</loc>
+     <lastmod>2020-04-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://jejjohnson.github.io/research_journal/snippets/visualization/matplotlib/logscale/</loc>
      <lastmod>2020-04-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
