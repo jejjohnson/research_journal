@@ -6,9 +6,38 @@ authors:
 path: docs/snippets/visualization/matplotlib
 source: colorbars.md
 ---
+# Colorbars
+
+---
+
+## Basics
+
+* [AstroML](https://jakevdp.github.io/mpl_tutorial/tutorial_pages/tut3.html)
+
+---
+
+## Plot Colorbar Only
+
+* [StackOverFlow](https://stackoverflow.com/questions/16595138/standalone-colorbar-matplotlib)
 
 
-#### Scaling
+---
+
+## Plot n Colorbars, 1 Plot
+
+* [How to Plot Only One Colorbar for Multiple Plot Using Matplotlib](https://jdhao.github.io/2017/06/11/mpl_multiplot_one_colorbar/) - jdhao's Blog
+* [Matplotlib Docs](https://matplotlib.org/3.1.0/gallery/subplots_axes_and_figures/colorbar_placement.html)
+* [StackOverflow](https://stackoverflow.com/questions/13784201/matplotlib-2-subplots-1-colorbar)
+
+---
+
+## Colorbar Position
+
+* [Matplotlib Docs](https://matplotlib.org/3.1.0/gallery/axes_grid1/demo_colorbar_with_axes_divider.html)
+
+---
+
+## Scaling
 
 
 ```python
@@ -16,7 +45,9 @@ cbar = plt.colorbar(pts,  fraction=0.046,)
 
 ```
 
-#### Normalizing
+---
+
+## Normalizing
 
 ```python
 import matplotlib.colors as colors

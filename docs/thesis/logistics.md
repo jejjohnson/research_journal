@@ -88,6 +88,8 @@ Another way to look at it is to have **strengths** and **limitations** in my dis
 
 Often times, we have many details that I think is important to know but not necessarily important to tell the story. Theorems, derivations, side notes, are very important but sometimes I think we can omit them from the main body of the text. I will create a few tabs that will hide some of these details I deem irrelevant for the story.
 
+
+
 <details>
 <summary>
     <font color="black">Details

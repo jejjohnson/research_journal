@@ -1,78 +1,49 @@
+---
+title: Overview
+description: Overview of my ML4OCN Research
+authors:
+    - J. Emmanuel Johnson
+path: docs/projects/ML4OCN
+source: README.md
+---
 # Overview
 
 I present some of my findings for working on machine learning applied to ocean applications.
 
-## Documents
+## ARGO Project
 
-### Global Data
+!!! summary "Summary"
+    In this project, we are trying to predict profiles of $Bbp$. This is a multi-output ML problem with high dimensional inputs and high dimensional outputs.
 
-* Notebook I - Loading the Preprocessed Data - [ipynb](ARGO_project/global_data/1_load_processed_data.md)
-* Notebook II - Loading the Preprocessed Data - [ipynb](ARGO_project/global_data/2_ml_algorithms.md)
-
----
-
-## Walk-Throughs
-
-These are the fully fledged notebooks which will go through all of the preprocessing steps that were done in order to achieve the results we achieved.
-
-1. Explore the Data
-2. Preprocessing - PCA Components Analysis, Column Transformations
-3. End-to-End Training Example - RF, LR, MLP scikit-learn
-4. Output Maps (Validation Floats)
-5. Results
-   1. Line Plots - Variance in Profiles
-   2. Residual Plots
-   3. Joint Distribution Plots
+**Note**: You can find the repository with all of the reproducible code, specific functions and notebooks at [github.com/IPL-UV/ml4ocean](https://github.com/IPL-UV/ml4ocean).
 
 ---
 
-## Ideas
+### Subset Dataset
 
-**BaseLine Models**: sklearn models
-* Random Forests
-* Linear Regression
-* MLP
+We look at the North Atlantic and SubTropical Gyre regions to try and get an idea about how some ML methods might perform in this scenarios. As a first pass, we did minimal preprocessing with some standard PCA components reduction and we were ambitious and attempted to predict all 273 depths for the profiles. We had some success as we were able to do a decent job with Random forests and MultiLayer Perceptrons.
 
-**SOTA Models**: Outside
-* CatBoost
-* XGBoost
+!!! fire "Relevant Materials"
+    * ISPRS 2020 Publication - **Pending**
 
-**Bayesian Models**
-* Keras:
-  * Bayesian Layers (Edward)
-  * Linear Regression (TF Probability)
-  * Deep Kernel Learning (TF Probability, Bayesian Layers)
+??? example "Todo"
+    * 0.0 - Data Exploration Notebook
+    * 1.0 - Data Preprocessing Notebook
+    * 2.0 - Loading the Preprocessed Data
+    * 3.0 - Baseline ML Algorithm
+    * 4.0 - Visualization & Summary Statistics
 
-**GPyTorch Explore**
-* Exact GP
-* Sparse Variational GP
-* Deep GP
-* DKL - Sparse
+---
 
-### Tutorials
+### Global Dataset
 
-**Feature Extraction**
-* Column Transformations (scikit-ify everything)
-* PCA Trick
+After we found success in the subset data, we decided to go for the global dataset and see how we do. We did reduce the problem difficulty by predicting only 19 depth levels instead of $\sim$273.
 
-**CrossValidation**
-* Model Only
-* PreProcessing
+!!! check "Notebooks"
+    * 2.0 - [Loading the Preprocessed Data](ARGO_project/global_data/1_load_processed_data.md)
+    * 3.0 - [Baseline ML Algorithm](ARGO_project/global_data/2_ml_algorithms.md)
 
-**Model Training**
-* Cross Validation (Random, GridSearch)
-* Training Tips
-  * [Validation Curves](https://scikit-learn.org/stable/auto_examples/model_selection/plot_validation_curve.html#sphx-glr-auto-examples-model-selection-plot-validation-curve-py)
-  * [Learning Curves](https://scikit-learn.org/stable/auto_examples/model_selection/plot_learning_curve.html#sphx-glr-auto-examples-model-selection-plot-learning-curve-py)
-
-**Assessment**
-* Interpretability
-  * Permutation Maps
-  * Sensitivity Analysis
-
-**Visualization**
-* Matplotlib - Complete Customization
-* GeoPandas
-* XArray
-* HoloViews / GeoViews
-* DataShader
+??? example "Todo"
+    * 0.0 - Data Exploration Notebook
+    * 1.0 - Data Preprocessing Notebook
+    * 4.0 - Visualization & Summary Statistics

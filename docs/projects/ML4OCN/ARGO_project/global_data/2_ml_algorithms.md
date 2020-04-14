@@ -1,4 +1,12 @@
-# Baseline Algorithm
+---
+title: 3.0 Baseline Models
+description: Overview of my ML4OCN Research
+authors:
+    - J. Emmanuel Johnson
+path: docs/projects/ML4OCN/ARGO_project/global_data
+source: 2_ml_algorithms.md
+---
+# Baseline Algorithms
 
 
 

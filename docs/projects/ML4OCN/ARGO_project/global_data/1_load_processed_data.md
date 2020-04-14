@@ -1,3 +1,11 @@
+---
+title: 2.0 Processed Data
+description: Overview of my ML4OCN Research
+authors:
+    - J. Emmanuel Johnson
+path: docs/projects/ML4OCN/ARGO_project/global_data
+source: 1_load_processed_data.md
+---
 # Loading the Data
 
 

@@ -16,31 +16,6 @@
 * $\mathbf{X},\mathbf{Y}$ can have different number of dimensions
 * $\mathbf{X},\mathbf{Y}$ must have different number of samples
 
----
-- [Probabilities in Feature Space: The Mean Trick](#probabilities-in-feature-space-the-mean-trick)
-    - [Mean Embedding](#mean-embedding)
-    - [Maximum Mean Discrepency (MMD)](#maximum-mean-discrepency-mmd)
-    - [Hilbert-Schmidt Independence Criterion (HSIC)](#hilbert-schmidt-independence-criterion-hsic)
-- [Covariance Measures](#covariance-measures)
-  - [Uncentered Kernel](#uncentered-kernel)
-  - [Centered Kernel](#centered-kernel)
-    - [Hilbert-Schmidt Independence Criterion (HSIC)](#hilbert-schmidt-independence-criterion-hsic-1)
-    - [Maximum Mean Discrepency (MMD)](#maximum-mean-discrepency-mmd-1)
-- [Kernel Matrix Inversion](#kernel-matrix-inversion)
-    - [Sherman-Morrison-Woodbury](#sherman-morrison-woodbury)
-- [Kernel Approximation](#kernel-approximation)
-  - [Random Fourier Features](#random-fourier-features)
-  - [Nystrom Approximation](#nystrom-approximation)
-  - [Structured Kernel Interpolation](#structured-kernel-interpolation)
-- [Correlation Measures](#correlation-measures)
-  - [Uncentered Kernel](#uncentered-kernel-1)
-    - [Kernel Alignment (KA)](#kernel-alignment-ka)
-  - [Uncentered Kernel](#uncentered-kernel-2)
-    - [Centered Kernel Alignment (cKA)](#centered-kernel-alignment-cka)
-- [Supplementary](#supplementary)
-- [Ideas](#ideas)
-
----
 
 
 ### Feature Map
