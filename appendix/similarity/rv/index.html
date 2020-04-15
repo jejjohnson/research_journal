@@ -6523,15 +6523,28 @@
     </font>
 </summary></p>
 <p>We can expand the terms in the parenthesis like normally. Then we take the expectation of each of the terms individually.</p>
-<p>$$
+<div>
+<div class="MathJax_Preview">
 \begin{aligned}
-\text{cov}(\mathbf{x,y})  &amp;= \mathbb{E}\left((\mathbf{x}-\mu_\mathbf{x})(\mathbf{y}-\mu_\mathbf{y}) \right) \
-&amp;= \mathbb{E}\left[\mathbf{xy} - \mu_\mathbf{x} Y - \mathbf{x}\mu_\mathbf{y} + \mu_\mathbf{x}\mu_y \right] \
-&amp;=  \mathbb{E}[\mathbf{xy}] - \mu_\mathbf{x}  \mathbb{E}[\mathbf{x}] -  \mu_y\mathbb{E}[\mathbf{y}] + \mu_\mathbf{x}\mu_y \
-&amp;=  \mathbb{E}[\mathbf{xy}] - \mu_\mathbf{x}\mu_y
+\text{cov}(\mathbf{x,y})  
+&amp;= \mathbb{E}\left((\mathbf{x}-\mu_\mathbf{x})(\mathbf{y}-\mu_\mathbf{y}) \right) \\
+&amp;= \mathbb{E}\left[\mathbf{xy} - \mu_\mathbf{x} Y - \mathbf{x}\mu_\mathbf{y} + \mu_\mathbf{x}\mu_y \right] \\
+&amp;=  \mathbb{E}[\mathbf{xy}] - \mu_\mathbf{x}  \mathbb{E}[\mathbf{x}] -  \mu_y\mathbb{E}[\mathbf{y}] + \mu_\mathbf{x}\mu_y \\
+&amp;=  \mathbb{E}[\mathbf{xy}] - \mu_\mathbf{x}\mu_y \\
 \end{aligned}
-$$
-<!-- </details> --></p>
+</div>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\text{cov}(\mathbf{x,y})  
+&= \mathbb{E}\left((\mathbf{x}-\mu_\mathbf{x})(\mathbf{y}-\mu_\mathbf{y}) \right) \\
+&= \mathbb{E}\left[\mathbf{xy} - \mu_\mathbf{x} Y - \mathbf{x}\mu_\mathbf{y} + \mu_\mathbf{x}\mu_y \right] \\
+&=  \mathbb{E}[\mathbf{xy}] - \mu_\mathbf{x}  \mathbb{E}[\mathbf{x}] -  \mu_y\mathbb{E}[\mathbf{y}] + \mu_\mathbf{x}\mu_y \\
+&=  \mathbb{E}[\mathbf{xy}] - \mu_\mathbf{x}\mu_y \\
+\end{aligned}
+</script>
+</div>
+<!-- </details> -->
+
 <p>This will result in a scalar value <span><span class="MathJax_Preview">\mathbb{R}^+</span><script type="math/tex">\mathbb{R}^+</script></span> that ranges from <span><span class="MathJax_Preview">(-\infty, \infty)</span><script type="math/tex">(-\infty, \infty)</script></span>. This number is affected by scale so we can different values depending upon the scale of our data, i.e. <span><span class="MathJax_Preview">\text{cov}(\mathbf{x,y}) \neq \text{cov}(\alpha \mathbf{x}, \beta \mathbf{x})</span><script type="math/tex">\text{cov}(\mathbf{x,y}) \neq \text{cov}(\alpha \mathbf{x}, \beta \mathbf{x})</script></span> where <span><span class="MathJax_Preview">\alpha, \beta \in \mathbb{R}^{+}</span><script type="math/tex">\alpha, \beta \in \mathbb{R}^{+}</script></span></p>
 <h4 id="empirical-estimate_2">Empirical Estimate<a class="headerlink" href="#empirical-estimate_2" title="Permanent link">&para;</a></h4>
 <p>We can compare the r.v. <span><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> with another r.v. <span><span class="MathJax_Preview">Y \in \mathbb{R}^{N \times 1}</span><script type="math/tex">Y \in \mathbb{R}^{N \times 1}</script></span>. the covariance, or the cross-covariance between multiple variables <span><span class="MathJax_Preview">X,Y</span><script type="math/tex">X,Y</script></span>. We can write this as:</p>
