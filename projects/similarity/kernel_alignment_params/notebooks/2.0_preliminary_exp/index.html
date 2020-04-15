@@ -6370,15 +6370,12 @@
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;First set of params:</span><span class="se">\n</span><span class="si">{</span><span class="n">parameters</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </code></pre></div>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>0.32917944341805494 0.3439255265652333
+<div class="codehilite"><pre><span></span><code>0.32917944341805494 0.3439255265652333
 Number of params: 19200
 First set of params:
 {&#39;dataset&#39;: &#39;sine&#39;, &#39;scorer&#39;: &#39;hsic&#39;, &#39;sigma_X&#39;: 0.00032917944341805485, &#39;sigma_Y&#39;: 0.00034392552656523323}
 </code></pre></div>
-</td></tr></table>
+
 
 </div>
 <input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><label for="__tabbed_2_3">Experimental Step</label><div class="tabbed-content">
@@ -6462,21 +6459,7 @@ First set of params:
 <span class="p">)</span>
 </code></pre></div>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>[Parallel(n_jobs=-1)]: Using backend LokyBackend with 28 concurrent workers.
+<div class="codehilite"><pre><span></span><code>[Parallel(n_jobs=-1)]: Using backend LokyBackend with 28 concurrent workers.
 [Parallel(n_jobs=-1)]: Done 232 tasks      | elapsed:    2.0s
 [Parallel(n_jobs=-1)]: Done 732 tasks      | elapsed:    5.6s
 [Parallel(n_jobs=-1)]: Done 1432 tasks      | elapsed:   10.5s
@@ -6492,7 +6475,7 @@ First set of params:
 [Parallel(n_jobs=-1)]: Done 19145 out of 19200 | elapsed:  2.0min remaining:    0.3s
 [Parallel(n_jobs=-1)]: Done 19200 out of 19200 | elapsed:  2.0min finished
 </code></pre></div>
-</td></tr></table>
+
 
 <div class="highlight"><pre><span></span><code><span class="c1"># test (number of results = n parameters)</span>
 <span class="k">assert</span> <span class="n">n_params</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
@@ -6586,13 +6569,11 @@ First set of params:
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;First set of params:</span><span class="se">\n</span><span class="si">{</span><span class="n">parameters</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </code></pre></div>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>Number of params: 36
+<div class="codehilite"><pre><span></span><code>Number of params: 36
 First set of params:
 {&#39;dataset&#39;: &#39;sine&#39;, &#39;scorer&#39;: &#39;hsic&#39;, &#39;estimator&#39;: &#39;mean&#39;}
 </code></pre></div>
-</td></tr></table>
+
 
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Dict</span>
 
@@ -6676,11 +6657,10 @@ First set of params:
 <span class="p">)</span>
 </code></pre></div>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>[Parallel(n_jobs=1)]: Using backend SequentialBackend with 1 concurrent workers.
+<div class="codehilite"><pre><span></span><code>[Parallel(n_jobs=1)]: Using backend SequentialBackend with 1 concurrent workers.
 [Parallel(n_jobs=1)]: Done  36 out of  36 | elapsed:    4.3s finished
 </code></pre></div>
-</td></tr></table>
+
 
 <div class="highlight"><pre><span></span><code><span class="c1"># test (number of results = n parameters)</span>
 <span class="k">assert</span> <span class="n">n_params</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
@@ -6900,9 +6880,9 @@ First set of params:
 </div>
 <input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><label for="__tabbed_4_2">Kernel Alignment</label><div class="tabbed-content">
 <p><center></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>![png](pics/param_grid/output_47_1.png)
+<div class="codehilite"><pre><span></span><code>![png](pics/param_grid/output_47_1.png)
 </code></pre></div>
-</td></tr></table>
+
 
 <p></center></p>
 </div>
@@ -7095,7 +7075,11 @@ First set of params:
         })
       </script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../../../../javascripts/extra.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
       
     
   </body>

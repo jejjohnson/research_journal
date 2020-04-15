@@ -6071,7 +6071,7 @@
 * Assumes known variance
 * Assumes <span><span class="MathJax_Preview">D\times D</span><script type="math/tex">D\times D</script></span> covariance matrix for multidimensional data
 * Quite inexpensive to implement
-* The 3rd term (the 2nd order component of the Taylor expansion) has been show to not make a huge difference</p>
+* The 3<sup>rd</sup> term (the 2<sup>nd</sup> order component of the Taylor expansion) has been show to not make a huge difference</p>
 <div class="highlight"><pre><span></span><code><span class="n">egp_moment1</span> <span class="o">=</span> <span class="n">jax</span><span class="o">.</span><span class="n">jfwd</span><span class="p">(</span><span class="n">posterior</span><span class="p">,</span> <span class="n">args_num</span><span class="o">=</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
 </code></pre></div>
 
@@ -6228,7 +6228,11 @@
         })
       </script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../javascripts/extra.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
       
     
   </body>

@@ -6255,11 +6255,10 @@
 <span class="nb">print</span><span class="p">(</span><span class="n">ytrain</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">ytest</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 </code></pre></div>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>(19763, 26) (4941, 26)
+<div class="codehilite"><pre><span></span><code>(19763, 26) (4941, 26)
 (19763, 19) (4941, 19)
 </code></pre></div>
-</td></tr></table>
+
 
 </details>
 <hr />
@@ -6281,9 +6280,9 @@
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
 </code></pre></div>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>&lt;matplotlib.legend.Legend at 0x7fcac3ba3080&gt;
+<div class="codehilite"><pre><span></span><code>&lt;matplotlib.legend.Legend at 0x7fcac3ba3080&gt;
 </code></pre></div>
-</td></tr></table>
+
 
 </details>
 <p><img alt="png" src="../pics/output_9_1.png" /></p>
@@ -6309,16 +6308,7 @@
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Time Taken: </span><span class="si">{</span><span class="n">t1</span><span class="si">}</span><span class="s2"> secs&quot;</span><span class="p">)</span>
 </code></pre></div>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>[Parallel(n_jobs=-1)]: Using backend ThreadingBackend with 28 concurrent workers.
+<div class="codehilite"><pre><span></span><code>[Parallel(n_jobs=-1)]: Using backend ThreadingBackend with 28 concurrent workers.
 [Parallel(n_jobs=-1)]: Done 144 tasks      | elapsed:    7.8s
 [Parallel(n_jobs=-1)]: Done 394 tasks      | elapsed:   19.4s
 [Parallel(n_jobs=-1)]: Done 744 tasks      | elapsed:   35.4s
@@ -6329,7 +6319,7 @@ Time Taken: 95.3053548336029 secs
 
 [Parallel(n_jobs=-1)]: Done 2000 out of 2000 | elapsed:  1.6min finished
 </code></pre></div>
-</td></tr></table>
+
 
 </div>
 </div>
@@ -6341,13 +6331,7 @@ Time Taken: 95.3053548336029 secs
 <span class="n">ypred_train</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">ytrain_scaled</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">ytrain_scaled</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">ytrain_scaled</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
 </code></pre></div>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>[Parallel(n_jobs=28)]: Using backend ThreadingBackend with 28 concurrent workers.
+<div class="codehilite"><pre><span></span><code>[Parallel(n_jobs=28)]: Using backend ThreadingBackend with 28 concurrent workers.
 [Parallel(n_jobs=28)]: Done 144 tasks      | elapsed:    0.2s
 [Parallel(n_jobs=28)]: Done 394 tasks      | elapsed:    0.5s
 [Parallel(n_jobs=28)]: Done 744 tasks      | elapsed:    0.9s
@@ -6355,7 +6339,7 @@ Time Taken: 95.3053548336029 secs
 [Parallel(n_jobs=28)]: Done 1744 tasks      | elapsed:    1.8s
 [Parallel(n_jobs=28)]: Done 2000 out of 2000 | elapsed:    2.1s finished
 </code></pre></div>
-</td></tr></table>
+
 
 <div class="highlight"><pre><span></span><code><span class="n">np</span><span class="o">.</span><span class="n">minimum</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
 </code></pre></div>
@@ -6394,13 +6378,7 @@ Time Taken: 95.3053548336029 secs
 <span class="n">ytest_vec</span> <span class="o">=</span> <span class="n">ytest_c</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
 </code></pre></div>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>[Parallel(n_jobs=28)]: Using backend ThreadingBackend with 28 concurrent workers.
+<div class="codehilite"><pre><span></span><code>[Parallel(n_jobs=28)]: Using backend ThreadingBackend with 28 concurrent workers.
 [Parallel(n_jobs=28)]: Done 144 tasks      | elapsed:    0.1s
 [Parallel(n_jobs=28)]: Done 394 tasks      | elapsed:    0.2s
 [Parallel(n_jobs=28)]: Done 744 tasks      | elapsed:    0.4s
@@ -6408,7 +6386,7 @@ Time Taken: 95.3053548336029 secs
 [Parallel(n_jobs=28)]: Done 1744 tasks      | elapsed:    0.8s
 [Parallel(n_jobs=28)]: Done 2000 out of 2000 | elapsed:    0.8s finished
 </code></pre></div>
-</td></tr></table>
+
 
 <div class="highlight"><pre><span></span><code><span class="n">plot_residuals</span><span class="p">(</span><span class="n">ytest_vec</span><span class="p">,</span> <span class="n">ypred_vec</span><span class="p">,</span> <span class="s1">&#39;test&#39;</span><span class="p">)</span>
 </code></pre></div>
@@ -6540,16 +6518,7 @@ Time Taken: 95.3053548336029 secs
 <div class="highlight"><pre><span></span><code><span class="p">[</span><span class="n">r2_score</span><span class="p">(</span><span class="n">iscale</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">inverse_transform</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),</span> <span class="n">iscale</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">inverse_transform</span><span class="p">(</span><span class="n">y</span><span class="p">)</span><span class="o">.</span><span class="n">ravel</span><span class="p">())</span> <span class="k">for</span> <span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">iscale</span><span class="p">)</span> <span class="ow">in</span> <span class="n">predictions_train</span><span class="p">]</span>
 </code></pre></div>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>[0.9831090704366079,
+<div class="codehilite"><pre><span></span><code>[0.9831090704366079,
  0.9835754471993815,
  0.983328216844481,
  0.9833219144776779,
@@ -6560,22 +6529,13 @@ Time Taken: 95.3053548336029 secs
  0.9830150417288622,
  0.9828010707842838]
 </code></pre></div>
-</td></tr></table>
+
 
 <h4 id="testing-data_1">Testing Data<a class="headerlink" href="#testing-data_1" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="p">[</span><span class="n">r2_score</span><span class="p">(</span><span class="n">iscale</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">inverse_transform</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),</span> <span class="n">iscale</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">inverse_transform</span><span class="p">(</span><span class="n">y</span><span class="p">)</span><span class="o">.</span><span class="n">ravel</span><span class="p">())</span> <span class="k">for</span> <span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">iscale</span><span class="p">)</span> <span class="ow">in</span> <span class="n">predictions_test</span><span class="p">]</span>
 </code></pre></div>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>[0.7186974424983624,
+<div class="codehilite"><pre><span></span><code>[0.7186974424983624,
  0.7071992892898138,
  0.6647674379299724,
  0.8125536947385796,
@@ -6586,7 +6546,7 @@ Time Taken: 95.3053548336029 secs
  0.7808035958518491,
  0.7484396890420137]
 </code></pre></div>
-</td></tr></table>
+
 
 <h3 id="other-ways">Other Ways<a class="headerlink" href="#other-ways" title="Permanent link">&para;</a></h3>
 <ul>
@@ -6707,7 +6667,11 @@ Time Taken: 95.3053548336029 secs
         })
       </script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../../../../javascripts/extra.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
       
     
   </body>

@@ -6343,11 +6343,10 @@
 <span class="o">%</span><span class="n">autoreload</span> <span class="mi">2</span>
 </code></pre></div>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>The autoreload extension is already loaded. To reload it, use:
+<div class="codehilite"><pre><span></span><code>The autoreload extension is already loaded. To reload it, use:
   %reload_ext autoreload
 </code></pre></div>
-</td></tr></table>
+
 
 <hr />
 <h3 id="1-load-data">1 Load Data<a class="headerlink" href="#1-load-data" title="Permanent link">&para;</a></h3>
@@ -6654,15 +6653,7 @@
 <span class="n">save_model</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">model_name</span><span class="si">}</span><span class="s2">_na&quot;</span><span class="p">)</span>
 </code></pre></div>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7
-8
-9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>[Parallel(n_jobs=-1)]: Using backend ThreadingBackend with 28 concurrent workers.
+<div class="codehilite"><pre><span></span><code>[Parallel(n_jobs=-1)]: Using backend ThreadingBackend with 28 concurrent workers.
 [Parallel(n_jobs=-1)]: Done 144 tasks      | elapsed:    4.1s
 [Parallel(n_jobs=-1)]: Done 394 tasks      | elapsed:   10.2s
 [Parallel(n_jobs=-1)]: Done 744 tasks      | elapsed:   18.6s
@@ -6672,7 +6663,7 @@
 
 Training time: 37.415 secs.
 </code></pre></div>
-</td></tr></table>
+
 
 <hr />
 <h3 id="6-test-ml-model">6 - Test ML Model<a class="headerlink" href="#6-test-ml-model" title="Permanent link">&para;</a></h3>
@@ -6708,19 +6699,14 @@ Training time: 37.415 secs.
 <div class="highlight"><pre><span></span><code><span class="n">ypred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">Xtrain</span><span class="p">)</span>
 </code></pre></div>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>[Parallel(n_jobs=28)]: Using backend ThreadingBackend with 28 concurrent workers.
+<div class="codehilite"><pre><span></span><code>[Parallel(n_jobs=28)]: Using backend ThreadingBackend with 28 concurrent workers.
 [Parallel(n_jobs=28)]: Done 144 tasks      | elapsed:    0.3s
 [Parallel(n_jobs=28)]: Done 394 tasks      | elapsed:    0.8s
 [Parallel(n_jobs=28)]: Done 744 tasks      | elapsed:    1.5s
 [Parallel(n_jobs=28)]: Done 1194 tasks      | elapsed:    2.2s
 [Parallel(n_jobs=28)]: Done 1500 out of 1500 | elapsed:    2.7s finished
 </code></pre></div>
-</td></tr></table>
+
 
 <div class="highlight"><pre><span></span><code><span class="n">min_lim</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">ypred</span><span class="p">,</span> <span class="n">ytrain</span><span class="p">)))</span>
 <span class="n">max_lim</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">ypred</span><span class="p">,</span> <span class="n">ytrain</span><span class="p">)))</span>
@@ -6732,9 +6718,9 @@ Training time: 37.415 secs.
 <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">([</span><span class="n">min_lim</span><span class="p">,</span> <span class="n">max_lim</span><span class="p">])</span>
 </code></pre></div>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>(-5.863397779903146, 13.594780012746048)
+<div class="codehilite"><pre><span></span><code>(-5.863397779903146, 13.594780012746048)
 </code></pre></div>
-</td></tr></table>
+
 
 <p><img alt="png" src="../pics/explore/output_40_1.png" /></p>
 <p>Then we can look at the statistics for each level.</p>
@@ -6748,30 +6734,7 @@ Training time: 37.415 secs.
 <span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">summary</span><span class="p">())</span>
 </code></pre></div>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>                                 OLS Regression Results                                
+<div class="codehilite"><pre><span></span><code>                                 OLS Regression Results                                
 =======================================================================================
 Dep. Variable:                      y   R-squared (uncentered):                   0.973
 Model:                            OLS   Adj. R-squared (uncentered):              0.973
@@ -6796,7 +6759,7 @@ Kurtosis:                       8.245   Cond. No.                         1.00
 Warnings:
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
 </code></pre></div>
-</td></tr></table>
+
 
 <div class="highlight"><pre><span></span><code><span class="n">statistic</span> <span class="o">=</span> <span class="s1">&#39;r2&#39;</span>
 
@@ -6815,19 +6778,14 @@ Warnings:
 <div class="highlight"><pre><span></span><code><span class="n">ypred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">Xvalid</span><span class="p">)</span>
 </code></pre></div>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>[Parallel(n_jobs=28)]: Using backend ThreadingBackend with 28 concurrent workers.
+<div class="codehilite"><pre><span></span><code>[Parallel(n_jobs=28)]: Using backend ThreadingBackend with 28 concurrent workers.
 [Parallel(n_jobs=28)]: Done 144 tasks      | elapsed:    0.1s
 [Parallel(n_jobs=28)]: Done 394 tasks      | elapsed:    0.3s
 [Parallel(n_jobs=28)]: Done 744 tasks      | elapsed:    0.5s
 [Parallel(n_jobs=28)]: Done 1194 tasks      | elapsed:    0.8s
 [Parallel(n_jobs=28)]: Done 1500 out of 1500 | elapsed:    0.9s finished
 </code></pre></div>
-</td></tr></table>
+
 
 <div class="highlight"><pre><span></span><code><span class="c1"># each level</span>
 <span class="n">each_level</span> <span class="o">=</span> <span class="kc">False</span>
@@ -6969,24 +6927,7 @@ Warnings:
 <div class="highlight"><pre><span></span><code><span class="n">rf_model</span><span class="o">.</span>
 </code></pre></div>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>{&#39;bootstrap&#39;: True,
+<div class="codehilite"><pre><span></span><code>{&#39;bootstrap&#39;: True,
  &#39;ccp_alpha&#39;: 0.0,
  &#39;criterion&#39;: &#39;mse&#39;,
  &#39;max_depth&#39;: None,
@@ -7005,7 +6946,7 @@ Warnings:
  &#39;verbose&#39;: 0,
  &#39;warm_start&#39;: False}
 </code></pre></div>
-</td></tr></table>
+
 
 <div class="highlight"><pre><span></span><code><span class="n">tree_feature_importances</span> <span class="o">=</span> \
     <span class="n">model</span><span class="o">.</span><span class="n">feature_importances_</span>
@@ -7148,7 +7089,11 @@ Warnings:
         })
       </script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../../../../javascripts/extra.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
       
     
   </body>

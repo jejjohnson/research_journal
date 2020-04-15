@@ -6096,10 +6096,10 @@
 </div>
 <p>The derivative of an expectation of something is the same as the expectation of a derivative (<span><span class="MathJax_Preview">\frac{\partial}{\partial \theta}(\mathbb{E}_x[\cdot]=\mathbb{E}_x[\frac{\partial}{\partial \theta}(\cdot)]</span><script type="math/tex">\frac{\partial}{\partial \theta}(\mathbb{E}_x[\cdot]=\mathbb{E}_x[\frac{\partial}{\partial \theta}(\cdot)]</script></span>) using the dominated convergence theorem (<a href="https://math.stackexchange.com/questions/217702/when-can-we-interchange-the-derivative-with-an-expectation">stackoverflow</a>). So we can just take the derivative w.r.t. <span><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span> inside of the expectation</p>
 <p>$$\frac{\partial \mathcal{J}(\mathcal{P}_z)}{\partial \theta}=</p>
-<p>\mathbb{E}<em>x\left[ \frac{\partial}{\partial \theta}(\log \mathcal{P}_x(x)) - \frac{\partial}{\partial \theta} \left( \log \left| \frac{\partial \mathcal{G}</em>{\theta}(x)}{\partial x} \right|\right) - \frac{\partial}{\partial \theta} \left( \log \mathcal{N}(\mathcal{G}_{\theta}(x)) \right) \right]$$</p>
+<p>\mathbb{E}<em _theta="\theta">x\left[ \frac{\partial}{\partial \theta}(\log \mathcal{P}_x(x)) - \frac{\partial}{\partial \theta} \left( \log \left| \frac{\partial \mathcal{G}</em>(x)}{\partial x} \right|\right) - \frac{\partial}{\partial \theta} \left( \log \mathcal{N}(\mathcal{G}_{\theta}(x)) \right) \right]$$</p>
 <p>Let's take it term by term. First of all, we can see that the <span><span class="MathJax_Preview">\log \mathcal{P}_x(x)</span><script type="math/tex">\log \mathcal{P}_x(x)</script></span> has no parameters dependent upon <span><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span> so we can immediately cancel that term.</p>
 <p>$$\frac{\partial \mathcal{J}(\mathcal{P}_z)}{\partial \theta}=</p>
-<p>\mathbb{E}<em>x\left[ \cancel{\frac{\partial}{\partial \theta}(\log \mathcal{P}_x(x))} - \frac{\partial}{\partial \theta} \left( \log \left| \frac{\partial \mathcal{G}</em>{\theta}(x)}{\partial x} \right|\right) - \frac{\partial}{\partial \theta} \left( \log \mathcal{N}(\mathcal{G}_{\theta}(x)) \right) \right]$$</p>
+<p>\mathbb{E}<em _theta="\theta">x\left[ \cancel{\frac{\partial}{\partial \theta}(\log \mathcal{P}_x(x))} - \frac{\partial}{\partial \theta} \left( \log \left| \frac{\partial \mathcal{G}</em>(x)}{\partial x} \right|\right) - \frac{\partial}{\partial \theta} \left( \log \mathcal{N}(\mathcal{G}_{\theta}(x)) \right) \right]$$</p>
 <p><span style="color:red">The second term</span> ??? <a href="https://stats.stackexchange.com/questions/154133/how-to-get-the-derivative-of-a-normal-distribution-w-r-t-its-parameters">third term</a></p>
 <p>Practically speaking, this is a bit difficult to calculate. Instead we can do a procedure that measures how much more Gaussian the approximate base distribution has become as a result of the transformation <span><span class="MathJax_Preview">\mathcal{G}_{\theta}(x)</span><script type="math/tex">\mathcal{G}_{\theta}(x)</script></span>.</p>
 <p>--</p>
@@ -6221,7 +6221,11 @@
         })
       </script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../../../../javascripts/extra.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
       
     
   </body>

@@ -6414,7 +6414,7 @@ $$
 \begin{aligned}
 f &amp;\sim \mathcal{N}(f|\mu_{GP}, \nu^2_{GP}) \
     \mu_{GP} &amp;= K_{<em>} K_{GP}^{-1}y=K_{</em>} \alpha \
-    \nu^2_{GP} &amp;= K_{**} - K_{<em>} K_{GP}^{-1}K_{</em>}^{\top} + \tilde{\Sigma}_x
+    \nu^2_{GP} &amp;= K_{**} - K_{*} K_{GP}<sup _top="\top">{-1}K_{*}</sup> + \tilde{\Sigma}_x
 \end{aligned}
 $$
 where <span><span class="MathJax_Preview">\tilde{\Sigma}_x = \nabla_x \mu_{GP} \Sigma_x \nabla \mu_{GP}^\top</span><script type="math/tex">\tilde{\Sigma}_x = \nabla_x \mu_{GP} \Sigma_x \nabla \mu_{GP}^\top</script></span>.</p>
@@ -6424,15 +6424,15 @@ $$
 \begin{aligned}
     \mu_{SGP} &amp;= K_{<em>z}K_{zz}^{-1}m \
     \nu^2_{SGP} &amp;= K_{*</em>} 
-    - K_{<em>z}\left[ K_{zz}^{-1} - K_{zz}^{-1}SK_{zz}^{-1} \right]K_{*z}^{\top}
+    - K_{<em>z}\left[ K_{zz}^{-1} - K_{zz}<sup -1="-1">{-1}SK_{zz}</sup> \right]K_{<em>z}^{\top}
 \end{aligned}
 $$
 So the new predictive functions will be:
 $$
 \begin{aligned}
     \mu_{SGP} &amp;= K_{*z}K_{zz}^{-1}m \
-    \nu^2_{SGP} &amp;= K_{*</em>} 
-    - K_{*z}\left[ K_{zz}^{-1} - K_{zz}^{-1}SK_{zz}^{-1} \right]K_{*z}^{\top} 
+    \nu^2_{SGP} &amp;= K_{</em></em>} 
+    - K_{*z}\left[ K_{zz}^{-1} - K_{zz}<sup -1="-1">{-1}SK_{zz}</sup> \right]K_{*z}^{\top} 
     + \tilde{\Sigma}_x
 \end{aligned}
 $$
@@ -6581,7 +6581,11 @@ As shown above, this is a fairly extensible method that offers a cheap improved 
         })
       </script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../../../javascripts/extra.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
       
     
   </body>

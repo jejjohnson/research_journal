@@ -5946,82 +5946,16 @@
 <h2 id="multiprocessing-module">Multiprocessing Module<a class="headerlink" href="#multiprocessing-module" title="Permanent link">&para;</a></h2>
 <p>Useful for doing "embarrassingly parallel" tasks. You do need to control how it works (e.g. the number of jobs, what to loop over). I use it because it's quite easy but there are more advanced ways to do parallization below.</p>
 <p>=== info "Snippet"</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>```python
+<div class="codehilite"><pre><span></span><code>```python
 results = Parallel(n_jobs=n_jobs, verbose=verbose)(
     delayed(exp_step)(iparam, **kwargs) for iparam in parameters
 )
 ```
 </code></pre></div>
-</td></tr></table>
+
 
 <p>=== info "Full Function"</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-56
-57
-58
-59
-60
-61
-62
-63</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>```python
+<div class="codehilite"><pre><span></span><code>```python
 from joblib import Parallel, delayed
 from typing import Callable, Iterable
 
@@ -6085,7 +6019,7 @@ def run_parallel_step(
     return results
 ```
 </code></pre></div>
-</td></tr></table>
+
 
 <h2 id="dask">Dask<a class="headerlink" href="#dask" title="Permanent link">&para;</a></h2>
                 
@@ -6199,7 +6133,11 @@ def run_parallel_step(
         })
       </script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../../javascripts/extra.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
       
     
   </body>

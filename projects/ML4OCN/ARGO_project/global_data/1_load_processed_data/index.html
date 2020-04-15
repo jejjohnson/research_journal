@@ -6641,18 +6641,7 @@
 <span class="n">full_df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">tolist</span><span class="p">()[:</span><span class="mi">10</span><span class="p">]</span>
 </code></pre></div>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>Dataframe Features: (25413, 45)
+<div class="codehilite"><pre><span></span><code>Dataframe Features: (25413, 45)
 
 [&#39;sla&#39;,
  &#39;PAR&#39;,
@@ -6665,19 +6654,17 @@
  &#39;doy_cos&#39;,
  &#39;x_cart&#39;]
 </code></pre></div>
-</td></tr></table>
+
 
 <div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Dataframe Indices (meta vars):&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">full_df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">names</span><span class="p">))</span>
 <span class="n">full_df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">names</span>
 </code></pre></div>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>Dataframe Indices (meta vars): 7
+<div class="codehilite"><pre><span></span><code>Dataframe Indices (meta vars): 7
 
 FrozenList([&#39;wmo&#39;, &#39;n_cycle&#39;, &#39;N&#39;, &#39;lon&#39;, &#39;lat&#39;, &#39;juld&#39;, &#39;date&#39;])
 </code></pre></div>
-</td></tr></table>
+
 
 <hr />
 <h2 id="2-training-and-test-split">2 - Training and Test Split<a class="headerlink" href="#2-training-and-test-split" title="Permanent link">&para;</a></h2>
@@ -6763,15 +6750,12 @@ FrozenList([&#39;wmo&#39;, &#39;n_cycle&#39;, &#39;N&#39;, &#39;lon&#39;, &#39;l
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ISPRS2016 Independent Data:&quot;</span><span class="p">,</span> <span class="n">isprs2020_df</span><span class="p">[</span><span class="n">input_features</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">isprs2020_df</span><span class="p">[</span><span class="n">output_features</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 </code></pre></div>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>Input Data: (24704, 26)
+<div class="codehilite"><pre><span></span><code>Input Data: (24704, 26)
 Output Data: (24704, 19)
 SOCA2016 Independent Data: (378, 26) (378, 19)
 ISPRS2016 Independent Data: (331, 26) (331, 19)
 </code></pre></div>
-</td></tr></table>
+
 
 <h3 id="32-saving">3.2 - Saving<a class="headerlink" href="#32-saving" title="Permanent link">&para;</a></h3>
 <ul>
@@ -6934,7 +6918,11 @@ ISPRS2016 Independent Data: (331, 26) (331, 19)
         })
       </script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../../../../javascripts/extra.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
       
     
   </body>
