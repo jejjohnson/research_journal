@@ -6321,25 +6321,16 @@ $$
 \text{HSIC}(\hat{P}<em>{XY}, \mathcal{F}, \mathcal{G})
 &amp;= \text{Tr}(K</em>{\mathbf{x}}K_{\mathbf{x}})
 \end{aligned}$$</p>
-<!-- <details> -->
+<details>
 
-<p><summary>
+<summary>
     <font color="red">Proof
     </font>
-</summary></p>
-<p>In this section, we will derive the empirical formula for HSIC using the Hilbert-Schmidt Norm of the covariance matrix with the kernel mapping.</p>
-<div>
-<div class="MathJax_Preview">
-\begin{aligned}
-||C_{\phi(x)\psi(x)}||_\mathcal{H}^2 
-&amp;= ||\Phi^\top \Psi||^2 \\
-&amp;= tr\left[ (\Phi^\top \Psi)^\top (\Phi^\top \Psi)\right] \\
-&amp;= tr \left[ \Psi^\top \Phi \Phi^\top \Psi\right] \\
-&amp;= tr \left[ \Psi \Psi^\top \Phi \Phi^\top \right] \\
-&amp;= tr (K_{\mathbf{x}}K_{\mathbf{x}})
-\end{aligned}
-</div>
-<script type="math/tex; mode=display">
+</summary>
+
+In this section, we will derive the empirical formula for HSIC using the Hilbert-Schmidt Norm of the covariance matrix with the kernel mapping.
+
+$$
 \begin{aligned}
 ||C_{\phi(x)\psi(x)}||_\mathcal{H}^2 
 &= ||\Phi^\top \Psi||^2 \\
@@ -6348,33 +6339,24 @@ $$
 &= tr \left[ \Psi \Psi^\top \Phi \Phi^\top \right] \\
 &= tr (K_{\mathbf{x}}K_{\mathbf{x}})
 \end{aligned}
-</script>
-</div>
-<!-- </details> -->
+$$
 
-<!-- <details> -->
+</details>
 
-<p><summary>
+<details>
+
+<summary>
     <font color="black">Details
     </font>
-</summary></p>
-<p>Using the same argument as above, we can also define a cross covariance matrix of the form:</p>
-<div>
-<div class="MathJax_Preview">C_{xy} = \mathbb{E}_{xy} \left[  (\phi(x) - \mu_x) \otimes (\psi(y) - \mu_y)\right]</div>
-<script type="math/tex; mode=display">C_{xy} = \mathbb{E}_{xy} \left[  (\phi(x) - \mu_x) \otimes (\psi(y) - \mu_y)\right]</script>
-</div>
-<p>where <span><span class="MathJax_Preview">\otimes</span><script type="math/tex">\otimes</script></span> is the tensor product, <span><span class="MathJax_Preview">\mu_x, \mu_y</span><script type="math/tex">\mu_x, \mu_y</script></span> are the expecations of the mappings <span><span class="MathJax_Preview">\mathbb{E}_x [\phi (x)]</span><script type="math/tex">\mathbb{E}_x [\phi (x)]</script></span>, <span><span class="MathJax_Preview">\mathbb{E}_y[\psi(y)]</span><script type="math/tex">\mathbb{E}_y[\psi(y)]</script></span> respectively. The HSIC is the cross-covariance operator described above and can be expressed in terms of kernels.</p>
-<div>
-<div class="MathJax_Preview">
-\begin{aligned}
-\text{HSIC}(\mathcal{F}, \mathcal{G}, \mathbb{P}_{xy})
-&amp;= ||C_{xy}||_{\mathcal{H}}^2 \\
-&amp;= \mathbb{E}_{xx',yy'} \left[ K_x(x,x')K_y(y,y') \right] \\
-&amp;+  \mathbb{E}_{xx'} \left[ K_x(x,x')\right] \mathbb{E}_{yy'} \left[ K_y(y,y')\right] \\
-&amp;-  2\mathbb{E}_{xy} \left[ \mathbb{E}_{x'} \left[ K_x(x,x')\right] \mathbb{E}_{y'} \left[ K_y(y,y')\right] \right]
-\end{aligned}
-</div>
-<script type="math/tex; mode=display">
+</summary>
+
+Using the same argument as above, we can also define a cross covariance matrix of the form:
+
+$$C_{xy} = \mathbb{E}_{xy} \left[  (\phi(x) - \mu_x) \otimes (\psi(y) - \mu_y)\right]$$
+
+where $\otimes$ is the tensor product, $\mu_x, \mu_y$ are the expecations of the mappings $\mathbb{E}_x [\phi (x)]$, $\mathbb{E}_y[\psi(y)]$ respectively. The HSIC is the cross-covariance operator described above and can be expressed in terms of kernels.
+
+$$
 \begin{aligned}
 \text{HSIC}(\mathcal{F}, \mathcal{G}, \mathbb{P}_{xy})
 &= ||C_{xy}||_{\mathcal{H}}^2 \\
@@ -6382,30 +6364,36 @@ $$
 &+  \mathbb{E}_{xx'} \left[ K_x(x,x')\right] \mathbb{E}_{yy'} \left[ K_y(y,y')\right] \\
 &-  2\mathbb{E}_{xy} \left[ \mathbb{E}_{x'} \left[ K_x(x,x')\right] \mathbb{E}_{y'} \left[ K_y(y,y')\right] \right]
 \end{aligned}
-</script>
-</div>
-<p>where <span><span class="MathJax_Preview">\mathbb{E}_{xx'yy'}</span><script type="math/tex">\mathbb{E}_{xx'yy'}</script></span> is the expectation over both <span><span class="MathJax_Preview">(x,y) \sim \mathbb{P}_{xy}</span><script type="math/tex">(x,y) \sim \mathbb{P}_{xy}</script></span> and we assume that <span><span class="MathJax_Preview">(x',y')</span><script type="math/tex">(x',y')</script></span> can be sampled independently from <span><span class="MathJax_Preview">\mathbb{P}_{xy}</span><script type="math/tex">\mathbb{P}_{xy}</script></span>.</p>
-<!-- </details> -->
+$$
 
-<!-- <details> -->
 
-<p><summary>
+where $\mathbb{E}_{xx'yy'}$ is the expectation over both $(x,y) \sim \mathbb{P}_{xy}$ and we assume that $(x',y')$ can be sampled independently from $\mathbb{P}_{xy}$.
+
+</details>
+
+<details>
+
+<summary>
     <font color="blue">Code
     </font>
-</summary></p>
-<p>This is very easy to compute in practice. One just needs to calculate the Frobenius Norm (Hilbert-Schmidt Norm) between two kernel matrics that correctly model your data. This boils down to computing the trace of the matrix multiplication of two matrices: <span><span class="MathJax_Preview">tr(K_x^\top K_y)</span><script type="math/tex">tr(K_x^\top K_y)</script></span>. So in algorithmically that is</p>
+</summary>
+
+This is very easy to compute in practice. One just needs to calculate the Frobenius Norm (Hilbert-Schmidt Norm) between two kernel matrics that correctly model your data. This boils down to computing the trace of the matrix multiplication of two matrices: $tr(K_x^\top K_y)$. So in algorithmically that is
+
 <div class="highlight"><pre><span></span><code><span class="n">hsic_score</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">trace</span><span class="p">(</span><span class="n">K_x</span><span class="o">.</span><span class="n">T</span> <span class="o">@</span> <span class="n">K_y</span><span class="p">)</span>
 </code></pre></div>
 
-<p>Notice that this is a 3-part operation. So, of course, we can refactor this to be much easier. A faster way to do this is:</p>
+Notice that this is a 3-part operation. So, of course, we can refactor this to be much easier. A faster way to do this is:
+
 <div class="highlight"><pre><span></span><code><span class="n">hsic_score</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">K_x</span> <span class="o">*</span> <span class="n">K_y</span><span class="p">)</span>
 </code></pre></div>
 
-<p>This can be orders of magnitude faster because it is a much cheaper operation to compute elementwise products than a sum. And for fun, we can even use the <code>einsum</code> notation.</p>
+This can be orders of magnitude faster because it is a much cheaper operation to compute elementwise products than a sum. And for fun, we can even use the `einsum` notation.
+
 <div class="highlight"><pre><span></span><code><span class="n">hsic_score</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s2">&quot;ji,ij-&gt;&quot;</span><span class="p">,</span> <span class="n">K_x</span><span class="p">,</span> <span class="n">K_y</span><span class="p">)</span>
 </code></pre></div>
 
-<!-- </details> -->
+</details>
 
 <hr />
 <h3 id="centering">Centering<a class="headerlink" href="#centering" title="Permanent link">&para;</a></h3>
@@ -6418,29 +6406,16 @@ $$
 <blockquote>
 <p>Normalizing your inputs does <strong>not</strong> equal centering your kernel matrix.</p>
 </blockquote>
-<!-- <details> -->
+<details>
+<font color="black">Details</font>
 
-<p><font color="black">Details</font></p>
-<p>We assume that the kernel function <span><span class="MathJax_Preview">\psi(x_i)</span><script type="math/tex">\psi(x_i)</script></span> has a zero mean like so:</p>
-<div>
-<div class="MathJax_Preview">\psi(x_i) = \psi(x_i) - \frac{1}{N}\sum_{r=1}^N \psi(x_r)</div>
-<script type="math/tex; mode=display">\psi(x_i) = \psi(x_i) - \frac{1}{N}\sum_{r=1}^N \psi(x_r)</script>
-</div>
-<p>This holds if the covariance matrix is computed from <span><span class="MathJax_Preview">\psi(x_i)</span><script type="math/tex">\psi(x_i)</script></span>. So the kernel matrix <span><span class="MathJax_Preview">K_{ij}=\psi(x_i)^\top \psi(x_j)</span><script type="math/tex">K_{ij}=\psi(x_i)^\top \psi(x_j)</script></span> needs to be replaced with <span><span class="MathJax_Preview">\tilde{K}_{ij}=\psi(x_i)^\top \psi(x_s)</span><script type="math/tex">\tilde{K}_{ij}=\psi(x_i)^\top \psi(x_s)</script></span> where <span><span class="MathJax_Preview">\tilde{K}_{ij}</span><script type="math/tex">\tilde{K}_{ij}</script></span> is:</p>
-<div>
-<div class="MathJax_Preview">
-\begin{aligned}
-\tilde{K}_{ij} 
-&amp;= \psi(x_i)^\top \psi(x_j) - 
-\frac{1}{N} \sum_{r=1}^N 
-- \frac{1}{N} \sum_{r=1}^N \psi(x_r)^\top \psi(x_j) 
-+ \frac{1}{N^2} \sum_{r,s=1}^N \psi(x_r))^\top \psi(x_s) \\
-&amp;= K_{ij} - \frac{1}{N}\sum_{r=1}^{N}K_{ir} 
-- \frac{1}{N} K_{rj}
-+ \frac{1}{N^2} \sum_{r,s=1}^N K_s
-\end{aligned}
-</div>
-<script type="math/tex; mode=display">
+We assume that the kernel function $\psi(x_i)$ has a zero mean like so:
+
+$$\psi(x_i) = \psi(x_i) - \frac{1}{N}\sum_{r=1}^N \psi(x_r)$$
+
+This holds if the covariance matrix is computed from $\psi(x_i)$. So the kernel matrix $K_{ij}=\psi(x_i)^\top \psi(x_j)$ needs to be replaced with $\tilde{K}_{ij}=\psi(x_i)^\top \psi(x_s)$ where $\tilde{K}_{ij}$ is:
+
+$$
 \begin{aligned}
 \tilde{K}_{ij} 
 &= \psi(x_i)^\top \psi(x_j) - 
@@ -6451,32 +6426,34 @@ $$
 - \frac{1}{N} K_{rj}
 + \frac{1}{N^2} \sum_{r,s=1}^N K_s
 \end{aligned}
-</script>
-</div>
-<!-- </details> -->
+$$
 
-<!-- <details> -->
 
-<p><summary>
+</details>
+
+<details>
+<summary>
     <font color="blue">Code
     </font>
-</summary></p>
-<p>On a more practical note, this can be done easily by:</p>
-<div>
-<div class="MathJax_Preview">H = \mathbf{I}_N - \frac{1}{N} \mathbf{1}_N\mathbf{1}_N^\top</div>
-<script type="math/tex; mode=display">H = \mathbf{I}_N - \frac{1}{N} \mathbf{1}_N\mathbf{1}_N^\top</script>
-</div>
+</summary>
+
+On a more practical note, this can be done easily by:
+
+$$H = \mathbf{I}_N - \frac{1}{N} \mathbf{1}_N\mathbf{1}_N^\top$$
+
 <div class="highlight"><pre><span></span><code><span class="n">H</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="n">n_samples</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="n">n_samples</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">n_samples</span><span class="p">,</span> <span class="n">n_samples</span><span class="p">)</span>
 </code></pre></div>
 
-<p><strong>Refactor</strong></p>
-<p>There is also a function in the <code>scikit-learn</code> library which does it for you.</p>
+**Refactor**
+
+There is also a function in the `scikit-learn` library which does it for you.
+
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">KernelCenterer</span>
 
 <span class="n">K_centered</span> <span class="o">=</span> <span class="n">KernelCenterer</span><span class="p">()</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">K</span><span class="p">)</span>
 </code></pre></div>
 
-<!-- </details> -->
+</details>
 
 <p>And like the covariance, we can also summarize the data structures with a correlation-like coefficient</p>
 <div>
