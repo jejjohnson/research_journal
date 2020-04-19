@@ -10,6 +10,7 @@ source: hsic.md
 
 We use the Hilbert-Schmidt Independence Criterion (HSIC) measure independence between two distributions. It involves constructing an appropriate kernel matrix for each dataset and then using the Frobenius Norm as a way to "summarize" the variability of the data. Often times the motivation for this method is lost in the notorious paper of Arthur Gretton (the creator of the method), but actually, this idea was developed long before him with ideas from a covariance matrix perspective. Below are my notes for how to get from a simple covariance matrix to the HSIC method and similar ones.
 
+
 ---
 
 ## Motivation
@@ -39,6 +40,10 @@ This means measures like the covariance and correlation become useless because t
 ## Recap - Summarizing Multivariate Information
 
 Let's have the two distributions $\mathcal{X} \in \mathbb{R}^{D_x}$ and $\mathcal{Y} \in \mathbb{R}^{D_y}$. Let's also assume that we can sample $(x,y)$ from $\mathbb{P}_{xy}$. We can capture the second order dependencies between $X$ and $Y$ by constructing a covariance matrix in the feature space defined as:
+
+\begin{align}
+C_{\mathbf{xy}} &\in \mathbb{R}^{D \times D}
+\end{align}
 
 $$C_{\mathbf{xy}} \in \mathbb{R}^{D \times D}$$
 
@@ -92,96 +97,72 @@ $$
 \begin{aligned}
 ||C_{\phi(x)\psi(x)}||_\mathcal{H}^2 
 &= ||\Phi^\top \Psi||^2_{\mathcal{F}} 
-\end{aligned}$$
+\end{aligned}
+$$
 
 Now after a bit of simplication, we end up with the HSIC-Norm:
+
 $$
 \begin{aligned}
 \text{HSIC}(\hat{P}_{XY}, \mathcal{F}, \mathcal{G})
-&= \text{Tr}(K_{\mathbf{x}}K_{\mathbf{x}})
-\end{aligned}$$
-
-
-
-<!-- <details> -->
-
-<summary>
-    <font color="red">Proof
-    </font>
-</summary>
-
-In this section, we will derive the empirical formula for HSIC using the Hilbert-Schmidt Norm of the covariance matrix with the kernel mapping.
-
-$$
-\begin{aligned}
-||C_{\phi(x)\psi(x)}||_\mathcal{H}^2 
-&= ||\Phi^\top \Psi||^2 \\
-&= tr\left[ (\Phi^\top \Psi)^\top (\Phi^\top \Psi)\right] \\
-&= tr \left[ \Psi^\top \Phi \Phi^\top \Psi\right] \\
-&= tr \left[ \Psi \Psi^\top \Phi \Phi^\top \right] \\
-&= tr (K_{\mathbf{x}}K_{\mathbf{x}})
+&= \text{Tr}(K_{\mathbf{x}}K_{\mathbf{y}}) \\
 \end{aligned}
 $$
 
-<!-- </details> -->
+??? info "Details"
+
+    === "Proof"
+        $$
+        \begin{aligned}
+        ||C_{\phi(x)\psi(x)}||_\mathcal{H}^2 
+        &= ||\Phi^\top \Psi||^2 \\
+        &= tr\left[ (\Phi^\top \Psi)^\top (\Phi^\top \Psi)\right] \\
+        &= tr \left[ \Psi^\top \Phi \Phi^\top \Psi\right] \\
+        &= tr \left[ \Psi \Psi^\top \Phi \Phi^\top \right] \\
+        &= tr (K_{\mathbf{x}}K_{\mathbf{x}})
+        \end{aligned}
+        $$
+
+    === "Full Expression"
+        Using the same argument as above, we can also define a cross covariance matrix of the form:
+
+        $$C_{xy} = \mathbb{E}_{xy} \left[  (\phi(x) - \mu_x) \otimes (\psi(y) - \mu_y)\right]$$
+
+        where $\otimes$ is the tensor product, $\mu_x, \mu_y$ are the expecations of the mappings $\mathbb{E}_x [\phi (x)]$, $\mathbb{E}_y[\psi(y)]$ respectively. The HSIC is the cross-covariance operator described above and can be expressed in terms of kernels.
+
+        $$
+        \begin{aligned}
+        \text{HSIC}(\mathcal{F}, \mathcal{G}, \mathbb{P}_{xy})
+        &= ||C_{xy}||_{\mathcal{H}}^2 \\
+        &= \mathbb{E}_{xx',yy'} \left[ K_x(x,x')K_y(y,y') \right] \\
+        &+  \mathbb{E}_{xx'} \left[ K_x(x,x')\right] \mathbb{E}_{yy'} \left[ K_y(y,y')\right] \\
+        &-  2\mathbb{E}_{xy} \left[ \mathbb{E}_{x'} \left[ K_x(x,x')\right] \mathbb{E}_{y'} \left[ K_y(y,y')\right] \right]
+        \end{aligned}
+        $$
 
 
-<!-- <details> -->
-
-<summary>
-    <font color="black">Details
-    </font>
-</summary>
-
-Using the same argument as above, we can also define a cross covariance matrix of the form:
-
-$$C_{xy} = \mathbb{E}_{xy} \left[  (\phi(x) - \mu_x) \otimes (\psi(y) - \mu_y)\right]$$
-
-where $\otimes$ is the tensor product, $\mu_x, \mu_y$ are the expecations of the mappings $\mathbb{E}_x [\phi (x)]$, $\mathbb{E}_y[\psi(y)]$ respectively. The HSIC is the cross-covariance operator described above and can be expressed in terms of kernels.
-
-$$
-\begin{aligned}
-\text{HSIC}(\mathcal{F}, \mathcal{G}, \mathbb{P}_{xy})
-&= ||C_{xy}||_{\mathcal{H}}^2 \\
-&= \mathbb{E}_{xx',yy'} \left[ K_x(x,x')K_y(y,y') \right] \\
-&+  \mathbb{E}_{xx'} \left[ K_x(x,x')\right] \mathbb{E}_{yy'} \left[ K_y(y,y')\right] \\
-&-  2\mathbb{E}_{xy} \left[ \mathbb{E}_{x'} \left[ K_x(x,x')\right] \mathbb{E}_{y'} \left[ K_y(y,y')\right] \right]
-\end{aligned}
-$$
+        where $\mathbb{E}_{xx'yy'}$ is the expectation over both $(x,y) \sim \mathbb{P}_{xy}$ and we assume that $(x',y')$ can be sampled independently from $\mathbb{P}_{xy}$.
 
 
-where $\mathbb{E}_{xx'yy'}$ is the expectation over both $(x,y) \sim \mathbb{P}_{xy}$ and we assume that $(x',y')$ can be sampled independently from $\mathbb{P}_{xy}$.
+    === "Code"
 
-<!-- </details> -->
+        This is very easy to compute in practice. One just needs to calculate the Frobenius Norm (Hilbert-Schmidt Norm) between two kernel matrics that correctly model your data. This boils down to computing the trace of the matrix multiplication of two matrices: $tr(K_x^\top K_y)$. So in algorithmically that is
 
+        ```python
+        hsic_score = np.trace(K_x.T @ K_y)
+        ```
 
-<!-- <details> -->
+        Notice that this is a 3-part operation. So, of course, we can refactor this to be much easier. A faster way to do this is:
 
-<summary>
-    <font color="blue">Code
-    </font>
-</summary>
+        ```python
+        hsic_score = np.sum(K_x * K_y)
+        ```
 
-This is very easy to compute in practice. One just needs to calculate the Frobenius Norm (Hilbert-Schmidt Norm) between two kernel matrics that correctly model your data. This boils down to computing the trace of the matrix multiplication of two matrices: $tr(K_x^\top K_y)$. So in algorithmically that is
+        This can be orders of magnitude faster because it is a much cheaper operation to compute elementwise products than a sum. And for fun, we can even use the `einsum` notation.
 
-```python
-hsic_score = np.trace(K_x.T @ K_y)
-```
-
-Notice that this is a 3-part operation. So, of course, we can refactor this to be much easier. A faster way to do this is:
-
-```python
-hsic_score = np.sum(K_x * K_y)
-```
-
-This can be orders of magnitude faster because it is a much cheaper operation to compute elementwise products than a sum. And for fun, we can even use the `einsum` notation.
-
-```python
-hsic_score = np.einsum("ji,ij->", K_x, K_y)
-```
-
-<!-- </details> -->
-
+        ```python
+        hsic_score = np.einsum("ji,ij->", K_x, K_y)
+        ```
 ---
 
 ### Centering
@@ -194,64 +175,52 @@ where $H$ is your centering matrix.
 
 > Normalizing your inputs does **not** equal centering your kernel matrix.
 
-<!-- <details> -->
-<font color="black">Details</font>
+??? info "Details"
 
-We assume that the kernel function $\psi(x_i)$ has a zero mean like so:
+    === "Full Expression"
 
-$$\psi(x_i) = \psi(x_i) - \frac{1}{N}\sum_{r=1}^N \psi(x_r)$$
+        We assume that the kernel function $\psi(x_i)$ has a zero mean like so:
 
-This holds if the covariance matrix is computed from $\psi(x_i)$. So the kernel matrix $K_{ij}=\psi(x_i)^\top \psi(x_j)$ needs to be replaced with $\tilde{K}_{ij}=\psi(x_i)^\top \psi(x_s)$ where $\tilde{K}_{ij}$ is:
+        $$\psi(x_i) = \psi(x_i) - \frac{1}{N}\sum_{r=1}^N \psi(x_r)$$
 
-$$
-\begin{aligned}
-\tilde{K}_{ij} 
-&= \psi(x_i)^\top \psi(x_j) - 
-\frac{1}{N} \sum_{r=1}^N 
-- \frac{1}{N} \sum_{r=1}^N \psi(x_r)^\top \psi(x_j) 
-+ \frac{1}{N^2} \sum_{r,s=1}^N \psi(x_r))^\top \psi(x_s) \\
-&= K_{ij} - \frac{1}{N}\sum_{r=1}^{N}K_{ir} 
-- \frac{1}{N} K_{rj}
-+ \frac{1}{N^2} \sum_{r,s=1}^N K_s
-\end{aligned}
-$$
+        This holds if the covariance matrix is computed from $\psi(x_i)$. So the kernel matrix $K_{ij}=\psi(x_i)^\top \psi(x_j)$ needs to be replaced with $\tilde{K}_{ij}=\psi(x_i)^\top \psi(x_s)$ where $\tilde{K}_{ij}$ is:
 
+        $$
+        \begin{aligned}
+        \tilde{K}_{ij} 
+        &= \psi(x_i)^\top \psi(x_j) - 
+        \frac{1}{N} \sum_{r=1}^N 
+        - \frac{1}{N} \sum_{r=1}^N \psi(x_r)^\top \psi(x_j) 
+        + \frac{1}{N^2} \sum_{r,s=1}^N \psi(x_r))^\top \psi(x_s) \\
+        &= K_{ij} - \frac{1}{N}\sum_{r=1}^{N}K_{ir} 
+        - \frac{1}{N} K_{rj}
+        + \frac{1}{N^2} \sum_{r,s=1}^N K_s
+        \end{aligned}
+        $$
 
-<!-- </details> -->
+    === "Code"
 
-<!-- <details> -->
-<summary>
-    <font color="blue">Code
-    </font>
-</summary>
+        On a more practical note, this can be done easily by:
 
-On a more practical note, this can be done easily by:
+        $$H = \mathbf{I}_N - \frac{1}{N} \mathbf{1}_N\mathbf{1}_N^\top$$
 
-$$H = \mathbf{I}_N - \frac{1}{N} \mathbf{1}_N\mathbf{1}_N^\top$$
+        ```python
+        H = np.eye(n_samples) - (1 / n_samples) * np.ones(n_samples, n_samples)
+        ```
 
-```python
-H = np.eye(n_samples) - (1 / n_samples) * np.ones(n_samples, n_samples)
-```
+        **Refactor**
 
-**Refactor**
+        There is also a function in the `scikit-learn` library which does it for you.
 
-There is also a function in the `scikit-learn` library which does it for you.
+        ```python
+        from sklearn.preprocessing import KernelCenterer
 
-```python
-from sklearn.preprocessing import KernelCenterer
-
-K_centered = KernelCenterer().fit_transform(K)
-```
-
-<!-- </details> -->
-
-And like the covariance, we can also summarize the data structures with a correlation-like coefficient
-
-$$\rho_\mathbf{xy}=\frac{ \langle K_{\mathbf{x}}, K_{\mathbf{y}}\rangle_\mathcal{F}}{||K_\mathbf{x}||_{\mathcal{F}} ||K_\mathbf{y}||_{\mathcal{F}}}$$
-
+        K_centered = KernelCenterer().fit_transform(K)
+        ```
 ---
 
 ## Correlation
+
 
 So above is the entire motivation behind HSIC as a non-linear covariance measure. But there is the obvious extension that we need to do: as a similarity measure (i.e. a correlation). HSIC suffers from the same issue as a covariance measure: it is difficult to interpret. HSIC's strongest factor is that it can be used for independence testing. However, as a similarity measure, it violates some key criteria that we need: invariant to scaling and interpretability (bounded between 0-1). Recall the HSIC formula:
 
@@ -260,27 +229,20 @@ A(K_x, K_y) =
 \left\langle H K_x, H K_y \right\rangle_{F}
 $$
 
-Below we outline the introduction of the normalization term for the HSIC quantity.
+Below is the HSIC term that is normalized by the norm of the 
 
-### Centered Kernel Alignment
+$$\text{cKA}(\mathbf{xy})=\frac{ \langle K_{\mathbf{x}}, K_{\mathbf{y}}\rangle_\mathcal{F}}{||K_\mathbf{x}||_{\mathcal{F}} ||K_\mathbf{y}||_{\mathcal{F}}}$$
 
-$$
-A(H K_{x}, H K_{y}) =
-\frac{\left\langle H K_{x}, H K_{y} \right\rangle_{F}}{\sqrt{|| H K_{x}||_{F}|| H K_{y} ||_{F}}}
-$$
+This is known as **Centered Kernel Alignment** in the literature. They add a normalization term to deal with some of the shortcomings of the original **Kernel Alignment** algorithm which had some benefits e.g. a way to cancel out unbalanced class effects. In relation to HSICThe improvement over the original algorithm seems minor but there is a critical difference. Without the centering, the alignment does not correlate well to the performance of the learning machine. There is 
 
-They add a normalization term to deal with some of the shortcomings of the original KTA algorithm which had some benefits e.g. a way to cancel out unbalanced class effects. The improvement over the original algorithm seems minor but there is a critical difference. Without the centering, the alignment does not correlate well to the performance of the learning machine. 
+??? info "Original Kernel Alignment"
+    The original kernel alignment method had the normalization factor but the matrices were not centered. 
 
-#### Original Kernel Alignment
+    $$A(K_x, K_y) = 
+    \frac{\left\langle K_x, K_y \right\rangle_{F}}{\sqrt{|| K_x||_{F}|| K_y ||_{F}}}
+    $$
 
-The original kernel alignment method had the normalization factor but the matrices were not centered. 
-
-$$A(K_x, K_y) = 
-\frac{\left\langle K_x, K_y \right\rangle_{F}}{\sqrt{|| K_x||_{F}|| K_y ||_{F}}}
-$$
-
-The alignment can be seen as a similarity score based on the cosine of the angle. For arbitrary matrices, this score ranges between -1 and 1. But using positive semidefinite Gram matrices, the score is lower-bounded by 0. This method was introduced **before** the HSIC method was introduced by Gretton. However, because the kernel matrices were not centered, there were some serious problems when trying to use it for measuring similarity: You could literally get any number between 0-1 if with parameters. So for a simple 1D linear dataset which should have a correlation of 1, I could get any number between 0 and 1 if I just change the length scale slightly. The HSIC and the CKA were much more robust than this method so I would avoid it.
-
+    The alignment can be seen as a similarity score based on the cosine of the angle. For arbitrary matrices, this score ranges between -1 and 1. But using positive semidefinite Gram matrices, the score is lower-bounded by 0. This method was introduced **before** the HSIC method was introduced by Gretton. However, because the kernel matrices were not centered, there were some serious problems when trying to use it for measuring similarity: You could literally get any number between 0-1 if with parameters. So for a simple 1D linear dataset which should have a correlation of 1, I could get any number between 0 and 1 if I just change the length scale slightly. The HSIC and the CKA were much more robust than this method so I would avoid it.
 
 ---
 

@@ -1362,8 +1362,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../blogs/ideas/concrete/" title="Concrete" class="md-nav__link">
-      Concrete
+    <a href="../../blogs/ideas/concrete/" title="Concrete Ideas" class="md-nav__link">
+      Concrete Ideas
     </a>
   </li>
 
@@ -2834,6 +2834,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../projects/similarity/kernel_alignment_params/notebooks/3.0_exp_mutual_info/" title="Full Experiment Walkthrough" class="md-nav__link">
+      Full Experiment Walkthrough
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../projects/similarity/kernel_alignment_params/notebooks/4.0_dist_vs_mi/" title="Mutual Info vs Scores" class="md-nav__link">
       Mutual Info vs Scores
     </a>
@@ -2950,6 +2962,13 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#deployment" class="md-nav__link">
+    Deployment
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#extensions" class="md-nav__link">
@@ -3118,6 +3137,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../machine_learning/class_notes/" title="Class Notes" class="md-nav__link">
+      Class Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../machine_learning/deep_learning/" title="Deep Learning" class="md-nav__link">
       Deep Learning
     </a>
@@ -3156,6 +3187,18 @@
   <li class="md-nav__item">
     <a href="../machine_learning/physics/" title="Physic-Informed Machine Learning" class="md-nav__link">
       Physic-Informed Machine Learning
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../machine_learning/statistics/" title="Statistics" class="md-nav__link">
+      Statistics
     </a>
   </li>
 
@@ -3485,8 +3528,32 @@
 
 
   <li class="md-nav__item">
+    <a href="../python/packages/plotting/" title="Plotting Libraries" class="md-nav__link">
+      Plotting Libraries
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../python/packages/pytorch/" title="PyTorch" class="md-nav__link">
       PyTorch
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python/packages/sklearn/" title="Scikit-Learn" class="md-nav__link">
+      Scikit-Learn
     </a>
   </li>
 
@@ -5914,6 +5981,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#deployment" class="md-nav__link">
+    Deployment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#extensions" class="md-nav__link">
     Extensions
   </a>
@@ -6027,6 +6101,22 @@
                 
                 
                 <h1 id="mkdocs-tips-n-tricks">MKDocs Tips n Tricks<a class="headerlink" href="#mkdocs-tips-n-tricks" title="Permanent link">&para;</a></h1>
+<hr />
+<h2 id="deployment">Deployment<a class="headerlink" href="#deployment" title="Permanent link">&para;</a></h2>
+<p>If you have a heavy website, it helps to just reload what you have edited. The reason I do this is because markdown doesn't support <code>pymdown</code> formats so it's difficult to see what you're actually doing if you want fancy formats. So use the following command to <strong>only</strong> reload the page you are currently editing.</p>
+<div class="highlight"><pre><span></span><code>mkdocs serve --dirtyreload
+</code></pre></div>
+
+<details class="todo"><summary>Todo</summary><p>I want to see if this works on a remote server. In theory, I should be able to run the following command:
+<div class="highlight"><pre><span></span><code>mkdocs serve --dirtyreload --dev-addr <span class="m">3009</span>
+</code></pre></div></p>
+<p>Then I would be able to ssh into the server:</p>
+<div class="highlight"><pre><span></span><code>ssh erc -L <span class="m">3009</span>:localhost:3009
+</code></pre></div>
+
+<p>Or I could use the built-in tunneling with VSCode.</p>
+</details>
+<hr />
 <h2 id="extensions">Extensions<a class="headerlink" href="#extensions" title="Permanent link">&para;</a></h2>
 <h3 id="admonition"><a href="https://squidfunk.github.io/mkdocs-material/extensions/admonition/">Admonition</a><a class="headerlink" href="#admonition" title="Permanent link">&para;</a></h3>
 <p>This is great, it allows me to add little blocks of things I find interesting.</p>
@@ -6041,59 +6131,33 @@
 <li><code>???</code> - collapsible</li>
 </ul>
 <h5 id="defaults">Defaults<a class="headerlink" href="#defaults" title="Permanent link">&para;</a></h5>
-<div class="admonition note">
-<p class="admonition-title">Note Button</p>
-<p>Can use <code>note</code> or <code>seealso</code></p>
-</div>
-<div class="admonition abstract">
-<p class="admonition-title">Abstract Button</p>
-<p>Can use <code>abstract,summary,tldr</code></p>
-</div>
-<div class="admonition info">
-<p class="admonition-title">Info Button</p>
-<p>Can use <code>info,todo</code></p>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">Fire Button</p>
-<p><code>tip,hint,important</code></p>
-</div>
-<div class="admonition success">
-<p class="admonition-title">Checkmark Button</p>
-<p><code>success, check, done</code></p>
-</div>
-<div class="admonition question">
-<p class="admonition-title">Question Mark</p>
-<p><code>question,help,faq</code></p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Warning Sign</p>
-<p><code>warning,caution,attention</code></p>
-</div>
-<div class="admonition failure">
-<p class="admonition-title">X Mark</p>
-<p><code>failure,fail,missing</code></p>
-</div>
-<div class="admonition danger">
-<p class="admonition-title">Danger sign</p>
-<p><code>danger, error</code></p>
-</div>
-<div class="admonition bug">
-<p class="admonition-title">Bug sign</p>
-<p><code>bug</code></p>
-</div>
-<div class="admonition example">
-<p class="admonition-title">Numbered List</p>
-<p><code>bug</code></p>
-</div>
-<div class="admonition quote">
-<p class="admonition-title">Quotation Marks</p>
-<p><code>quote, cite</code></p>
-</div>
+<p>!!! note "Note Button"
+    Can use <code>note</code> or <code>seealso</code></p>
+<p>!!! abstract "Abstract Button"
+    Can use <code>abstract,summary,tldr</code></p>
+<p>!!! info "Info Button"
+    Can use <code>info,todo</code></p>
+<p>!!! tip "Fire Button"
+    <code>tip,hint,important</code></p>
+<p>!!! success "Checkmark Button"
+    <code>success, check, done</code></p>
+<p>!!! question "Question Mark"
+    <code>question,help,faq</code></p>
+<p>!!! warning "Warning Sign"
+    <code>warning,caution,attention</code></p>
+<p>!!! failure "X Mark"
+    <code>failure,fail,missing</code></p>
+<p>!!! danger "Danger sign"
+    <code>danger, error</code></p>
+<p>!!! bug "Bug sign"
+    <code>bug</code></p>
+<p>!!! example "Numbered List"
+    <code>bug</code></p>
+<p>!!! quote "Quotation Marks"
+    <code>quote, cite</code></p>
 <h5 id="what-now">What Now?<a class="headerlink" href="#what-now" title="Permanent link">&para;</a></h5>
-<div class="admonition question">
-<p class="admonition-title">Question</p>
-<p>How does this work if I want to design my own symbol?</p>
-</div>
+<p>!!! question
+    How does this work if I want to design my own symbol?</p>
 <details class="todo"><summary>Todo</summary><p>Design my own symbol and add it to the research notebook!</p>
 </details>
 <hr />
@@ -6121,20 +6185,15 @@
 </div>
 <h4 id="line-numbers">Line Numbers<a class="headerlink" href="#line-numbers" title="Permanent link">&para;</a></h4>
 <p>We can also enable line numbers with the <code>linenums: true</code> extension.</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class="highlight"><pre><span></span><code><span class="lineno" data-linenos="1 "></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="lineno" data-linenos="2 "></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 </code></pre></div>
-</td></tr></table>
 
 <h4 id="highlight-line-numbers">Highlight Line Numbers<a class="headerlink" href="#highlight-line-numbers" title="Permanent link">&para;</a></h4>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="hll"><span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="o">*</span>              <span class="c1"># Don&#39;t do this!!</span>
+<div class="highlight"><pre><span></span><code><span class="lineno" data-linenos="1 "></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="lineno" data-linenos="2 "></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="lineno" data-linenos="3 "></span><span class="hll"><span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="o">*</span>              <span class="c1"># Don&#39;t do this!!</span>
 </span></code></pre></div>
-</td></tr></table>
 
 <hr />
 <h2 id="meta-data">Meta Data<a class="headerlink" href="#meta-data" title="Permanent link">&para;</a></h2>
@@ -6260,7 +6319,11 @@ source: pytest.md
         })
       </script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../javascripts/extra.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
       
     
   </body>

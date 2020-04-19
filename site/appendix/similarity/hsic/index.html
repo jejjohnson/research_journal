@@ -1302,32 +1302,6 @@
     Correlation
   </a>
   
-    <nav class="md-nav" aria-label="Correlation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#centered-kernel-alignment" class="md-nav__link">
-    Centered Kernel Alignment
-  </a>
-  
-    <nav class="md-nav" aria-label="Centered Kernel Alignment">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#original-kernel-alignment" class="md-nav__link">
-    Original Kernel Alignment
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -1543,8 +1517,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../blogs/ideas/concrete/" title="Concrete" class="md-nav__link">
-      Concrete
+    <a href="../../../blogs/ideas/concrete/" title="Concrete Ideas" class="md-nav__link">
+      Concrete Ideas
     </a>
   </li>
 
@@ -3015,6 +2989,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../projects/similarity/kernel_alignment_params/notebooks/3.0_exp_mutual_info/" title="Full Experiment Walkthrough" class="md-nav__link">
+      Full Experiment Walkthrough
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../projects/similarity/kernel_alignment_params/notebooks/4.0_dist_vs_mi/" title="Mutual Info vs Scores" class="md-nav__link">
       Mutual Info vs Scores
     </a>
@@ -3181,6 +3167,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../resources/machine_learning/class_notes/" title="Class Notes" class="md-nav__link">
+      Class Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../resources/machine_learning/deep_learning/" title="Deep Learning" class="md-nav__link">
       Deep Learning
     </a>
@@ -3219,6 +3217,18 @@
   <li class="md-nav__item">
     <a href="../../../resources/machine_learning/physics/" title="Physic-Informed Machine Learning" class="md-nav__link">
       Physic-Informed Machine Learning
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../resources/machine_learning/statistics/" title="Statistics" class="md-nav__link">
+      Statistics
     </a>
   </li>
 
@@ -3548,8 +3558,32 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../resources/python/packages/plotting/" title="Plotting Libraries" class="md-nav__link">
+      Plotting Libraries
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../resources/python/packages/pytorch/" title="PyTorch" class="md-nav__link">
       PyTorch
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../resources/python/packages/sklearn/" title="Scikit-Learn" class="md-nav__link">
+      Scikit-Learn
     </a>
   </li>
 
@@ -6022,32 +6056,6 @@
     Correlation
   </a>
   
-    <nav class="md-nav" aria-label="Correlation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#centered-kernel-alignment" class="md-nav__link">
-    Centered Kernel Alignment
-  </a>
-  
-    <nav class="md-nav" aria-label="Centered Kernel Alignment">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#original-kernel-alignment" class="md-nav__link">
-    Original Kernel Alignment
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -6193,6 +6201,14 @@
 <h2 id="recap-summarizing-multivariate-information">Recap - Summarizing Multivariate Information<a class="headerlink" href="#recap-summarizing-multivariate-information" title="Permanent link">&para;</a></h2>
 <p>Let's have the two distributions <span><span class="MathJax_Preview">\mathcal{X} \in \mathbb{R}^{D_x}</span><script type="math/tex">\mathcal{X} \in \mathbb{R}^{D_x}</script></span> and <span><span class="MathJax_Preview">\mathcal{Y} \in \mathbb{R}^{D_y}</span><script type="math/tex">\mathcal{Y} \in \mathbb{R}^{D_y}</script></span>. Let's also assume that we can sample <span><span class="MathJax_Preview">(x,y)</span><script type="math/tex">(x,y)</script></span> from <span><span class="MathJax_Preview">\mathbb{P}_{xy}</span><script type="math/tex">\mathbb{P}_{xy}</script></span>. We can capture the second order dependencies between <span><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> and <span><span class="MathJax_Preview">Y</span><script type="math/tex">Y</script></span> by constructing a covariance matrix in the feature space defined as:</p>
 <div>
+<div class="MathJax_Preview">\begin{align}
+C_{\mathbf{xy}} &amp;\in \mathbb{R}^{D \times D}
+\end{align}</div>
+<script type="math/tex; mode=display">\begin{align}
+C_{\mathbf{xy}} &\in \mathbb{R}^{D \times D}
+\end{align}</script>
+</div>
+<div>
 <div class="MathJax_Preview">C_{\mathbf{xy}} \in \mathbb{R}^{D \times D}</div>
 <script type="math/tex; mode=display">C_{\mathbf{xy}} \in \mathbb{R}^{D \times D}</script>
 </div>
@@ -6248,26 +6264,31 @@
 \begin{aligned}
 ||C_{\phi(x)\psi(x)}||_\mathcal{H}^2 
 &amp;= ||\Phi^\top \Psi||^2_{\mathcal{F}} 
-\end{aligned}</div>
+\end{aligned}
+</div>
 <script type="math/tex; mode=display">
 \begin{aligned}
 ||C_{\phi(x)\psi(x)}||_\mathcal{H}^2 
 &= ||\Phi^\top \Psi||^2_{\mathcal{F}} 
-\end{aligned}</script>
+\end{aligned}
+</script>
 </div>
-<p>Now after a bit of simplication, we end up with the HSIC-Norm:
-$$
+<p>Now after a bit of simplication, we end up with the HSIC-Norm:</p>
+<div>
+<div class="MathJax_Preview">
 \begin{aligned}
-\text{HSIC}(\hat{P}<em>{XY}, \mathcal{F}, \mathcal{G})
-&amp;= \text{Tr}(K</em>{\mathbf{x}}K_{\mathbf{x}})
-\end{aligned}$$</p>
-<!-- <details> -->
-
-<p><summary>
-    <font color="red">Proof
-    </font>
-</summary></p>
-<p>In this section, we will derive the empirical formula for HSIC using the Hilbert-Schmidt Norm of the covariance matrix with the kernel mapping.</p>
+\text{HSIC}(\hat{P}_{XY}, \mathcal{F}, \mathcal{G})
+&amp;= \text{Tr}(K_{\mathbf{x}}K_{\mathbf{y}}) \\
+\end{aligned}
+</div>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\text{HSIC}(\hat{P}_{XY}, \mathcal{F}, \mathcal{G})
+&= \text{Tr}(K_{\mathbf{x}}K_{\mathbf{y}}) \\
+\end{aligned}
+</script>
+</div>
+<details class="info"><summary>Details</summary><div class="tabbed-set" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Proof</label><div class="tabbed-content">
 <div>
 <div class="MathJax_Preview">
 \begin{aligned}
@@ -6290,14 +6311,8 @@ $$
 \end{aligned}
 </script>
 </div>
-<!-- </details> -->
-
-<!-- <details> -->
-
-<p><summary>
-    <font color="black">Details
-    </font>
-</summary></p>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Full Expression</label><div class="tabbed-content">
 <p>Using the same argument as above, we can also define a cross covariance matrix of the form:</p>
 <div>
 <div class="MathJax_Preview">C_{xy} = \mathbb{E}_{xy} \left[  (\phi(x) - \mu_x) \otimes (\psi(y) - \mu_y)\right]</div>
@@ -6325,14 +6340,8 @@ $$
 </script>
 </div>
 <p>where <span><span class="MathJax_Preview">\mathbb{E}_{xx'yy'}</span><script type="math/tex">\mathbb{E}_{xx'yy'}</script></span> is the expectation over both <span><span class="MathJax_Preview">(x,y) \sim \mathbb{P}_{xy}</span><script type="math/tex">(x,y) \sim \mathbb{P}_{xy}</script></span> and we assume that <span><span class="MathJax_Preview">(x',y')</span><script type="math/tex">(x',y')</script></span> can be sampled independently from <span><span class="MathJax_Preview">\mathbb{P}_{xy}</span><script type="math/tex">\mathbb{P}_{xy}</script></span>.</p>
-<!-- </details> -->
-
-<!-- <details> -->
-
-<p><summary>
-    <font color="blue">Code
-    </font>
-</summary></p>
+</div>
+<input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">Code</label><div class="tabbed-content">
 <p>This is very easy to compute in practice. One just needs to calculate the Frobenius Norm (Hilbert-Schmidt Norm) between two kernel matrics that correctly model your data. This boils down to computing the trace of the matrix multiplication of two matrices: <span><span class="MathJax_Preview">tr(K_x^\top K_y)</span><script type="math/tex">tr(K_x^\top K_y)</script></span>. So in algorithmically that is</p>
 <div class="highlight"><pre><span></span><code><span class="n">hsic_score</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">trace</span><span class="p">(</span><span class="n">K_x</span><span class="o">.</span><span class="n">T</span> <span class="o">@</span> <span class="n">K_y</span><span class="p">)</span>
 </code></pre></div>
@@ -6345,8 +6354,9 @@ $$
 <div class="highlight"><pre><span></span><code><span class="n">hsic_score</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s2">&quot;ji,ij-&gt;&quot;</span><span class="p">,</span> <span class="n">K_x</span><span class="p">,</span> <span class="n">K_y</span><span class="p">)</span>
 </code></pre></div>
 
-<!-- </details> -->
-
+</div>
+</div>
+</details>
 <hr />
 <h3 id="centering">Centering<a class="headerlink" href="#centering" title="Permanent link">&para;</a></h3>
 <p>A very important but subtle point is that the method with kernels assumes that your data is centered in the kernel space. This isn't necessarily true. Fortunately it is easy to do so.</p>
@@ -6358,9 +6368,7 @@ $$
 <blockquote>
 <p>Normalizing your inputs does <strong>not</strong> equal centering your kernel matrix.</p>
 </blockquote>
-<!-- <details> -->
-
-<p><font color="black">Details</font></p>
+<details class="info"><summary>Details</summary><div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Full Expression</label><div class="tabbed-content">
 <p>We assume that the kernel function <span><span class="MathJax_Preview">\psi(x_i)</span><script type="math/tex">\psi(x_i)</script></span> has a zero mean like so:</p>
 <div>
 <div class="MathJax_Preview">\psi(x_i) = \psi(x_i) - \frac{1}{N}\sum_{r=1}^N \psi(x_r)</div>
@@ -6393,14 +6401,8 @@ $$
 \end{aligned}
 </script>
 </div>
-<!-- </details> -->
-
-<!-- <details> -->
-
-<p><summary>
-    <font color="blue">Code
-    </font>
-</summary></p>
+</div>
+<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">Code</label><div class="tabbed-content">
 <p>On a more practical note, this can be done easily by:</p>
 <div>
 <div class="MathJax_Preview">H = \mathbf{I}_N - \frac{1}{N} \mathbf{1}_N\mathbf{1}_N^\top</div>
@@ -6416,13 +6418,9 @@ $$
 <span class="n">K_centered</span> <span class="o">=</span> <span class="n">KernelCenterer</span><span class="p">()</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">K</span><span class="p">)</span>
 </code></pre></div>
 
-<!-- </details> -->
-
-<p>And like the covariance, we can also summarize the data structures with a correlation-like coefficient</p>
-<div>
-<div class="MathJax_Preview">\rho_\mathbf{xy}=\frac{ \langle K_{\mathbf{x}}, K_{\mathbf{y}}\rangle_\mathcal{F}}{||K_\mathbf{x}||_{\mathcal{F}} ||K_\mathbf{y}||_{\mathcal{F}}}</div>
-<script type="math/tex; mode=display">\rho_\mathbf{xy}=\frac{ \langle K_{\mathbf{x}}, K_{\mathbf{y}}\rangle_\mathcal{F}}{||K_\mathbf{x}||_{\mathcal{F}} ||K_\mathbf{y}||_{\mathcal{F}}}</script>
 </div>
+</div>
+</details>
 <hr />
 <h2 id="correlation">Correlation<a class="headerlink" href="#correlation" title="Permanent link">&para;</a></h2>
 <p>So above is the entire motivation behind HSIC as a non-linear covariance measure. But there is the obvious extension that we need to do: as a similarity measure (i.e. a correlation). HSIC suffers from the same issue as a covariance measure: it is difficult to interpret. HSIC's strongest factor is that it can be used for independence testing. However, as a similarity measure, it violates some key criteria that we need: invariant to scaling and interpretability (bounded between 0-1). Recall the HSIC formula:</p>
@@ -6436,21 +6434,13 @@ A(K_x, K_y) =
 \left\langle H K_x, H K_y \right\rangle_{F}
 </script>
 </div>
-<p>Below we outline the introduction of the normalization term for the HSIC quantity.</p>
-<h3 id="centered-kernel-alignment">Centered Kernel Alignment<a class="headerlink" href="#centered-kernel-alignment" title="Permanent link">&para;</a></h3>
+<p>Below is the HSIC term that is normalized by the norm of the </p>
 <div>
-<div class="MathJax_Preview">
-A(H K_{x}, H K_{y}) =
-\frac{\left\langle H K_{x}, H K_{y} \right\rangle_{F}}{\sqrt{|| H K_{x}||_{F}|| H K_{y} ||_{F}}}
+<div class="MathJax_Preview">\text{cKA}(\mathbf{xy})=\frac{ \langle K_{\mathbf{x}}, K_{\mathbf{y}}\rangle_\mathcal{F}}{||K_\mathbf{x}||_{\mathcal{F}} ||K_\mathbf{y}||_{\mathcal{F}}}</div>
+<script type="math/tex; mode=display">\text{cKA}(\mathbf{xy})=\frac{ \langle K_{\mathbf{x}}, K_{\mathbf{y}}\rangle_\mathcal{F}}{||K_\mathbf{x}||_{\mathcal{F}} ||K_\mathbf{y}||_{\mathcal{F}}}</script>
 </div>
-<script type="math/tex; mode=display">
-A(H K_{x}, H K_{y}) =
-\frac{\left\langle H K_{x}, H K_{y} \right\rangle_{F}}{\sqrt{|| H K_{x}||_{F}|| H K_{y} ||_{F}}}
-</script>
-</div>
-<p>They add a normalization term to deal with some of the shortcomings of the original KTA algorithm which had some benefits e.g. a way to cancel out unbalanced class effects. The improvement over the original algorithm seems minor but there is a critical difference. Without the centering, the alignment does not correlate well to the performance of the learning machine. </p>
-<h4 id="original-kernel-alignment">Original Kernel Alignment<a class="headerlink" href="#original-kernel-alignment" title="Permanent link">&para;</a></h4>
-<p>The original kernel alignment method had the normalization factor but the matrices were not centered. </p>
+<p>This is known as <strong>Centered Kernel Alignment</strong> in the literature. They add a normalization term to deal with some of the shortcomings of the original <strong>Kernel Alignment</strong> algorithm which had some benefits e.g. a way to cancel out unbalanced class effects. In relation to HSICThe improvement over the original algorithm seems minor but there is a critical difference. Without the centering, the alignment does not correlate well to the performance of the learning machine. There is </p>
+<details class="info"><summary>Original Kernel Alignment</summary><p>The original kernel alignment method had the normalization factor but the matrices were not centered. </p>
 <div>
 <div class="MathJax_Preview">A(K_x, K_y) = 
 \frac{\left\langle K_x, K_y \right\rangle_{F}}{\sqrt{|| K_x||_{F}|| K_y ||_{F}}}
@@ -6460,6 +6450,7 @@ A(H K_{x}, H K_{y}) =
 </script>
 </div>
 <p>The alignment can be seen as a similarity score based on the cosine of the angle. For arbitrary matrices, this score ranges between -1 and 1. But using positive semidefinite Gram matrices, the score is lower-bounded by 0. This method was introduced <strong>before</strong> the HSIC method was introduced by Gretton. However, because the kernel matrices were not centered, there were some serious problems when trying to use it for measuring similarity: You could literally get any number between 0-1 if with parameters. So for a simple 1D linear dataset which should have a correlation of 1, I could get any number between 0 and 1 if I just change the length scale slightly. The HSIC and the CKA were much more robust than this method so I would avoid it.</p>
+</details>
 <hr />
 <h2 id="connections">Connections<a class="headerlink" href="#connections" title="Permanent link">&para;</a></h2>
 <hr />
@@ -6650,7 +6641,11 @@ A(H K_{x}, H K_{y}) =
         })
       </script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../../javascripts/extra.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
       
     
   </body>

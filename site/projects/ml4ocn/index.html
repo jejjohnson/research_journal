@@ -1362,8 +1362,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../blogs/ideas/concrete/" title="Concrete" class="md-nav__link">
-      Concrete
+    <a href="../../blogs/ideas/concrete/" title="Concrete Ideas" class="md-nav__link">
+      Concrete Ideas
     </a>
   </li>
 
@@ -2900,6 +2900,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../similarity/kernel_alignment_params/notebooks/3.0_exp_mutual_info/" title="Full Experiment Walkthrough" class="md-nav__link">
+      Full Experiment Walkthrough
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../similarity/kernel_alignment_params/notebooks/4.0_dist_vs_mi/" title="Mutual Info vs Scores" class="md-nav__link">
       Mutual Info vs Scores
     </a>
@@ -3066,6 +3078,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../resources/machine_learning/class_notes/" title="Class Notes" class="md-nav__link">
+      Class Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../resources/machine_learning/deep_learning/" title="Deep Learning" class="md-nav__link">
       Deep Learning
     </a>
@@ -3104,6 +3128,18 @@
   <li class="md-nav__item">
     <a href="../../resources/machine_learning/physics/" title="Physic-Informed Machine Learning" class="md-nav__link">
       Physic-Informed Machine Learning
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../resources/machine_learning/statistics/" title="Statistics" class="md-nav__link">
+      Statistics
     </a>
   </li>
 
@@ -3433,8 +3469,32 @@
 
 
   <li class="md-nav__item">
+    <a href="../../resources/python/packages/plotting/" title="Plotting Libraries" class="md-nav__link">
+      Plotting Libraries
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../resources/python/packages/pytorch/" title="PyTorch" class="md-nav__link">
       PyTorch
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../resources/python/packages/sklearn/" title="Scikit-Learn" class="md-nav__link">
+      Scikit-Learn
     </a>
   </li>
 
@@ -5923,20 +5983,14 @@
                 <h1 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h1>
 <p>I present some of my findings for working on machine learning applied to ocean applications.</p>
 <h2 id="argo-project">ARGO Project<a class="headerlink" href="#argo-project" title="Permanent link">&para;</a></h2>
-<div class="admonition summary">
-<p class="admonition-title">Summary</p>
-<p>In this project, we are trying to predict profiles of <span><span class="MathJax_Preview">Bbp</span><script type="math/tex">Bbp</script></span>. This is a multi-output ML problem with high dimensional inputs and high dimensional outputs.</p>
-</div>
+<p>!!! summary "Summary"
+    In this project, we are trying to predict profiles of <span><span class="MathJax_Preview">Bbp</span><script type="math/tex">Bbp</script></span>. This is a multi-output ML problem with high dimensional inputs and high dimensional outputs.</p>
 <p><strong>Note</strong>: You can find the repository with all of the reproducible code, specific functions and notebooks at <a href="https://github.com/IPL-UV/ml4ocean">github.com/IPL-UV/ml4ocean</a>.</p>
 <hr />
 <h3 id="subset-dataset">Subset Dataset<a class="headerlink" href="#subset-dataset" title="Permanent link">&para;</a></h3>
 <p>We look at the North Atlantic and SubTropical Gyre regions to try and get an idea about how some ML methods might perform in this scenarios. As a first pass, we did minimal preprocessing with some standard PCA components reduction and we were ambitious and attempted to predict all 273 depths for the profiles. We had some success as we were able to do a decent job with Random forests and MultiLayer Perceptrons.</p>
-<div class="admonition fire">
-<p class="admonition-title">Relevant Materials</p>
-<ul>
-<li>ISPRS 2020 Publication - <strong>Pending</strong></li>
-</ul>
-</div>
+<p>!!! fire "Relevant Materials"
+    * ISPRS 2020 Publication - <strong>Pending</strong></p>
 <details class="example"><summary>Todo</summary><ul>
 <li>0.0 - Data Exploration Notebook</li>
 <li>1.0 - Data Preprocessing Notebook</li>
@@ -5948,13 +6002,9 @@
 <hr />
 <h3 id="global-dataset">Global Dataset<a class="headerlink" href="#global-dataset" title="Permanent link">&para;</a></h3>
 <p>After we found success in the subset data, we decided to go for the global dataset and see how we do. We did reduce the problem difficulty by predicting only 19 depth levels instead of <span><span class="MathJax_Preview">\sim</span><script type="math/tex">\sim</script></span>273.</p>
-<div class="admonition check">
-<p class="admonition-title">Notebooks</p>
-<ul>
-<li>2.0 - <a href="ARGO_project/global_data/1_load_processed_data/">Loading the Preprocessed Data</a></li>
-<li>3.0 - <a href="ARGO_project/global_data/2_ml_algorithms/">Baseline ML Algorithm</a></li>
-</ul>
-</div>
+<p>!!! check "Notebooks"
+    * 2.0 - <a href="ARGO_project/global_data/1_load_processed_data/">Loading the Preprocessed Data</a>
+    * 3.0 - <a href="ARGO_project/global_data/2_ml_algorithms/">Baseline ML Algorithm</a></p>
 <details class="example"><summary>Todo</summary><ul>
 <li>0.0 - Data Exploration Notebook</li>
 <li>1.0 - Data Preprocessing Notebook</li>
@@ -6074,7 +6124,11 @@
         })
       </script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../javascripts/extra.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
       
     
   </body>

@@ -8,6 +8,31 @@ source: mkdocs.md
 # MKDocs Tips n Tricks
 
 
+---
+
+## Deployment
+
+If you have a heavy website, it helps to just reload what you have edited. The reason I do this is because markdown doesn't support `pymdown` formats so it's difficult to see what you're actually doing if you want fancy formats. So use the following command to **only** reload the page you are currently editing.
+
+```bash
+mkdocs serve --dirtyreload
+```
+
+??? todo
+    I want to see if this works on a remote server. In theory, I should be able to run the following command:
+    ```bash
+    mkdocs serve --dirtyreload --dev-addr 3009
+    ```
+
+    Then I would be able to ssh into the server:
+
+    ```bash
+    ssh erc -L 3009:localhost:3009
+    ```
+
+    Or I could use the built-in tunneling with VSCode.
+
+---
 
 ## Extensions
 

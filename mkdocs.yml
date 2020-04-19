@@ -30,44 +30,82 @@ plugins:
 copyright: Copyright &copy; 2020 J. Emmanuel Johnson
 
 markdown_extensions:
-  - codehilite:
+  - markdown.extensions.admonition
+  - markdown.extensions.attr_list
+  - markdown.extensions.codehilite:
       guess_lang: false
-      linenums: true
-  - admonition
-  - pymdownx.tilde
-  - pymdownx.superfences    # Adds support for nested blocks
-  - pymdownx.arithmatex     # Adss support for mathjax
-  - pymdownx.details        # adds support for collapsible blocks
-  - pymdownx.tabbed         # enables tabbed code blocks
-  - pymdownx.mark
-  - pymdownx.tasklist:
-      custom_checkbox: true 
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc:
+      permalink: true
+  - pymdownx.arithmatex
   - pymdownx.betterem:
       smart_enable: all
-  - meta                    # enables meta data at the top of document
-  - toc:
-      permalink: True
-  # - pymdownx.inlinehilite
-  # - markdown.extensions.attr_list
-  # - pymdownx.betterem:
-  #     smart_enable: all
-  # - pymdownx.caret
-  # - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:pymdownx.emoji.twemoji
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.highlight:
+      linenums_style: pymdownx-inline
   # - pymdownx.inlinehilite
-  # - pymdownx.magiclink
-  
-  # - pymdownx.smartsymbols
-  # - pymdownx.tasklist:
-  #     custom_checkbox: true 
-  # - pymdownx.tilde
+  - pymdownx.keys
+  # - pymdownx.magiclink:
+  #     repo_url_shorthand: true
+  #     user: squidfunk
+  #     repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# - codehilite:
+#     guess_lang: false
+#     linenums: true
+# - admonition
+# - pymdownx.tilde
+# - pymdownx.superfences    # Adds support for nested blocks
+# - markdown.extensions.admonition
+# - pymdownx.arithmatex     # Ads support for mathjax
+# - pymdownx.details        # adds support for collapsible blocks
+# - pymdownx.tabbed         # enables tabbed code blocks
+# - pymdownx.mark
+# - pymdownx.tasklist:
+#     custom_checkbox: true 
+# - pymdownx.betterem:
+#     smart_enable: all
+# - meta                    # enables meta data at the top of document
+# - toc:
+#     permalink: True
+# # - pymdownx.inlinehilite
+# - markdown.extensions.attr_list
+# # - pymdownx.betterem:
+# #     smart_enable: all
+# # - pymdownx.caret
+# # - pymdownx.critic
+# - pymdownx.emoji:
+#     emoji_index: !!python/name:materialx.emoji.twemoji
+#     emoji_generator: !!python/name:materialx.emoji.to_svg
+# - pymdownx.inlinehilite
+# # - pymdownx.magiclink
+
+# # - pymdownx.smartsymbols
+# # - pymdownx.tasklist:
+# #     custom_checkbox: true 
+# # - pymdownx.tilde
 
 extra_javascript:
-    # - https://polyfill.io/v3/polyfill.min.js?features=es6
-    # - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js
-    - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+    - javascripts/extra.js
+    - https://polyfill.io/v3/polyfill.min.js?features=es6
+    - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js
+    # - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 
 extra:
   # disqus: XHR39t5kZv
@@ -82,5 +120,4 @@ extra:
       link: 'https://linkedin.com/in/jejjohnson'
     - icon: fontawesome/solid/globe
       link: 'https://jejjohnson.netlify.com'
-    
-      
+  

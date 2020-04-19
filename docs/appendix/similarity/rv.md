@@ -90,7 +90,7 @@ $$
 \end{aligned}
 $$
 
-<!-- <details> -->
+<details>
 <summary>
     <font color="red">Proof
     </font>
@@ -100,13 +100,15 @@ We can expand the terms in the parenthesis like normally. Then we take the expec
 
 $$
 \begin{aligned}
-\text{cov}(\mathbf{x,y})  &= \mathbb{E}\left((\mathbf{x}-\mu_\mathbf{x})(\mathbf{y}-\mu_\mathbf{y}) \right) \\
+\text{cov}(\mathbf{x,y})  
+&= \mathbb{E}\left((\mathbf{x}-\mu_\mathbf{x})(\mathbf{y}-\mu_\mathbf{y}) \right) \\
 &= \mathbb{E}\left[\mathbf{xy} - \mu_\mathbf{x} Y - \mathbf{x}\mu_\mathbf{y} + \mu_\mathbf{x}\mu_y \right] \\
 &=  \mathbb{E}[\mathbf{xy}] - \mu_\mathbf{x}  \mathbb{E}[\mathbf{x}] -  \mu_y\mathbb{E}[\mathbf{y}] + \mu_\mathbf{x}\mu_y \\
-&=  \mathbb{E}[\mathbf{xy}] - \mu_\mathbf{x}\mu_y
+&=  \mathbb{E}[\mathbf{xy}] - \mu_\mathbf{x}\mu_y \\
 \end{aligned}
 $$
-<!-- </details> -->
+
+</details>
 
 This will result in a scalar value $\mathbb{R}^+$ that ranges from $(-\infty, \infty)$. This number is affected by scale so we can different values depending upon the scale of our data, i.e. $\text{cov}(\mathbf{x,y}) \neq \text{cov}(\alpha \mathbf{x}, \beta \mathbf{x})$ where $\alpha, \beta \in \mathbb{R}^{+}$
 
@@ -118,6 +120,7 @@ We can compare the r.v. $X$ with another r.v. $Y \in \mathbb{R}^{N \times 1}$. t
 $$\text{cov}(\mathbf{x,y})  = \frac{1}{n-1} \sum_{i=1}^N (x_i - x_\mu)(y_i - y_\mu)$$
 
 <details>
+
 <summary>
     <font color="blue">Code
     </font>
@@ -126,6 +129,7 @@ $$\text{cov}(\mathbf{x,y})  = \frac{1}{n-1} \sum_{i=1}^N (x_i - x_\mu)(y_i - y_\
 ```python
 c_xy = X.T @ Y
 ```
+
 </details>
 
 ---

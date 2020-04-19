@@ -1500,8 +1500,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../blogs/ideas/concrete/" title="Concrete" class="md-nav__link">
-      Concrete
+    <a href="../../../blogs/ideas/concrete/" title="Concrete Ideas" class="md-nav__link">
+      Concrete Ideas
     </a>
   </li>
 
@@ -2972,6 +2972,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../projects/similarity/kernel_alignment_params/notebooks/3.0_exp_mutual_info/" title="Full Experiment Walkthrough" class="md-nav__link">
+      Full Experiment Walkthrough
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../projects/similarity/kernel_alignment_params/notebooks/4.0_dist_vs_mi/" title="Mutual Info vs Scores" class="md-nav__link">
       Mutual Info vs Scores
     </a>
@@ -3138,6 +3150,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../resources/machine_learning/class_notes/" title="Class Notes" class="md-nav__link">
+      Class Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../resources/machine_learning/deep_learning/" title="Deep Learning" class="md-nav__link">
       Deep Learning
     </a>
@@ -3176,6 +3200,18 @@
   <li class="md-nav__item">
     <a href="../../../resources/machine_learning/physics/" title="Physic-Informed Machine Learning" class="md-nav__link">
       Physic-Informed Machine Learning
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../resources/machine_learning/statistics/" title="Statistics" class="md-nav__link">
+      Statistics
     </a>
   </li>
 
@@ -3505,8 +3541,32 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../resources/python/packages/plotting/" title="Plotting Libraries" class="md-nav__link">
+      Plotting Libraries
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../resources/python/packages/pytorch/" title="PyTorch" class="md-nav__link">
       PyTorch
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../resources/python/packages/sklearn/" title="Scikit-Learn" class="md-nav__link">
+      Scikit-Learn
     </a>
   </li>
 
@@ -6420,8 +6480,8 @@ $$</p>
 <p>Let <span><span class="MathJax_Preview">\mathbf{L}=\text{cholesky}(\mathbf{K}+\sigma_n^2\mathbf{I})</span><script type="math/tex">\mathbf{L}=\text{cholesky}(\mathbf{K}+\sigma_n^2\mathbf{I})</script></span>. We can write the log likelihood in terms of the cholesky decomposition.
 $$
 \begin{aligned}
-\log p(y|x, \theta) &amp;= - \frac{N}{2} \log 2\pi - \frac{1}{2}y^{\top}(K+\sigma^2I)^{-1}y - \frac{1}{2} \log \left| K+\sigma^2I \right|  \
-&amp;= - \frac{N}{2} \log 2\pi - \frac{1}{2} ||\mathbf{L}^{-1}y||^2 - \sum_i \log \mathbf{L}_{ii} 
+\log p(y|x, \theta) &amp;= - \frac{N}{2} \log 2\pi - \frac{1}{2}y<sup>{\top}(K+\sigma</sup>2I)^{-1}y - \frac{1}{2} \log \left| K+\sigma^2I \right|  \
+&amp;= - \frac{N}{2} \log 2\pi - \frac{1}{2} ||\mathbf{L}<sup>{-1}y||</sup>2 - \sum_i \log \mathbf{L}_{ii} 
 \end{aligned}
 $$</p>
 <p>This gives us a computational complexity of <span><span class="MathJax_Preview">\mathcal{O}(N + N^2 + N^3)=\mathcal{O}(N^3)</span><script type="math/tex">\mathcal{O}(N + N^2 + N^3)=\mathcal{O}(N^3)</script></span></p>
@@ -6600,7 +6660,11 @@ source - Dai, [GPSS 2018](http://zhenwendai.github.io/slides/gpss2018_slides.pdf
         })
       </script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../../javascripts/extra.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
       
     
   </body>

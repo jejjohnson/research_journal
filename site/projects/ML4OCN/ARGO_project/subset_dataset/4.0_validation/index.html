@@ -1362,8 +1362,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../blogs/ideas/concrete/" title="Concrete" class="md-nav__link">
-      Concrete
+    <a href="../../../../../blogs/ideas/concrete/" title="Concrete Ideas" class="md-nav__link">
+      Concrete Ideas
     </a>
   </li>
 
@@ -3039,6 +3039,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../../similarity/kernel_alignment_params/notebooks/3.0_exp_mutual_info/" title="Full Experiment Walkthrough" class="md-nav__link">
+      Full Experiment Walkthrough
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../../similarity/kernel_alignment_params/notebooks/4.0_dist_vs_mi/" title="Mutual Info vs Scores" class="md-nav__link">
       Mutual Info vs Scores
     </a>
@@ -3205,6 +3217,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../../../resources/machine_learning/class_notes/" title="Class Notes" class="md-nav__link">
+      Class Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../../../resources/machine_learning/deep_learning/" title="Deep Learning" class="md-nav__link">
       Deep Learning
     </a>
@@ -3243,6 +3267,18 @@
   <li class="md-nav__item">
     <a href="../../../../../resources/machine_learning/physics/" title="Physic-Informed Machine Learning" class="md-nav__link">
       Physic-Informed Machine Learning
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../resources/machine_learning/statistics/" title="Statistics" class="md-nav__link">
+      Statistics
     </a>
   </li>
 
@@ -3572,8 +3608,32 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../../../resources/python/packages/plotting/" title="Plotting Libraries" class="md-nav__link">
+      Plotting Libraries
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../../../resources/python/packages/pytorch/" title="PyTorch" class="md-nav__link">
       PyTorch
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../resources/python/packages/sklearn/" title="Scikit-Learn" class="md-nav__link">
+      Scikit-Learn
     </a>
   </li>
 
@@ -6236,11 +6296,10 @@
 <span class="o">%</span><span class="n">autoreload</span> <span class="mi">2</span>
 </code></pre></div>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>The autoreload extension is already loaded. To reload it, use:
+<div class="codehilite"><pre><span></span><code>The autoreload extension is already loaded. To reload it, use:
   %reload_ext autoreload
 </code></pre></div>
-</td></tr></table>
+
 
 <h2 id="data">Data<a class="headerlink" href="#data" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">run_experiment</span><span class="p">():</span>
@@ -6293,16 +6352,7 @@
 <span class="nb">print</span><span class="p">(</span><span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;Xtest&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;ytest&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 </code></pre></div>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>Input:
+<div class="codehilite"><pre><span></span><code>Input:
  9.99999974737875e-06 0.0227799993008375
 Output:
  -8.90301918762965 10.745141882960526
@@ -6313,7 +6363,7 @@ Validation:
 Testing:
 (162, 33) (162, 276)
 </code></pre></div>
-</td></tr></table>
+
 
 <hr />
 <h2 id="2-load-ml-model">2 - Load ML Model<a class="headerlink" href="#2-load-ml-model" title="Permanent link">&para;</a></h2>
@@ -6374,19 +6424,14 @@ Testing:
 <span class="n">ytest</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">[</span><span class="s2">&quot;out_post_trans&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">inverse_transform</span><span class="p">(</span><span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;ytest&#39;</span><span class="p">])</span>
 </code></pre></div>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>[Parallel(n_jobs=28)]: Using backend ThreadingBackend with 28 concurrent workers.
+<div class="codehilite"><pre><span></span><code>[Parallel(n_jobs=28)]: Using backend ThreadingBackend with 28 concurrent workers.
 [Parallel(n_jobs=28)]: Done 144 tasks      | elapsed:    0.1s
 [Parallel(n_jobs=28)]: Done 394 tasks      | elapsed:    0.1s
 [Parallel(n_jobs=28)]: Done 744 tasks      | elapsed:    0.3s
 [Parallel(n_jobs=28)]: Done 1194 tasks      | elapsed:    0.4s
 [Parallel(n_jobs=28)]: Done 1500 out of 1500 | elapsed:    0.5s finished
 </code></pre></div>
-</td></tr></table>
+
 
 <h3 id="average-validation-plots">Average Validation Plots<a class="headerlink" href="#average-validation-plots" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">plot_validation</span><span class="p">(</span><span class="n">y_mu</span><span class="p">,</span> <span class="n">y_std</span><span class="p">,</span> <span class="n">ylabels</span><span class="p">):</span>
@@ -6445,11 +6490,10 @@ Testing:
 <span class="n">results_df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
 </code></pre></div>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>(162, 2) (162, 276)
+<div class="codehilite"><pre><span></span><code>(162, 2) (162, 276)
 0.00014170522838878957 6901486.0 0.00016999999934341794 6901486.0
 </code></pre></div>
-</td></tr></table>
+
 
 <div>
 <style scoped>
@@ -6653,30 +6697,7 @@ Testing:
 <span class="nb">print</span><span class="p">(</span><span class="n">lin_res</span><span class="o">.</span><span class="n">summary</span><span class="p">())</span>
 </code></pre></div>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>                                 OLS Regression Results                                
+<div class="codehilite"><pre><span></span><code>                                 OLS Regression Results                                
 =======================================================================================
 Dep. Variable:                 Labels   R-squared (uncentered):                   0.999
 Model:                            OLS   Adj. R-squared (uncentered):              0.999
@@ -6701,7 +6722,7 @@ Kurtosis:                       9.720   Cond. No.                         1.00
 Warnings:
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
 </code></pre></div>
-</td></tr></table>
+
 
 <h4 id="figure">Figure<a class="headerlink" href="#figure" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">plot_scatter</span><span class="p">(</span><span class="n">results_df</span><span class="p">):</span>
@@ -6877,7 +6898,11 @@ Warnings:
         })
       </script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../../../../javascripts/extra.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
       
     
   </body>

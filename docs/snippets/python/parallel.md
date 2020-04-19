@@ -3,6 +3,16 @@
 
 ## Multiprocessing Module
 
+Useful for doing "embarrassingly parallel" tasks. You do need to control how it works (e.g. the number of jobs, what to loop over). I use it because it's quite easy but there are more advanced ways to do parallization below.
+
+=== info "Snippet"
+
+    ```python
+    results = Parallel(n_jobs=n_jobs, verbose=verbose)(
+        delayed(exp_step)(iparam, **kwargs) for iparam in parameters
+    )
+    ```
+
 === info "Full Function"
 
     ```python
@@ -68,3 +78,5 @@
         )
         return results
     ```
+
+## Dask
