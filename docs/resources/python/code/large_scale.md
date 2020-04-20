@@ -1,5 +1,14 @@
 # Large Scale
 
+## Tutorials
+
+
+### Small Big Data 
+
+These are tutorials to see how we can
+
+* [Small Big Data: Using Numpy and Pandas when your data doesn't fit](https://www.youtube.com/watch?v=8pFnrr0NnwY) - Itamar Turner-Trauring - (PyCon 2020)
+* Dask - [Youtube Page](https://www.youtube.com/channel/UCj9eavqmvwaCyKhIlu2GaoA/videos) | [Matthew Playlist](https://www.youtube.com/playlist?list=PLRtz5iA93T4PQvWuoMnIyEIz1fXiJ5Pri)
 
 ## Packages
 

@@ -16,11 +16,18 @@
 
 # Inference
 
+## Maximum Likelihood
+
+
+**Sources**:
+
+* [Intro to Quantitative Econ w. Python](https://python-intro.quantecon.org/mle.html)
 
 
 
+---
 
-### Laplace Approximation
+## Laplace Approximation
 
 
 
@@ -31,7 +38,7 @@ This is where we approximate the posterior with a Gaussian distribution $\mathca
 * Only captures a single mode and discards the probability mass 
   * similar to the KLD in one direction.
 
-
+---
 
 ## Markov Chain Monte Carlo
 

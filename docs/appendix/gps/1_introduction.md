@@ -8,6 +8,24 @@ source: 1_introduction.md
 ---
 # GP from Scratch
 
+This post will go through how we can build a GP regression model from scratch. I will be going over the formulation as well as how we can code this up from scratch. I did this before a long time ago but I've learned a lot about GPs since then. So I'm putting all of my knowledge together so that I can get a good implementation that goes in parallel with the theory. I am also interested in furthering my research on [uncertain GPs](../../projects/ErrorGPs/README.md) where I go over how we can look at input error in GPs.
+
+
+!!! info "Materials"
+    The full code can be found in the colab notebook. Later I will refactor everything into a script so I can use it in the future.
+
+    * [Colab Notebook](https://colab.research.google.com/drive/1JQy7nsNOmkfDm_ovCQQ0zUtx2hwAI4ll)
+
+!!! check "Good News"
+    It took me approximately 12 hours in total to code this up from scratch. That's significantly better than last time as that time easily took me a week and some change. And I still had problems with the code afterwards. That's progress, no?
+
+!!! info "Resources"
+    I saw quite a few tutorials that inspired me to do this tutorial.
+
+    * [Blog Post](http://krasserm.github.io/2018/03/19/gaussian-processes/) - 
+    > Excellent blog post that goes over GPs with step-by-step. Necessary equations only.
+    * [Blog Post Series](https://peterroelants.github.io/posts/gaussian-process-tutorial/) - Peter Roelants
+    > Good blog post series that go through more finer details of GPs using TensorFlow.
 
 ## Definition
 
@@ -67,16 +85,18 @@ $$
 P(y|X) = \int P(y|f,X)P(f)df
 $$
 
-#### Bayesian Treatment
+### Bayesian Treatment
 
-So now how does this look in terms of the Bayes theorem:
-
+So now how does this look in terms of the Bayes theorem in words:
 
 $$
-\begin{aligned}
-\text{Posterior} &= \frac{\text{Likelihood}\cdot\text{Prior}}{\text{Evidence}}\\
-p(f|X,y) &= \frac{p(y|f, X) \: p(f|X, \theta)}{p(y| X)} \\
-\end{aligned}
+\text{Posterior} = \frac{\text{Likelihood}\cdot\text{Prior}}{\text{Evidence}}
+$$
+
+And mathematically:
+
+$$
+p(f|X,y) = \frac{p(y|f, X) \: p(f|X, \theta)}{p(y| X)}
 $$
 
 
@@ -227,53 +247,40 @@ and we arrive at a joint Gaussian distribution of the training and testing which
 
 
 
+#### Sampling from Prior
 
 Now, something a bit more practical, generally speaking when we program the sampling portion of the prior, we need data. The kernel function is as is and has already been defined with its appropriate parameters. Furthermore, we already have defined the mean function $\mu$ when we initialized the mean function above. So we just need to pass the function through the multivariate normal function along with the number of samples we would like to draw from the prior.
 
-<details>
+!!! details "Code"
+    ```python
+    # initialize parameters
+    params = {
+        'gamma': 10., 
+        'length_scale': 1e-3, 
+    }
 
-```python
-def sample_prior(self, X, n_samples=1, random_state=None):
-    """Draws random n_samples from the multivariate normal
-    distribution:
-    X ~ N(mu, K(X,X))
-    
-    Parameters
-    ----------
-    X : array, (N x D)
-        The vector data use to draw the random samples from
-        where N is the number of data and D is the dimension.
-    
-    n_samples : int (default = 1)
-        The number of random samples to draw from the normal
-        distribution
-    
-    random_state : int, (default = None)
-        Needed if we want to specify the random seed used to 
-        draw the random samples.
+    n_samples = 10                   # condition on 10 samples 
+    test_X = X[:n_samples, :].copy() # random samples from data distribution
 
-    Returns
-    -------
-    samples : array, (n_samples x N)
-        The samples drawn from the multivariate normal
-        distribution.
-    """
-    # calculate the covariance
-    cov = self.kernel(X, X)
+    # GP Prior functions (mu, sigma)
+    mu_f = zero_mean                            
+    cov_f = functools.partial(gram, rbf_kernel)
+    mu_x, cov_x = gp_prior(params, mu_f=mu_f, cov_f=cov_f , x=test_X)
 
-    # handle the random state
-    rng = check_random_state(random_state)
+    # make it semi-positive definite with jitter
+    jitter = 1e-6
+    cov_x_ = cov_x + jitter * jnp.eye(cov_x.shape[0])
 
-    # draw samples from random multivariate normal
-    samples = rng.multivariate_normal(self.mu.ravel(), cov, int(n_samples))
+    n_functions = 10                # number of random functions to draw
 
-    return samples
-```
+    key = jax.random.PRNGKey(0)     # Jax random numbers boilerplate code
 
-</details>
+    y_samples = jax.random.multivariate_normal(key, mu_x, cov_x_, shape=(n_functions,))
+    ```
 
 ---
-### Likelihood (noise model)
+
+## Likelihood (noise model)
 
 $$
 p(y|f,X)=\prod_{i=1}^{N}\mathcal{N}(y_i|f_i,\sigma_\epsilon^2)= \mathcal{N}(y|f(x), \sigma_\epsilon^2\mathbf{I}_N)
@@ -288,6 +295,178 @@ Alternative Notation:
 * $\mathcal{N}(f, \sigma_n^2) = \prod_{i=1}^N\mathcal{P}(y_i, f_i)$
 
 ---
+
+## Posterior
+
+
+Alternative Notation:
+
+* $\mathcal{P}(f|y)\propto \mathcal{N}(y|f, \sigma_n^2\mathbf{I})\cdot \mathcal{N}(f|\mu, \mathbf{K}_{ff})$
+
+
+!!! details "Code"
+
+    This will easily be the longest function that we need for the GP. In my version, it's not necessary for training the GP. But it is necessary for testing.
+
+
+    === "Posterior"
+
+        ```python
+        def posterior(params, prior_params, X, Y, X_new, likelihood_noise=False, return_cov=False):
+            (mu_func, cov_func) = prior_params
+
+            # ==========================
+            # 1. GP PRIOR
+            # ==========================
+            mu_x, Kxx = gp_prior(params, mu_f=mu_func, cov_f=cov_func, x=X)
+
+            # ===========================
+            # 2. CHOLESKY FACTORIZATION
+            # ===========================
+
+            (L, lower), alpha = cholesky_factorization(
+                Kxx + (params["likelihood_noise"] + 1e-7) * jnp.eye(Kxx.shape[0]), 
+                Y-mu_func(X).reshape(-1,1)
+            )
+
+            # ================================
+            # 4. PREDICTIVE MEAN DISTRIBUTION
+            # ================================
+
+            # calculate transform kernel
+            KxX = cov_func(params, X_new, X)
+
+            # Calculate the Mean
+            mu_y = jnp.dot(KxX, alpha)
+
+            # =====================================
+            # 5. PREDICTIVE COVARIANCE DISTRIBUTION
+            # =====================================
+            v = jax.scipy.linalg.cho_solve((L, lower), KxX.T)
+            
+            # Calculate kernel matrix for inputs
+            Kxx = cov_func(params, X_new, X_new)
+            
+            cov_y = Kxx - jnp.dot(KxX, v)
+
+            # Likelihood Noise
+            if likelihood_noise is True:
+                cov_y += params['likelihood_noise']
+
+            # return variance (diagonals of covariance)
+            if return_cov is not True:
+                cov_y = jnp.diag(cov_y)
+
+            return mu_y, cov_y
+        ```
+
+!!! info "Cholesky"
+
+    A lot of times just straight solving the $K^{-1}y=\alpha$ will give you problems. Many times you'll get an error about the matrix being ill-conditioned and non positive semi-definite. So we have to rectify that with the Cholesky decomposition. $K$ should be a positive semi-definite matrix so, there are more stable ways to solve this. We can use the cholesky decomposition which decomposes $K$ into a product of two lower triangular matrices:
+
+    $$K = LL^\top$$
+
+    We do this because:
+
+    1. it's less expensive to calculate the inverse of a triangular matrix
+    2. it's easier to solve systems of equations $Ax=b$.
+
+
+    === "Cholesky Factorization"
+
+        There are two convenience terms that allow you to calculate the cholesky decomposition:
+
+        1. `cho_factor` - calculates the decomposition $K \rightarrow L$
+        2. `cho_solve` - solves the system of equations problem $LL^\top \alpha=y$
+
+        ```python
+        def cholesky_factorization(K, Y):
+
+            # cho factor the cholesky, K = LL^T
+            L = jax.scipy.linalg.cho_factor(K, lower=True)
+
+            # alpha, LL^T alpha=y
+            alpha = jax.scipy.linalg.cho_solve(L, Y)
+
+            return L, alpha
+        ```
+
+        **Note**: If you want to get the cholesky matrix by itself and operator on it without the `cho_factor` function, then you should call the `cholesky` function directly. The `cho_factor` puts random (inexpensive) values in the part of the triangle that's not necessary. Whereas the `cholesky` adds zeros there instead.
+
+    === "Variance Term"
+
+        The variance term also makes use of the $K^{-1}$. So naturally, we can use the already factored cholesky decompsition to calculate the term.
+
+        $$
+        \begin{aligned}
+        k_* K^{-1}k_*
+        &= (Lv)^\top K^{-1}Lv\\
+        &= v^\top L^\top (LL^\top)^{-1} Lv\\
+        &= v^{\top}L^\top L^{-\top}L^{-1}v\\
+        &= v^\top v
+        \end{aligned}
+        $$
+
+        ```python
+
+        v = jax.scipy.linalg.cho_solve((L, lower), KxX.T)
+        var = np.dot(KxX, v)
+        ```
+
+
+---
+
+### Joint Probability Distribution
+
+To make GPs useful, we want to actually make predictions. This stems from the using the joint distribution of the training data and test data with the formula shown above used to condition on multivariate Gaussians. In terms of the GP function space, we have
+
+$$
+\begin{aligned}
+\mathcal{P}\left(\begin{bmatrix}f \\ f_*\end{bmatrix} \right) &= 
+ \mathcal{N}\left( 
+    \begin{bmatrix}
+    \mu \\ \mu_*
+    \end{bmatrix},
+    \begin{bmatrix}
+    K_{xx} & K_{x*} \\ K_{*x} & K_{**}
+    \end{bmatrix} \right)
+\end{aligned}
+$$
+
+
+Then solving for the marginals, we can come up with the predictive test points.
+
+$$\mathcal{P}(f_* |X_*, y, X, \theta)= \mathcal{N}(f_* | \mu_*, \nu^2_*  )$$
+
+where:
+
+* $\mu*=K_* (K + \sigma^2 I)^{-1}y=K_* \alpha$
+* $\nu^2_*= K_{**} - K_*(K + \sigma^2I)^{-1}K_*^{\top}$
+
+---
+
+## Marginal Log-Likelihood
+
+
+The prior $m(x), K$ have hyper-parameters $\theta$. So learning a $\mathcal{GP}$ implies inferring hyper-parameters from the model. 
+
+$$p(Y|X,\theta)=\int p(Y|f)p(f|X, \theta)df$$
+
+However, we are not interested in $f$ directly. We can marginalize it out via the integral equation. The marginal of a Gaussian is Gaussian.
+
+**Note**: Typically we use the $\log$ likelihood instead of a pure likelihood. This is purely for computational purposes. The $\log$ function is monotonic so it doesn't alter the location of the extreme points of the function. Furthermore we typically minimize the $-\log$ instead of the maximum $\log$ for purely practical reasons.
+
+One way to train these functions is to use Maximum A Posterior (MAP) of the hyper-parameters
+
+
+$$
+\begin{aligned}
+\theta^* &= \underset{\theta}{\text{argmax}}\log p(y|X,\theta) \\
+&= \underset{\theta}{\text{argmax}}\log \mathcal{N}(y | 0, K + \sigma^2 I)
+\end{aligned}
+$$
+
+
 ### Marginal Likelihood (Evidence)
 
 $$
@@ -342,113 +521,28 @@ $$
 
     * Alternative Derivation for Log Likelihood - [blog](http://jrmeyer.github.io/machinelearning/2017/08/18/mle.html)
 
-
-
-## Posterior
-
-
-Alternative Notation:
-
-* $\mathcal{P}(f|y)\propto \mathcal{N}(y|f, \sigma_n^2\mathbf{I})\cdot \mathcal{N}(f|\mu, \mathbf{K}_{ff})$
-
-
-??? details "Code"
-
-    ```python
-    def posterior(self, X):
-
-        # K(x,x)
-        K = self.kernel(self.x_train, self.x_train)
-
-        # K(x,x')
-        K_x = self.kernel(self.x_train, X)
-
-        # K(x',x')
-        K_xx = self.kernel(X, X)
-
-        # Inverse of kernel
-        K_inv = np.linalg.inv(
-            K + self.noise_variance * np.eye(len(self.x_train))
-        )
-
-        # Calculate the weights
-        alpha = K_inv @ self.y_train
-
-        # Calculate the mean function
-        mu = K_x @ alpha
-
-        # Calculate the covariance function
-        cov = K_xx - K_x.T @ K_inv @ K_x
-
-        return mu, cov
-    ```
-
 ---
 
-### Joint Probability Distribution
+### Marginal Log-Likelihood
 
-To make GPs useful, we want to actually make predictions. This stems from the using the joint distribution of the training data and test data with the formula shown above used to condition on multivariate Gaussians. In terms of the GP function space, we have
+!!! todo "TODO"
+    Proof of Marginal Log-Likelihood
 
-$$
-\begin{aligned}
-\mathcal{P}\left(\begin{bmatrix}f \\ f_*\end{bmatrix} \right) &= 
- \mathcal{N}\left( 
-    \begin{bmatrix}
-    \mu \\ \mu_*
-    \end{bmatrix},
-    \begin{bmatrix}
-    K_{xx} & K_{x*} \\ K_{*x} & K_{**}
-    \end{bmatrix} \right)
-\end{aligned}
-$$
-
-
-Then solving for the marginals, we can come up with the predictive test points.
-
-$$\mathcal{P}(f_* |X_*, y, X, \theta)= \mathcal{N}(f_* | \mu_*, \nu^2_*  )$$
-
-where:
-
-* $\mu*=K_* (K + \sigma^2 I)^{-1}y=K_* \alpha$
-* $\nu^2_*= K_{**} - K_*(K + \sigma^2I)^{-1}K_*^{\top}$
-
----
-### Learning in GPs
-
-The prior $m(x), K$ have hyper-parameters $\theta$. So learning a $\mathcal{GP}$ implies inferring hyper-parameters from the model. 
-
-$$\mathcal{P}(Y|X,\theta)=\int \mathcal{P}(Y|f)\mathcal{P}(f|X, \theta)df$$
-
-However, we are not interested in $f$ directly. We can marginalize it out via the integral equation. The marginal of a Gaussian is Gaussian.
-
-**Note**: Typically we use the $\log$ likelihood instead of a pure likelihood. This is purely for computational purposes. The $\log$ function is monotonic so it doesn't alter the location of the extreme points of the function. Furthermore we typically minimize the $-\log$ instead of the maximum $\log$ for purely practical reasons.
-
-One way to train these functions is to use Maximum A Posterior (MAP) of the hyper-parameters
-
-
-$$
-\begin{aligned}
-\theta^* &= \underset{\theta}{\text{argmax}}\log p(y|X,\theta) \\
-&= \underset{\theta}{\text{argmax}}\log \mathcal{N}(y | 0, K + \sigma^2 I)
-\end{aligned}
-$$
-
-
-## Marginal Log-Likelihood
+Now we need a cost function that will allow us to get the best hyperparameters that fit our data.
 
 $$
 \log p(y|x, \theta) = - \frac{N}{2} \log 2\pi - \frac{1}{2}y^{\top}(K+\sigma^2I)^{-1}y - \frac{1}{2} \log \left| K+\sigma^2I \right| 
 $$
 
-In terms of the cholesky decomposition:
+Inverting $N\times N$ matrices is the worse part about GPs in general. There are many techniques to be able to handle them, but for basics, it can become a problem. Furthermore, inverting this Kernel matrix tends to have problems being *positive semi-definite*. One way we can make this more efficient is to do the cholesky decomposition and then solve our problem that way. 
+
+#### Cholesky Components
 
 Let $\mathbf{L}=\text{cholesky}(\mathbf{K}+\sigma_n^2\mathbf{I})$. We can write the log likelihood in terms of the cholesky decomposition.
 
 $$
 \begin{aligned}
-\log p(y|x, \theta) &= - \frac{N}{2} \log 2\pi - \frac{1}{2}y^{\top}(K+\sigma^2I)^{-1}y - \frac{1}{2} \log \left| K+\sigma^2I \right|  \\
-&= - \frac{N}{2} \log 2\pi - \frac{1}{2} ||\mathbf{L}^{-1}y||^2 - \sum_i \log \mathbf{L}_{ii} \\
-&= - \frac{N}{2} \log 2\pi - \frac{1}{2} ||\alpha||^2 - \sum_i \log \mathbf{L}_{ii}
+\log p(y|x, \theta) &= - \frac{N}{2} \log 2\pi - \frac{1}{2} ||\underbrace{\mathbf{L}^{-1}y}_{\alpha}||^2 - \sum_i \log \mathbf{L}_{ii}
 \end{aligned}
 $$
 
@@ -457,6 +551,11 @@ This gives us a computational complexity of $\mathcal{O}(N + N^2 + N^3)=\mathcal
 
 
 !!! details "Code"
+
+    I will demonstrate two ways to do this: 
+
+    1. We will use the equations above
+    2. We will refactor this and use the built-in function
 
     === "From Scratch"
         ```python
@@ -472,16 +571,18 @@ This gives us a computational complexity of $\mathcal{O}(N + N^2 + N^3)=\mathcal
             # ===========================
             # 2. CHOLESKY FACTORIZATION
             # ===========================
-            (L, lower), alpha = cholesky_factorization(Kxx + ( params['likelihood_noise'] + 1e-5 ) * jnp.eye(Kxx.shape[0]), Y)
+            (L, lower), alpha = cholesky_factorization(
+                Kxx + ( params['likelihood_noise'] + 1e-5 ) * jnp.eye(Kxx.shape[0]), Y
+            )
 
             # ===========================
             # 3. Marginal Log-Likelihood
             # ===========================
-            log_likelihood = -0.5 * jnp.einsum("ik,ik->k", Y, alpha)
+            log_likelihood = -0.5 * jnp.einsum("ik,ik->k", Y, alpha) # same as dot(Y.T, alpha)
             log_likelihood -= jnp.sum(jnp.log(jnp.diag(L)))
             log_likelihood -= ( Kxx.shape[0] / 2 ) * jnp.log(2 * jnp.pi)
 
-            return - jnp.sum(log_likelihood)
+            return - log_likelihood.sum()
         ```
 
     === "Refactored"
@@ -492,23 +593,24 @@ This gives us a computational complexity of $\mathcal{O}(N + N^2 + N^3)=\mathcal
             (mu_func, cov_func) = prior_params
             
             # ==========================
-            # 1. GP Prior (mu, sig)
+            # 1. GP Prior, mu(), cov(,)
             # ==========================
-            mu_x = mu_f(Xtrain)
+            mu_x = mu_f(Ytrain)
             Kxx = cov_f(params, Xtrain, Xtrain)
             
             # ===========================
-            # 2. GP Kernel
+            # 2. GP Likelihood
             # ===========================
             K_gp = Kxx + ( params['likelihood_noise'] + 1e-6 ) * jnp.eye(Kxx.shape[0])
             
             # ===========================
-            # 3. Built-in GP Likelihood
+            # 3. Marginal Log-Likelihood
             # ===========================
-            log_prob = jax.scipy.stats.multivariate_normal.logpdf(Ytrain.squeeze(), mean=jnp.zeros(Ytrain.shape[0]), cov=K_gp)
-            
-            nll = jnp.sum(log_prob)
-            return -nll
+            # get log probability
+            log_prob = jax.scipy.stats.multivariate_normal.logpdf(x=Ytrain.T, mean=mu_x, cov=K_gp)
+
+            # sum dimensions and return neg mll
+            return -log_prob.sum()
         ```
 
 source - Dai, [GPSS 2018](http://zhenwendai.github.io/slides/gpss2018_slides.pdf)
@@ -520,138 +622,113 @@ source - Dai, [GPSS 2018](http://zhenwendai.github.io/slides/gpss2018_slides.pdf
 
 !!! details "Code"
 
-    === "Train Step"
+    === "Log Params"
 
-    ```python
-    logger.setLevel(logging.INFO)
+        We often have problems when it comes to using optimizers. A lot of times they just don't seem to want to converge and the gradients seem to not change no matter what happens. One trick we can do is to make the optimizer solve a transformed version of the parameters. And then we can take a softmax so that they converge properly.
 
-    X, y, Xtest, ytest = get_data(30)
+        $$f(x) = \ln (1 + \exp(x))$$
 
+        Jax has a built-in function so we'll just use that.
 
+        ```python
+        def saturate(params):
+            return {ikey:jax.nn.softplus(ivalue) for (ikey, ivalue) in params.items()}
+        ```
 
-    params = {
-        'gamma': 10.,
-    #     'length_scale': 1.0,
-    #     'var_f': 1.0,
-        'likelihood_noise': 1e-3,
-    }
+    === "Experimental Parameters"
 
-    # Nice Trick for better training of params
-    def saturate(params):
-        return {ikey:softplus(ivalue) for (ikey, ivalue) in params.items()}
+        ```python
+        logger.setLevel(logging.INFO)
 
-    params = saturate(params)
-
-    cov_f = functools.partial(gram, rbf_kernel)
-
-    gp_priors = (mu_f, cov_f)
-
-    # LOSS FUNCTION
-    mll_loss = jax.jit(functools.partial(nll_scratch, gp_priors))
-
-    # GRADIENT LOSS FUNCTION
-    dloss = jax.jit(jax.grad(mll_loss))
+        X, y, Xtest, ytest = get_data(50)
 
 
+        # PRIOR FUNCTIONS (mean, covariance)
+        mu_f = zero_mean
+        cov_f = functools.partial(gram, rbf_kernel)
+        gp_priors = (mu_f, cov_f)
 
-    # MEAN FUNCTION
-    mu_f = zero_mean
+        # Kernel, Likelihood parameters
+        params = {
+            'gamma': 2.0,
+            # 'length_scale': 1.0,
+            # 'var_f': 1.0,
+            'likelihood_noise': 1.,
+        }
+        # saturate parameters with likelihoods
+        params = saturate(params)
 
+        # LOSS FUNCTION
+        mll_loss = jax.jit(functools.partial(marginal_likelihood, gp_priors))
 
-    # l_val = mll_loss(saturate(params), X[0,:], y[0, :].reshape(-1, 1))
-    l_vals = mll_loss(saturate(params), X, y)
-    # print('MLL (vector):', l_val)
-    # print('MLL (samples):', l_vals)
+        # GRADIENT LOSS FUNCTION
+        dloss = jax.jit(jax.grad(mll_loss))
+        ```
 
+    === "Training Step"
 
-    # dl_val = dloss(saturate(params), X[0,:], y[0, :].reshape(-1, 1))
-    dl_vals = dloss(saturate(params), X, y)
-    # print('dMLL (vector):', dl_val)|
-    # print('dMLL (samples):', dl_vals)
+        ```python
+        # STEP FUNCTION
+        @jax.jit
+        def step(params, X, y, opt_state):
+            # calculate loss
+            loss = mll_loss(params, X, y)
 
+            # calculate gradient of loss
+            grads = dloss(params, X, y)
 
-
-    # STEP FUNCTION
-    @jax.jit
-    def step(params, X, y, opt_state):
-        # print("BEOFRE!")
-        # print(X.shape, y.shape)
-        # print("PARAMS", params)
-        # print(opt_state)
-        # value and gradient of loss function
-        loss = mll_loss(params, X, y)
-        grads = dloss(params, X, y)
-        # # print(f"VALUE:", value)
-        # print("During! v", value)
-        # print("During! p", params)
-        # print("During! g", grads)
-        # update parameter state
-        opt_state = opt_update(0, grads, opt_state)
-
-        # get new params
-        params = get_params(opt_state)
-        # print("AFTER! v", value)
-        # print("AFTER! p", params)
-        # print("AFTER! g", grads)
-        return params, opt_state, loss
-
-    # initialize optimizer
-    opt_init, opt_update, get_params = optimizers.adam(step_size=1e-2)
-
-    # initialize parameters
-    opt_state = opt_init(params)
-
-    # get initial parameters
-    params = get_params(opt_state)
-    # print("PARAMS!", params)
-
-    n_epochs = 2_000
-    learning_rate = 0.01
-    losses = list()
-
-    import tqdm
-
-    with tqdm.trange(n_epochs) as bar:
-
-        for i in bar:
-            postfix = {}
-    #         params = saturate(params)
-            # get nll and grads
-            # nll, grads = dloss(params, X, y)
-
-            params, opt_state, value = step(params, X, y, opt_state)
+            # update optimizer state
+            opt_state = opt_update(0, grads, opt_state)
 
             # update params
-            # params, momentums, scales, nll = train_step(params, momentums, scales, X, y)
-            for ikey in params.keys():
-                postfix[ikey] = f"{params[ikey]:.2f}"
-            # params[ikey] += learning_rate * grads[ikey].mean()
+            params = get_params(opt_state)
 
-            losses.append(value.mean())
-            postfix["Loss"] = f"{onp.array(losses[-1]):.2f}"
-            bar.set_postfix(postfix)
-            params = saturate(params)
-            
+            return params, opt_state, loss
+        ```
+    
+    === "Experimental Loop"
 
-    # params = log_params(params)
-    ```
+        ```python
+        # initialize optimizer
+        opt_init, opt_update, get_params = optimizers.rmsprop(step_size=1e-2)
 
-#### Term I
+        # initialize parameters
+        opt_state = opt_init(params)
 
-$$
-\frac{\partial}{\partial \theta} \left( K + \sigma^2I  \right)^{-1}=- (K+\sigma^2I)^{-1} \frac{\partial}{\partial \theta} \left( K + \sigma^2I  \right)(K+\sigma^2I)^{-1}
-$$
+        # get initial parameters
+        params = get_params(opt_state)
 
-#### Term II
+        # TRAINING PARARMETERS
+        n_epochs = 500
+        learning_rate = 0.1
+        losses = list()
+        postfix = {}
 
-$$
-\begin{aligned}
-\frac{\partial}{\partial \theta} \log \left| K + \sigma^2I \right|
-&=\text{trace }\left( \frac{\partial}{\partial \theta} \log (K + \sigma^2 I) \right) \\ 
-&=\text{trace }\left( (K+\sigma^2I)^{-1} \frac{\partial}{\partial \theta}  (K + \sigma^2 I) \right)
-\end{aligned}
-$$
+        import tqdm
 
+        with tqdm.trange(n_epochs) as bar:
 
+            for i in bar:
+                # 1 step - optimize function
+                params, opt_state, value = step(params, X, y, opt_state)
 
-**Rule:** $\log |\text{det }A|=\text{trace }(\log A)$
+                # update params
+                postfix = {}
+                for ikey in params.keys():
+                    postfix[ikey] = f"{jax.nn.softplus(params[ikey]):.2f}"
+
+                # save loss values
+                losses.append(value.mean())
+
+                # update progress bar
+                postfix["Loss"] = f"{onp.array(losses[-1]):.2f}"
+                bar.set_postfix(postfix)
+                # saturate params
+                params = saturate(params)
+        ```
+
+---
+
+## Resources
+
+* Surrogates: GP Modeling, Design, and Optimization for the Applied Sciences - Gramacy - [Online Book](https://bookdown.org/rbg/surrogates/)

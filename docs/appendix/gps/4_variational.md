@@ -1,23 +1,89 @@
-# Uncertain Inputs GPs - Variational Strategies
+---
+title: Variational GPs
+description: All of my projects
+authors:
+    - J. Emmanuel Johnson
+path: docs/appendex/gps
+source: 4_variational.md.md
+---
+# Variational Gaussian Processes
 
 
 This post is a follow-up from my previous post where I walk through the literature talking about the different strategies of account for input error in Gaussian processes. In this post, I will be discussing how we can use variational strategies to account for input error.
 
---- 
+* Extended and Unscented Gaussian Processes - Steinburg & Bonilla (NIPS, 2014)
 
-- [Uncertain Inputs GPs - Variational Strategies](#uncertain-inputs-gps---variational-strategies)
-  - [Posterior Approximations](#posterior-approximations)
-  - [Sparse Model](#sparse-model)
-    - [Evidence Lower Bound (ELBO)](#evidence-lower-bound-elbo)
-  - [Uncertain Inputs](#uncertain-inputs)
-    - [Case I - Strong Prior](#case-i---strong-prior)
-    - [Case II - Regularized Strong Prior](#case-ii---regularized-strong-prior)
-    - [Case III - Prior with Openness](#case-iii---prior-with-openness)
-    - [Case IV - Bonus, Conservative Freedom](#case-iv---bonus-conservative-freedom)
-  - [Resources](#resources)
-      - [Important Papers](#important-papers)
-      - [Summary Thesis](#summary-thesis)
-      - [Talks](#talks)
+## Model
+
+Recall, we are give some data $\mathcal{D}\in \left\{x_i, y_i \right\}^{N}_{i=1}$ of vector valued input and output pairs. We are interested in finding some latent function $f$ that describes the relationship between $\mathbf{x}$ and $y$. We put a likelihood on this function an say it comes from a Gaussian process. So, from a Bayesian perspective, we have:
+
+$$
+p(f|X,y) = \frac{p(y|f, X) \: p(f|X, \theta)}{p(y| X)}
+$$
+
+
+where:
+
+* Prior: $p(f|X, \theta)=\mathcal{GP}(m_\theta, \mathbf{K}_\theta)$
+* Likelihood (noise model): $p(y|f,X)=\mathcal{N}(y|f(x), \sigma_n^2\mathbf{I})$
+* Marginal Likelihood (Evidence): $p(y|X)=\int_f p(y|f,X)p(f|X)df$
+* Posterior: $p(f|X,y) = \mathcal{GP}(\mu_*, \mathbf{K}_*)$
+
+We typically solve this problem using maximum likelihood as our noise model is a Gaussian likelihood, and so the marginal log-likelihood can be computed in closed form. However, in the case that our likelihood is **not** Gaussian or if we want to marginalize over some uncertain inputs, then this posterior no longer tractable. So one strategy is to use variational inference to approximate the posterior distribution.
+
+---
+
+## Variational Inference
+
+**Reference**: Linearized and Unscented GP - Steinburg & Bonilla
+
+We can approximate the posterior distribution $p(f|y)$ with variational inference. We introduce a variational distribution that is approximately Gaussian. We can introduce the Evidence Lower Bound (ELBO) term on the log-marginal likelihood 
+
+
+
+$$
+\mathcal{L} = \mathbb{E}_{q(f)}\left[ \log p(y|f) \right] - \text{D}_\text{KL}\left[ q(f) || p(f) \right]
+$$
+
+!!! todo "TODO"
+
+    Do the full derivation of the ELBO from the KLD perspective. 
+    $$
+    \mathcal{L} = \text{D}_\text{KL}[ || q()]
+    $$
+
+We assume that the posterior can be approximated with a Gaussian distribution $q(f)=\mathcal{N}(f|m,S)$. Because of this assumption, we have a tractable KL-Divergence term.
+
+$$
+\mathbf{E}_{q(f)}\left[  \log p(y|f) \right] =
+-\frac{1}{2}
+\left[D\log 2\pi + \log|\Sigma| + \mathbb{E}_{q(f)}\left[ (y - g(f))^\top \Sigma^{-1} (y -g(f))\right]  \right]
+$$
+
+$$
+\text{D}_\text{KL}\left[ q(f) || p(f) \right] = \frac{1}{2}
+\left[\text{Tr}(K^{-1}S) + (\mu - m)^\top K^{-1} (\mu - m) - \log|S| + \log|K|-D  \right]
+$$
+
+<!-- !!! todo "Variational Expectations" -->
+
+Do the derivation of this term. GPFlow/Pyro package for reference.
+
+$$
+\begin{aligned}
+\int_{q(f)} \log p(y|f) q(f)df &=
+\mathbf{E}_{q(f)}\left[ p(y|f) \right] \\
+&=
+- \frac{1}{2N}\sum_{i=1}^{N} \log 2\pi +
+\log \sigma^2 +
+\left( (Y-m)^2 + S\right)
+\end{aligned}
+$$
+
+$$
+\mathbb{E}_{q(f)}\left[ (y - g(f))^\top \Sigma^{-1} (y -g(f))\right] 
+$$
+
 
 
 ## Posterior Approximations
@@ -27,7 +93,7 @@ What links all of the strategies from uncertain GPs is how they approach the pro
 This approach has similar strategies that stem from the wave of methods that appeared using variational inference (VI). VI consists of creating a variational approximation of the posterior distribution $q(\mathbf u)\approx \mathcal{P}(\mathbf x)$. Under some assumptions and a baseline distribution for $q(\mathbf u)$,  we can try to approximate the complex distribution $\mathcal{P}(\mathbf x)$ by minimizing the distance between the two distributions, $D\left[q(\mathbf u)||\mathcal{P}(\mathbf x)\right]$. Many practioners believe that approximating the posterior and not the model is the better option when doing Bayesian inference; especially for large data ([example blog](https://www.prowler.io/blog/sparse-gps-approximate-the-posterior-not-the-model), [VFE paper]()). The variational family of methods that are common for GPs use the Kullback-Leibler (KL) divergence criteria between the GP posterior approximation $q(\mathbf u)$ and the true GP posterior $\mathcal{P}(\mathbf x)$. From the literature, this has been extended to many different problems related to GPs for regression, classification, dimensionality reduction and more.
 
 **VGP Model**
-<details>
+
 
 **Posterior Distribution:**
 $$p(Y|X) = \int_{\mathcal F} p(Y|F) P(F|X) dF$$
@@ -57,11 +123,11 @@ $$\geq \left\langle \log p(Y|F) + \log \frac{p(F|X)}{q(F)} \right\rangle_{q(F)}$
 
 $$\mathcal{L}_{1}(q)=\left\langle \log p(Y|F)\right\rangle_{q(F)} - D_{KL} \left( q(F) || p(F|X)\right) $$
 
-</details>
+
 
 
 **Variational GP Model w/ Prior**
-<details>
+
 
 **Posterior Distribution:**
 $$p(Y) = \int_{\mathcal X} p(Y|X) P(X) dX$$
@@ -95,7 +161,7 @@ $$\mathcal{L}_{2}(q)=\left\langle \log p(Y|X)\right\rangle_{q(F)} - D_{KL} \left
 
 $$\mathcal{L}_{2}(q)=\left\langle \mathcal{L}_{1}(q)\right\rangle_{q(F)} - D_{KL} \left( q(X) || p(X)\right) $$
 
-</details>
+
 
 
 

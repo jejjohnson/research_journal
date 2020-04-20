@@ -1,29 +1,45 @@
 # Jax Tutorial Ideas
 
 
-## Main Ideas
+## Tutorials
 
-1. Introduction
-   > Linear Regression, Regularization, 
-   > vmap, jit,
-   > grad, jacobian, hessian
-2. Gaussian Processes
-   > Exact GP, Kernel, MLE, 
+* `vmap`
+* `jit`
+* `grad`, `jacobian`, `hessian`
+* `optimizers`
+* containers - `Dict`, `Tuple`, `NamedTuple`
 
-#### Comparing Methods
+---
 
-* Exact GP
-* Linearized GP (Taylor Expansion, 1st Order, 2nd Order)
-* Moment-Matching GP
-  * Scratch - Loops, numba
-  * Jax - vmap, jit
-* MCMC GP
-  * Scratch - Collin
-  * numpyro - NUTS/HMC
-* Variational GP
-  * scratch
-  * Idea - Pyro
-  * numpyro - SVI
+## Use Cases
+
+* Gaussian Processes
+* Kernel Matrices and Derivatives
+* Optimized Kernel Ridge Regression (OKRR) - [Notebook](https://gonzmg88.github.io/Talk_OKRR/)
+* Optimized Kernel Entropy Components Analysis (OKECA)
+* Centered Kernel Alignment (CKA)
+* Gaussianization Flows
+
+
+---
+
+## Projects
+
+1. Uncertain Inputs for GPs
+2. Gaussianization Flows - Case Study
+
+* Uncertain Inputs for Gaussian Processes
+  * Linearized GP (Taylor Expansion, 1st Order, 2nd Order)
+  * Moment Matching (RBF)
+    * Scratch - Loops, numba
+    * Jax
+  * MCMC Posterior Approximation
+    * Scratch
+    * Numpyro - NUTS/HMC
+  * Variational GP
+    * Numpyro - SVI
+
+---
   
 #### Data
 
@@ -39,46 +55,3 @@
 * Deep Models
 * DKL Models
 * 
-
-
-
-
-
----
-
-## 1. Using Jax
-
-Basics:
-* grad
-* jit
-* vmap
-* jacobian
-* hessian
-* params
-* optimizers
-
-
-## 2. Regression Master Class
-
-
-## 3. Kernel Methods
-
-* Kernel Least Squares
-* Gaussian Processes
-  * [Krasserm](http://krasserm.github.io/2018/03/19/gaussian-processes/)
-* Support Vector Machines
-
-
-## 4. Special Algorithms
-
-* Optimized Kernel Ridge Regression
-  * [Gonzalo's Notebook](https://gonzmg88.github.io/Talk_OKRR/)
-* Optimized Kernel Entropy Components Analysis
-
-## 5. Input Uncertainty
-
-* Taylor Expansion
-* Moment Matching
-* Variational
-* MCMC (NUTS/HMC)
-* Heteroscedastic Likelihood
