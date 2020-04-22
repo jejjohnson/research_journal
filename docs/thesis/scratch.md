@@ -20,6 +20,37 @@ These are some scratch notes for organizing my thesis.
 
 ---
 
+## Part I - Sensitivity Analysis
+
+> Opening up black-box models (i.e. kernel methods)
+
+
+* We look at sensitivity methods in the context of kernel methods
+* "Open the black box"
+* Non-Bayesian Context
+  * (KRR, SVM, KDE, HSIC)
+  * Earth Data
+* "Incomplete" Bayesian Context
+  * Show examples in the context of a Bayesian Model (GPs + Emulation)
+
+**Publication**
+
+* SAKAME
+
+#### Lab Notebooks
+
+* GPs + GSA + Emulation -  $\phi$-Week
+
+#### Tutorials
+
+* Regression: KRR, OKRR, RFF
+* Classification: SVM, RFF+SGD
+* Density Estimation: KDE, OKECA
+* Dependence Estimation: HSIC, rHSIC
+
+---
+---
+
 ## ML Problems
 
 * Representations?

@@ -10,6 +10,13 @@
 
 ---
 
+| Family     | Kernel | Randomized | Composition |
+| ---------- | ------ | ---------- | ----------- |
+| Regression | KRR    | RFF        | SSGPR       |
+| Bayesian   | GPR    | SSGRP      | SSGPR       |
+
+---
+
 ## 1 Kernel Methods
 
 ### 1.1 What is a Kernel Function?

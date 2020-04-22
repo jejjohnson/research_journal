@@ -1,19 +1,5 @@
 # Uncertainty
 
-- [Uncertainty](#uncertainty)
-  - [Overview of Overview](#overview-of-overview)
-  - [What is Uncertainty?](#what-is-uncertainty)
-      - [Aleatoric Uncertainty, $\sigma^2$](#aleatoric-uncertainty-mathsemanticsmrowmsupmi%cf%83mimn2mnmsupmrowannotation-encoding%22applicationx-tex%22sigma2annotationsemanticsmath%cf%832)
-    - [Intuition: 1D Regression](#intuition-1d-regression)
-    - [Real Function](#real-function)
-    - [Intuition: Confidence Intervals](#intuition-confidence-intervals)
-      - [Epistemic Uncertainty, $\nu_{**}^2$](#epistemic-uncertainty-mathsemanticsmrowmsubsupmi%ce%bdmimrowmo%e2%88%97momo%e2%88%97momrowmn2mnmsubsupmrowannotation-encoding%22applicationx-tex%22nu2annotationsemanticsmath%ce%bd%e2%88%97%e2%88%972%e2%80%8b)
-      - [Uncertainty in the Error Generalization](#uncertainty-in-the-error-generalization)
-    - [Uncertainty Over Functions](#uncertainty-over-functions)
-  - [Distribution Shift](#distribution-shift)
-
----
-
 ## Overview of Overview
 
 * Models w. Uncertainty 
