@@ -576,6 +576,10 @@
      <lastmod>2020-04-26</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
+     <loc>https://jejjohnson.github.io/research_journal/projects/similarity/kernel_alignment_params/notebooks/code_reviews/estimate_dist/2.2_exp_mutual_info/</loc>
+     <lastmod>2020-04-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
      <loc>https://jejjohnson.github.io/research_journal/projects/similarity/kernel_alignment_params/notebooks/code_reviews/estimate_hsic/estimate_hsic/</loc>
      <lastmod>2020-04-26</lastmod>
      <changefreq>daily</changefreq>
@@ -1132,27 +1136,11 @@
      <lastmod>2020-04-26</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/tutorials/pytorch_nns/</loc>
-     <lastmod>2020-04-26</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
      <loc>https://jejjohnson.github.io/research_journal/tutorials/pytorch_nns/1_nn_from_scratch/</loc>
      <lastmod>2020-04-26</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/tutorials/pytorch_nns/2_refactor/</loc>
-     <lastmod>2020-04-26</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/tutorials/pytorch_nns/3_subclass/</loc>
-     <lastmod>2020-04-26</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/tutorials/pytorch_nns/4_wrapping/</loc>
-     <lastmod>2020-04-26</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/tutorials/pytorch_nns/5_extras/</loc>
      <lastmod>2020-04-26</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
