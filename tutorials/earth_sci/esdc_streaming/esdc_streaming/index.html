@@ -6920,7 +6920,7 @@
 <p>The kind folks behind the Earth System Data Lab (Data Cube System for Copernicus, <a href="https://dcs4cop.eu/">DCS4SOP</a>) have been developing a package called <code>xcube</code> which will allow processing ESDC a lot easier. I tried using it a while back but I didn't have any success so I kind of gave up on it and decided to use some of my own functions. But they recently announced on their <a href="https://forum.earthsystemdatalab.net">forum</a> that the package was ready. So I decided to test it out and see how it works.</p>
 <h2 id="my-background">My Background<a class="headerlink" href="#my-background" title="Permanent link">&para;</a></h2>
 <p>I've been working with the datacubes for quite some time and I've learned a lot thanks to their efforts. I was even a part of their Early Adopters program which allowed me to use their homegrown <a href="https://jupyterlab.readthedocs.io/en/stable/">JupyterLab</a> system (sign up for access <a href="https://www.earthsystemdatalab.net/index.php/interact/data-lab/">here</a>). I learned a lot about xarray data structures in general, and it really motivated me to try and incorporate different spatial-temporal data representation considerations in <a href="https://jejjohnson.github.io/research_journal/">my research</a> and thesis. What was super nice was that they had all of the data readily available for use and all I had to do was tinker with my algorithms on their server. But I still wanted some stuff to be on my home machine, my lab machine and possibly on google colab. Nothing heavy but just some light protoyping. So this is nice for those of us who don't necessarily want to use their system but would still like to play with the data. They went the extra mile and even made this package called <code>xcube</code>. Now, for my purposes, I like it because it handles a lot of masking and clipping. But that's just the tip of the iceberg...</p>
-<div class="highlight"><pre><span></span><code><span class="c1">#@title Install Appropriate packages</span>
+<details class="details"><summary>Preamble Code</summary><div class="highlight"><pre><span></span><code><span class="c1">#@title Install Appropriate packages</span>
 
 <span class="c1"># requirements</span>
 <span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">xarray</span> <span class="n">zarr</span> <span class="n">shapely</span> <span class="n">affine</span> <span class="n">rasterio</span> <span class="n">geopandas</span>
@@ -6934,136 +6934,7 @@
 <span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">upgrade</span> <span class="s2">&quot;git+https://github.com/dcs4cop/xcube.git#egg=xcube&quot;</span> <span class="o">--</span><span class="n">pre</span>
 </code></pre></div>
 
-<div class="codehilite"><pre><span></span><code>Requirement already satisfied: xarray in /usr/local/lib/python3.6/dist-packages (0.15.1)
-Collecting zarr
-[?25l  Downloading https://files.pythonhosted.org/packages/a3/87/383d77399148ef0772da3472b513ecf143252e7c365c51b0f06714800366/zarr-2.4.0.tar.gz (3.3MB)
-[K     |████████████████████████████████| 3.3MB 4.9MB/s eta 0:00:01
-[?25hRequirement already satisfied: shapely in /usr/local/lib/python3.6/dist-packages (1.7.0)
-Collecting affine
-  Downloading https://files.pythonhosted.org/packages/ac/a6/1a39a1ede71210e3ddaf623982b06ecfc5c5c03741ae659073159184cd3e/affine-2.3.0-py2.py3-none-any.whl
-Collecting rasterio
-[?25l  Downloading https://files.pythonhosted.org/packages/c7/81/13321f88f582a00705c5f348724728e8999136e19d6e7c56f7e6ac9bb7f9/rasterio-1.1.3-cp36-cp36m-manylinux1_x86_64.whl (18.1MB)
-[K     |████████████████████████████████| 18.1MB 221kB/s 
-[?25hCollecting geopandas
-[?25l  Downloading https://files.pythonhosted.org/packages/83/c5/3cf9cdc39a6f2552922f79915f36b45a95b71fd343cfc51170a5b6ddb6e8/geopandas-0.7.0-py2.py3-none-any.whl (928kB)
-[K     |████████████████████████████████| 931kB 45.9MB/s 
-[?25hRequirement already satisfied: pandas&gt;=0.25 in /usr/local/lib/python3.6/dist-packages (from xarray) (1.0.3)
-Requirement already satisfied: numpy&gt;=1.15 in /usr/local/lib/python3.6/dist-packages (from xarray) (1.18.2)
-Requirement already satisfied: setuptools&gt;=41.2 in /usr/local/lib/python3.6/dist-packages (from xarray) (46.1.3)
-Collecting asciitree
-  Downloading https://files.pythonhosted.org/packages/2d/6a/885bc91484e1aa8f618f6f0228d76d0e67000b0fdd6090673b777e311913/asciitree-0.3.3.tar.gz
-Collecting fasteners
-  Downloading https://files.pythonhosted.org/packages/18/bd/55eb2d6397b9c0e263af9d091ebdb756b15756029b3cededf6461481bc63/fasteners-0.15-py2.py3-none-any.whl
-Collecting numcodecs&gt;=0.6.4
-[?25l  Downloading https://files.pythonhosted.org/packages/53/2a/1dc435cbd1d082827190a3e46168fd04f74e266e91313969d5a1aab601bf/numcodecs-0.6.4.tar.gz (3.8MB)
-[K     |████████████████████████████████| 3.8MB 35.6MB/s 
-[?25hCollecting snuggs&gt;=1.4.1
-  Downloading https://files.pythonhosted.org/packages/cc/0e/d27d6e806d6c0d1a2cfdc5d1f088e42339a0a54a09c3343f7f81ec8947ea/snuggs-1.4.7-py3-none-any.whl
-Collecting click-plugins
-  Downloading https://files.pythonhosted.org/packages/e9/da/824b92d9942f4e472702488857914bdd50f73021efea15b4cad9aca8ecef/click_plugins-1.1.1-py2.py3-none-any.whl
-Requirement already satisfied: attrs in /usr/local/lib/python3.6/dist-packages (from rasterio) (19.3.0)
-Requirement already satisfied: click&lt;8,&gt;=4.0 in /usr/local/lib/python3.6/dist-packages (from rasterio) (7.1.1)
-Collecting cligj&gt;=0.5
-  Downloading https://files.pythonhosted.org/packages/e4/be/30a58b4b0733850280d01f8bd132591b4668ed5c7046761098d665ac2174/cligj-0.5.0-py3-none-any.whl
-Collecting pyproj&gt;=2.2.0
-[?25l  Downloading https://files.pythonhosted.org/packages/ce/37/705ee471f71130d4ceee41bbcb06f3b52175cb89273cbb5755ed5e6374e0/pyproj-2.6.0-cp36-cp36m-manylinux2010_x86_64.whl (10.4MB)
-[K     |████████████████████████████████| 10.4MB 35.9MB/s 
-[?25hCollecting fiona
-[?25l  Downloading https://files.pythonhosted.org/packages/ec/20/4e63bc5c6e62df889297b382c3ccd4a7a488b00946aaaf81a118158c6f09/Fiona-1.8.13.post1-cp36-cp36m-manylinux1_x86_64.whl (14.7MB)
-[K     |████████████████████████████████| 14.7MB 330kB/s 
-[?25hRequirement already satisfied: pytz&gt;=2017.2 in /usr/local/lib/python3.6/dist-packages (from pandas&gt;=0.25-&gt;xarray) (2018.9)
-Requirement already satisfied: python-dateutil&gt;=2.6.1 in /usr/local/lib/python3.6/dist-packages (from pandas&gt;=0.25-&gt;xarray) (2.8.1)
-Collecting monotonic&gt;=0.1
-  Downloading https://files.pythonhosted.org/packages/ac/aa/063eca6a416f397bd99552c534c6d11d57f58f2e94c14780f3bbf818c4cf/monotonic-1.5-py2.py3-none-any.whl
-Requirement already satisfied: six in /usr/local/lib/python3.6/dist-packages (from fasteners-&gt;zarr) (1.12.0)
-Requirement already satisfied: pyparsing&gt;=2.1.6 in /usr/local/lib/python3.6/dist-packages (from snuggs&gt;=1.4.1-&gt;rasterio) (2.4.7)
-Collecting munch
-  Downloading https://files.pythonhosted.org/packages/cc/ab/85d8da5c9a45e072301beb37ad7f833cd344e04c817d97e0cc75681d248f/munch-2.5.0-py2.py3-none-any.whl
-Building wheels for collected packages: zarr, asciitree, numcodecs
-  Building wheel for zarr (setup.py) ... [?25l[?25hdone
-  Created wheel for zarr: filename=zarr-2.4.0-cp36-none-any.whl size=127066 sha256=15a01a752735178395c62259774a61067bb995b595672010b4e6ce9c1b6b5289
-  Stored in directory: /root/.cache/pip/wheels/e1/5b/25/24c685604b91139aba00a5b6299b53e7a0661f737f27782559
-  Building wheel for asciitree (setup.py) ... [?25l[?25hdone
-  Created wheel for asciitree: filename=asciitree-0.3.3-cp36-none-any.whl size=5037 sha256=7edc59bb90e23a65af89b80c00531734a45399622f80e90d6308bfc410a2ef7b
-  Stored in directory: /root/.cache/pip/wheels/1d/d9/58/9808b306744df0208fccc640d3d9952a5bc7468502d42897d5
-  Building wheel for numcodecs (setup.py) ... [?25l[?25hdone
-  Created wheel for numcodecs: filename=numcodecs-0.6.4-cp36-cp36m-linux_x86_64.whl size=3887834 sha256=29d82c507f5118052062d8eabc2f5d73ac157160933bd3d802a9ce320824fdcc
-  Stored in directory: /root/.cache/pip/wheels/ca/07/ed/fea2e120cbb91d90b577c5ac56b4b082024f56fcd88e9afa55
-Successfully built zarr asciitree numcodecs
-Installing collected packages: asciitree, monotonic, fasteners, numcodecs, zarr, affine, snuggs, click-plugins, cligj, rasterio, pyproj, munch, fiona, geopandas
-Successfully installed affine-2.3.0 asciitree-0.3.3 click-plugins-1.1.1 cligj-0.5.0 fasteners-0.15 fiona-1.8.13.post1 geopandas-0.7.0 monotonic-1.5 munch-2.5.0 numcodecs-0.6.4 pyproj-2.6.0 rasterio-1.1.3 snuggs-1.4.7 zarr-2.4.0
-Reading package lists... Done
-Building dependency tree       
-Reading state information... Done
-proj-data is already the newest version (4.9.3-2).
-proj-data set to manually installed.
-The following NEW packages will be installed:
-  libproj-dev proj-bin
-0 upgraded, 2 newly installed, 0 to remove and 25 not upgraded.
-Need to get 232 kB of archives.
-After this operation, 1,220 kB of additional disk space will be used.
-Get:1 http://archive.ubuntu.com/ubuntu bionic/universe amd64 libproj-dev amd64 4.9.3-2 [199 kB]
-Get:2 http://archive.ubuntu.com/ubuntu bionic/universe amd64 proj-bin amd64 4.9.3-2 [32.3 kB]
-Fetched 232 kB in 1s (221 kB/s)
-Selecting previously unselected package libproj-dev:amd64.
-(Reading database ... 144568 files and directories currently installed.)
-Preparing to unpack .../libproj-dev_4.9.3-2_amd64.deb ...
-Unpacking libproj-dev:amd64 (4.9.3-2) ...
-Selecting previously unselected package proj-bin.
-Preparing to unpack .../proj-bin_4.9.3-2_amd64.deb ...
-Unpacking proj-bin (4.9.3-2) ...
-Setting up libproj-dev:amd64 (4.9.3-2) ...
-Setting up proj-bin (4.9.3-2) ...
-Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
-Reading package lists... Done
-Building dependency tree       
-Reading state information... Done
-Suggested packages:
-  libgdal-doc
-The following NEW packages will be installed:
-  libgeos-dev
-0 upgraded, 1 newly installed, 0 to remove and 25 not upgraded.
-Need to get 73.1 kB of archives.
-After this operation, 486 kB of additional disk space will be used.
-Get:1 http://archive.ubuntu.com/ubuntu bionic/universe amd64 libgeos-dev amd64 3.6.2-1build2 [73.1 kB]
-Fetched 73.1 kB in 1s (103 kB/s)
-Selecting previously unselected package libgeos-dev.
-(Reading database ... 144601 files and directories currently installed.)
-Preparing to unpack .../libgeos-dev_3.6.2-1build2_amd64.deb ...
-Unpacking libgeos-dev (3.6.2-1build2) ...
-Setting up libgeos-dev (3.6.2-1build2) ...
-Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
-Obtaining cartopy from git+https://github.com/SciTools/Cartopy.git#egg=cartopy
-  Cloning https://github.com/SciTools/Cartopy.git to ./src/cartopy
-  Running command git clone -q https://github.com/SciTools/Cartopy.git /content/src/cartopy
-Requirement already satisfied, skipping upgrade: numpy&gt;=1.10 in /usr/local/lib/python3.6/dist-packages (from cartopy) (1.18.2)
-Requirement already satisfied, skipping upgrade: shapely&gt;=1.5.6 in /usr/local/lib/python3.6/dist-packages (from cartopy) (1.7.0)
-Collecting pyshp&gt;=1.1.4
-[?25l  Downloading https://files.pythonhosted.org/packages/27/16/3bf15aa864fb77845fab8007eda22c2bd67bd6c1fd13496df452c8c43621/pyshp-2.1.0.tar.gz (215kB)
-[K     |████████████████████████████████| 225kB 4.6MB/s 
-[?25hRequirement already satisfied, skipping upgrade: six&gt;=1.3.0 in /usr/local/lib/python3.6/dist-packages (from cartopy) (1.12.0)
-Requirement already satisfied, skipping upgrade: setuptools&gt;=0.7.2 in /usr/local/lib/python3.6/dist-packages (from cartopy) (46.1.3)
-Building wheels for collected packages: pyshp
-  Building wheel for pyshp (setup.py) ... [?25l[?25hdone
-  Created wheel for pyshp: filename=pyshp-2.1.0-cp36-none-any.whl size=32609 sha256=efc7f234f85d0ce31808aba7dd43198b43e72e98160f95ca5baf460b0995375d
-  Stored in directory: /root/.cache/pip/wheels/a6/0c/de/321b5192ad416b328975a2f0385f72c64db4656501eba7cc1a
-Successfully built pyshp
-Installing collected packages: pyshp, cartopy
-  Running setup.py develop for cartopy
-Successfully installed cartopy pyshp-2.1.0
-Collecting xcube
-  Cloning https://github.com/dcs4cop/xcube.git to /tmp/pip-install-a7xvjrrb/xcube
-  Running command git clone -q https://github.com/dcs4cop/xcube.git /tmp/pip-install-a7xvjrrb/xcube
-Building wheels for collected packages: xcube
-  Building wheel for xcube (setup.py) ... [?25l[?25hdone
-  Created wheel for xcube: filename=xcube-0.5.0.dev0-cp36-none-any.whl size=254711 sha256=af0624d45739778a65f51561a4c17150748e96a81cfd600c60f90c7ca6653336
-  Stored in directory: /tmp/pip-ephem-wheel-cache-k0atts5z/wheels/72/9a/d0/f71cb2f8bc29e8ca6db15d80daaf4330b814aba9b2aaadd6b1
-Successfully built xcube
-Installing collected packages: xcube
-Successfully installed xcube-0.5.0.dev0
-</code></pre></div>
-
-
+</details>
 <div class="highlight"><pre><span></span><code><span class="c1">#@title Core Packages</span>
 <span class="kn">import</span> <span class="nn">shapely</span>
 <span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
