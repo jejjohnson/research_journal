@@ -133,13 +133,28 @@ MAP estimate is easy to make it work but can do some weird stuff.
 Bayesian - hard to make it work but sometimes makes more sense.
 
 * Maximum Likelihood
-  $$\underset{w}{\text{argmax }} \mathcal{P}(y|x,w)$$
+
+$$
+\underset{w}{\text{argmax }} \mathcal{P}(y|x,w)
+$$
+
 * MAP
-  $$\underset{w}{\text{argmax }} \mathcal{P}(y|x,w)\mathcal{P}(w)$$
+
+$$
+\underset{w}{\text{argmax }} \mathcal{P}(y|x,w)\mathcal{P}(w)
+$$
+
 * Type II Maximum Likelihood
-  $$\underset{\alpha}{\text{argmax }} \mathcal{P}(y|x,\alpha)=\int \mathcal{P}(y|x,w)\mathcal{P}(w|\alpha)dw$$
+  
+$$
+\underset{\alpha}{\text{argmax }} \mathcal{P}(y|x,\alpha)=\int \mathcal{P}(y|x,w)\mathcal{P}(w|\alpha)dw
+$$
+
 * Type II MAP:
-  $$\underset{\alpha}{\text{argmax }} \mathcal{P}(y|x,\alpha)\mathcal{P}(\alpha)$$
+
+$$
+\underset{\alpha}{\text{argmax }} \mathcal{P}(y|x,\alpha)\mathcal{P}(\alpha)
+$$
 
 ### Tips and Tricks for Practicioners
 

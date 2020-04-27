@@ -1,32 +1,5 @@
 # GPs and Uncertain Inputs through the Ages
 
-- [Summary](#summary)
-- [Standard GP Formulation](#standard-gp-formulation)
-  - [Stochastic Test Points](#stochastic-test-points)
-    - [Setup](#setup)
-    - [GP Predictive Distribution](#gp-predictive-distribution)
-    - [Numerical Integration](#numerical-integration)
-    - [Approximate Gaussian Distribution](#approximate-gaussian-distribution)
-- [Stochastic Measurements](#stochastic-measurements)
-  - [Noisy-Input GP (NIGP)](#noisy-input-gp-nigp)
-    - [Expected Derivative](#expected-derivative)
-    - [Moment Matching](#moment-matching)
-- [Variational Strategies](#variational-strategies)
-- [My Method - Marriage of Two Strategies](#my-method---marriage-of-two-strategies)
-  - [Model](#model)
-  - [Inference](#inference)
-- [Supplementary Material](#supplementary-material)
-  - [Moment Matching](#moment-matching-1)
-  - [Kernel Expectations](#kernel-expectations)
-  - [Propagation of Variances](#propagation-of-variances)
-  - [NIGP - Propagating Variances](#nigp---propagating-variances)
-- [Real Results with Variance Estimates](#real-results-with-variance-estimates)
-- [Resources](#resources)
-  - [Papers](#papers)
-    - [Thesis Explain](#thesis-explain)
-    - [Important Papers](#important-papers)
-
-
 ## Summary
 
 <p align="center">

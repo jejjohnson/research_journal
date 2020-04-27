@@ -30,7 +30,7 @@ source: README.md
 
 We are looking at different "HSIC scorers" because they all vary in terms of whether they center the kernel matrix or if they normalize the score via the norm of the individual kernels.
 
-??? info "Different Scorers"
+!!! info "Different Scorers"
     === "HSIC"
 
         $$\text{HSIC} = \frac{1}{n(n-1)}\langle K_xH,K_yH \rangle_F$$
@@ -53,7 +53,7 @@ We are looking at different "HSIC scorers" because they all vary in terms of whe
 
 ### 2. Which Estimator should we use?
 
-??? info "Example Estimators"
+!!! info "Example Estimators"
     === "Scott"
         **Notice**: This method doesn't take into account the dimensionality
 
@@ -85,7 +85,11 @@ We are looking at different "HSIC scorers" because they all vary in terms of whe
 
 ---
 
+
+
 ## Experiments
+
+
 
 ### Parameter Grid - 1D Data
 

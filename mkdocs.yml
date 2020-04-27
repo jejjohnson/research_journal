@@ -13,8 +13,8 @@ theme:
   name: material
   language: en
   palette:
-    primary: indigo
-    accent: indigo
+    primary: black
+    accent: gray
   font:
     text: source code pro
     code: source code pro

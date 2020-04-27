@@ -332,6 +332,18 @@ $$\left|\mathbf K_{NN} + \sigma_y^2 \mathbf I_N \right| \approx |\mathbf \Lambda
 ---
 ## Resources
 
+## Code Walk-Throughs
+
+* [VFE Approximation for GPs, the gory Details](https://bwengals.github.io/vfe-approximation-for-gaussian-processes-the-gory-details.html) | [More Notes](https://bwengals.github.io/pymc3-fitcvfe-implementation-notes.html) | [Summary of Inducing Point Methods](https://bwengals.github.io/inducing-point-methods-to-speed-up-gps.html)
+  > A good walkthrough of the essential equations and how we can implement them from scratch
+* [SparseGP - Alaya-in-Matrix](https://github.com/Alaya-in-Matrix/SparseGP/blob/master/VFE.py)
+  > Another good walkthrough with everything well defined such that its easy to replicate.
+
+## Math Walkthroughs
+
+* [Gonzalo Blog](https://www.uv.es/gonmagar/blog/2018/04/19/VariationalFreeEnergy)
+  > Step-by-Step Derivations
+
 ### Papers
 
 * Nystrom Approximation

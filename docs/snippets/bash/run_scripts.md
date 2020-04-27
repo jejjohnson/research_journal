@@ -7,7 +7,8 @@ For this, we want to wait for `[script1.py](http://script1.py)` to finish succes
 
 ```bash
 #!/usr/bin/env bash
-python script1.py & python script2.py
+python script1.py && 
+python script2.py
 ```
 
 ### Case II: Run Script 1, Wait, Run Script 2 IFF Script 1 has failed
@@ -25,5 +26,6 @@ We want to run both scripts concurrently as background processes
 
 ```bash
 #!/usr/bin/env bash
-python script1.py & python script2.py
+python script1.py & 
+python script2.py
 ```

@@ -1,104 +1,97 @@
-# DL 4 Researchers Part II - Refactoring
+# Refactoring
 
 
 ## Model (and Parameters)
 
 **Old Way**
 
-<details>
 
 <!-- tabs:start -->
 
-#### ** PyTorch **
+=== "From Scratch"
 
-```python
-from torch import nn
-import math
+    ```python
+    from torch import nn
+    import math
 
-# dimensions for parameters
-input_dim = 8
-output_dim = 1
-n_samples = x_train.shape[0]
+    # dimensions for parameters
+    input_dim = 8
+    output_dim = 1
+    n_samples = x_train.shape[0]
 
-# weight 'matrix'
-weights = nn.Parameter(
-    torch.randn(input_dim, output_dim) / math.sqrt(input_dim),
-    requires_grad=True
-) 
+    # weight 'matrix'
+    weights = nn.Parameter(
+        torch.randn(input_dim, output_dim) / math.sqrt(input_dim),
+        requires_grad=True
+    ) 
 
-# bias vector
-bias = nn.Parameter(
-    torch.zeros(output_dim),
-    requires_grad=True
-)
+    # bias vector
+    bias = nn.Parameter(
+        torch.zeros(output_dim),
+        requires_grad=True
+    )
 
-# define model
-def model(x_batch: torch.tensor):
-    return x_batch @ weights + bias
+    # define model
+    def model(x_batch: torch.tensor):
+        return x_batch @ weights + bias
 
-# set linear model
-lr_model = model
-```
+    # set linear model
+    lr_model = model
+    ```
 
-<!-- tabs:end -->
+=== "Refactored"
 
-</details>
+    ```python
+    class LinearModel(nn.Module):
+        """A Linear Model
 
-<!-- tabs:start -->
+        Parameters
+        ----------
+        input_dim : int,
+            The input dimension for the linear model
+            (# input features)
+        
+        output_dim : int,
+            the output Dimension for the linear model
+            (# outputs)
 
-#### ** PyTorch **
+        Attributes
+        ----------
+        weights : torch.Tensor (input_dim x output_dim)
+            the parameter for the linear model weights
 
-```python
-class LinearModel(nn.Module):
-    """A Linear Model
+        bias : torch.Tensor (output_dim)
+            the parameter for the linear model bias
+        
+        Methods
+        -------
+        forward : torch.tensor (input_dim x output_dim)
+            the forward pass through the linear model
+        """
+        def __init__(self, input_dim: int, output_dim: int):
+            super().__init__()
 
-    Parameters
-    ----------
-    input_dim : int,
-        The input dimension for the linear model
-        (# input features)
-    
-    output_dim : int,
-        the output Dimension for the linear model
-        (# outputs)
+            # weight 'matrix'
+            self.weights = nn.Parameter(
+                torch.randn(input_dim, output_dim) / math.sqrt(input_dim),
+                requires_grad=True
+            ) 
 
-    Attributes
-    ----------
-    weights : torch.Tensor (input_dim x output_dim)
-        the parameter for the linear model weights
+            # bias vector
+            self.bias = nn.Parameter(
+                torch.zeros(output_dim),
+                requires_grad=True
+            )
 
-    bias : torch.Tensor (output_dim)
-        the parameter for the linear model bias
-    
-    Methods
-    -------
-    forward : torch.tensor (input_dim x output_dim)
-        the forward pass through the linear model
-    """
-    def __init__(self, input_dim: int, output_dim: int):
-        super().__init__()
+        def forward(self, x_batch: torch.tensor):
+            return x_batch @ self.weights + self.bias
 
-        # weight 'matrix'
-        self.weights = nn.Parameter(
-            torch.randn(input_dim, output_dim) / math.sqrt(input_dim),
-            requires_grad=True
-        ) 
+    input_dim = x_train.shape[1]
+    output_dim = y_train.shape[1]
 
-        # bias vector
-        self.bias = nn.Parameter(
-            torch.zeros(output_dim),
-            requires_grad=True
-        )
-
-    def forward(self, x_batch: torch.tensor):
-        return x_batch @ self.weights + self.bias
-
-input_dim = x_train.shape[1]
-output_dim = y_train.shape[1]
-
-lr_model = LinearModel(input_dim, output_dim)
-```
-So we have effectively encapsulated that entire parameter definition within a single understandable function. We have the parameters defined when we initialize the `model` and then we have the `forward` method which allows us to perform the operation.
+    lr_model = LinearModel(input_dim, output_dim)
+    ```
+    So we have effectively encapsulated that entire parameter definition within a single understandable function. We have the parameters defined when we initialize the `model` and then we have the `forward` method which allows us to perform the operation.
 
 <!-- tabs:end -->
 
@@ -108,35 +101,30 @@ So we have effectively encapsulated that entire parameter definition within a si
 
 We can also look and use the built-in loss functions. The `mse` is a very common loss function so it should be available within the library.
 
-#### Old Way
+=== "Old Way"
 
 
-<!-- tabs:start -->
 
-#### ** PyTorch **
-
-In PyTorch, we need to look at the `nn.functional.mse_loss` module or the `nn.MSELoss()`. The latter has more options as it is a class and not a function but the former will do for now. So we can change the old way:
-
-<details>
+    In PyTorch, we need to look at the `nn.functional.mse_loss` module or the `nn.MSELoss()`. The latter has more options as it is a class and not a function but the former will do for now. So we can change the old way:
 
 
-```python
-def mse_loss(input: torch.tensor, target: torch.tensor):
-    return torch.mean((input - target) ** 2)
-```
-</details>
+    ```python
+    def mse_loss(input: torch.tensor, target: torch.tensor):
+        return torch.mean((input - target) ** 2)
+    ```
 
-to a simplified version.
+=== "Refactored"
+    to a simplified version.
 
 
-```python
-import torch.nn.functional as F
+    ```python
+    import torch.nn.functional as F
 
-# set loss function to mse
-loss_func = F.mse_loss
-```
+    # set loss function to mse
+    loss_func = F.mse_loss
+    ```
 
-<!-- tabs:end -->
+
 
 ---
 
@@ -146,7 +134,7 @@ Another refactor opportunity is to use a built-in optimizer. I don't want to hav
 
 <!-- tabs:start -->
 
-#### ** PyTorch **
+
 
 ```python
 from torch import optim
@@ -157,7 +145,6 @@ learning_rate = 0.01
 opt = optim.SGD(lr_model.parameters(), lr=learning_rate)
 ```
 
-<!-- tabs:end -->
 
 
 ---
@@ -166,62 +153,57 @@ opt = optim.SGD(lr_model.parameters(), lr=learning_rate)
 
 So after all of that hard work, the training procedure will look a lot cleaner because we have encapsulated a lot of operations using the built-in operations. Now we can focus on other things.
 
-#### Old Way 
-
-
-#### New Way
 
 
 <!-- tabs:start -->
 
-#### ** PyTorch **
+=== "Refactored"
 
-```python
-batch_size = 100
-epochs = 10
-n_samples = x_train.shape[0]
-n_batches = (n_samples - 1) // batch_size + 1
-losses = []
+    ```python
+    batch_size = 100
+    epochs = 10
+    n_samples = x_train.shape[0]
+    n_batches = (n_samples - 1) // batch_size + 1
+    losses = []
 
 
-with tqdm.trange(epochs) as bar:
-    # Loop through epochs with tqdm bar
-    for iepoch in bar:
-        # Loop through batches
-        for idx in range(n_batches):
+    with tqdm.trange(epochs) as bar:
+        # Loop through epochs with tqdm bar
+        for iepoch in bar:
+            # Loop through batches
+            for idx in range(n_batches):
 
-        # get indices for batches
-            start_idx = idx * batch_size
-            end_idx   = start_idx + batch_size
+            # get indices for batches
+                start_idx = idx * batch_size
+                end_idx   = start_idx + batch_size
 
-            xbatch = x_train[start_idx:end_idx]
-            ybatch = y_train[start_idx:end_idx]
+                xbatch = x_train[start_idx:end_idx]
+                ybatch = y_train[start_idx:end_idx]
 
-            # predictions
-            ypred = lr_model(xbatch)
+                # predictions
+                ypred = lr_model(xbatch)
 
-            # loss
-            loss = loss_func(ypred, ybatch)
+                # loss
+                loss = loss_func(ypred, ybatch)
 
-            # add running loss
-            losses.append(loss.item())
+                # add running loss
+                losses.append(loss.item())
 
-            # Loss back propagation
-            loss.backward()
+                # Loss back propagation
+                loss.backward()
 
-            # optimize weights
-            opt.step()
-            opt.zero_grad()
-            
+                # optimize weights
+                opt.step()
+                opt.zero_grad()
+                
 
-            postfix = dict(
-                Epoch=f"{iepoch+1}", 
-                Loss=f"{loss.item():.3f}",
-                )
-            bar.set_postfix(postfix)
-```
+                postfix = dict(
+                    Epoch=f"{iepoch+1}", 
+                    Loss=f"{loss.item():.3f}",
+                    )
+                bar.set_postfix(postfix)
+    ```
 
-<!-- tabs:end -->
 
 ---
 
@@ -231,9 +213,6 @@ Now there are some extra things we can do to reduce the amount of code and make 
 
 
 
-<!-- tabs:start -->
-
-#### ** PyTorch **
 
 ### Dataset
 

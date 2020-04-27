@@ -5,6 +5,7 @@ A fast implementation of the RBF Kernel using numexpr.
 Using the fact that: ||x-y||<sup>2</sup> = ||x||<sup>2</sup> + ||y||<sup>2</sup> - 2 * x<sup>T</sup> * y
 
 **Resources**
+
 * Fast Implementation - [StackOverFlow](https://stackoverflow.com/questions/47271662/what-is-the-fastest-way-to-compute-an-rbf-kernel-in-python)
 
 

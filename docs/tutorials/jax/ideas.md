@@ -15,6 +15,7 @@
 
 * Gaussian Processes
 * Kernel Matrices and Derivatives
+* Kernel Density Estimation - [Blog](https://matthewmcateer.me/blog/gaussian-kde-from-scratch/) | 
 * Optimized Kernel Ridge Regression (OKRR) - [Notebook](https://gonzmg88.github.io/Talk_OKRR/)
 * Optimized Kernel Entropy Components Analysis (OKECA)
 * Centered Kernel Alignment (CKA)

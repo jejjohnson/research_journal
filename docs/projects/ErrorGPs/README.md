@@ -106,3 +106,31 @@ $$\mathcal{L}(\theta) = \text{D}_{\text{KL}}\left[ q(\mathbf{f})\, q(\mathbf{X})
 
 
 [**Gaussian Process Model Zoo**](https://jejjohnson.github.io/gp_model_zoo/#/)
+
+
+---
+
+## Datasets
+
+We use some toy datasets which including: 
+
+1. "near square sine wave"
+
+$$
+f(x) = \sin\left(\frac{\pi}{c} \cos\left( 5 + \frac{x}{2} \right)  \right)
+$$
+
+2. The sigmoid curve
+
+$$
+f(x) = \frac{1}{1+ \exp(-x)}
+$$
+
+3. [Mauna Loa Ice Core Data](https://bwengals.github.io/mauna-loa-example-2-ice-core-data.html) | [Data Portal](https://geosci.uchicago.edu/~rtp1/PrinciplesPlanetaryClimate/Data/dataPortal.html)
+
+$$
+
+$$
+
+4. Spatial IASI Data
+
