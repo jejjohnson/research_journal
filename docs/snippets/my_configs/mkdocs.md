@@ -1,0 +1,93 @@
+# MkDocs
+
+
+```bash
+# Project information
+site_name: Research Journal
+site_description: My Personal Research Journal
+site_author: J. Emmanuel Johnson
+site_url: https://jejjohnson.github.io/research_journal
+
+# Repository
+repo_name: jejjohnson/research_journal
+repo_url: https://github.com/jejjohnson/research_journal
+
+# Configuration
+theme:
+  name: material
+  language: en
+  palette:
+    primary: black
+    accent: gray
+  font:
+    text: source code pro
+    code: source code pro
+
+plugins:
+  - search
+  - mknotebooks:
+      execute: false
+      write_markdown: true
+      timeout: 600
+
+# Copyright
+copyright: Copyright &copy; 2020 J. Emmanuel Johnson
+
+markdown_extensions:
+  - markdown.extensions.admonition
+  - markdown.extensions.attr_list
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:pymdownx.emoji.twemoji
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.highlight:
+      linenums_style: pymdownx-inline
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  # - pymdownx.magiclink:
+  #     repo_url_shorthand: true
+  #     user: squidfunk
+  #     repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+extra_javascript:
+    - javascripts/extra.js
+    - https://polyfill.io/v3/polyfill.min.js?features=es6
+    - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js
+    # - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+
+extra:
+  # disqus: XHR39t5kZv
+  social:
+    # - type: 'envelope'
+    #   link: 'http://www.shortwhale.com/ericmjl'
+    - icon: fontawesome/brands/github
+      link: 'https://github.com/jejjohnson'
+    - icon: fontawesome/brands/twitter
+      link: 'https://twitter.com/jejjohnson'
+    - icon: fontawesome/brands/linkedin
+      link: 'https://linkedin.com/in/jejjohnson'
+    - icon: fontawesome/solid/globe
+      link: 'https://jejjohnson.netlify.com'
+  
+```

@@ -50,7 +50,7 @@ markdown_extensions:
       emoji_generator: !!python/name:pymdownx.emoji.to_svg
   - pymdownx.highlight:
       linenums_style: pymdownx-inline
-  # - pymdownx.inlinehilite
+  - pymdownx.inlinehilite
   - pymdownx.keys
   # - pymdownx.magiclink:
   #     repo_url_shorthand: true
@@ -65,41 +65,6 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
-
-# - codehilite:
-#     guess_lang: false
-#     linenums: true
-# - admonition
-# - pymdownx.tilde
-# - pymdownx.superfences    # Adds support for nested blocks
-# - markdown.extensions.admonition
-# - pymdownx.arithmatex     # Ads support for mathjax
-# - pymdownx.details        # adds support for collapsible blocks
-# - pymdownx.tabbed         # enables tabbed code blocks
-# - pymdownx.mark
-# - pymdownx.tasklist:
-#     custom_checkbox: true 
-# - pymdownx.betterem:
-#     smart_enable: all
-# - meta                    # enables meta data at the top of document
-# - toc:
-#     permalink: True
-# # - pymdownx.inlinehilite
-# - markdown.extensions.attr_list
-# # - pymdownx.betterem:
-# #     smart_enable: all
-# # - pymdownx.caret
-# # - pymdownx.critic
-# - pymdownx.emoji:
-#     emoji_index: !!python/name:materialx.emoji.twemoji
-#     emoji_generator: !!python/name:materialx.emoji.to_svg
-# - pymdownx.inlinehilite
-# # - pymdownx.magiclink
-
-# # - pymdownx.smartsymbols
-# # - pymdownx.tasklist:
-# #     custom_checkbox: true 
-# # - pymdownx.tilde
 
 extra_javascript:
     - javascripts/extra.js
