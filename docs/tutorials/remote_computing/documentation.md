@@ -159,6 +159,9 @@ mkdocs gh-deploy
 
 Below are my specifics on how I setup the documentation on my system.
 
+!!! tip "Remote Access"
+    I have found that I tend to keep a lot of files for my documentation and it can be very heavy. None of the frameworks I've outlined are super light so it can be very taxing on your little laptop. So I highly recommend that you use a server (or desktop station if you have one). I'm fortunate in that I have a server for my work so I use that and that really reduces the amount of computational power that I have to use!
+
 ### Installation
 
 I have everything installed under one package. I've never had any dependency issues so I never saw any reason to have separate environments.
@@ -235,3 +238,56 @@ You can find a [full example](https://sphinxcontrib-napoleon.readthedocs.io/en/l
     Because it's a pain to do documentation, I usually do it **first** before I actually code the function. Obviously I will have to change it later. But it actually forces to me think about what I want the function to do before I start coding. It's a sort of...forces me to think about the preliminary requirements or scope of my function beforehand. If I find that I'm writing too many things, then maybe I should shorten the function to do something smaller and more manageable.
 
 ---
+
+### Makefile
+
+Typing in those commands all the time is cumbersome. So I created a Makefile which shortens the command a bit.
+
+??? details "Makefile"
+
+    ```bash
+    # JUPYTER NOTEBOOKS
+    notebooks_to_docs: ## Move notebooks to docs notebooks directory
+            @printf "\033[1;34mCreating notebook directory...\033[0m\n"
+            mkdir -p docs/notebooks
+            @printf "\033[1;34mRemoving old notebooks...\033[0m\n"
+            rm -rf docs/notebooks/*.ipynb
+            @printf "\033[1;34mCopying Notebooks to directory...\033[0m\n"
+            cp notebooks/*.ipynb docs/notebooks
+            @printf "\033[1;34mDone!\033[0m\n"
+    jlab_html:
+            mkdir -p docs/notebooks
+            jupyter nbconvert notebooks/*.ipynb --to html --output-dir docs/notebooks/
+
+    ##@ Documentation
+
+    pdoc:	## Generate python API Documentation with pdoc
+            @printf "\033[1;34mCreating python API documentation with pdoc...\033[0m\n"
+            pdoc --html --overwrite ${PKGROOT} --html-dir docs/
+            @ touch $@
+            @printf "\033[1;34mpdoc completed!\033[0m\n\n"
+
+    pdoc-live: ## Start python API live documentation
+            @printf "\033[1;34mStarting live documentation with pdoc...\033[0m\n"
+            pdoc ${PKGROOT} --http localhost:8801
+
+    mkdocs: notebooks_to_docs ## Build site documentation with mkdocs
+            @printf "\033[1;34mCreating full documentation with mkdocs...\033[0m\n"
+            mkdocs build --config-file mkdocs.yml --clean --theme material --site-dir site/
+            @printf "\033[1;34mmkdocs completed!\033[0m\n\n"
+
+    docs-live: notebooks_to_docs pdoc ## Build mkdocs documentation live
+            @printf "\033[1;34mStarting live docs with mkdocs...\033[0m\n"
+            mkdocs serve --dev-addr localhost:8802 --theme material
+
+    docs-live-d: notebooks_to_docs pdoc ## Build mkdocs documentation live (quicker reload)
+            @printf "\033[1;34mStarting live docs with mkdocs...\033[0m\n"
+            mkdocs serve --dev-addr localhost:8802 --dirtyreload --theme material
+
+    docs: pdoc mkdocs ## Build the docs (pdoc, MkDocs)
+
+    docsdeploy: docs ## Deploy Documentation
+            @printf "\033[1;34mDeploying docs...\033[0m\n"
+            mkdocs gh-deploy
+            @printf "\033[1;34mDocs delopyed!\033[0m\n\n"
+    ```

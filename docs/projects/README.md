@@ -88,6 +88,9 @@ source: README.md
 
 ## Machine Learning for Ocean Applications
 
+!!! abstract 
+    You can visit the documentation [here](https://IPL-UV.github.io/ml4ocean)
+
 !!! info "Projects"
     * [ARGO Floats MultiOutput Models](/)
     * [Ocean Water Types Regression](/)
