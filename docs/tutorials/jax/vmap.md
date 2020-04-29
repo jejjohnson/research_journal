@@ -110,6 +110,16 @@ Personally, I find this one more readable than the standard Jax implementation. 
 * If you're function doesn't have too many arguments, then this is a bit cleaner in my opinion. If not, it may be best to fix a number of arguments in your function first to reduce the clutter.
 * You cannot partially fit arguments in whichever order you please. For example, I cannot partially fit the input_batch and leave the params argument free. I don't know why this is the case. There are many tricks to get around this like using a [closure](https://stackoverflow.com/questions/11173660/can-one-partially-apply-the-second-argument-of-a-function-that-takes-no-keyword) but I think it's just easier to use the `in_axes` arguments and just be explicit.
 
-### Why do you needs this?
+## Why do you needs this?
+
+### Gradients
 
 Well, even if you are going to write your code in a way that supports batch sizes, you're probably using this so that you can calculate gradients using the `jax.grad` function. You can only take a gradients of functions that output a scalar value. So this is the only way you can vectorize the computation without doing explicit loops.
+
+### Kernel Matrices
+
+```python
+vv = lambda x,y: np.vdot(x, y)
+mv = jax.vmap(vv, (0, None), 0)
+mm = vmap(mv, (None, 1), 1)
+```

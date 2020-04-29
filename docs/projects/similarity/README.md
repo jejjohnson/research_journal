@@ -27,7 +27,7 @@ I investigate the following questions:
 * How does this all compare to **mutual information** for known high-dimensional, multivariate distributions?
 
 ??? info "Important Links"
-    * [Main Project Page](kernel_alignment_params/README.md)
+    * [Main Project Page](https://jejjohnson.github.io/hsic_alignment/)
     * [LaTeX Doc](/)
     * [FFT Talk](../../talks/2020_fft_01_31_hsic_align.md)
 
