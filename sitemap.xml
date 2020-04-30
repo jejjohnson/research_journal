@@ -812,6 +812,26 @@
      <lastmod>2020-04-30</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
+     <loc>https://jejjohnson.github.io/research_journal/snippets/parallel/dask_embarass/</loc>
+     <lastmod>2020-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://jejjohnson.github.io/research_journal/snippets/parallel/hyperparams/</loc>
+     <lastmod>2020-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://jejjohnson.github.io/research_journal/snippets/parallel/large_predict/</loc>
+     <lastmod>2020-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://jejjohnson.github.io/research_journal/snippets/parallel/mp_module/</loc>
+     <lastmod>2020-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://jejjohnson.github.io/research_journal/snippets/parallel/pipelines/</loc>
+     <lastmod>2020-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
      <loc>https://jejjohnson.github.io/research_journal/snippets/python/conda/</loc>
      <lastmod>2020-04-30</lastmod>
      <changefreq>daily</changefreq>
@@ -829,10 +849,6 @@
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/snippets/python/named_tuples/</loc>
-     <lastmod>2020-04-30</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://jejjohnson.github.io/research_journal/snippets/python/parallel/</loc>
      <lastmod>2020-04-30</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
@@ -892,6 +908,10 @@
      <lastmod>2020-04-30</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
+     <loc>https://jejjohnson.github.io/research_journal/snippets/visualization/creating_gifs/</loc>
+     <lastmod>2020-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
      <loc>https://jejjohnson.github.io/research_journal/snippets/visualization/matplotlib/colorbars/</loc>
      <lastmod>2020-04-30</lastmod>
      <changefreq>daily</changefreq>
@@ -909,6 +929,10 @@
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/snippets/visualization/matplotlib/styling/</loc>
+     <lastmod>2020-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://jejjohnson.github.io/research_journal/snippets/visualization/xarray/tifs/</loc>
      <lastmod>2020-04-30</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
@@ -1065,6 +1089,10 @@
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://jejjohnson.github.io/research_journal/tutorials/earth_sci/</loc>
+     <lastmod>2020-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://jejjohnson.github.io/research_journal/tutorials/earth_sci/_ideas/</loc>
      <lastmod>2020-04-30</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
