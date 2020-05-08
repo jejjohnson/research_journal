@@ -57,3 +57,16 @@ $$F_\theta(x) = \sigma^{-1}\left( \sum_{j=1}^K \pi_j \sigma(\frac{(x-\mu_i)}{\be
 * [Gaussian Mixture CDF - Jax](https://github.com/Information-Fusion-Lab-Umass/NoX/blob/master/nox/normalizing_flows.py#L1434)
   > Jax Implementation. No inverse but at least I can see the potential Jax version
 * [Gaussian Mixture Model - INN 4 Inverse Problems](https://github.com/VLL-HD/FrEIA/blob/master/FrEIA/modules/gaussian_mixture.py) | [Tests](https://github.com/VLL-HD/FrEIA/blob/master/tests/gaussian_mixture.py) | [Technical Report](https://arxiv.org/abs/2003.05739)
+  > They have a nice technical report which talks about how one can train a mixture density network with full covariance matrices.
+
+
+---
+
+### Literature
+
+#### Relevant
+
+
+**Variational AutoEncoder with Optimizing Gaussian Mixture Model Priors** - Guo et al. (2020) - [PDF](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9020116)
+
+**Variational inference with Gaussian mixture model and householder flow** - Liu et. al. (2018) - ... 

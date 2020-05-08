@@ -2,6 +2,11 @@
 
 ### From Scratch
 
+#### Introduction
+
+* [NN and Bayesian Learning](https://github.com/magister-informatica-uach/INFO320)
+  > Class notes with PyTorch/Pyro Code
+
 #### Probability & Statistics
 
 * An Introduction to Probability and Computational Bayesian Statistcs - Eric Ma -[Blog](https://ericmjl.github.io/essays-on-data-science/machine-learning/computational-bayesian-stats/)

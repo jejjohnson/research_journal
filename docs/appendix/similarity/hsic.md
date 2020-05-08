@@ -41,11 +41,9 @@ This means measures like the covariance and correlation become useless because t
 
 Let's have the two distributions $\mathcal{X} \in \mathbb{R}^{D_x}$ and $\mathcal{Y} \in \mathbb{R}^{D_y}$. Let's also assume that we can sample $(x,y)$ from $\mathbb{P}_{xy}$. We can capture the second order dependencies between $X$ and $Y$ by constructing a covariance matrix in the feature space defined as:
 
-\begin{align}
-C_{\mathbf{xy}} &\in \mathbb{R}^{D \times D}
-\end{align}
-
-$$C_{\mathbf{xy}} \in \mathbb{R}^{D \times D}$$
+$$
+C_{\mathbf{xy}} \in \mathbb{R}^{D \times D}
+$$
 
 We can use the Hilbert-Schmidt Norm (HS-Norm) as a statistic to effectively summarize content within this covariance matrix. It's defined as:
 

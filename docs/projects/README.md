@@ -44,6 +44,7 @@ source: README.md
 
 
 ??? info "Information Measures for Drought Factors"
+
     **Important Links**:
 
     * [Main Projecct Page](/)
@@ -54,6 +55,7 @@ source: README.md
 
 
 ??? info "PySim"
+
     Some highlights include:
 
     * Scikit-Learn Format to allow for pipeline, cross-validation and scoring
@@ -70,6 +72,7 @@ source: README.md
 ## Uncertainty Quantification
 
 !!! info "Projects"
+
     * [Input Uncertainty for Gaussian Processes](/)
     * [Gaussianization Models in Eath Science Applications](/)
     * [Gaussian Process Model Zoo](/)
@@ -81,6 +84,7 @@ source: README.md
 ## Kernel Methods and Derivatives
 
 !!! info "Projects"
+
     * [Kernel Derivatives Applied to Earth Science Data Cubes](/)
     * [Derivatives for Sensitivity Analysis in Gaussian Processes applied to Emulation](/)
 
@@ -88,10 +92,12 @@ source: README.md
 
 ## Machine Learning for Ocean Applications
 
-!!! abstract 
-    You can visit the documentation [here](https://IPL-UV.github.io/ml4ocean)
+!!! abstract
+
+    You can visit the website [here](https://IPL-UV.github.io/ml4ocean)
 
 !!! info "Projects"
-    * [ARGO Floats MultiOutput Models](/)
+
+    * [ARGO Floats MultiOutput Models](https://ipl-uv.github.io/ml4ocean)
     * [Ocean Water Types Regression](/)
     * [Ocean Water Types Classification](/)

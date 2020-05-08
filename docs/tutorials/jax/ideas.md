@@ -56,3 +56,15 @@
 * Deep Models
 * DKL Models
 * 
+
+## Resources
+
+**GPS**
+
+* [VI 4 GPs w. Jax](https://github.com/FrancisRhysWard/Variational_inference) | [BBVI GP](https://github.com/FrancisRhysWard/Variational_inference/blob/master/distribution_prediction/blackbox_vi/blackbox_vi_gp.py)
+* [JaxGP](https://github.com/salutnomo/Structured-Learning-for-Robot-Control/blob/master/GP2/JAX/jaxGP.py)
+* [GPs and DGPs with Jax n Flax](https://github.com/danieljtait/ladax)
+
+**OKECA**
+
+* [PCA Projections](https://github.com/MinRegret/timecast/blob/master/timecast/learners/_pcr.py)

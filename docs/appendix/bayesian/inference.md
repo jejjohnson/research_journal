@@ -2,6 +2,8 @@
 
 [**Source**](https://www.cs.ubc.ca/~schmidtm/MLRG/GaussianProcesses.pdf) | Deisenroth - [Sampling](https://drive.google.com/file/d/1Ryb1zDzndnv1kOe8nT0Iu4OD6m0KC8ry/view)
 
+**Advances in VI** - [Notebook](https://github.com/magister-informatica-uach/INFO320/blob/master/6_advances_in_VI.ipynb)
+
 * Numerical Integration (low dimension)
 * Bayesian Quadrature
 * Expectation Propagation

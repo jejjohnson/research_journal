@@ -28,15 +28,10 @@ jlab_html:
 		mkdir -p docs/notebooks
 		jupyter nbconvert notebooks/*.ipynb --to html --output-dir docs/notebooks/
 
-docs: ## Build site documentation with mkdocs
+docs-build: ## Build site documentation with mkdocs
 		@printf "\033[1;34mCreating full documentation with mkdocs...\033[0m\n"
 		mkdocs build --config-file mkdocs.yml --clean --theme material --site-dir site/
 		@printf "\033[1;34mmkdocs completed!\033[0m\n\n"
-
-docs-deploy: docs ## Build site documentation with mkdocs
-		@printf "\033[1;34mDeploying mkdocs...\033[0m\n"
-		mkdocs gh-deploy
-		@printf "\033[1;34mDeployment completed!\033[0m\n\n"
 
 docs-live: ## Build mkdocs documentation live
 		@printf "\033[1;34mStarting live docs with mkdocs...\033[0m\n"
@@ -45,3 +40,13 @@ docs-live: ## Build mkdocs documentation live
 docs-live-d: ## Build mkdocs documentation live (quicker reload)
 		@printf "\033[1;34mStarting live docs with mkdocs...\033[0m\n"
 		mkdocs serve --dev-addr $(HOST):$(PORT) --dirtyreload --theme material
+
+docs-deploy: notebooks_to_docs ## Deploy docs
+		@printf "\033[1;34mDeploying docs...\033[0m\n"
+		mkdocs gh-deploy
+		@printf "\033[1;34mSuccess...\033[0m\n"
+
+docs-deploy-all: notebooks_to_docs pdocs ## Deploy docs
+		@printf "\033[1;34mDeploying docs...\033[0m\n"
+		mkdocs gh-deploy
+		@printf "\033[1;34mSuccess...\033[0m\n"

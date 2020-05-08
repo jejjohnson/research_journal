@@ -26,3 +26,15 @@ This page highlights some of the key papers that we will go over during the work
 * A Comprehensive guide to Bayesian Convolutional NeuralNetwork with Variational Inference - Shridhar et. al. (2018) - [arxiv](https://arxiv.org/pdf/1901.02731.pdf) | [code (PyTorch)](https://github.com/kumar-shridhar/PyTorch-BayesianCNN)
 * 
 
+## SOTA
+
+
+**Bayesian Deep Learning and a Probabilistic Perspective of Generalization** - AGW & Pavel Izmailov - [PDF](https://arxiv.org/pdf/2002.08791.pdf)
+
+**The Case for Bayesian Deep Learning** - AGW - [ARXIV](https://arxiv.org/abs/2001.10995)
+
+**Cyclical Stochastic Gradient MCMC for Bayesian Deep Learning** - Zhang et al - [arxiv](https://arxiv.org/abs/1902.03932) | [Code](https://github.com/ruqizhang/csgmcmc)
+
+* **Stochastic Weighted Averaging** - [SWA](https://github.com/wjmaddox/swa_gaussian) | [Paper](A Simple Baseline for Bayesian Uncertainty in Deep Learning)
+* **Stochastic Weighted Averaging** - [SWAG](https://github.com/izmailovpavel/understandingbdl) | [Paper]()
+* **Stochastic Weighted Averaging** - [Multi-SWAG]()
