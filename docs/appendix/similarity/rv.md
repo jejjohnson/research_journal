@@ -57,21 +57,16 @@ $$
 \end{aligned}
 $$
 
-<!-- <details> -->
-<summary>
-    <font color="blue">Code
-    </font>
-</summary>
+??? details "Code"
+    We can expand the terms in the parenthesis like normally. Then we take the expectation of each of the terms individually.
 
-We can expand the terms in the parenthesis like normally. Then we take the expectation of each of the terms individually.
+    ```python
+    # remove mean from data
+    X_mu = X.mean(axis=0)
 
-```python
-# remove mean from data
-X_mu = X.mean(axis=0)
-
-# ensure it is 1D
-var = (X - X_mu[:, None]).T @ (X - X_mu[:, None])
-```
+    # ensure it is 1D
+    var = (X - X_mu[:, None]).T @ (X - X_mu[:, None])
+    ```
 
 <!-- </details> -->
 
@@ -90,25 +85,20 @@ $$
 \end{aligned}
 $$
 
-<details>
-<summary>
-    <font color="red">Proof
-    </font>
-</summary>
+??? details "Proof"
 
-We can expand the terms in the parenthesis like normally. Then we take the expectation of each of the terms individually.
+    We can expand the terms in the parenthesis like normally. Then we take the expectation of each of the terms individually.
 
-$$
-\begin{aligned}
-\text{cov}(\mathbf{x,y})  
-&= \mathbb{E}\left((\mathbf{x}-\mu_\mathbf{x})(\mathbf{y}-\mu_\mathbf{y}) \right) \\
-&= \mathbb{E}\left[\mathbf{xy} - \mu_\mathbf{x} Y - \mathbf{x}\mu_\mathbf{y} + \mu_\mathbf{x}\mu_y \right] \\
-&=  \mathbb{E}[\mathbf{xy}] - \mu_\mathbf{x}  \mathbb{E}[\mathbf{x}] -  \mu_y\mathbb{E}[\mathbf{y}] + \mu_\mathbf{x}\mu_y \\
-&=  \mathbb{E}[\mathbf{xy}] - \mu_\mathbf{x}\mu_y \\
-\end{aligned}
-$$
+    $$
+    \begin{aligned}
+    \text{cov}(\mathbf{x,y})  
+    &= \mathbb{E}\left((\mathbf{x}-\mu_\mathbf{x})(\mathbf{y}-\mu_\mathbf{y}) \right) \\
+    &= \mathbb{E}\left[\mathbf{xy} - \mu_\mathbf{x} Y - \mathbf{x}\mu_\mathbf{y} + \mu_\mathbf{x}\mu_y \right] \\
+    &=  \mathbb{E}[\mathbf{xy}] - \mu_\mathbf{x}  \mathbb{E}[\mathbf{x}] -  \mu_y\mathbb{E}[\mathbf{y}] + \mu_\mathbf{x}\mu_y \\
+    &=  \mathbb{E}[\mathbf{xy}] - \mu_\mathbf{x}\mu_y \\
+    \end{aligned}
+    $$
 
-</details>
 
 This will result in a scalar value $\mathbb{R}^+$ that ranges from $(-\infty, \infty)$. This number is affected by scale so we can different values depending upon the scale of our data, i.e. $\text{cov}(\mathbf{x,y}) \neq \text{cov}(\alpha \mathbf{x}, \beta \mathbf{x})$ where $\alpha, \beta \in \mathbb{R}^{+}$
 
@@ -117,20 +107,16 @@ This will result in a scalar value $\mathbb{R}^+$ that ranges from $(-\infty, \i
 
 We can compare the r.v. $X$ with another r.v. $Y \in \mathbb{R}^{N \times 1}$. the covariance, or the cross-covariance between multiple variables $X,Y$. We can write this as:
 
-$$\text{cov}(\mathbf{x,y})  = \frac{1}{n-1} \sum_{i=1}^N (x_i - x_\mu)(y_i - y_\mu)$$
+$$
+\text{cov}(\mathbf{x,y})  = \frac{1}{n-1} \sum_{i=1}^N (x_i - x_\mu)(y_i - y_\mu)
+$$
 
-<details>
+??? details "Code"
 
-<summary>
-    <font color="blue">Code
-    </font>
-</summary>
+    ```python
+    c_xy = X.T @ Y
+    ```
 
-```python
-c_xy = X.T @ Y
-```
-
-</details>
 
 ---
 
@@ -139,7 +125,9 @@ c_xy = X.T @ Y
 
 This is the normalized version of the covariance measured mentioned above. This is done by dividing the covariance by the product of the standard deviation of the two samples X and Y.  
 
-$$\rho(\mathbf{x,y})=\frac{\text{cov}(\mathbf{x,y}) }{\sigma_x \sigma_y}$$
+$$
+\rho(\mathbf{x,y})=\frac{\text{cov}(\mathbf{x,y}) }{\sigma_x \sigma_y}
+$$
 
 This results in a scalar value $\mathbb{R}$ that lies in between $[-1, 1]$. When  $\rho=-1$, there is a negative correlation and when $\rho=1$, there is a positive correlation. When $\rho=0$ there is no correlation.
 
@@ -147,7 +135,9 @@ This results in a scalar value $\mathbb{R}$ that lies in between $[-1, 1]$. When
 
 So the formulation is:
 
-$$\rho(\mathbf{x,y}) = \frac{\text{cov}(\mathbf{x,y}) }{\sigma_x \sigma_y}$$
+$$
+\rho(\mathbf{x,y}) = \frac{\text{cov}(\mathbf{x,y}) }{\sigma_x \sigma_y}
+$$
 
 With this normalization, we now have a measure that is bounded between -1 and 1. This makes it much more interpretable and also invariant to isotropic scaling, $\rho(X,Y)=\rho(\alpha X, \beta Y)$ where $\alpha, \beta \in \mathbb{R}^{+}$
 
@@ -157,7 +147,9 @@ With this normalization, we now have a measure that is bounded between -1 and 1.
 
 This is a popular measure for measuring the errors between two datasets. More or less, it is a covariance measure that penalizes higher deviations between the datasets.
 
-$$RMSE(X,Y)=\sqrt{\frac{1}{N}\sum_{i=1}^N \left((x_i - \mu_x)-(y_i - \mu_i)\right)^2}$$
+$$
+RMSE(X,Y)=\sqrt{\frac{1}{N}\sum_{i=1}^N \left((x_i - \mu_x)-(y_i - \mu_i)\right)^2}
+$$
 
 
 ---
@@ -181,23 +173,18 @@ $$
 $$
 
 
-<details>
-<summary>
-    <font color="red">Proof
-    </font>
-</summary>
+??? details "Proof"
+    We can expand the terms in the parenthesis like normally. Then we take the expectation of each of the terms individually.
 
-We can expand the terms in the parenthesis like normally. Then we take the expectation of each of the terms individually.
+    $$
+    \begin{aligned}
+    \text{Var}(X) &= \mathbb{E}\left((X-\mu_x)(X-\mu_y) \right) \\
+    &= \mathbb{E}\left(XX - \mu_XX - X\mu_X + \mu_X\mu_X \right) \\
+    &=  \mathbb{E}(XX) - \mu_x  \mathbb{E}(X) -  \mathbb{E}(X)\mu_X + \mu_x\mu_X \\
+    &=  \mathbb{E}(X^2) - \mu_X^2
+    \end{aligned}
+    $$
 
-$$
-\begin{aligned}
-\text{Var}(X) &= \mathbb{E}\left((X-\mu_x)(X-\mu_y) \right) \\
-&= \mathbb{E}\left(XX - \mu_XX - X\mu_X + \mu_X\mu_X \right) \\
-&=  \mathbb{E}(XX) - \mu_x  \mathbb{E}(X) -  \mathbb{E}(X)\mu_X + \mu_x\mu_X \\
-&=  \mathbb{E}(X^2) - \mu_X^2
-\end{aligned}
-$$
-</details>
 
 To simplify the notation, we can write this as:
 
@@ -211,19 +198,16 @@ $$\Sigma_\mathbf{x} = \text{cov}(\mathbf{x,x})$$
 
 This shows the joint variation of all pairs of random variables.
 
-$$\Sigma_\mathbf{x} = \mathbf{x}^\top \mathbf{x}$$
+$$
+\Sigma_\mathbf{x} = \mathbf{x}^\top \mathbf{x}
+$$
 
 
-<details>
-<summary>
-    <font color="blue">Code
-    </font>
-</summary>
+??? details "Code"
 
-```python
-c_xy = X.T @ X
-```
-</details>
+    ```python
+    c_xy = X.T @ X
+    ```
 
 ---
 
@@ -240,23 +224,18 @@ $$
 
 
 
-<details>
-<summary>
-    <font color="red">Proof
-    </font>
-</summary>
+??? details "Proof"
+    We can expand the terms in the parenthesis like normally. Then we take the expectation of each of the terms individually.
 
-We can expand the terms in the parenthesis like normally. Then we take the expectation of each of the terms individually.
+    $$
+    \begin{aligned}
+    C(X,Y) &= \mathbb{E}\left((X-\mu_x)(Y-\mu_y) \right) \\
+    &= \mathbb{E}\left(XY - \mu_xY - X\mu_y + \mu_x\mu_y \right) \\
+    &=  \mathbb{E}(XY) - \mu_x  \mathbb{E}(X) -  \mathbb{E}(X)\mu_y + \mu_x\mu_y \\
+    &=  \mathbb{E}(XY) - \mu_x\mu_y
+    \end{aligned}
+    $$
 
-$$
-\begin{aligned}
-C(X,Y) &= \mathbb{E}\left((X-\mu_x)(Y-\mu_y) \right) \\
-&= \mathbb{E}\left(XY - \mu_xY - X\mu_y + \mu_x\mu_y \right) \\
-&=  \mathbb{E}(XY) - \mu_x  \mathbb{E}(X) -  \mathbb{E}(X)\mu_y + \mu_x\mu_y \\
-&=  \mathbb{E}(XY) - \mu_x\mu_y
-\end{aligned}
-$$
-</details>
 
 This results in a scalar value which represents the similarity between the samples. There are some key observations of this measure.
 
@@ -265,19 +244,16 @@ This results in a scalar value which represents the similarity between the sampl
 
 This shows the joint variation of all pairs of random variables.
 
-$$\Sigma_\mathbf{xy} = \mathbf{x}^\top \mathbf{y}$$
+$$
+\Sigma_\mathbf{xy} = \mathbf{x}^\top \mathbf{y}
+$$
 
 
-<details>
-<summary>
-    <font color="blue">Code
-    </font>
-</summary>
+??? details "Code"
 
-```python
-c_xy = X.T @ X
-```
-</details>
+    ```python
+    c_xy = X.T @ X
+    ```
 
 **Observations**
 * A completely diagonal covariance matrix means that all features are uncorrelated (orthogonal to each other).
@@ -297,7 +273,9 @@ c_xy = X.T @ X
 
 Recall that we now have self-covariance matrices $\Sigma_\mathbf{x}$ and cross-covariance matrices $\Sigma_\mathbf{xy}$ which are $\mathbb{R}^{D \times D}$. This is very useful as it captures the structure of the overall data. However, if we want to summarize the statistics, then we need some methods to do so. The matrix norm, in particular the Frobenius Norm (aka the Hilbert-Schmidt Norm) to effectively summarize content within this covariance matrix. It's defined as:
 
-$$||\Sigma_\mathbf{xy}||_{\mathcal{F}}^2 = \sum_i \lambda_i^2 = \text{tr}\left( \Sigma_\mathbf{xy}^\top \Sigma_\mathbf{xy} \right)$$
+$$
+||\Sigma_\mathbf{xy}||_{\mathcal{F}}^2 = \sum_i \lambda_i^2 = \text{tr}\left( \Sigma_\mathbf{xy}^\top \Sigma_\mathbf{xy} \right)
+$$
  
 Essentially this is a measure of the covariance matrix power or "essence" through its eigenvalue decomposition. Note that this term is zero iff $\mathbf{x,y}$ are independent and greater than zero otherwise. Since the covariance matrix is a second-order measure of the relations, we can only summarize the the second order relation information. But at the very least, we now have a scalar value in $\mathbb{R}$ that summarizes the structure of our data.
 
@@ -306,10 +284,8 @@ Essentially this is a measure of the covariance matrix power or "essence" throug
 ### Congruence Coefficient
 
 > A measure of similarity between two multivariate datasets.
-
-<font color="blue">TIP</font>
-
-This was a term introduced by Burt (1948) with the name "unadjusted correlation". It's a measure of similarity between two multivariate datasets. Later the term "congruence coefficient" was coined by Tucker (1951) and Harman (1976).
+??? tip
+    This was a term introduced by Burt (1948) with the name "unadjusted correlation". It's a measure of similarity between two multivariate datasets. Later the term "congruence coefficient" was coined by Tucker (1951) and Harman (1976).
 
 In the context of matrices, let's take summarize the cross-covariance matrix and then normalize this value by the self-covariance matrices. This results in:
 
@@ -370,50 +346,44 @@ $$
  
 
 
-<summary>
-    <font color="blue">Code
-    </font>
-</summary>
+??? details "Code"
 
+    This is very easy to compute in practice. One just needs to calculate the Frobenius Norm (Hilbert-Schmidt Norm) of a covariance matrix This boils down to computing the trace of the matrix multiplication of two matrices: $tr(C_{xy}^\top C_{xy})$. So in algorithmically that is:
 
+    ```python
+    hsic_score = np.sqrt(np.trace(C_xy.T * C_xy))
+    ```
+    We can make this faster by using the `sum` operation
 
+    ```python
+    # Numpy
+    hsic_score = np.sqrt(np.sum(C_xy * C_xy))
+    # PyTorch
+    hsic_score = (C_xy * C_xy).sum().sum()
+    ```
 
+    **Refactor**
 
-This is very easy to compute in practice. One just needs to calculate the Frobenius Norm (Hilbert-Schmidt Norm) of a covariance matrix This boils down to computing the trace of the matrix multiplication of two matrices: $tr(C_{xy}^\top C_{xy})$. So in algorithmically that is:
+    There is a built-in function to be able to to speed up this calculation by a magnitude.
 
-```python
-hsic_score = np.sqrt(np.trace(C_xy.T * C_xy))
-```
-We can make this faster by using the `sum` operation
+    ```python
+    hs_score = np.linalg.norm(C_xy, ord='fro')
+    ```
 
-```python
-# Numpy
-hsic_score = np.sqrt(np.sum(C_xy * C_xy))
-# PyTorch
-hsic_score = (C_xy * C_xy).sum().sum()
-```
+    and in PyTorch
 
-**Refactor**
+    ```python
+    hs_score = torch.norm(C_xy, p='fro)
+    ```
 
-There is a built-in function to be able to to speed up this calculation by a magnitude.
-
-```python
-hs_score = np.linalg.norm(C_xy, ord='fro')
-```
-
-and in PyTorch
-
-```python
-hs_score = torch.norm(C_xy, p='fro)
-```
-</details>
 
 
 #### Equivalence
 
 It turns out, for the linear case, when using the Frobenius norm to summarize the pairwise comparisons, comparing features is the same as comparing samples. For example, the norm of the covariance operator for the features and samples are equivalent:
 
-$$||\Sigma_{\mathbf{xy}}||_F^2 = 
+$$
+||\Sigma_{\mathbf{xy}}||_F^2 = 
 \langle \mathbf{W_x,W_y} \rangle_F
 $$
 
@@ -425,7 +395,9 @@ $$
 
 So what does this mean? Well, either method is fine. But you should probably choose one depending upon the computational resources available. For example, if you have more samples than features, then choose the feature space representation. On the other hand, if you have more features than samples, then choose the sample space representation.
 
-!> **Linear Only** This method only works for the linear case. There are some nonlinear transformations (called kernels) that one can use, but those will yield different values between feature space and sample space.
+
+!!! warning "Linear Only"
+    This method only works for the linear case. There are some nonlinear transformations (called kernels) that one can use, but those will yield different values between feature space and sample space.
 
 
 ## Extensions
@@ -443,12 +415,16 @@ Many frameworks is a generalization of this as they attempt to maximize these qu
 
 There is a mutual information interpretation. This measurement only captures the 1st and 2nd order moments of the distribution. This is as if we were approximating as a Gaussian distribution which can be described by its first and second moments. The mutual information can be calculated directly if the cross covariance and the self-covariance matrices are known.
 
-$$I(X,Y) = - \frac{1}{2} \log \left( \frac{|C|}{|C_{xx}||C_{yy}||} \right)$$
+$$
+I(X,Y) = - \frac{1}{2} \log \left( \frac{|C|}{|C_{xx}||C_{yy}||} \right)
+$$
 
 As we showed above, the term inside the log is simply the Pearson correlation coefficient $\rho$.
 
 
-$$I(X,Y) = - \frac{1}{2} \log (1- \rho^2)$$
+$$
+I(X,Y) = - \frac{1}{2} \log (1- \rho^2)
+$$
 
 ---
 

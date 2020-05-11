@@ -1,6 +1,0 @@
-name: tf2_talk
-channels:
-- conda-forge
-dependencies:
-- python=3.8
-- nodejs
