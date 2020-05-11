@@ -4093,6 +4093,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../resources/python/remote_computing/vscode/" title="VSCode" class="md-nav__link">
+      VSCode
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -4878,8 +4890,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../snippets/numpy/bisection/" title="Bisection search" class="md-nav__link">
-      Bisection search
+    <a href="../../../snippets/numpy/bisection/" title="Bisection" class="md-nav__link">
+      Bisection
     </a>
   </li>
 
@@ -6474,6 +6486,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../tutorials/jax/bisection/" title="Bisection search" class="md-nav__link">
+      Bisection search
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../tutorials/jax/classes/" title="Classes" class="md-nav__link">
       Classes
     </a>
@@ -7339,13 +7363,7 @@
 \end{aligned}
 </script>
 </div>
-<!-- <details> -->
-
-<p><summary>
-    <font color="blue">Code
-    </font>
-</summary></p>
-<p>We can expand the terms in the parenthesis like normally. Then we take the expectation of each of the terms individually.</p>
+<details class="details"><summary>Code</summary><p>We can expand the terms in the parenthesis like normally. Then we take the expectation of each of the terms individually.</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># remove mean from data</span>
 <span class="n">X_mu</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 
@@ -7353,6 +7371,7 @@
 <span class="n">var</span> <span class="o">=</span> <span class="p">(</span><span class="n">X</span> <span class="o">-</span> <span class="n">X_mu</span><span class="p">[:,</span> <span class="kc">None</span><span class="p">])</span><span class="o">.</span><span class="n">T</span> <span class="o">@</span> <span class="p">(</span><span class="n">X</span> <span class="o">-</span> <span class="n">X_mu</span><span class="p">[:,</span> <span class="kc">None</span><span class="p">])</span>
 </code></pre></div>
 
+</details>
 <!-- </details> -->
 
 <hr />
@@ -7374,15 +7393,18 @@
 \end{aligned}
 </script>
 </div>
-<details>
-<summary>
-    <font color="red">Proof
-    </font>
-</summary>
-
-We can expand the terms in the parenthesis like normally. Then we take the expectation of each of the terms individually.
-
-$$
+<details class="details"><summary>Proof</summary><p>We can expand the terms in the parenthesis like normally. Then we take the expectation of each of the terms individually.</p>
+<div>
+<div class="MathJax_Preview">
+\begin{aligned}
+\text{cov}(\mathbf{x,y})  
+&amp;= \mathbb{E}\left((\mathbf{x}-\mu_\mathbf{x})(\mathbf{y}-\mu_\mathbf{y}) \right) \\
+&amp;= \mathbb{E}\left[\mathbf{xy} - \mu_\mathbf{x} Y - \mathbf{x}\mu_\mathbf{y} + \mu_\mathbf{x}\mu_y \right] \\
+&amp;=  \mathbb{E}[\mathbf{xy}] - \mu_\mathbf{x}  \mathbb{E}[\mathbf{x}] -  \mu_y\mathbb{E}[\mathbf{y}] + \mu_\mathbf{x}\mu_y \\
+&amp;=  \mathbb{E}[\mathbf{xy}] - \mu_\mathbf{x}\mu_y \\
+\end{aligned}
+</div>
+<script type="math/tex; mode=display">
 \begin{aligned}
 \text{cov}(\mathbf{x,y})  
 &= \mathbb{E}\left((\mathbf{x}-\mu_\mathbf{x})(\mathbf{y}-\mu_\mathbf{y}) \right) \\
@@ -7390,50 +7412,57 @@ $$
 &=  \mathbb{E}[\mathbf{xy}] - \mu_\mathbf{x}  \mathbb{E}[\mathbf{x}] -  \mu_y\mathbb{E}[\mathbf{y}] + \mu_\mathbf{x}\mu_y \\
 &=  \mathbb{E}[\mathbf{xy}] - \mu_\mathbf{x}\mu_y \\
 \end{aligned}
-$$
-
+</script>
+</div>
 </details>
-
 <p>This will result in a scalar value <span><span class="MathJax_Preview">\mathbb{R}^+</span><script type="math/tex">\mathbb{R}^+</script></span> that ranges from <span><span class="MathJax_Preview">(-\infty, \infty)</span><script type="math/tex">(-\infty, \infty)</script></span>. This number is affected by scale so we can different values depending upon the scale of our data, i.e. <span><span class="MathJax_Preview">\text{cov}(\mathbf{x,y}) \neq \text{cov}(\alpha \mathbf{x}, \beta \mathbf{x})</span><script type="math/tex">\text{cov}(\mathbf{x,y}) \neq \text{cov}(\alpha \mathbf{x}, \beta \mathbf{x})</script></span> where <span><span class="MathJax_Preview">\alpha, \beta \in \mathbb{R}^{+}</span><script type="math/tex">\alpha, \beta \in \mathbb{R}^{+}</script></span></p>
 <h4 id="empirical-estimate_2">Empirical Estimate<a class="headerlink" href="#empirical-estimate_2" title="Permanent link">&para;</a></h4>
 <p>We can compare the r.v. <span><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> with another r.v. <span><span class="MathJax_Preview">Y \in \mathbb{R}^{N \times 1}</span><script type="math/tex">Y \in \mathbb{R}^{N \times 1}</script></span>. the covariance, or the cross-covariance between multiple variables <span><span class="MathJax_Preview">X,Y</span><script type="math/tex">X,Y</script></span>. We can write this as:</p>
 <div>
-<div class="MathJax_Preview">\text{cov}(\mathbf{x,y})  = \frac{1}{n-1} \sum_{i=1}^N (x_i - x_\mu)(y_i - y_\mu)</div>
-<script type="math/tex; mode=display">\text{cov}(\mathbf{x,y})  = \frac{1}{n-1} \sum_{i=1}^N (x_i - x_\mu)(y_i - y_\mu)</script>
+<div class="MathJax_Preview">
+\text{cov}(\mathbf{x,y})  = \frac{1}{n-1} \sum_{i=1}^N (x_i - x_\mu)(y_i - y_\mu)
 </div>
-<details>
-
-<summary>
-    <font color="blue">Code
-    </font>
-</summary>
-
-<div class="highlight"><pre><span></span><code><span class="n">c_xy</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">T</span> <span class="o">@</span> <span class="n">Y</span>
+<script type="math/tex; mode=display">
+\text{cov}(\mathbf{x,y})  = \frac{1}{n-1} \sum_{i=1}^N (x_i - x_\mu)(y_i - y_\mu)
+</script>
+</div>
+<details class="details"><summary>Code</summary><div class="highlight"><pre><span></span><code><span class="n">c_xy</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">T</span> <span class="o">@</span> <span class="n">Y</span>
 </code></pre></div>
 
 </details>
-
 <hr />
 <h3 id="correlation">Correlation<a class="headerlink" href="#correlation" title="Permanent link">&para;</a></h3>
 <p>This is the normalized version of the covariance measured mentioned above. This is done by dividing the covariance by the product of the standard deviation of the two samples X and Y.  </p>
 <div>
-<div class="MathJax_Preview">\rho(\mathbf{x,y})=\frac{\text{cov}(\mathbf{x,y}) }{\sigma_x \sigma_y}</div>
-<script type="math/tex; mode=display">\rho(\mathbf{x,y})=\frac{\text{cov}(\mathbf{x,y}) }{\sigma_x \sigma_y}</script>
+<div class="MathJax_Preview">
+\rho(\mathbf{x,y})=\frac{\text{cov}(\mathbf{x,y}) }{\sigma_x \sigma_y}
+</div>
+<script type="math/tex; mode=display">
+\rho(\mathbf{x,y})=\frac{\text{cov}(\mathbf{x,y}) }{\sigma_x \sigma_y}
+</script>
 </div>
 <p>This results in a scalar value <span><span class="MathJax_Preview">\mathbb{R}</span><script type="math/tex">\mathbb{R}</script></span> that lies in between <span><span class="MathJax_Preview">[-1, 1]</span><script type="math/tex">[-1, 1]</script></span>. When  <span><span class="MathJax_Preview">\rho=-1</span><script type="math/tex">\rho=-1</script></span>, there is a negative correlation and when <span><span class="MathJax_Preview">\rho=1</span><script type="math/tex">\rho=1</script></span>, there is a positive correlation. When <span><span class="MathJax_Preview">\rho=0</span><script type="math/tex">\rho=0</script></span> there is no correlation.</p>
 <h4 id="empirical-estimate_3">Empirical Estimate<a class="headerlink" href="#empirical-estimate_3" title="Permanent link">&para;</a></h4>
 <p>So the formulation is:</p>
 <div>
-<div class="MathJax_Preview">\rho(\mathbf{x,y}) = \frac{\text{cov}(\mathbf{x,y}) }{\sigma_x \sigma_y}</div>
-<script type="math/tex; mode=display">\rho(\mathbf{x,y}) = \frac{\text{cov}(\mathbf{x,y}) }{\sigma_x \sigma_y}</script>
+<div class="MathJax_Preview">
+\rho(\mathbf{x,y}) = \frac{\text{cov}(\mathbf{x,y}) }{\sigma_x \sigma_y}
+</div>
+<script type="math/tex; mode=display">
+\rho(\mathbf{x,y}) = \frac{\text{cov}(\mathbf{x,y}) }{\sigma_x \sigma_y}
+</script>
 </div>
 <p>With this normalization, we now have a measure that is bounded between -1 and 1. This makes it much more interpretable and also invariant to isotropic scaling, <span><span class="MathJax_Preview">\rho(X,Y)=\rho(\alpha X, \beta Y)</span><script type="math/tex">\rho(X,Y)=\rho(\alpha X, \beta Y)</script></span> where <span><span class="MathJax_Preview">\alpha, \beta \in \mathbb{R}^{+}</span><script type="math/tex">\alpha, \beta \in \mathbb{R}^{+}</script></span></p>
 <hr />
 <h3 id="root-mean-squared-error">Root Mean Squared Error<a class="headerlink" href="#root-mean-squared-error" title="Permanent link">&para;</a></h3>
 <p>This is a popular measure for measuring the errors between two datasets. More or less, it is a covariance measure that penalizes higher deviations between the datasets.</p>
 <div>
-<div class="MathJax_Preview">RMSE(X,Y)=\sqrt{\frac{1}{N}\sum_{i=1}^N \left((x_i - \mu_x)-(y_i - \mu_i)\right)^2}</div>
-<script type="math/tex; mode=display">RMSE(X,Y)=\sqrt{\frac{1}{N}\sum_{i=1}^N \left((x_i - \mu_x)-(y_i - \mu_i)\right)^2}</script>
+<div class="MathJax_Preview">
+RMSE(X,Y)=\sqrt{\frac{1}{N}\sum_{i=1}^N \left((x_i - \mu_x)-(y_i - \mu_i)\right)^2}
+</div>
+<script type="math/tex; mode=display">
+RMSE(X,Y)=\sqrt{\frac{1}{N}\sum_{i=1}^N \left((x_i - \mu_x)-(y_i - \mu_i)\right)^2}
+</script>
 </div>
 <hr />
 <h2 id="multi-dimensional">Multi-Dimensional<a class="headerlink" href="#multi-dimensional" title="Permanent link">&para;</a></h2>
@@ -7455,24 +7484,26 @@ $$
 \end{aligned}
 </script>
 </div>
-<details>
-<summary>
-    <font color="red">Proof
-    </font>
-</summary>
-
-We can expand the terms in the parenthesis like normally. Then we take the expectation of each of the terms individually.
-
-$$
+<details class="details"><summary>Proof</summary><p>We can expand the terms in the parenthesis like normally. Then we take the expectation of each of the terms individually.</p>
+<div>
+<div class="MathJax_Preview">
+\begin{aligned}
+\text{Var}(X) &amp;= \mathbb{E}\left((X-\mu_x)(X-\mu_y) \right) \\
+&amp;= \mathbb{E}\left(XX - \mu_XX - X\mu_X + \mu_X\mu_X \right) \\
+&amp;=  \mathbb{E}(XX) - \mu_x  \mathbb{E}(X) -  \mathbb{E}(X)\mu_X + \mu_x\mu_X \\
+&amp;=  \mathbb{E}(X^2) - \mu_X^2
+\end{aligned}
+</div>
+<script type="math/tex; mode=display">
 \begin{aligned}
 \text{Var}(X) &= \mathbb{E}\left((X-\mu_x)(X-\mu_y) \right) \\
 &= \mathbb{E}\left(XX - \mu_XX - X\mu_X + \mu_X\mu_X \right) \\
 &=  \mathbb{E}(XX) - \mu_x  \mathbb{E}(X) -  \mathbb{E}(X)\mu_X + \mu_x\mu_X \\
 &=  \mathbb{E}(X^2) - \mu_X^2
 \end{aligned}
-$$
+</script>
+</div>
 </details>
-
 <p>To simplify the notation, we can write this as:</p>
 <div>
 <div class="MathJax_Preview">\Sigma_\mathbf{x} = \text{cov}(\mathbf{x,x})</div>
@@ -7485,19 +7516,17 @@ $$
 <h5 id="empirical-estimation">Empirical Estimation<a class="headerlink" href="#empirical-estimation" title="Permanent link">&para;</a></h5>
 <p>This shows the joint variation of all pairs of random variables.</p>
 <div>
-<div class="MathJax_Preview">\Sigma_\mathbf{x} = \mathbf{x}^\top \mathbf{x}</div>
-<script type="math/tex; mode=display">\Sigma_\mathbf{x} = \mathbf{x}^\top \mathbf{x}</script>
+<div class="MathJax_Preview">
+\Sigma_\mathbf{x} = \mathbf{x}^\top \mathbf{x}
 </div>
-<details>
-<summary>
-    <font color="blue">Code
-    </font>
-</summary>
-
-<div class="highlight"><pre><span></span><code><span class="n">c_xy</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">T</span> <span class="o">@</span> <span class="n">X</span>
+<script type="math/tex; mode=display">
+\Sigma_\mathbf{x} = \mathbf{x}^\top \mathbf{x}
+</script>
+</div>
+<details class="details"><summary>Code</summary><div class="highlight"><pre><span></span><code><span class="n">c_xy</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">T</span> <span class="o">@</span> <span class="n">X</span>
 </code></pre></div>
-</details>
 
+</details>
 <hr />
 <h4 id="cross-covariance">Cross-Covariance<a class="headerlink" href="#cross-covariance" title="Permanent link">&para;</a></h4>
 <p>We can compare the r.v. <span><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> with another r.v. <span><span class="MathJax_Preview">Y \in \mathbb{R}^{N \times 1}</span><script type="math/tex">Y \in \mathbb{R}^{N \times 1}</script></span>. the covariance, or the cross-covariance between multiple variables <span><span class="MathJax_Preview">X,Y</span><script type="math/tex">X,Y</script></span>. We can write this as:</p>
@@ -7515,41 +7544,41 @@ $$
 \end{aligned}
 </script>
 </div>
-<details>
-<summary>
-    <font color="red">Proof
-    </font>
-</summary>
-
-We can expand the terms in the parenthesis like normally. Then we take the expectation of each of the terms individually.
-
-$$
+<details class="details"><summary>Proof</summary><p>We can expand the terms in the parenthesis like normally. Then we take the expectation of each of the terms individually.</p>
+<div>
+<div class="MathJax_Preview">
+\begin{aligned}
+C(X,Y) &amp;= \mathbb{E}\left((X-\mu_x)(Y-\mu_y) \right) \\
+&amp;= \mathbb{E}\left(XY - \mu_xY - X\mu_y + \mu_x\mu_y \right) \\
+&amp;=  \mathbb{E}(XY) - \mu_x  \mathbb{E}(X) -  \mathbb{E}(X)\mu_y + \mu_x\mu_y \\
+&amp;=  \mathbb{E}(XY) - \mu_x\mu_y
+\end{aligned}
+</div>
+<script type="math/tex; mode=display">
 \begin{aligned}
 C(X,Y) &= \mathbb{E}\left((X-\mu_x)(Y-\mu_y) \right) \\
 &= \mathbb{E}\left(XY - \mu_xY - X\mu_y + \mu_x\mu_y \right) \\
 &=  \mathbb{E}(XY) - \mu_x  \mathbb{E}(X) -  \mathbb{E}(X)\mu_y + \mu_x\mu_y \\
 &=  \mathbb{E}(XY) - \mu_x\mu_y
 \end{aligned}
-$$
+</script>
+</div>
 </details>
-
 <p>This results in a scalar value which represents the similarity between the samples. There are some key observations of this measure.</p>
 <h5 id="empirical-estimation_1">Empirical Estimation<a class="headerlink" href="#empirical-estimation_1" title="Permanent link">&para;</a></h5>
 <p>This shows the joint variation of all pairs of random variables.</p>
 <div>
-<div class="MathJax_Preview">\Sigma_\mathbf{xy} = \mathbf{x}^\top \mathbf{y}</div>
-<script type="math/tex; mode=display">\Sigma_\mathbf{xy} = \mathbf{x}^\top \mathbf{y}</script>
+<div class="MathJax_Preview">
+\Sigma_\mathbf{xy} = \mathbf{x}^\top \mathbf{y}
 </div>
-<details>
-<summary>
-    <font color="blue">Code
-    </font>
-</summary>
-
-<div class="highlight"><pre><span></span><code><span class="n">c_xy</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">T</span> <span class="o">@</span> <span class="n">X</span>
+<script type="math/tex; mode=display">
+\Sigma_\mathbf{xy} = \mathbf{x}^\top \mathbf{y}
+</script>
+</div>
+<details class="details"><summary>Code</summary><div class="highlight"><pre><span></span><code><span class="n">c_xy</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">T</span> <span class="o">@</span> <span class="n">X</span>
 </code></pre></div>
-</details>
 
+</details>
 <p><strong>Observations</strong>
 * A completely diagonal covariance matrix means that all features are uncorrelated (orthogonal to each other).
 * Diagonal covariances are useful for learning, they mean non-redundant features!</p>
@@ -7562,17 +7591,18 @@ $$
 <h2 id="summarizing-multi-dimensional-information">Summarizing Multi-Dimensional Information<a class="headerlink" href="#summarizing-multi-dimensional-information" title="Permanent link">&para;</a></h2>
 <p>Recall that we now have self-covariance matrices <span><span class="MathJax_Preview">\Sigma_\mathbf{x}</span><script type="math/tex">\Sigma_\mathbf{x}</script></span> and cross-covariance matrices <span><span class="MathJax_Preview">\Sigma_\mathbf{xy}</span><script type="math/tex">\Sigma_\mathbf{xy}</script></span> which are <span><span class="MathJax_Preview">\mathbb{R}^{D \times D}</span><script type="math/tex">\mathbb{R}^{D \times D}</script></span>. This is very useful as it captures the structure of the overall data. However, if we want to summarize the statistics, then we need some methods to do so. The matrix norm, in particular the Frobenius Norm (aka the Hilbert-Schmidt Norm) to effectively summarize content within this covariance matrix. It's defined as:</p>
 <div>
-<div class="MathJax_Preview">||\Sigma_\mathbf{xy}||_{\mathcal{F}}^2 = \sum_i \lambda_i^2 = \text{tr}\left( \Sigma_\mathbf{xy}^\top \Sigma_\mathbf{xy} \right)</div>
-<script type="math/tex; mode=display">||\Sigma_\mathbf{xy}||_{\mathcal{F}}^2 = \sum_i \lambda_i^2 = \text{tr}\left( \Sigma_\mathbf{xy}^\top \Sigma_\mathbf{xy} \right)</script>
+<div class="MathJax_Preview">
+||\Sigma_\mathbf{xy}||_{\mathcal{F}}^2 = \sum_i \lambda_i^2 = \text{tr}\left( \Sigma_\mathbf{xy}^\top \Sigma_\mathbf{xy} \right)
+</div>
+<script type="math/tex; mode=display">
+||\Sigma_\mathbf{xy}||_{\mathcal{F}}^2 = \sum_i \lambda_i^2 = \text{tr}\left( \Sigma_\mathbf{xy}^\top \Sigma_\mathbf{xy} \right)
+</script>
 </div>
 <p>Essentially this is a measure of the covariance matrix power or "essence" through its eigenvalue decomposition. Note that this term is zero iff <span><span class="MathJax_Preview">\mathbf{x,y}</span><script type="math/tex">\mathbf{x,y}</script></span> are independent and greater than zero otherwise. Since the covariance matrix is a second-order measure of the relations, we can only summarize the the second order relation information. But at the very least, we now have a scalar value in <span><span class="MathJax_Preview">\mathbb{R}</span><script type="math/tex">\mathbb{R}</script></span> that summarizes the structure of our data.</p>
 <hr />
 <h3 id="congruence-coefficient">Congruence Coefficient<a class="headerlink" href="#congruence-coefficient" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p>A measure of similarity between two multivariate datasets.</p>
-</blockquote>
-<p><font color="blue">TIP</font></p>
-<p>This was a term introduced by Burt (1948) with the name "unadjusted correlation". It's a measure of similarity between two multivariate datasets. Later the term "congruence coefficient" was coined by Tucker (1951) and Harman (1976).</p>
+<details class="tip"><summary>Tip</summary><p>This was a term introduced by Burt (1948) with the name "unadjusted correlation". It's a measure of similarity between two multivariate datasets. Later the term "congruence coefficient" was coined by Tucker (1951) and Harman (1976).</p>
+</details>
 <p>In the context of matrices, let's take summarize the cross-covariance matrix and then normalize this value by the self-covariance matrices. This results in:</p>
 <div>
 <div class="MathJax_Preview">
@@ -7643,11 +7673,7 @@ tr \left( \mathbf{xx}^\top \mathbf{yy}^\top \right) \\
 \end{aligned}
 </script>
 </div>
-<p><summary>
-    <font color="blue">Code
-    </font>
-</summary></p>
-<p>This is very easy to compute in practice. One just needs to calculate the Frobenius Norm (Hilbert-Schmidt Norm) of a covariance matrix This boils down to computing the trace of the matrix multiplication of two matrices: <span><span class="MathJax_Preview">tr(C_{xy}^\top C_{xy})</span><script type="math/tex">tr(C_{xy}^\top C_{xy})</script></span>. So in algorithmically that is:</p>
+<details class="details"><summary>Code</summary><p>This is very easy to compute in practice. One just needs to calculate the Frobenius Norm (Hilbert-Schmidt Norm) of a covariance matrix This boils down to computing the trace of the matrix multiplication of two matrices: <span><span class="MathJax_Preview">tr(C_{xy}^\top C_{xy})</span><script type="math/tex">tr(C_{xy}^\top C_{xy})</script></span>. So in algorithmically that is:</p>
 <p><div class="highlight"><pre><span></span><code><span class="n">hsic_score</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">trace</span><span class="p">(</span><span class="n">C_xy</span><span class="o">.</span><span class="n">T</span> <span class="o">*</span> <span class="n">C_xy</span><span class="p">))</span>
 </code></pre></div>
 We can make this faster by using the <code>sum</code> operation</p>
@@ -7663,16 +7689,19 @@ We can make this faster by using the <code>sum</code> operation</p>
 </code></pre></div>
 
 <p>and in PyTorch</p>
-<p><div class="highlight"><pre><span></span><code><span class="n">hs_score</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">C_xy</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="s1">&#39;fro)</span>
+<div class="highlight"><pre><span></span><code><span class="n">hs_score</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">C_xy</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="s1">&#39;fro)</span>
 </code></pre></div>
-</details></p>
+
+</details>
 <h4 id="equivalence">Equivalence<a class="headerlink" href="#equivalence" title="Permanent link">&para;</a></h4>
 <p>It turns out, for the linear case, when using the Frobenius norm to summarize the pairwise comparisons, comparing features is the same as comparing samples. For example, the norm of the covariance operator for the features and samples are equivalent:</p>
 <div>
-<div class="MathJax_Preview">||\Sigma_{\mathbf{xy}}||_F^2 = 
+<div class="MathJax_Preview">
+||\Sigma_{\mathbf{xy}}||_F^2 = 
 \langle \mathbf{W_x,W_y} \rangle_F
 </div>
-<script type="math/tex; mode=display">||\Sigma_{\mathbf{xy}}||_F^2 = 
+<script type="math/tex; mode=display">
+||\Sigma_{\mathbf{xy}}||_F^2 = 
 \langle \mathbf{W_x,W_y} \rangle_F
 </script>
 </div>
@@ -7686,7 +7715,10 @@ We can make this faster by using the <code>sum</code> operation</p>
 </script>
 </div>
 <p>So what does this mean? Well, either method is fine. But you should probably choose one depending upon the computational resources available. For example, if you have more samples than features, then choose the feature space representation. On the other hand, if you have more features than samples, then choose the sample space representation.</p>
-<p>!&gt; <strong>Linear Only</strong> This method only works for the linear case. There are some nonlinear transformations (called kernels) that one can use, but those will yield different values between feature space and sample space.</p>
+<div class="admonition warning">
+<p class="admonition-title">Linear Only</p>
+<p>This method only works for the linear case. There are some nonlinear transformations (called kernels) that one can use, but those will yield different values between feature space and sample space.</p>
+</div>
 <h2 id="extensions">Extensions<a class="headerlink" href="#extensions" title="Permanent link">&para;</a></h2>
 <p>Many frameworks is a generalization of this as they attempt to maximize these quantities with some sort of constraint.</p>
 <ul>
@@ -7699,13 +7731,21 @@ We can make this faster by using the <code>sum</code> operation</p>
 <h2 id="mutual-information">Mutual Information<a class="headerlink" href="#mutual-information" title="Permanent link">&para;</a></h2>
 <p>There is a mutual information interpretation. This measurement only captures the 1<sup>st</sup> and 2<sup>nd</sup> order moments of the distribution. This is as if we were approximating as a Gaussian distribution which can be described by its first and second moments. The mutual information can be calculated directly if the cross covariance and the self-covariance matrices are known.</p>
 <div>
-<div class="MathJax_Preview">I(X,Y) = - \frac{1}{2} \log \left( \frac{|C|}{|C_{xx}||C_{yy}||} \right)</div>
-<script type="math/tex; mode=display">I(X,Y) = - \frac{1}{2} \log \left( \frac{|C|}{|C_{xx}||C_{yy}||} \right)</script>
+<div class="MathJax_Preview">
+I(X,Y) = - \frac{1}{2} \log \left( \frac{|C|}{|C_{xx}||C_{yy}||} \right)
+</div>
+<script type="math/tex; mode=display">
+I(X,Y) = - \frac{1}{2} \log \left( \frac{|C|}{|C_{xx}||C_{yy}||} \right)
+</script>
 </div>
 <p>As we showed above, the term inside the log is simply the Pearson correlation coefficient <span><span class="MathJax_Preview">\rho</span><script type="math/tex">\rho</script></span>.</p>
 <div>
-<div class="MathJax_Preview">I(X,Y) = - \frac{1}{2} \log (1- \rho^2)</div>
-<script type="math/tex; mode=display">I(X,Y) = - \frac{1}{2} \log (1- \rho^2)</script>
+<div class="MathJax_Preview">
+I(X,Y) = - \frac{1}{2} \log (1- \rho^2)
+</div>
+<script type="math/tex; mode=display">
+I(X,Y) = - \frac{1}{2} \log (1- \rho^2)
+</script>
 </div>
 <hr />
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>

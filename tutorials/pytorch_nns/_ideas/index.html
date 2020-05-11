@@ -3799,6 +3799,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../resources/python/remote_computing/vscode/" title="VSCode" class="md-nav__link">
+      VSCode
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -4584,8 +4596,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../snippets/numpy/bisection/" title="Bisection search" class="md-nav__link">
-      Bisection search
+    <a href="../../../snippets/numpy/bisection/" title="Bisection" class="md-nav__link">
+      Bisection
     </a>
   </li>
 
@@ -6182,6 +6194,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../jax/bisection/" title="Bisection search" class="md-nav__link">
+      Bisection search
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../jax/classes/" title="Classes" class="md-nav__link">
       Classes
     </a>
@@ -6451,6 +6475,26 @@
   <a href="#2" class="md-nav__link">
     2.
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pytorch-lightning" class="md-nav__link">
+    PyTorch Lightning
+  </a>
+  
+    <nav class="md-nav" aria-label="PyTorch Lightning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#debugging-tips" class="md-nav__link">
+    Debugging Tips
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -6780,6 +6824,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#pytorch-lightning" class="md-nav__link">
+    PyTorch Lightning
+  </a>
+  
+    <nav class="md-nav" aria-label="PyTorch Lightning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#debugging-tips" class="md-nav__link">
+    Debugging Tips
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -6806,6 +6870,15 @@
 <li><a href="https://matthewmcateer.me/blog/a-quick-intro-to-bayesian-neural-networks/">BNN</a></li>
 </ul>
 <h2 id="2">2.<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<hr />
+<h2 id="pytorch-lightning">PyTorch Lightning<a class="headerlink" href="#pytorch-lightning" title="Permanent link">&para;</a></h2>
+<h3 id="debugging-tips">Debugging Tips<a class="headerlink" href="#debugging-tips" title="Permanent link">&para;</a></h3>
+<ul>
+<li>There are 5 validation runs before the training loop starts (built-in)</li>
+<li><code>fast_dev_run</code> - runs 1 batch of training and testing data (like compiling)</li>
+<li><code>overfit_pct=0.01</code> - can my model overfit on 1% of my data? The loss should go to 0...</li>
+<li><code>train_percent_check=0.1, val_percent_check=0.01</code> - same thing but with specific numbers</li>
+</ul>
                 
               
               
