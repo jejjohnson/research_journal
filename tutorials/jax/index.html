@@ -21,7 +21,7 @@
     
     
       
-        <title>My Tutorials - Research Journal</title>
+        <title>Jax - Research Journal</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#my-tutorials" class="md-skip">
+        <a href="#jax" class="md-skip">
           Skip to content
         </a>
       
@@ -96,7 +96,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              My Tutorials
+              Jax
             
           </span>
         </div>
@@ -6247,14 +6247,14 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        My Tutorials
+        Jax
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
         </span>
       </label>
     
-    <a href="./" title="My Tutorials" class="md-nav__link md-nav__link--active">
-      My Tutorials
+    <a href="./" title="Jax" class="md-nav__link md-nav__link--active">
+      Jax
     </a>
     
       
@@ -6273,8 +6273,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#resources" class="md-nav__link">
-    Resources
+  <a href="#learning-jax" class="md-nav__link">
+    Learning Jax
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#my-tutorials" class="md-nav__link">
+    My Tutorials
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cool-libraries-i-follow" class="md-nav__link">
+    Cool Libraries I follow
   </a>
   
 </li>
@@ -6964,8 +6978,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#resources" class="md-nav__link">
-    Resources
+  <a href="#learning-jax" class="md-nav__link">
+    Learning Jax
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#my-tutorials" class="md-nav__link">
+    My Tutorials
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cool-libraries-i-follow" class="md-nav__link">
+    Cool Libraries I follow
   </a>
   
 </li>
@@ -6990,13 +7018,90 @@
                   
                 
                 
-                <h1 id="my-tutorials">My Tutorials<a class="headerlink" href="#my-tutorials" title="Permanent link">&para;</a></h1>
-<p>I plan to use Jax and get accustomed to functional programming. I quite like it and it's a different way of doing things. Jax itself is super interesting and I really like the bells and whistles that it has to offer. The access to <code>vmap</code>, <code>jit</code>, </p>
-<h2 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h2>
+                <h1 id="jax">Jax<a class="headerlink" href="#jax" title="Permanent link">&para;</a></h1>
+<p>A new library that I think will take on the machine learning world and be very competitive with deep learning architectures. It's fast, runs on GPUs and you can use the native numpy way of coding. Below are some helpful resources as well as some of my own hand-crafted tutorials.</p>
+<hr />
+<h2 id="learning-jax">Learning Jax<a class="headerlink" href="#learning-jax" title="Permanent link">&para;</a></h2>
+<p>If you want more information about Jax in general:</p>
+<ol>
+<li>Jax - Scipy Lecture 2020 - Jake VanderPlas - <a href="https://www.youtube.com/watch?v=z-WSrQDXkuM&amp;feature=emb_logo">Video</a><blockquote>
+<p>A really good introduction to Jax by one of the contributors. Really aimed at the general public but detailed enough so that you can get a really good idea about how to use it.</p>
+</blockquote>
+</li>
+<li>You Don't Know Jax - Colin Raffel - <a href="https://colinraffel.com/blog/you-don-t-know-jax.html">Blog</a><blockquote>
+<p>A very simple introduction in blog format. Goes through the basics and is very clear.</p>
+</blockquote>
+</li>
+<li>Getting started with Hax (MLPs, CNNs, &amp; RNNs) - Robert Tjarko Lange - <a href="https://roberttlange.github.io/posts/2020/03/blog-post-10/">Video</a><blockquote>
+<p>A nice tutorial but dives a bit deeper into some of the deep learning models you'll typically find. Implements everything from scratch and highlights the jax features in the process. Then proceeds to use the built-in <code>stax</code> library and refactors some parts. Probably the most complete advanced tutorial you'll find right now.</p>
+</blockquote>
+</li>
+<li>From PyTorch to Jax: towards neural net frameworks that purify stateful code - Sabrina J. Mielke - <a href="https://sjmielke.com/jax-purify.htm">blog</a><blockquote>
+<p>This tutorial goes from scratch and then really gets into the nitty gritty aspects that allow you to really customize your code to ensure that you follow the functional paradigm. It even shows you how to get 'classes' while still respecting the jax restrictions. From a philosophy standpoint, I think it's just awesome. And from a practical standpoint, it basically goes from a simple Jax function to something you'll see in the <a href="">Haiku</a> library (a fully formed jax library for neural networks). Just awesome.</p>
+</blockquote>
+</li>
+<li>Accelerated ML Research via Composable Function Transformations in Python - <a href="https://slideslive.com/38922046/program-transformations-for-ml-3">neurips 2019</a><blockquote>
+<p>A tutorial about Jax but mainly from a programming research standpoint.</p>
+</blockquote>
+</li>
+<li>Taylor-Mode AD for Higher-Order Derivatives in Jax - <a href="https://slideslive.com/38922047/program-transformations-for-ml-4">neurips 2019</a><blockquote>
+<p>Very similar to the above tutorial.</p>
+</blockquote>
+</li>
+</ol>
+<hr />
+<h2 id="my-tutorials">My Tutorials<a class="headerlink" href="#my-tutorials" title="Permanent link">&para;</a></h2>
+<p>I plan to use Jax and get accustomed to functional programming. I quite like it and it's a different way of doing things. Jax itself is super interesting and I really like the bells and whistles that it has to offer. The access to <code>vmap</code>, <code>jit</code>, and <code>grad</code>.</p>
 <ul>
-<li>Accelerated ML Research via Composable Function Transformations in Python - <a href="https://slideslive.com/38922046/program-transformations-for-ml-3">neurips 2019</a></li>
-<li>Taylor-Mode AD for Higher-Order Derivatives in Jax - <a href="https://slideslive.com/38922047/program-transformations-for-ml-4">neurips 2019</a></li>
-<li>NumPyro - <a href="https://openreview.net/forum?id=H1g1niFhIB">paper</a></li>
+<li><a href="vmap/">vmap</a><blockquote>
+<p>Automatic handling of batch dimensions (samples) so that you can write your code in vector format.</p>
+</blockquote>
+</li>
+<li><a href="jit/">Jit Compilation</a><blockquote>
+<p>Jit compilation. Making your code fast with some restrictions.</p>
+</blockquote>
+</li>
+<li><a href="classes/">Classes</a><blockquote>
+<p>Just a small example of the change in philosophy. Most deep learning libraries have you write things in terms of classes. But jax is purely functional (unless you use a dedicated library like <a href="https://github.com/deepmind/dm-haiku">haiku</a>) so you need to change your coding style.</p>
+</blockquote>
+</li>
+</ul>
+<hr />
+<h2 id="cool-libraries-i-follow">Cool Libraries I follow<a class="headerlink" href="#cool-libraries-i-follow" title="Permanent link">&para;</a></h2>
+<p>This is just a rolling list of really cool libraries that I follow. Sometimes I actively use it and sometimes I just like to browse code and get good ideas.</p>
+<ul>
+<li><a href="">Flax</a><blockquote>
+<p>This should probably be in your repertoire of libraries. A really good and simple library for neural networks from Google itself. Strictly functional and super popular.</p>
+</blockquote>
+</li>
+<li><a href="">Haiku</a><blockquote>
+<p>Another very popular deep learning library built on top of Jax. This one gives the illusion of PyTorch/TensorFlow because the modules look very class oriented. But it still follows Jax protocol. Very neat how they managed to do that. To see it from scratch, see the <a href="https://sjmielke.com/jax-purify.htm">above</a> tutorial.</p>
+</blockquote>
+</li>
+<li><a href="">Elegy</a><blockquote>
+<p>A new library based on Jax and Haiku which has a similar style to keras. Still very new but it has potential. I find it interesting because the natural progression from Jax+Haiku is something similar to keras. I'm glad someone took up that mantle.</p>
+</blockquote>
+</li>
+<li><a href="">Numpyro</a> | <a href="https://openreview.net/forum?id=H1g1niFhIB">Paper</a><blockquote>
+<p>A probabilistic framework which focuses on mcmc sampling schemes (e.g. HMC/NUTS). It also has variational inference procedures.</p>
+</blockquote>
+</li>
+<li><a href="">Kalman Jax</a><blockquote>
+<p>This library is used for Markov GPs for time series. But they have a lot of little GP nuggets. Especially approximate inference algorithms, e.g. extended EP, statistically linearized EP, extended EP, etc.</p>
+</blockquote>
+</li>
+<li><a href="">NuX</a><blockquote>
+<p>Normalizing Flows using jax</p>
+</blockquote>
+</li>
+<li><a href="">jax-flows</a><blockquote>
+<p>Normalizing Flows using Jax.</p>
+</blockquote>
+</li>
+<li><a href="">Jax Cosmo</a><blockquote>
+<p>Applied to astrophysics but they have some nice routines that are not found in the main jax library (e.g. quad and interp)</p>
+</blockquote>
+</li>
 </ul>
                 
               
