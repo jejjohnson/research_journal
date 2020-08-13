@@ -924,8 +924,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../appendix/bayesian/monte_carlo/" title="Monte carlo" class="md-nav__link">
-      Monte carlo
+    <a href="../../../appendix/bayesian/monte_carlo/" title="Monte Carlo" class="md-nav__link">
+      Monte Carlo
     </a>
   </li>
 
@@ -4223,6 +4223,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#bonus-stuff" class="md-nav__link">
+    Bonus Stuff
+  </a>
+  
+    <nav class="md-nav" aria-label="Bonus Stuff">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wait-command" class="md-nav__link">
+    Wait Command
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions" class="md-nav__link">
+    Permissions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -6642,6 +6669,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../tutorials/pytorch_nns/4_sweeps/" title="Sweeps using Weights and Biases" class="md-nav__link">
+      Sweeps using Weights and Biases
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../tutorials/pytorch_nns/_ideas/" title="PyTorch Ideas" class="md-nav__link">
       PyTorch Ideas
     </a>
@@ -6998,6 +7037,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#bonus-stuff" class="md-nav__link">
+    Bonus Stuff
+  </a>
+  
+    <nav class="md-nav" aria-label="Bonus Stuff">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wait-command" class="md-nav__link">
+    Wait Command
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions" class="md-nav__link">
+    Permissions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -7019,24 +7085,39 @@
                 
                 
                 <h1 id="running-subsequent-scripts">Running Subsequent Scripts<a class="headerlink" href="#running-subsequent-scripts" title="Permanent link">&para;</a></h1>
-<h3 id="case-i-run-script-1-wait-run-script-2">Case I: Run Script 1, Wait, Run Script 2<a class="headerlink" href="#case-i-run-script-1-wait-run-script-2" title="Permanent link">&para;</a></h3>
+<h2 id="case-i-run-script-1-wait-run-script-2">Case I: Run Script 1, Wait, Run Script 2<a class="headerlink" href="#case-i-run-script-1-wait-run-script-2" title="Permanent link">&para;</a></h2>
 <p>For this, we want to wait for <code>[script1.py](http://script1.py)</code> to finish successfully, then we run <code>script2.py</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env bash</span>
 python script1.py <span class="o">&amp;&amp;</span> 
 python script2.py
 </code></pre></div>
 
-<h3 id="case-ii-run-script-1-wait-run-script-2-iff-script-1-has-failed">Case II: Run Script 1, Wait, Run Script 2 IFF Script 1 has failed<a class="headerlink" href="#case-ii-run-script-1-wait-run-script-2-iff-script-1-has-failed" title="Permanent link">&para;</a></h3>
+<h2 id="case-ii-run-script-1-wait-run-script-2-iff-script-1-has-failed">Case II: Run Script 1, Wait, Run Script 2 IFF Script 1 has failed<a class="headerlink" href="#case-ii-run-script-1-wait-run-script-2-iff-script-1-has-failed" title="Permanent link">&para;</a></h2>
 <p>This is the case where we want to run <code>[script2.py](http://script2.py)</code> but IFF <code>[script1.py](http://script1.py)</code> has finished</p>
 <div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env bash</span>
 python script1.py <span class="o">||</span> python script2.py
 </code></pre></div>
 
-<h3 id="case-iii-run-script1-and-script-2">Case III: Run script1 AND script 2<a class="headerlink" href="#case-iii-run-script1-and-script-2" title="Permanent link">&para;</a></h3>
+<h2 id="case-iii-run-script1-and-script-2">Case III: Run script1 AND script 2<a class="headerlink" href="#case-iii-run-script1-and-script-2" title="Permanent link">&para;</a></h2>
 <p>We want to run both scripts concurrently as background processes</p>
 <div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env bash</span>
 python script1.py <span class="p">&amp;</span> 
 python script2.py
+</code></pre></div>
+
+<h2 id="bonus-stuff">Bonus Stuff<a class="headerlink" href="#bonus-stuff" title="Permanent link">&para;</a></h2>
+<h3 id="wait-command">Wait Command<a class="headerlink" href="#wait-command" title="Permanent link">&para;</a></h3>
+<p>You can manually force the code to wait for all background processes to finish in the script before proceeding forward. This will continue even if there is a failure. It's very similar to the <code>||</code> command. There isn't a real difference.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">wait</span>
+</code></pre></div>
+
+<h3 id="permissions">Permissions<a class="headerlink" href="#permissions" title="Permanent link">&para;</a></h3>
+<p>So once you have a bash script <code>.sh</code>, make sure you have the permissions otherwise you won't be able to execute it. Just run this command</p>
+<div class="highlight"><pre><span></span><code>chmod +x &lt;filename&gt;
+</code></pre></div>
+
+<p>Now you can run the script.</p>
+<div class="highlight"><pre><span></span><code>./ &lt;filename&gt;
 </code></pre></div>
                 
               

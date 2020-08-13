@@ -8,26 +8,26 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="A Basic GP Built from scratch">
+        <meta name="description" content="My Personal Research Journal">
       
       
-        <link rel="canonical" href="https://jejjohnson.github.io/research_journal/projects/ErrorGPs/Variational/egp_pyro_vgp/egp_pyro_vgp/">
+        <link rel="canonical" href="https://jejjohnson.github.io/research_journal/tutorials/pytorch_nns/4_sweeps/">
       
       
         <meta name="author" content="J. Emmanuel Johnson">
       
-      <link rel="shortcut icon" href="../../../../../assets/images/favicon.png">
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.3">
     
     
       
-        <title>eVGP 1D Demo</title>
+        <title>Sweeps using Weights and Biases - Research Journal</title>
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.62d34fff.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.62d34fff.min.css">
       
-        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.c8acc6db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.c8acc6db.min.css">
       
       
         
@@ -45,11 +45,11 @@
     
     
     
-      <link rel="stylesheet" href="../../../../../css/ansi-colours.css">
+      <link rel="stylesheet" href="../../../css/ansi-colours.css">
     
-      <link rel="stylesheet" href="../../../../../css/jupyter-cells.css">
+      <link rel="stylesheet" href="../../../css/jupyter-cells.css">
     
-      <link rel="stylesheet" href="../../../../../css/pandas-dataframe.css">
+      <link rel="stylesheet" href="../../../css/pandas-dataframe.css">
     
     
       
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#variational-gp-regression" class="md-skip">
+        <a href="#sweeps-using-weights-and-biases" class="md-skip">
           Skip to content
         </a>
       
@@ -96,7 +96,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              eVGP 1D Demo
+              Sweeps using Weights and Biases
             
           </span>
         </div>
@@ -196,7 +196,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../.." title="Overview" class="md-nav__link">
+    <a href="../../.." title="Overview" class="md-nav__link">
       Overview
     </a>
   </li>
@@ -208,7 +208,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../definitions/" title="Definitions" class="md-nav__link">
+    <a href="../../../definitions/" title="Definitions" class="md-nav__link">
       Definitions
     </a>
   </li>
@@ -220,7 +220,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../logistics/" title="Logistics" class="md-nav__link">
+    <a href="../../../logistics/" title="Logistics" class="md-nav__link">
       Logistics
     </a>
   </li>
@@ -257,7 +257,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../Explorers/" title="Explorers" class="md-nav__link">
+    <a href="../../../Explorers/" title="Explorers" class="md-nav__link">
       Explorers
     </a>
   </li>
@@ -294,7 +294,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../Explorers/BNNs/" title="Bayesian Neural Networks Working Group" class="md-nav__link">
+    <a href="../../../Explorers/BNNs/" title="Bayesian Neural Networks Working Group" class="md-nav__link">
       Bayesian Neural Networks Working Group
     </a>
   </li>
@@ -306,7 +306,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../Explorers/BNNs/sidebar/" title="Sidebar" class="md-nav__link">
+    <a href="../../../Explorers/BNNs/sidebar/" title="Sidebar" class="md-nav__link">
       Sidebar
     </a>
   </li>
@@ -343,7 +343,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../Explorers/BNNs/code/" title="Programming Exercises" class="md-nav__link">
+    <a href="../../../Explorers/BNNs/code/" title="Programming Exercises" class="md-nav__link">
       Programming Exercises
     </a>
   </li>
@@ -355,7 +355,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../Explorers/BNNs/code/resources/" title="Resources" class="md-nav__link">
+    <a href="../../../Explorers/BNNs/code/resources/" title="Resources" class="md-nav__link">
       Resources
     </a>
   </li>
@@ -367,7 +367,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../Explorers/BNNs/code/software/" title="Software" class="md-nav__link">
+    <a href="../../../Explorers/BNNs/code/software/" title="Software" class="md-nav__link">
       Software
     </a>
   </li>
@@ -404,7 +404,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../Explorers/BNNs/code/my_notes/tensorflow/" title="TensorFlow 2.0" class="md-nav__link">
+    <a href="../../../Explorers/BNNs/code/my_notes/tensorflow/" title="TensorFlow 2.0" class="md-nav__link">
       TensorFlow 2.0
     </a>
   </li>
@@ -446,7 +446,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../Explorers/BNNs/code/packages/numpyro/" title="Numpyro" class="md-nav__link">
+    <a href="../../../Explorers/BNNs/code/packages/numpyro/" title="Numpyro" class="md-nav__link">
       Numpyro
     </a>
   </li>
@@ -458,7 +458,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../Explorers/BNNs/code/packages/pyro/" title="Pyro" class="md-nav__link">
+    <a href="../../../Explorers/BNNs/code/packages/pyro/" title="Pyro" class="md-nav__link">
       Pyro
     </a>
   </li>
@@ -505,7 +505,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../Explorers/BNNs/other/explorers_2020_01_tf/" title="Explorers Group: TF 2.X and PyTorch for not so Dummies" class="md-nav__link">
+    <a href="../../../Explorers/BNNs/other/explorers_2020_01_tf/" title="Explorers Group: TF 2.X and PyTorch for not so Dummies" class="md-nav__link">
       Explorers Group: TF 2.X and PyTorch for not so Dummies
     </a>
   </li>
@@ -517,7 +517,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../Explorers/BNNs/other/people/" title="Key Figures" class="md-nav__link">
+    <a href="../../../Explorers/BNNs/other/people/" title="Key Figures" class="md-nav__link">
       Key Figures
     </a>
   </li>
@@ -529,7 +529,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../Explorers/BNNs/other/polemica/" title="Controversy" class="md-nav__link">
+    <a href="../../../Explorers/BNNs/other/polemica/" title="Controversy" class="md-nav__link">
       Controversy
     </a>
   </li>
@@ -541,7 +541,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../Explorers/BNNs/other/videos/" title="Videos" class="md-nav__link">
+    <a href="../../../Explorers/BNNs/other/videos/" title="Videos" class="md-nav__link">
       Videos
     </a>
   </li>
@@ -583,7 +583,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../Explorers/BNNs/prezis/test/" title="TF2.X and PyTorch" class="md-nav__link">
+    <a href="../../../Explorers/BNNs/prezis/test/" title="TF2.X and PyTorch" class="md-nav__link">
       TF2.X and PyTorch
     </a>
   </li>
@@ -625,7 +625,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../Explorers/BNNs/theory/" title="Index" class="md-nav__link">
+    <a href="../../../Explorers/BNNs/theory/" title="Index" class="md-nav__link">
       Index
     </a>
   </li>
@@ -637,7 +637,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../Explorers/BNNs/theory/optimization/" title="Optimization" class="md-nav__link">
+    <a href="../../../Explorers/BNNs/theory/optimization/" title="Optimization" class="md-nav__link">
       Optimization
     </a>
   </li>
@@ -649,7 +649,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../Explorers/BNNs/theory/papers/" title="Papers" class="md-nav__link">
+    <a href="../../../Explorers/BNNs/theory/papers/" title="Papers" class="md-nav__link">
       Papers
     </a>
   </li>
@@ -661,7 +661,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../Explorers/BNNs/theory/prob_nn/" title="Neural Networks with Uncertainty" class="md-nav__link">
+    <a href="../../../Explorers/BNNs/theory/prob_nn/" title="Neural Networks with Uncertainty" class="md-nav__link">
       Neural Networks with Uncertainty
     </a>
   </li>
@@ -673,7 +673,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../Explorers/BNNs/theory/resources/" title="Resources" class="md-nav__link">
+    <a href="../../../Explorers/BNNs/theory/resources/" title="Resources" class="md-nav__link">
       Resources
     </a>
   </li>
@@ -685,7 +685,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../Explorers/BNNs/theory/sota/" title="State-of-the-Art" class="md-nav__link">
+    <a href="../../../Explorers/BNNs/theory/sota/" title="State-of-the-Art" class="md-nav__link">
       State-of-the-Art
     </a>
   </li>
@@ -697,7 +697,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../Explorers/BNNs/theory/uncertainty_in_neural_networks/" title="Neural Networks with Uncertainty" class="md-nav__link">
+    <a href="../../../Explorers/BNNs/theory/uncertainty_in_neural_networks/" title="Neural Networks with Uncertainty" class="md-nav__link">
       Neural Networks with Uncertainty
     </a>
   </li>
@@ -709,7 +709,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../Explorers/BNNs/theory/videos/" title="Videos" class="md-nav__link">
+    <a href="../../../Explorers/BNNs/theory/videos/" title="Videos" class="md-nav__link">
       Videos
     </a>
   </li>
@@ -756,7 +756,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../Explorers/starspots/links/" title="StarSpots" class="md-nav__link">
+    <a href="../../../Explorers/starspots/links/" title="StarSpots" class="md-nav__link">
       StarSpots
     </a>
   </li>
@@ -803,7 +803,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/" title="My Appendices" class="md-nav__link">
+    <a href="../../../appendix/" title="My Appendices" class="md-nav__link">
       My Appendices
     </a>
   </li>
@@ -840,7 +840,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/bayesian/exponential/" title="Exponential Family of Distributions" class="md-nav__link">
+    <a href="../../../appendix/bayesian/exponential/" title="Exponential Family of Distributions" class="md-nav__link">
       Exponential Family of Distributions
     </a>
   </li>
@@ -852,7 +852,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/bayesian/gaussian/" title="Gaussian" class="md-nav__link">
+    <a href="../../../appendix/bayesian/gaussian/" title="Gaussian" class="md-nav__link">
       Gaussian
     </a>
   </li>
@@ -864,7 +864,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/bayesian/inference/" title="Solving Hard Integral Problems" class="md-nav__link">
+    <a href="../../../appendix/bayesian/inference/" title="Solving Hard Integral Problems" class="md-nav__link">
       Solving Hard Integral Problems
     </a>
   </li>
@@ -876,7 +876,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/bayesian/intro/" title="Bayesian: Language of Uncertainty" class="md-nav__link">
+    <a href="../../../appendix/bayesian/intro/" title="Bayesian: Language of Uncertainty" class="md-nav__link">
       Bayesian: Language of Uncertainty
     </a>
   </li>
@@ -888,7 +888,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/bayesian/kde/" title="Kernel Density Estimation" class="md-nav__link">
+    <a href="../../../appendix/bayesian/kde/" title="Kernel Density Estimation" class="md-nav__link">
       Kernel Density Estimation
     </a>
   </li>
@@ -900,7 +900,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/bayesian/kl_divergence/" title="KL Divergence" class="md-nav__link">
+    <a href="../../../appendix/bayesian/kl_divergence/" title="KL Divergence" class="md-nav__link">
       KL Divergence
     </a>
   </li>
@@ -912,7 +912,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/bayesian/mixtures/" title="Mixture Models" class="md-nav__link">
+    <a href="../../../appendix/bayesian/mixtures/" title="Mixture Models" class="md-nav__link">
       Mixture Models
     </a>
   </li>
@@ -924,7 +924,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/bayesian/monte_carlo/" title="Monte Carlo" class="md-nav__link">
+    <a href="../../../appendix/bayesian/monte_carlo/" title="Monte Carlo" class="md-nav__link">
       Monte Carlo
     </a>
   </li>
@@ -936,7 +936,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/bayesian/pdf_est/" title="PDF Estimation" class="md-nav__link">
+    <a href="../../../appendix/bayesian/pdf_est/" title="PDF Estimation" class="md-nav__link">
       PDF Estimation
     </a>
   </li>
@@ -948,7 +948,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/bayesian/pdf_estimation/" title="PDF Estimation" class="md-nav__link">
+    <a href="../../../appendix/bayesian/pdf_estimation/" title="PDF Estimation" class="md-nav__link">
       PDF Estimation
     </a>
   </li>
@@ -960,7 +960,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/bayesian/regression/" title="Regression" class="md-nav__link">
+    <a href="../../../appendix/bayesian/regression/" title="Regression" class="md-nav__link">
       Regression
     </a>
   </li>
@@ -972,7 +972,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/bayesian/uniform/" title="Uniform Distribution" class="md-nav__link">
+    <a href="../../../appendix/bayesian/uniform/" title="Uniform Distribution" class="md-nav__link">
       Uniform Distribution
     </a>
   </li>
@@ -984,7 +984,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/bayesian/variational_inference/" title="Variational Inference" class="md-nav__link">
+    <a href="../../../appendix/bayesian/variational_inference/" title="Variational Inference" class="md-nav__link">
       Variational Inference
     </a>
   </li>
@@ -1021,7 +1021,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/bayesian/neural_networks/dropout/" title="Dropout" class="md-nav__link">
+    <a href="../../../appendix/bayesian/neural_networks/dropout/" title="Dropout" class="md-nav__link">
       Dropout
     </a>
   </li>
@@ -1033,7 +1033,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/bayesian/neural_networks/literature/" title="Literature" class="md-nav__link">
+    <a href="../../../appendix/bayesian/neural_networks/literature/" title="Literature" class="md-nav__link">
       Literature
     </a>
   </li>
@@ -1045,7 +1045,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/bayesian/neural_networks/regression_master/" title="Regression master" class="md-nav__link">
+    <a href="../../../appendix/bayesian/neural_networks/regression_master/" title="Regression master" class="md-nav__link">
       Regression master
     </a>
   </li>
@@ -1092,7 +1092,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/concepts/frameworks/" title="Frameworks" class="md-nav__link">
+    <a href="../../../appendix/concepts/frameworks/" title="Frameworks" class="md-nav__link">
       Frameworks
     </a>
   </li>
@@ -1104,7 +1104,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/concepts/lin_alg/" title="Linear Algebra Tricks" class="md-nav__link">
+    <a href="../../../appendix/concepts/lin_alg/" title="Linear Algebra Tricks" class="md-nav__link">
       Linear Algebra Tricks
     </a>
   </li>
@@ -1116,7 +1116,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/concepts/matrix_tricks/" title="Matrix tricks" class="md-nav__link">
+    <a href="../../../appendix/concepts/matrix_tricks/" title="Matrix tricks" class="md-nav__link">
       Matrix tricks
     </a>
   </li>
@@ -1128,7 +1128,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/concepts/sleeper_concepts/" title="Key Concepts" class="md-nav__link">
+    <a href="../../../appendix/concepts/sleeper_concepts/" title="Key Concepts" class="md-nav__link">
       Key Concepts
     </a>
   </li>
@@ -1140,7 +1140,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/concepts/splines/" title="Splines" class="md-nav__link">
+    <a href="../../../appendix/concepts/splines/" title="Splines" class="md-nav__link">
       Splines
     </a>
   </li>
@@ -1177,7 +1177,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/concepts/calculus/autograd/" title="Automatic Differentiation" class="md-nav__link">
+    <a href="../../../appendix/concepts/calculus/autograd/" title="Automatic Differentiation" class="md-nav__link">
       Automatic Differentiation
     </a>
   </li>
@@ -1189,7 +1189,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/concepts/calculus/change_of_variables/" title="Change of Variables" class="md-nav__link">
+    <a href="../../../appendix/concepts/calculus/change_of_variables/" title="Change of Variables" class="md-nav__link">
       Change of Variables
     </a>
   </li>
@@ -1201,7 +1201,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/concepts/calculus/identity_trick/" title="[Identity Trick](https://www.shakirm.com/slides/MLSS2018-Madrid-ProbThinking.pdf)" class="md-nav__link">
+    <a href="../../../appendix/concepts/calculus/identity_trick/" title="[Identity Trick](https://www.shakirm.com/slides/MLSS2018-Madrid-ProbThinking.pdf)" class="md-nav__link">
       [Identity Trick](https://www.shakirm.com/slides/MLSS2018-Madrid-ProbThinking.pdf)
     </a>
   </li>
@@ -1213,7 +1213,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/concepts/calculus/inverse_function/" title="Inverse Function Theorem" class="md-nav__link">
+    <a href="../../../appendix/concepts/calculus/inverse_function/" title="Inverse Function Theorem" class="md-nav__link">
       Inverse Function Theorem
     </a>
   </li>
@@ -1225,7 +1225,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/concepts/calculus/jensens/" title="Jensens Inequality" class="md-nav__link">
+    <a href="../../../appendix/concepts/calculus/jensens/" title="Jensens Inequality" class="md-nav__link">
       Jensens Inequality
     </a>
   </li>
@@ -1272,7 +1272,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/density/" title="Density Estimation" class="md-nav__link">
+    <a href="../../../appendix/density/" title="Density Estimation" class="md-nav__link">
       Density Estimation
     </a>
   </li>
@@ -1284,7 +1284,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/density/cde/" title="Conditional Density Estimation" class="md-nav__link">
+    <a href="../../../appendix/density/cde/" title="Conditional Density Estimation" class="md-nav__link">
       Conditional Density Estimation
     </a>
   </li>
@@ -1296,7 +1296,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/density/generative_modeling/" title="Generative Modeling" class="md-nav__link">
+    <a href="../../../appendix/density/generative_modeling/" title="Generative Modeling" class="md-nav__link">
       Generative Modeling
     </a>
   </li>
@@ -1308,7 +1308,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/density/histograms/" title="Histograms" class="md-nav__link">
+    <a href="../../../appendix/density/histograms/" title="Histograms" class="md-nav__link">
       Histograms
     </a>
   </li>
@@ -1320,7 +1320,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/density/logistic/" title="Logistic Distribution" class="md-nav__link">
+    <a href="../../../appendix/density/logistic/" title="Logistic Distribution" class="md-nav__link">
       Logistic Distribution
     </a>
   </li>
@@ -1357,7 +1357,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/density/flows/earth_science/" title="Applications in Earth Science" class="md-nav__link">
+    <a href="../../../appendix/density/flows/earth_science/" title="Applications in Earth Science" class="md-nav__link">
       Applications in Earth Science
     </a>
   </li>
@@ -1369,7 +1369,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/density/flows/gaussinization/" title="Gaussinization" class="md-nav__link">
+    <a href="../../../appendix/density/flows/gaussinization/" title="Gaussinization" class="md-nav__link">
       Gaussinization
     </a>
   </li>
@@ -1381,7 +1381,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/density/flows/householder/" title="HouseHolder Flows" class="md-nav__link">
+    <a href="../../../appendix/density/flows/householder/" title="HouseHolder Flows" class="md-nav__link">
       HouseHolder Flows
     </a>
   </li>
@@ -1393,7 +1393,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/density/flows/literature/" title="Normalizing Flows Literature" class="md-nav__link">
+    <a href="../../../appendix/density/flows/literature/" title="Normalizing Flows Literature" class="md-nav__link">
       Normalizing Flows Literature
     </a>
   </li>
@@ -1405,7 +1405,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/density/flows/mixture_cdfs/" title="Continuous Mixture CDFs" class="md-nav__link">
+    <a href="../../../appendix/density/flows/mixture_cdfs/" title="Continuous Mixture CDFs" class="md-nav__link">
       Continuous Mixture CDFs
     </a>
   </li>
@@ -1447,7 +1447,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/density/gaussianization/" title="RBIG for Spatial-Temporal Representation Analysis" class="md-nav__link">
+    <a href="../../../appendix/density/gaussianization/" title="RBIG for Spatial-Temporal Representation Analysis" class="md-nav__link">
       RBIG for Spatial-Temporal Representation Analysis
     </a>
   </li>
@@ -1459,7 +1459,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/density/gaussianization/ideas/" title="RBIG 2.0 Ideas" class="md-nav__link">
+    <a href="../../../appendix/density/gaussianization/ideas/" title="RBIG 2.0 Ideas" class="md-nav__link">
       RBIG 2.0 Ideas
     </a>
   </li>
@@ -1471,7 +1471,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/density/gaussianization/unscented/" title="Unscented Transformation" class="md-nav__link">
+    <a href="../../../appendix/density/gaussianization/unscented/" title="Unscented Transformation" class="md-nav__link">
       Unscented Transformation
     </a>
   </li>
@@ -1508,7 +1508,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/density/gaussianization/applications/climate/" title="Climate" class="md-nav__link">
+    <a href="../../../appendix/density/gaussianization/applications/climate/" title="Climate" class="md-nav__link">
       Climate
     </a>
   </li>
@@ -1520,7 +1520,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/density/gaussianization/applications/demo_innf/" title="Demo: Gaussianization" class="md-nav__link">
+    <a href="../../../appendix/density/gaussianization/applications/demo_innf/" title="Demo: Gaussianization" class="md-nav__link">
       Demo: Gaussianization
     </a>
   </li>
@@ -1532,7 +1532,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/density/gaussianization/applications/drought/" title="Drought" class="md-nav__link">
+    <a href="../../../appendix/density/gaussianization/applications/drought/" title="Drought" class="md-nav__link">
       Drought
     </a>
   </li>
@@ -1544,7 +1544,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/density/gaussianization/applications/spatial_temporal/" title="Spatial temporal" class="md-nav__link">
+    <a href="../../../appendix/density/gaussianization/applications/spatial_temporal/" title="Spatial temporal" class="md-nav__link">
       Spatial temporal
     </a>
   </li>
@@ -1586,7 +1586,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/density/gaussianization/software/coupling/" title="Coupling Layers" class="md-nav__link">
+    <a href="../../../appendix/density/gaussianization/software/coupling/" title="Coupling Layers" class="md-nav__link">
       Coupling Layers
     </a>
   </li>
@@ -1598,7 +1598,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/density/gaussianization/software/losses/" title="Loss Functions" class="md-nav__link">
+    <a href="../../../appendix/density/gaussianization/software/losses/" title="Loss Functions" class="md-nav__link">
       Loss Functions
     </a>
   </li>
@@ -1610,7 +1610,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/density/gaussianization/software/marginal_gauss/" title="Marginal Gaussianization" class="md-nav__link">
+    <a href="../../../appendix/density/gaussianization/software/marginal_gauss/" title="Marginal Gaussianization" class="md-nav__link">
       Marginal Gaussianization
     </a>
   </li>
@@ -1622,7 +1622,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/density/gaussianization/software/marginal_uni/" title="Marginal Uniformization" class="md-nav__link">
+    <a href="../../../appendix/density/gaussianization/software/marginal_uni/" title="Marginal Uniformization" class="md-nav__link">
       Marginal Uniformization
     </a>
   </li>
@@ -1634,7 +1634,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/density/gaussianization/software/refactor/" title="Refactoring RBIG (RBIG 1.1)" class="md-nav__link">
+    <a href="../../../appendix/density/gaussianization/software/refactor/" title="Refactoring RBIG (RBIG 1.1)" class="md-nav__link">
       Refactoring RBIG (RBIG 1.1)
     </a>
   </li>
@@ -1646,7 +1646,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/density/gaussianization/software/rotation/" title="Rotation" class="md-nav__link">
+    <a href="../../../appendix/density/gaussianization/software/rotation/" title="Rotation" class="md-nav__link">
       Rotation
     </a>
   </li>
@@ -1688,7 +1688,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/density/gaussianization/theory/gaussianization/" title="Gaussianization" class="md-nav__link">
+    <a href="../../../appendix/density/gaussianization/theory/gaussianization/" title="Gaussianization" class="md-nav__link">
       Gaussianization
     </a>
   </li>
@@ -1700,7 +1700,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/density/gaussianization/theory/itm/" title="Information Theory Measures" class="md-nav__link">
+    <a href="../../../appendix/density/gaussianization/theory/itm/" title="Information Theory Measures" class="md-nav__link">
       Information Theory Measures
     </a>
   </li>
@@ -1712,7 +1712,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/density/gaussianization/theory/literature/" title="Literature Review" class="md-nav__link">
+    <a href="../../../appendix/density/gaussianization/theory/literature/" title="Literature Review" class="md-nav__link">
       Literature Review
     </a>
   </li>
@@ -1724,7 +1724,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/density/gaussianization/theory/related/" title="Related Methods" class="md-nav__link">
+    <a href="../../../appendix/density/gaussianization/theory/related/" title="Related Methods" class="md-nav__link">
       Related Methods
     </a>
   </li>
@@ -1776,7 +1776,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/gps/1_introduction/" title="Basic GP" class="md-nav__link">
+    <a href="../../../appendix/gps/1_introduction/" title="Basic GP" class="md-nav__link">
       Basic GP
     </a>
   </li>
@@ -1788,7 +1788,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/gps/2_sparse_gps/" title="Sparse Gaussian Processes" class="md-nav__link">
+    <a href="../../../appendix/gps/2_sparse_gps/" title="Sparse Gaussian Processes" class="md-nav__link">
       Sparse Gaussian Processes
     </a>
   </li>
@@ -1800,7 +1800,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/gps/3_input_error/" title="GPs and Uncertain Inputs through the Ages" class="md-nav__link">
+    <a href="../../../appendix/gps/3_input_error/" title="GPs and Uncertain Inputs through the Ages" class="md-nav__link">
       GPs and Uncertain Inputs through the Ages
     </a>
   </li>
@@ -1812,7 +1812,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/gps/3_taylor_expansion/" title="Uncertainty of GPs: Taylor Expansion" class="md-nav__link">
+    <a href="../../../appendix/gps/3_taylor_expansion/" title="Uncertainty of GPs: Taylor Expansion" class="md-nav__link">
       Uncertainty of GPs: Taylor Expansion
     </a>
   </li>
@@ -1824,7 +1824,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/gps/4_variational/" title="Variational GPs" class="md-nav__link">
+    <a href="../../../appendix/gps/4_variational/" title="Variational GPs" class="md-nav__link">
       Variational GPs
     </a>
   </li>
@@ -1836,7 +1836,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/gps/gps_and_it/" title="Gaussian Dists. and GPs" class="md-nav__link">
+    <a href="../../../appendix/gps/gps_and_it/" title="Gaussian Dists. and GPs" class="md-nav__link">
       Gaussian Dists. and GPs
     </a>
   </li>
@@ -1848,7 +1848,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/gps/sota/" title="SOTA GPs" class="md-nav__link">
+    <a href="../../../appendix/gps/sota/" title="SOTA GPs" class="md-nav__link">
       SOTA GPs
     </a>
   </li>
@@ -1890,7 +1890,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/information/entropy/" title="Entropy" class="md-nav__link">
+    <a href="../../../appendix/information/entropy/" title="Entropy" class="md-nav__link">
       Entropy
     </a>
   </li>
@@ -1902,7 +1902,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/information/expf/" title="Exponential Family of Solutions" class="md-nav__link">
+    <a href="../../../appendix/information/expf/" title="Exponential Family of Solutions" class="md-nav__link">
       Exponential Family of Solutions
     </a>
   </li>
@@ -1914,7 +1914,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/information/gaussian/" title="Gaussian Distribution" class="md-nav__link">
+    <a href="../../../appendix/information/gaussian/" title="Gaussian Distribution" class="md-nav__link">
       Gaussian Distribution
     </a>
   </li>
@@ -1926,7 +1926,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/information/info/" title="Information" class="md-nav__link">
+    <a href="../../../appendix/information/info/" title="Information" class="md-nav__link">
       Information
     </a>
   </li>
@@ -1938,7 +1938,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/information/information/" title="Information" class="md-nav__link">
+    <a href="../../../appendix/information/information/" title="Information" class="md-nav__link">
       Information
     </a>
   </li>
@@ -1950,7 +1950,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/information/information_bottleneck/" title="Information Bottleneck" class="md-nav__link">
+    <a href="../../../appendix/information/information_bottleneck/" title="Information Bottleneck" class="md-nav__link">
       Information Bottleneck
     </a>
   </li>
@@ -1962,7 +1962,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/information/it_estimators/" title="Information Theory Measures Estimators" class="md-nav__link">
+    <a href="../../../appendix/information/it_estimators/" title="Information Theory Measures Estimators" class="md-nav__link">
       Information Theory Measures Estimators
     </a>
   </li>
@@ -1974,7 +1974,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/information/it_formulas/" title="Information Theory Measures" class="md-nav__link">
+    <a href="../../../appendix/information/it_formulas/" title="Information Theory Measures" class="md-nav__link">
       Information Theory Measures
     </a>
   </li>
@@ -1986,7 +1986,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/information/kld/" title="KLD" class="md-nav__link">
+    <a href="../../../appendix/information/kld/" title="KLD" class="md-nav__link">
       KLD
     </a>
   </li>
@@ -1998,7 +1998,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/information/knn/" title="K-Nearest Neighbors Estimator" class="md-nav__link">
+    <a href="../../../appendix/information/knn/" title="K-Nearest Neighbors Estimator" class="md-nav__link">
       K-Nearest Neighbors Estimator
     </a>
   </li>
@@ -2010,7 +2010,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/information/main/" title="Main" class="md-nav__link">
+    <a href="../../../appendix/information/main/" title="Main" class="md-nav__link">
       Main
     </a>
   </li>
@@ -2022,7 +2022,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/information/mi/" title="Mutual Information" class="md-nav__link">
+    <a href="../../../appendix/information/mi/" title="Mutual Information" class="md-nav__link">
       Mutual Information
     </a>
   </li>
@@ -2034,7 +2034,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/information/pdf_est/" title="Probability Density Function Estimators" class="md-nav__link">
+    <a href="../../../appendix/information/pdf_est/" title="Probability Density Function Estimators" class="md-nav__link">
       Probability Density Function Estimators
     </a>
   </li>
@@ -2046,7 +2046,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/information/variation/" title="Variation of Information" class="md-nav__link">
+    <a href="../../../appendix/information/variation/" title="Variation of Information" class="md-nav__link">
       Variation of Information
     </a>
   </li>
@@ -2088,7 +2088,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/kernels/distances/" title="Other Distances" class="md-nav__link">
+    <a href="../../../appendix/kernels/distances/" title="Other Distances" class="md-nav__link">
       Other Distances
     </a>
   </li>
@@ -2100,7 +2100,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/kernels/kernel/" title="Kernel Measures of Similarity" class="md-nav__link">
+    <a href="../../../appendix/kernels/kernel/" title="Kernel Measures of Similarity" class="md-nav__link">
       Kernel Measures of Similarity
     </a>
   </li>
@@ -2137,7 +2137,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/kernels/density/kde/" title="Kernel Density Estimation" class="md-nav__link">
+    <a href="../../../appendix/kernels/density/kde/" title="Kernel Density Estimation" class="md-nav__link">
       Kernel Density Estimation
     </a>
   </li>
@@ -2179,7 +2179,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/kernels/derivatives/literature/" title="Overview" class="md-nav__link">
+    <a href="../../../appendix/kernels/derivatives/literature/" title="Overview" class="md-nav__link">
       Overview
     </a>
   </li>
@@ -2221,7 +2221,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/kernels/similarity/kernels_it/" title="Kernels and Information Measures" class="md-nav__link">
+    <a href="../../../appendix/kernels/similarity/kernels_it/" title="Kernels and Information Measures" class="md-nav__link">
       Kernels and Information Measures
     </a>
   </li>
@@ -2233,7 +2233,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/kernels/similarity/similarity/" title="Similarity Measures" class="md-nav__link">
+    <a href="../../../appendix/kernels/similarity/similarity/" title="Similarity Measures" class="md-nav__link">
       Similarity Measures
     </a>
   </li>
@@ -2280,7 +2280,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/math/bisection/" title="Bisection" class="md-nav__link">
+    <a href="../../../appendix/math/bisection/" title="Bisection" class="md-nav__link">
       Bisection
     </a>
   </li>
@@ -2292,7 +2292,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/math/orthogonal/" title="Orthogonal" class="md-nav__link">
+    <a href="../../../appendix/math/orthogonal/" title="Orthogonal" class="md-nav__link">
       Orthogonal
     </a>
   </li>
@@ -2334,7 +2334,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/ml/mutlioutput/" title="Multi-Output" class="md-nav__link">
+    <a href="../../../appendix/ml/mutlioutput/" title="Multi-Output" class="md-nav__link">
       Multi-Output
     </a>
   </li>
@@ -2376,7 +2376,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/neural/rbig/" title="Rbig" class="md-nav__link">
+    <a href="../../../appendix/neural/rbig/" title="Rbig" class="md-nav__link">
       Rbig
     </a>
   </li>
@@ -2418,7 +2418,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/similarity/" title="Overview" class="md-nav__link">
+    <a href="../../../appendix/similarity/" title="Overview" class="md-nav__link">
       Overview
     </a>
   </li>
@@ -2430,7 +2430,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/similarity/definition/" title="What is Similarity?" class="md-nav__link">
+    <a href="../../../appendix/similarity/definition/" title="What is Similarity?" class="md-nav__link">
       What is Similarity?
     </a>
   </li>
@@ -2442,7 +2442,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/similarity/distance/" title="Distances" class="md-nav__link">
+    <a href="../../../appendix/similarity/distance/" title="Distances" class="md-nav__link">
       Distances
     </a>
   </li>
@@ -2454,7 +2454,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/similarity/hsic/" title="HSIC" class="md-nav__link">
+    <a href="../../../appendix/similarity/hsic/" title="HSIC" class="md-nav__link">
       HSIC
     </a>
   </li>
@@ -2466,7 +2466,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/similarity/mmd/" title="MMD" class="md-nav__link">
+    <a href="../../../appendix/similarity/mmd/" title="MMD" class="md-nav__link">
       MMD
     </a>
   </li>
@@ -2478,7 +2478,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/similarity/rv/" title="RV Coefficient" class="md-nav__link">
+    <a href="../../../appendix/similarity/rv/" title="RV Coefficient" class="md-nav__link">
       RV Coefficient
     </a>
   </li>
@@ -2490,7 +2490,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/similarity/taylor/" title="Taylor Diagram (1D Data)" class="md-nav__link">
+    <a href="../../../appendix/similarity/taylor/" title="Taylor Diagram (1D Data)" class="md-nav__link">
       Taylor Diagram (1D Data)
     </a>
   </li>
@@ -2502,7 +2502,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/similarity/taylor_2d/" title="Taylor Diagram (2D Data)" class="md-nav__link">
+    <a href="../../../appendix/similarity/taylor_2d/" title="Taylor Diagram (2D Data)" class="md-nav__link">
       Taylor Diagram (2D Data)
     </a>
   </li>
@@ -2514,7 +2514,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../appendix/similarity/vi/" title="Variation of Information" class="md-nav__link">
+    <a href="../../../appendix/similarity/vi/" title="Variation of Information" class="md-nav__link">
       Variation of Information
     </a>
   </li>
@@ -2561,7 +2561,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../blogs/" title="My Blogs" class="md-nav__link">
+    <a href="../../../blogs/" title="My Blogs" class="md-nav__link">
       My Blogs
     </a>
   </li>
@@ -2598,7 +2598,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../blogs/ideas/concrete/" title="Concrete Ideas" class="md-nav__link">
+    <a href="../../../blogs/ideas/concrete/" title="Concrete Ideas" class="md-nav__link">
       Concrete Ideas
     </a>
   </li>
@@ -2610,7 +2610,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../blogs/ideas/scratch/" title="Blog Ideas" class="md-nav__link">
+    <a href="../../../blogs/ideas/scratch/" title="Blog Ideas" class="md-nav__link">
       Blog Ideas
     </a>
   </li>
@@ -2652,7 +2652,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../blogs/posted/uncertain_gps/" title="GPs and Uncertain Inputs through the Ages" class="md-nav__link">
+    <a href="../../../blogs/posted/uncertain_gps/" title="GPs and Uncertain Inputs through the Ages" class="md-nav__link">
       GPs and Uncertain Inputs through the Ages
     </a>
   </li>
@@ -2672,12 +2672,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
     
     <label class="md-nav__link" for="nav-7">
       Projects
@@ -2701,7 +2699,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../" title="Overview" class="md-nav__link">
+    <a href="../../../projects/" title="Overview" class="md-nav__link">
       Overview
     </a>
   </li>
@@ -2711,12 +2709,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-2" type="checkbox" id="nav-7-2" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-2" type="checkbox" id="nav-7-2">
     
     <label class="md-nav__link" for="nav-7-2">
       ErrorGPs
@@ -2740,7 +2736,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../" title="Overview" class="md-nav__link">
+    <a href="../../../projects/ErrorGPs/" title="Overview" class="md-nav__link">
       Overview
     </a>
   </li>
@@ -2752,7 +2748,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../approximate/" title="Gaussian Approximations" class="md-nav__link">
+    <a href="../../../projects/ErrorGPs/approximate/" title="Gaussian Approximations" class="md-nav__link">
       Gaussian Approximations
     </a>
   </li>
@@ -2789,7 +2785,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Code/software/" title="Software" class="md-nav__link">
+    <a href="../../../projects/ErrorGPs/Code/software/" title="Software" class="md-nav__link">
       Software
     </a>
   </li>
@@ -2831,7 +2827,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Overview/basics/" title="Basics" class="md-nav__link">
+    <a href="../../../projects/ErrorGPs/Overview/basics/" title="Basics" class="md-nav__link">
       Basics
     </a>
   </li>
@@ -2843,7 +2839,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Overview/literature/" title="Literature Review" class="md-nav__link">
+    <a href="../../../projects/ErrorGPs/Overview/literature/" title="Literature Review" class="md-nav__link">
       Literature Review
     </a>
   </li>
@@ -2855,7 +2851,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Overview/next/" title="Next Steps" class="md-nav__link">
+    <a href="../../../projects/ErrorGPs/Overview/next/" title="Next Steps" class="md-nav__link">
       Next Steps
     </a>
   </li>
@@ -2897,7 +2893,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Taylor%20Expansion/error_propagation/" title="Error Propagation" class="md-nav__link">
+    <a href="../../../projects/ErrorGPs/Taylor%20Expansion/error_propagation/" title="Error Propagation" class="md-nav__link">
       Error Propagation
     </a>
   </li>
@@ -2909,7 +2905,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Taylor%20Expansion/scratch/" title="Scratch" class="md-nav__link">
+    <a href="../../../projects/ErrorGPs/Taylor%20Expansion/scratch/" title="Scratch" class="md-nav__link">
       Scratch
     </a>
   </li>
@@ -2921,7 +2917,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Taylor%20Expansion/taylor/" title="Linearized GP" class="md-nav__link">
+    <a href="../../../projects/ErrorGPs/Taylor%20Expansion/taylor/" title="Linearized GP" class="md-nav__link">
       Linearized GP
     </a>
   </li>
@@ -2936,12 +2932,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-2-6" type="checkbox" id="nav-7-2-6" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-2-6" type="checkbox" id="nav-7-2-6">
     
     <label class="md-nav__link" for="nav-7-2-6">
       Variational
@@ -2965,7 +2959,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../vi/" title="Variational Strategies" class="md-nav__link">
+    <a href="../../../projects/ErrorGPs/Variational/vi/" title="Variational Strategies" class="md-nav__link">
       Variational Strategies
     </a>
   </li>
@@ -3002,7 +2996,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../egp_pyro_svgp/egp_pyro_svgp/" title="eSVGP 1D Demo" class="md-nav__link">
+    <a href="../../../projects/ErrorGPs/Variational/egp_pyro_svgp/egp_pyro_svgp/" title="eSVGP 1D Demo" class="md-nav__link">
       eSVGP 1D Demo
     </a>
   </li>
@@ -3017,12 +3011,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-2-6-3" type="checkbox" id="nav-7-2-6-3" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-2-6-3" type="checkbox" id="nav-7-2-6-3">
     
     <label class="md-nav__link" for="nav-7-2-6-3">
       Egp pyro vgp
@@ -3044,76 +3036,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        eVGP 1D Demo
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
-        </span>
-      </label>
-    
-    <a href="./" title="eVGP 1D Demo" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../../projects/ErrorGPs/Variational/egp_pyro_vgp/egp_pyro_vgp/" title="eVGP 1D Demo" class="md-nav__link">
       eVGP 1D Demo
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#variational-gp-regression" class="md-nav__link">
-    Variational GP Regression
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vgp-w-uncertain-inputs" class="md-nav__link">
-    VGP w. Uncertain Inputs
-  </a>
-  
-    <nav class="md-nav" aria-label="VGP w. Uncertain Inputs">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#method-0-standard-prior" class="md-nav__link">
-    Method 0 - Standard Prior
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#method-iii-bayesian-prior" class="md-nav__link">
-    Method III - Bayesian Prior
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -3158,7 +3085,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../monte_carlo/demo/" title="MCMC eGP" class="md-nav__link">
+    <a href="../../../projects/ErrorGPs/monte_carlo/demo/" title="MCMC eGP" class="md-nav__link">
       MCMC eGP
     </a>
   </li>
@@ -3205,7 +3132,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../similarity/" title="Overview" class="md-nav__link">
+    <a href="../../../projects/similarity/" title="Overview" class="md-nav__link">
       Overview
     </a>
   </li>
@@ -3252,7 +3179,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../resources/" title="My Resources" class="md-nav__link">
+    <a href="../../../resources/" title="My Resources" class="md-nav__link">
       My Resources
     </a>
   </li>
@@ -3264,7 +3191,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../resources/dl_overview/" title="Software" class="md-nav__link">
+    <a href="../../../resources/dl_overview/" title="Software" class="md-nav__link">
       Software
     </a>
   </li>
@@ -3276,7 +3203,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../resources/mkdocs/" title="MKDocs Tips" class="md-nav__link">
+    <a href="../../../resources/mkdocs/" title="MKDocs Tips" class="md-nav__link">
       MKDocs Tips
     </a>
   </li>
@@ -3288,7 +3215,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../resources/my_workflow/" title="My WorkFlow" class="md-nav__link">
+    <a href="../../../resources/my_workflow/" title="My WorkFlow" class="md-nav__link">
       My WorkFlow
     </a>
   </li>
@@ -3300,7 +3227,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../resources/reproducibility/" title="Reproducibility" class="md-nav__link">
+    <a href="../../../resources/reproducibility/" title="Reproducibility" class="md-nav__link">
       Reproducibility
     </a>
   </li>
@@ -3337,7 +3264,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../resources/machine_learning/" title="Machine Learning" class="md-nav__link">
+    <a href="../../../resources/machine_learning/" title="Machine Learning" class="md-nav__link">
       Machine Learning
     </a>
   </li>
@@ -3349,7 +3276,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../resources/machine_learning/bayesian/" title="Bayesian ML" class="md-nav__link">
+    <a href="../../../resources/machine_learning/bayesian/" title="Bayesian ML" class="md-nav__link">
       Bayesian ML
     </a>
   </li>
@@ -3361,7 +3288,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../resources/machine_learning/books/" title="Recommended Books" class="md-nav__link">
+    <a href="../../../resources/machine_learning/books/" title="Recommended Books" class="md-nav__link">
       Recommended Books
     </a>
   </li>
@@ -3373,7 +3300,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../resources/machine_learning/class_notes/" title="Class Notes" class="md-nav__link">
+    <a href="../../../resources/machine_learning/class_notes/" title="Class Notes" class="md-nav__link">
       Class Notes
     </a>
   </li>
@@ -3385,7 +3312,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../resources/machine_learning/deep_learning/" title="Deep Learning" class="md-nav__link">
+    <a href="../../../resources/machine_learning/deep_learning/" title="Deep Learning" class="md-nav__link">
       Deep Learning
     </a>
   </li>
@@ -3397,7 +3324,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../resources/machine_learning/interpretability/" title="Interpretable Machine Learning" class="md-nav__link">
+    <a href="../../../resources/machine_learning/interpretability/" title="Interpretable Machine Learning" class="md-nav__link">
       Interpretable Machine Learning
     </a>
   </li>
@@ -3409,7 +3336,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../resources/machine_learning/nns/" title="Neural Networks" class="md-nav__link">
+    <a href="../../../resources/machine_learning/nns/" title="Neural Networks" class="md-nav__link">
       Neural Networks
     </a>
   </li>
@@ -3421,7 +3348,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../resources/machine_learning/physics/" title="Physic-Informed Machine Learning" class="md-nav__link">
+    <a href="../../../resources/machine_learning/physics/" title="Physic-Informed Machine Learning" class="md-nav__link">
       Physic-Informed Machine Learning
     </a>
   </li>
@@ -3433,7 +3360,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../resources/machine_learning/statistics/" title="Statistics" class="md-nav__link">
+    <a href="../../../resources/machine_learning/statistics/" title="Statistics" class="md-nav__link">
       Statistics
     </a>
   </li>
@@ -3475,7 +3402,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../resources/math/bisection/" title="Bisection Method" class="md-nav__link">
+    <a href="../../../resources/math/bisection/" title="Bisection Method" class="md-nav__link">
       Bisection Method
     </a>
   </li>
@@ -3517,7 +3444,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../resources/python/ides/" title="Python IDEs" class="md-nav__link">
+    <a href="../../../resources/python/ides/" title="Python IDEs" class="md-nav__link">
       Python IDEs
     </a>
   </li>
@@ -3529,7 +3456,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../resources/python/tidbits/" title="Interesting Tidbits" class="md-nav__link">
+    <a href="../../../resources/python/tidbits/" title="Interesting Tidbits" class="md-nav__link">
       Interesting Tidbits
     </a>
   </li>
@@ -3566,7 +3493,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../resources/python/code/einsum/" title="Einsum" class="md-nav__link">
+    <a href="../../../resources/python/code/einsum/" title="Einsum" class="md-nav__link">
       Einsum
     </a>
   </li>
@@ -3578,7 +3505,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../resources/python/code/large_scale/" title="Large Scale" class="md-nav__link">
+    <a href="../../../resources/python/code/large_scale/" title="Large Scale" class="md-nav__link">
       Large Scale
     </a>
   </li>
@@ -3620,7 +3547,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../resources/python/good_code/" title="Tutorials" class="md-nav__link">
+    <a href="../../../resources/python/good_code/" title="Tutorials" class="md-nav__link">
       Tutorials
     </a>
   </li>
@@ -3632,7 +3559,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../resources/python/good_code/documentation/" title="Documentation" class="md-nav__link">
+    <a href="../../../resources/python/good_code/documentation/" title="Documentation" class="md-nav__link">
       Documentation
     </a>
   </li>
@@ -3644,7 +3571,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../resources/python/good_code/experiments/" title="Experiments" class="md-nav__link">
+    <a href="../../../resources/python/good_code/experiments/" title="Experiments" class="md-nav__link">
       Experiments
     </a>
   </li>
@@ -3656,7 +3583,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../resources/python/good_code/git/" title="Git" class="md-nav__link">
+    <a href="../../../resources/python/good_code/git/" title="Git" class="md-nav__link">
       Git
     </a>
   </li>
@@ -3668,7 +3595,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../resources/python/good_code/good_code/" title="Good Code" class="md-nav__link">
+    <a href="../../../resources/python/good_code/good_code/" title="Good Code" class="md-nav__link">
       Good Code
     </a>
   </li>
@@ -3680,7 +3607,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../resources/python/good_code/makefiles/" title="MakeFiles" class="md-nav__link">
+    <a href="../../../resources/python/good_code/makefiles/" title="MakeFiles" class="md-nav__link">
       MakeFiles
     </a>
   </li>
@@ -3692,7 +3619,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../resources/python/good_code/pip/" title="Pip" class="md-nav__link">
+    <a href="../../../resources/python/good_code/pip/" title="Pip" class="md-nav__link">
       Pip
     </a>
   </li>
@@ -3704,7 +3631,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../resources/python/good_code/pythonic/" title="Pythonic" class="md-nav__link">
+    <a href="../../../resources/python/good_code/pythonic/" title="Pythonic" class="md-nav__link">
       Pythonic
     </a>
   </li>
@@ -3716,7 +3643,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../resources/python/good_code/typing/" title="Typing" class="md-nav__link">
+    <a href="../../../resources/python/good_code/typing/" title="Typing" class="md-nav__link">
       Typing
     </a>
   </li>
@@ -3758,7 +3685,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../resources/python/packages/geospatial/" title="Earth-Sci Stuff" class="md-nav__link">
+    <a href="../../../resources/python/packages/geospatial/" title="Earth-Sci Stuff" class="md-nav__link">
       Earth-Sci Stuff
     </a>
   </li>
@@ -3770,7 +3697,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../resources/python/packages/jax/" title="Jax" class="md-nav__link">
+    <a href="../../../resources/python/packages/jax/" title="Jax" class="md-nav__link">
       Jax
     </a>
   </li>
@@ -3782,7 +3709,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../resources/python/packages/logging/" title="Logging" class="md-nav__link">
+    <a href="../../../resources/python/packages/logging/" title="Logging" class="md-nav__link">
       Logging
     </a>
   </li>
@@ -3794,7 +3721,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../resources/python/packages/pandas/" title="Pandas" class="md-nav__link">
+    <a href="../../../resources/python/packages/pandas/" title="Pandas" class="md-nav__link">
       Pandas
     </a>
   </li>
@@ -3806,7 +3733,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../resources/python/packages/parallel/" title="Parallel Programming" class="md-nav__link">
+    <a href="../../../resources/python/packages/parallel/" title="Parallel Programming" class="md-nav__link">
       Parallel Programming
     </a>
   </li>
@@ -3818,7 +3745,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../resources/python/packages/pathlib/" title="PathLib" class="md-nav__link">
+    <a href="../../../resources/python/packages/pathlib/" title="PathLib" class="md-nav__link">
       PathLib
     </a>
   </li>
@@ -3830,7 +3757,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../resources/python/packages/plotting/" title="Plotting Libraries" class="md-nav__link">
+    <a href="../../../resources/python/packages/plotting/" title="Plotting Libraries" class="md-nav__link">
       Plotting Libraries
     </a>
   </li>
@@ -3842,7 +3769,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../resources/python/packages/pytorch/" title="PyTorch" class="md-nav__link">
+    <a href="../../../resources/python/packages/pytorch/" title="PyTorch" class="md-nav__link">
       PyTorch
     </a>
   </li>
@@ -3854,7 +3781,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../resources/python/packages/sklearn/" title="Scikit-Learn" class="md-nav__link">
+    <a href="../../../resources/python/packages/sklearn/" title="Scikit-Learn" class="md-nav__link">
       Scikit-Learn
     </a>
   </li>
@@ -3866,7 +3793,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../resources/python/packages/sql/" title="SQL" class="md-nav__link">
+    <a href="../../../resources/python/packages/sql/" title="SQL" class="md-nav__link">
       SQL
     </a>
   </li>
@@ -3908,7 +3835,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../resources/python/remote_computing/" title="Overview" class="md-nav__link">
+    <a href="../../../resources/python/remote_computing/" title="Overview" class="md-nav__link">
       Overview
     </a>
   </li>
@@ -3920,7 +3847,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../resources/python/remote_computing/jupyter_slurm/" title="JupyterLab + Slurm" class="md-nav__link">
+    <a href="../../../resources/python/remote_computing/jupyter_slurm/" title="JupyterLab + Slurm" class="md-nav__link">
       JupyterLab + Slurm
     </a>
   </li>
@@ -3932,7 +3859,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../resources/python/remote_computing/vscode/" title="VSCode" class="md-nav__link">
+    <a href="../../../resources/python/remote_computing/vscode/" title="VSCode" class="md-nav__link">
       VSCode
     </a>
   </li>
@@ -3974,7 +3901,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../resources/python/software_stacks/dl_software/" title="Deep Learning" class="md-nav__link">
+    <a href="../../../resources/python/software_stacks/dl_software/" title="Deep Learning" class="md-nav__link">
       Deep Learning
     </a>
   </li>
@@ -3986,7 +3913,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../resources/python/software_stacks/earthsci/" title="Earth Science" class="md-nav__link">
+    <a href="../../../resources/python/software_stacks/earthsci/" title="Earth Science" class="md-nav__link">
       Earth Science
     </a>
   </li>
@@ -3998,7 +3925,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../resources/python/software_stacks/python_stack/" title="Python Ecosystem" class="md-nav__link">
+    <a href="../../../resources/python/software_stacks/python_stack/" title="Python Ecosystem" class="md-nav__link">
       Python Ecosystem
     </a>
   </li>
@@ -4010,7 +3937,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../resources/python/software_stacks/standard_stack/" title="Standard" class="md-nav__link">
+    <a href="../../../resources/python/software_stacks/standard_stack/" title="Standard" class="md-nav__link">
       Standard
     </a>
   </li>
@@ -4057,7 +3984,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../resources/tips/" title="Cheat Sheets" class="md-nav__link">
+    <a href="../../../resources/tips/" title="Cheat Sheets" class="md-nav__link">
       Cheat Sheets
     </a>
   </li>
@@ -4069,7 +3996,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../resources/tips/colab/" title="Colab" class="md-nav__link">
+    <a href="../../../resources/tips/colab/" title="Colab" class="md-nav__link">
       Colab
     </a>
   </li>
@@ -4081,7 +4008,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../resources/tips/conda/" title="Conda" class="md-nav__link">
+    <a href="../../../resources/tips/conda/" title="Conda" class="md-nav__link">
       Conda
     </a>
   </li>
@@ -4093,7 +4020,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../resources/tips/github/" title="Github" class="md-nav__link">
+    <a href="../../../resources/tips/github/" title="Github" class="md-nav__link">
       Github
     </a>
   </li>
@@ -4105,7 +4032,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../resources/tips/markdown/" title="Markdown" class="md-nav__link">
+    <a href="../../../resources/tips/markdown/" title="Markdown" class="md-nav__link">
       Markdown
     </a>
   </li>
@@ -4117,7 +4044,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../resources/tips/sklearn/" title="Scikit-Learn" class="md-nav__link">
+    <a href="../../../resources/tips/sklearn/" title="Scikit-Learn" class="md-nav__link">
       Scikit-Learn
     </a>
   </li>
@@ -4164,7 +4091,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../snippets/" title="My Snippets" class="md-nav__link">
+    <a href="../../../snippets/" title="My Snippets" class="md-nav__link">
       My Snippets
     </a>
   </li>
@@ -4201,7 +4128,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../snippets/bash/args/" title="Arguments in Scripts" class="md-nav__link">
+    <a href="../../../snippets/bash/args/" title="Arguments in Scripts" class="md-nav__link">
       Arguments in Scripts
     </a>
   </li>
@@ -4213,7 +4140,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../snippets/bash/loops/" title="Loops" class="md-nav__link">
+    <a href="../../../snippets/bash/loops/" title="Loops" class="md-nav__link">
       Loops
     </a>
   </li>
@@ -4225,7 +4152,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../snippets/bash/make_args/" title="Makefile Arguments" class="md-nav__link">
+    <a href="../../../snippets/bash/make_args/" title="Makefile Arguments" class="md-nav__link">
       Makefile Arguments
     </a>
   </li>
@@ -4237,7 +4164,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../snippets/bash/run_scripts/" title="Running Subsequent Scripts" class="md-nav__link">
+    <a href="../../../snippets/bash/run_scripts/" title="Running Subsequent Scripts" class="md-nav__link">
       Running Subsequent Scripts
     </a>
   </li>
@@ -4279,7 +4206,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../snippets/bayesian/sklearn_egp/" title="Error in GPs in Sklearn" class="md-nav__link">
+    <a href="../../../snippets/bayesian/sklearn_egp/" title="Error in GPs in Sklearn" class="md-nav__link">
       Error in GPs in Sklearn
     </a>
   </li>
@@ -4321,7 +4248,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../snippets/earth/cart_geo/" title="Cartesian Coordinates 2 Geocoordinates" class="md-nav__link">
+    <a href="../../../snippets/earth/cart_geo/" title="Cartesian Coordinates 2 Geocoordinates" class="md-nav__link">
       Cartesian Coordinates 2 Geocoordinates
     </a>
   </li>
@@ -4333,7 +4260,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../snippets/earth/xarray/" title="XArray" class="md-nav__link">
+    <a href="../../../snippets/earth/xarray/" title="XArray" class="md-nav__link">
       XArray
     </a>
   </li>
@@ -4375,7 +4302,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../snippets/latex/pseudocode/" title="PseudoCode" class="md-nav__link">
+    <a href="../../../snippets/latex/pseudocode/" title="PseudoCode" class="md-nav__link">
       PseudoCode
     </a>
   </li>
@@ -4387,7 +4314,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../snippets/latex/tables/" title="Tables" class="md-nav__link">
+    <a href="../../../snippets/latex/tables/" title="Tables" class="md-nav__link">
       Tables
     </a>
   </li>
@@ -4429,7 +4356,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../snippets/markdown/figures/" title="Figures" class="md-nav__link">
+    <a href="../../../snippets/markdown/figures/" title="Figures" class="md-nav__link">
       Figures
     </a>
   </li>
@@ -4471,7 +4398,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../snippets/ml/anomaly/" title="Anomaly Detection" class="md-nav__link">
+    <a href="../../../snippets/ml/anomaly/" title="Anomaly Detection" class="md-nav__link">
       Anomaly Detection
     </a>
   </li>
@@ -4513,7 +4440,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../snippets/my_configs/mkdocs/" title="MkDocs" class="md-nav__link">
+    <a href="../../../snippets/my_configs/mkdocs/" title="MkDocs" class="md-nav__link">
       MkDocs
     </a>
   </li>
@@ -4550,7 +4477,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../snippets/my_configs/conda/env_jax/" title="Env jax" class="md-nav__link">
+    <a href="../../../snippets/my_configs/conda/env_jax/" title="Env jax" class="md-nav__link">
       Env jax
     </a>
   </li>
@@ -4592,7 +4519,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../snippets/my_configs/jlab/installsh/" title="Install JupyterLab Stuff" class="md-nav__link">
+    <a href="../../../snippets/my_configs/jlab/installsh/" title="Install JupyterLab Stuff" class="md-nav__link">
       Install JupyterLab Stuff
     </a>
   </li>
@@ -4634,7 +4561,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../snippets/my_configs/makefile/make/" title="Make" class="md-nav__link">
+    <a href="../../../snippets/my_configs/makefile/make/" title="Make" class="md-nav__link">
       Make
     </a>
   </li>
@@ -4676,7 +4603,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../snippets/my_configs/setups/setup_py/" title="Setup py" class="md-nav__link">
+    <a href="../../../snippets/my_configs/setups/setup_py/" title="Setup py" class="md-nav__link">
       Setup py
     </a>
   </li>
@@ -4723,7 +4650,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../snippets/numpy/bisection/" title="Bisection" class="md-nav__link">
+    <a href="../../../snippets/numpy/bisection/" title="Bisection" class="md-nav__link">
       Bisection
     </a>
   </li>
@@ -4735,7 +4662,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../snippets/numpy/euclidean/" title="Efficient Euclidean Distance Calculation - Numpy Einsum" class="md-nav__link">
+    <a href="../../../snippets/numpy/euclidean/" title="Efficient Euclidean Distance Calculation - Numpy Einsum" class="md-nav__link">
       Efficient Euclidean Distance Calculation - Numpy Einsum
     </a>
   </li>
@@ -4747,7 +4674,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../snippets/numpy/group_sum/" title="Add every n values in array" class="md-nav__link">
+    <a href="../../../snippets/numpy/group_sum/" title="Add every n values in array" class="md-nav__link">
       Add every n values in array
     </a>
   </li>
@@ -4759,7 +4686,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../snippets/numpy/rbf_kernel/" title="Optimized RBF kernel using `numexpr`" class="md-nav__link">
+    <a href="../../../snippets/numpy/rbf_kernel/" title="Optimized RBF kernel using `numexpr`" class="md-nav__link">
       Optimized RBF kernel using `numexpr`
     </a>
   </li>
@@ -4801,7 +4728,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../snippets/parallel/dask_embarass/" title="Embarrassingly Parallel Workloads" class="md-nav__link">
+    <a href="../../../snippets/parallel/dask_embarass/" title="Embarrassingly Parallel Workloads" class="md-nav__link">
       Embarrassingly Parallel Workloads
     </a>
   </li>
@@ -4813,7 +4740,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../snippets/parallel/hyperparams/" title="Hyperparameter Optimization" class="md-nav__link">
+    <a href="../../../snippets/parallel/hyperparams/" title="Hyperparameter Optimization" class="md-nav__link">
       Hyperparameter Optimization
     </a>
   </li>
@@ -4825,7 +4752,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../snippets/parallel/large_predict/" title="Large predict" class="md-nav__link">
+    <a href="../../../snippets/parallel/large_predict/" title="Large predict" class="md-nav__link">
       Large predict
     </a>
   </li>
@@ -4837,7 +4764,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../snippets/parallel/mp_module/" title="Parallel Processing" class="md-nav__link">
+    <a href="../../../snippets/parallel/mp_module/" title="Parallel Processing" class="md-nav__link">
       Parallel Processing
     </a>
   </li>
@@ -4849,7 +4776,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../snippets/parallel/pipelines/" title="Pipelines" class="md-nav__link">
+    <a href="../../../snippets/parallel/pipelines/" title="Pipelines" class="md-nav__link">
       Pipelines
     </a>
   </li>
@@ -4891,7 +4818,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../snippets/python/conda/" title="Conda" class="md-nav__link">
+    <a href="../../../snippets/python/conda/" title="Conda" class="md-nav__link">
       Conda
     </a>
   </li>
@@ -4903,7 +4830,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../snippets/python/conda_envs/" title="My Typical Conda Environments" class="md-nav__link">
+    <a href="../../../snippets/python/conda_envs/" title="My Typical Conda Environments" class="md-nav__link">
       My Typical Conda Environments
     </a>
   </li>
@@ -4915,7 +4842,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../snippets/python/dict_2_list/" title="Dictionaries to Lists" class="md-nav__link">
+    <a href="../../../snippets/python/dict_2_list/" title="Dictionaries to Lists" class="md-nav__link">
       Dictionaries to Lists
     </a>
   </li>
@@ -4927,7 +4854,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../snippets/python/lists_tricks/" title="Tricks with Lists" class="md-nav__link">
+    <a href="../../../snippets/python/lists_tricks/" title="Tricks with Lists" class="md-nav__link">
       Tricks with Lists
     </a>
   </li>
@@ -4939,7 +4866,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../snippets/python/named_tuples/" title="Named Tuples" class="md-nav__link">
+    <a href="../../../snippets/python/named_tuples/" title="Named Tuples" class="md-nav__link">
       Named Tuples
     </a>
   </li>
@@ -4951,7 +4878,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../snippets/python/paths/" title="Paths" class="md-nav__link">
+    <a href="../../../snippets/python/paths/" title="Paths" class="md-nav__link">
       Paths
     </a>
   </li>
@@ -4963,7 +4890,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../snippets/python/setup/" title="My Setup File" class="md-nav__link">
+    <a href="../../../snippets/python/setup/" title="My Setup File" class="md-nav__link">
       My Setup File
     </a>
   </li>
@@ -5005,7 +4932,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../snippets/pytorch/device/" title="Device Agnostic" class="md-nav__link">
+    <a href="../../../snippets/pytorch/device/" title="Device Agnostic" class="md-nav__link">
       Device Agnostic
     </a>
   </li>
@@ -5017,7 +4944,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../snippets/pytorch/histograms/" title="Histograms in PyTorch" class="md-nav__link">
+    <a href="../../../snippets/pytorch/histograms/" title="Histograms in PyTorch" class="md-nav__link">
       Histograms in PyTorch
     </a>
   </li>
@@ -5029,7 +4956,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../snippets/pytorch/interp/" title="Interpolating in PyTorch" class="md-nav__link">
+    <a href="../../../snippets/pytorch/interp/" title="Interpolating in PyTorch" class="md-nav__link">
       Interpolating in PyTorch
     </a>
   </li>
@@ -5041,7 +4968,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../snippets/pytorch/keops/" title="KeOps - Gaussian Kernel" class="md-nav__link">
+    <a href="../../../snippets/pytorch/keops/" title="KeOps - Gaussian Kernel" class="md-nav__link">
       KeOps - Gaussian Kernel
     </a>
   </li>
@@ -5053,7 +4980,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../snippets/pytorch/loops_tqdm/" title="Loops with TQDM" class="md-nav__link">
+    <a href="../../../snippets/pytorch/loops_tqdm/" title="Loops with TQDM" class="md-nav__link">
       Loops with TQDM
     </a>
   </li>
@@ -5065,7 +4992,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../snippets/pytorch/multi_kernel/" title="Multi kernel" class="md-nav__link">
+    <a href="../../../snippets/pytorch/multi_kernel/" title="Multi kernel" class="md-nav__link">
       Multi kernel
     </a>
   </li>
@@ -5077,7 +5004,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../snippets/pytorch/numpy/" title="PyTorch Tensors 2 Numpy Adaptors" class="md-nav__link">
+    <a href="../../../snippets/pytorch/numpy/" title="PyTorch Tensors 2 Numpy Adaptors" class="md-nav__link">
       PyTorch Tensors 2 Numpy Adaptors
     </a>
   </li>
@@ -5089,7 +5016,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../snippets/pytorch/pytorch_lightning/" title="Pytorch lightning" class="md-nav__link">
+    <a href="../../../snippets/pytorch/pytorch_lightning/" title="Pytorch lightning" class="md-nav__link">
       Pytorch lightning
     </a>
   </li>
@@ -5101,7 +5028,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../snippets/pytorch/rbf_kernel/" title="Rbf kernel" class="md-nav__link">
+    <a href="../../../snippets/pytorch/rbf_kernel/" title="Rbf kernel" class="md-nav__link">
       Rbf kernel
     </a>
   </li>
@@ -5143,7 +5070,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../snippets/scipy/cholesky/" title="The Cholesky Decomposition" class="md-nav__link">
+    <a href="../../../snippets/scipy/cholesky/" title="The Cholesky Decomposition" class="md-nav__link">
       The Cholesky Decomposition
     </a>
   </li>
@@ -5185,7 +5112,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../snippets/testing/pytest/" title="PyTest Tricks" class="md-nav__link">
+    <a href="../../../snippets/testing/pytest/" title="PyTest Tricks" class="md-nav__link">
       PyTest Tricks
     </a>
   </li>
@@ -5197,7 +5124,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../snippets/testing/tips/" title="Tips" class="md-nav__link">
+    <a href="../../../snippets/testing/tips/" title="Tips" class="md-nav__link">
       Tips
     </a>
   </li>
@@ -5239,7 +5166,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../snippets/visualization/creating_gifs/" title="gifs" class="md-nav__link">
+    <a href="../../../snippets/visualization/creating_gifs/" title="gifs" class="md-nav__link">
       gifs
     </a>
   </li>
@@ -5276,7 +5203,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../snippets/visualization/matplotlib/colorbars/" title="Colorbars" class="md-nav__link">
+    <a href="../../../snippets/visualization/matplotlib/colorbars/" title="Colorbars" class="md-nav__link">
       Colorbars
     </a>
   </li>
@@ -5288,7 +5215,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../snippets/visualization/matplotlib/legends/" title="Legend" class="md-nav__link">
+    <a href="../../../snippets/visualization/matplotlib/legends/" title="Legend" class="md-nav__link">
       Legend
     </a>
   </li>
@@ -5300,7 +5227,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../snippets/visualization/matplotlib/logscale/" title="Log Scale Plots" class="md-nav__link">
+    <a href="../../../snippets/visualization/matplotlib/logscale/" title="Log Scale Plots" class="md-nav__link">
       Log Scale Plots
     </a>
   </li>
@@ -5312,7 +5239,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../snippets/visualization/matplotlib/nice_defaults/" title="Defaults" class="md-nav__link">
+    <a href="../../../snippets/visualization/matplotlib/nice_defaults/" title="Defaults" class="md-nav__link">
       Defaults
     </a>
   </li>
@@ -5324,7 +5251,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../snippets/visualization/matplotlib/styling/" title="Styling" class="md-nav__link">
+    <a href="../../../snippets/visualization/matplotlib/styling/" title="Styling" class="md-nav__link">
       Styling
     </a>
   </li>
@@ -5366,7 +5293,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../snippets/visualization/xarray/tifs/" title="Tif Files" class="md-nav__link">
+    <a href="../../../snippets/visualization/xarray/tifs/" title="Tif Files" class="md-nav__link">
       Tif Files
     </a>
   </li>
@@ -5418,7 +5345,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../talks/" title="My Talks" class="md-nav__link">
+    <a href="../../../talks/" title="My Talks" class="md-nav__link">
       My Talks
     </a>
   </li>
@@ -5430,7 +5357,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../talks/2018_kermes_egp/" title="KERMES Meetup 2018" class="md-nav__link">
+    <a href="../../../talks/2018_kermes_egp/" title="KERMES Meetup 2018" class="md-nav__link">
       KERMES Meetup 2018
     </a>
   </li>
@@ -5442,7 +5369,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../talks/2019_agu_rbigclima/" title="AGU 2019" class="md-nav__link">
+    <a href="../../../talks/2019_agu_rbigclima/" title="AGU 2019" class="md-nav__link">
       AGU 2019
     </a>
   </li>
@@ -5454,7 +5381,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../talks/2019_phiweek_gpsens/" title="Phi Week 2019" class="md-nav__link">
+    <a href="../../../talks/2019_phiweek_gpsens/" title="Phi Week 2019" class="md-nav__link">
       Phi Week 2019
     </a>
   </li>
@@ -5466,7 +5393,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../talks/2019_phiweek_rbigad/" title="Phi Week 2019" class="md-nav__link">
+    <a href="../../../talks/2019_phiweek_rbigad/" title="Phi Week 2019" class="md-nav__link">
       Phi Week 2019
     </a>
   </li>
@@ -5478,7 +5405,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../talks/2020_fft_01_31_hsic_align/" title="Fast Friday Talk" class="md-nav__link">
+    <a href="../../../talks/2020_fft_01_31_hsic_align/" title="Fast Friday Talk" class="md-nav__link">
       Fast Friday Talk
     </a>
   </li>
@@ -5490,7 +5417,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../talks/2020_kermes_egp/" title="KERMES Meetup 2020" class="md-nav__link">
+    <a href="../../../talks/2020_kermes_egp/" title="KERMES Meetup 2020" class="md-nav__link">
       KERMES Meetup 2020
     </a>
   </li>
@@ -5502,7 +5429,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../talks/fft_2020_01_31_hsic_align/" title="Fast Friday Talk" class="md-nav__link">
+    <a href="../../../talks/fft_2020_01_31_hsic_align/" title="Fast Friday Talk" class="md-nav__link">
       Fast Friday Talk
     </a>
   </li>
@@ -5544,7 +5471,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../thesis/" title="My Thesis" class="md-nav__link">
+    <a href="../../../thesis/" title="My Thesis" class="md-nav__link">
       My Thesis
     </a>
   </li>
@@ -5556,7 +5483,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../thesis/contribution/" title="Related Publications" class="md-nav__link">
+    <a href="../../../thesis/contribution/" title="Related Publications" class="md-nav__link">
       Related Publications
     </a>
   </li>
@@ -5568,7 +5495,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../thesis/logistics/" title="Logistics" class="md-nav__link">
+    <a href="../../../thesis/logistics/" title="Logistics" class="md-nav__link">
       Logistics
     </a>
   </li>
@@ -5580,7 +5507,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../thesis/outline/" title="Thesis Outline" class="md-nav__link">
+    <a href="../../../thesis/outline/" title="Thesis Outline" class="md-nav__link">
       Thesis Outline
     </a>
   </li>
@@ -5592,7 +5519,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../thesis/quotes/" title="Quotes" class="md-nav__link">
+    <a href="../../../thesis/quotes/" title="Quotes" class="md-nav__link">
       Quotes
     </a>
   </li>
@@ -5604,7 +5531,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../thesis/reproducibility/" title="Reproducibility" class="md-nav__link">
+    <a href="../../../thesis/reproducibility/" title="Reproducibility" class="md-nav__link">
       Reproducibility
     </a>
   </li>
@@ -5616,7 +5543,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../thesis/scratch/" title="My Thesis: A Overview" class="md-nav__link">
+    <a href="../../../thesis/scratch/" title="My Thesis: A Overview" class="md-nav__link">
       My Thesis: A Overview
     </a>
   </li>
@@ -5628,7 +5555,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../thesis/toc/" title="Toc" class="md-nav__link">
+    <a href="../../../thesis/toc/" title="Toc" class="md-nav__link">
       Toc
     </a>
   </li>
@@ -5690,7 +5617,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../thesis/chapters/1_introduction/1.1_earth_sci/" title="Earth Science Setting" class="md-nav__link">
+    <a href="../../../thesis/chapters/1_introduction/1.1_earth_sci/" title="Earth Science Setting" class="md-nav__link">
       Earth Science Setting
     </a>
   </li>
@@ -5702,7 +5629,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../thesis/chapters/1_introduction/1.2_ml_problems/" title="Machine Learning Setting" class="md-nav__link">
+    <a href="../../../thesis/chapters/1_introduction/1.2_ml_problems/" title="Machine Learning Setting" class="md-nav__link">
       Machine Learning Setting
     </a>
   </li>
@@ -5714,7 +5641,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../thesis/chapters/1_introduction/1.3_thesis/" title="1.3 thesis" class="md-nav__link">
+    <a href="../../../thesis/chapters/1_introduction/1.3_thesis/" title="1.3 thesis" class="md-nav__link">
       1.3 thesis
     </a>
   </li>
@@ -5756,7 +5683,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../thesis/chapters/2_models/sensitivity/" title="Sensitivity" class="md-nav__link">
+    <a href="../../../thesis/chapters/2_models/sensitivity/" title="Sensitivity" class="md-nav__link">
       Sensitivity
     </a>
   </li>
@@ -5768,7 +5695,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../thesis/chapters/2_models/similarity/" title="Similarity" class="md-nav__link">
+    <a href="../../../thesis/chapters/2_models/similarity/" title="Similarity" class="md-nav__link">
       Similarity
     </a>
   </li>
@@ -5780,7 +5707,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../thesis/chapters/2_models/uncertainty/" title="Uncertainty" class="md-nav__link">
+    <a href="../../../thesis/chapters/2_models/uncertainty/" title="Uncertainty" class="md-nav__link">
       Uncertainty
     </a>
   </li>
@@ -5822,7 +5749,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../thesis/chapters/3_similarity/hybrid/" title="Hybrid Approaches" class="md-nav__link">
+    <a href="../../../thesis/chapters/3_similarity/hybrid/" title="Hybrid Approaches" class="md-nav__link">
       Hybrid Approaches
     </a>
   </li>
@@ -5834,7 +5761,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../thesis/chapters/3_similarity/kernels/" title="Kernel Methods" class="md-nav__link">
+    <a href="../../../thesis/chapters/3_similarity/kernels/" title="Kernel Methods" class="md-nav__link">
       Kernel Methods
     </a>
   </li>
@@ -5846,7 +5773,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../thesis/chapters/3_similarity/neural_nets/" title="Neural Networks" class="md-nav__link">
+    <a href="../../../thesis/chapters/3_similarity/neural_nets/" title="Neural Networks" class="md-nav__link">
       Neural Networks
     </a>
   </li>
@@ -5858,7 +5785,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../thesis/chapters/3_similarity/random_kernels/" title="Randomized" class="md-nav__link">
+    <a href="../../../thesis/chapters/3_similarity/random_kernels/" title="Randomized" class="md-nav__link">
       Randomized
     </a>
   </li>
@@ -5925,7 +5852,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../thesis/chapters/4_information/density/0_overview/" title="Overview" class="md-nav__link">
+    <a href="../../../thesis/chapters/4_information/density/0_overview/" title="Overview" class="md-nav__link">
       Overview
     </a>
   </li>
@@ -5937,7 +5864,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../thesis/chapters/4_information/density/classical/" title="Density Estimation" class="md-nav__link">
+    <a href="../../../thesis/chapters/4_information/density/classical/" title="Density Estimation" class="md-nav__link">
       Density Estimation
     </a>
   </li>
@@ -5949,7 +5876,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../thesis/chapters/4_information/density/gaussianization/" title="Parametric Gaussianization" class="md-nav__link">
+    <a href="../../../thesis/chapters/4_information/density/gaussianization/" title="Parametric Gaussianization" class="md-nav__link">
       Parametric Gaussianization
     </a>
   </li>
@@ -5961,7 +5888,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../thesis/chapters/4_information/density/nfs/" title="Normalizing Flows" class="md-nav__link">
+    <a href="../../../thesis/chapters/4_information/density/nfs/" title="Normalizing Flows" class="md-nav__link">
       Normalizing Flows
     </a>
   </li>
@@ -5973,7 +5900,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../thesis/chapters/4_information/density/parametric/" title="Parametric" class="md-nav__link">
+    <a href="../../../thesis/chapters/4_information/density/parametric/" title="Parametric" class="md-nav__link">
       Parametric
     </a>
   </li>
@@ -5985,7 +5912,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../thesis/chapters/4_information/density/rbig/" title="Rotation-Based Iterative Gaussianization (RBIG)" class="md-nav__link">
+    <a href="../../../thesis/chapters/4_information/density/rbig/" title="Rotation-Based Iterative Gaussianization (RBIG)" class="md-nav__link">
       Rotation-Based Iterative Gaussianization (RBIG)
     </a>
   </li>
@@ -6027,7 +5954,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../thesis/chapters/4_information/information/1_information/" title="Information Theory" class="md-nav__link">
+    <a href="../../../thesis/chapters/4_information/information/1_information/" title="Information Theory" class="md-nav__link">
       Information Theory
     </a>
   </li>
@@ -6039,7 +5966,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../thesis/chapters/4_information/information/2_rbig/" title="TODO" class="md-nav__link">
+    <a href="../../../thesis/chapters/4_information/information/2_rbig/" title="TODO" class="md-nav__link">
       TODO
     </a>
   </li>
@@ -6086,7 +6013,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../thesis/chapters/5_applications/sensitivity/" title="Sensitivity Applications" class="md-nav__link">
+    <a href="../../../thesis/chapters/5_applications/sensitivity/" title="Sensitivity Applications" class="md-nav__link">
       Sensitivity Applications
     </a>
   </li>
@@ -6098,7 +6025,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../thesis/chapters/5_applications/similarity/" title="Similarity Applications" class="md-nav__link">
+    <a href="../../../thesis/chapters/5_applications/similarity/" title="Similarity Applications" class="md-nav__link">
       Similarity Applications
     </a>
   </li>
@@ -6110,7 +6037,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../thesis/chapters/5_applications/uncertainty/" title="Uncertainty Applications" class="md-nav__link">
+    <a href="../../../thesis/chapters/5_applications/uncertainty/" title="Uncertainty Applications" class="md-nav__link">
       Uncertainty Applications
     </a>
   </li>
@@ -6135,10 +6062,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12" checked>
     
     <label class="md-nav__link" for="nav-12">
       Tutorials
@@ -6162,7 +6091,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../tutorials/" title="Tutorials" class="md-nav__link">
+    <a href="../../" title="Tutorials" class="md-nav__link">
       Tutorials
     </a>
   </li>
@@ -6199,7 +6128,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../tutorials/earth_sci/" title="Earth Science Tools" class="md-nav__link">
+    <a href="../../earth_sci/" title="Earth Science Tools" class="md-nav__link">
       Earth Science Tools
     </a>
   </li>
@@ -6211,7 +6140,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../tutorials/earth_sci/_ideas/" title="Ideas" class="md-nav__link">
+    <a href="../../earth_sci/_ideas/" title="Ideas" class="md-nav__link">
       Ideas
     </a>
   </li>
@@ -6223,7 +6152,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../tutorials/earth_sci/esdc_streaming/" title="Esdc streaming" class="md-nav__link">
+    <a href="../../earth_sci/esdc_streaming/" title="Esdc streaming" class="md-nav__link">
       Esdc streaming
     </a>
   </li>
@@ -6265,7 +6194,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../tutorials/gaussian_processes/_ideas/" title="ideas" class="md-nav__link">
+    <a href="../../gaussian_processes/_ideas/" title="ideas" class="md-nav__link">
        ideas
     </a>
   </li>
@@ -6307,7 +6236,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../tutorials/jax/" title="Jax" class="md-nav__link">
+    <a href="../../jax/" title="Jax" class="md-nav__link">
       Jax
     </a>
   </li>
@@ -6319,7 +6248,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../tutorials/jax/bisection/" title="Bisection search" class="md-nav__link">
+    <a href="../../jax/bisection/" title="Bisection search" class="md-nav__link">
       Bisection search
     </a>
   </li>
@@ -6331,7 +6260,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../tutorials/jax/classes/" title="Classes" class="md-nav__link">
+    <a href="../../jax/classes/" title="Classes" class="md-nav__link">
       Classes
     </a>
   </li>
@@ -6343,7 +6272,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../tutorials/jax/ideas/" title="Jax Tutorial Ideas" class="md-nav__link">
+    <a href="../../jax/ideas/" title="Jax Tutorial Ideas" class="md-nav__link">
       Jax Tutorial Ideas
     </a>
   </li>
@@ -6355,7 +6284,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../tutorials/jax/init_funcs/" title="Init funcs" class="md-nav__link">
+    <a href="../../jax/init_funcs/" title="Init funcs" class="md-nav__link">
       Init funcs
     </a>
   </li>
@@ -6367,7 +6296,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../tutorials/jax/jit/" title="Jit" class="md-nav__link">
+    <a href="../../jax/jit/" title="Jit" class="md-nav__link">
       Jit
     </a>
   </li>
@@ -6379,7 +6308,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../tutorials/jax/optimize/" title="Optimizing Using Jax" class="md-nav__link">
+    <a href="../../jax/optimize/" title="Optimizing Using Jax" class="md-nav__link">
       Optimizing Using Jax
     </a>
   </li>
@@ -6391,7 +6320,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../tutorials/jax/vmap/" title="VMAP" class="md-nav__link">
+    <a href="../../jax/vmap/" title="VMAP" class="md-nav__link">
       VMAP
     </a>
   </li>
@@ -6428,7 +6357,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../tutorials/jax/lab_tutorials/bandwidth/" title="Bandwidth Approximation" class="md-nav__link">
+    <a href="../../jax/lab_tutorials/bandwidth/" title="Bandwidth Approximation" class="md-nav__link">
       Bandwidth Approximation
     </a>
   </li>
@@ -6440,7 +6369,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../tutorials/jax/lab_tutorials/kernel_derivatives/" title="Kernel Derivatives" class="md-nav__link">
+    <a href="../../jax/lab_tutorials/kernel_derivatives/" title="Kernel Derivatives" class="md-nav__link">
       Kernel Derivatives
     </a>
   </li>
@@ -6452,7 +6381,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../tutorials/jax/lab_tutorials/kernels/" title="Kernel Matrices" class="md-nav__link">
+    <a href="../../jax/lab_tutorials/kernels/" title="Kernel Matrices" class="md-nav__link">
       Kernel Matrices
     </a>
   </li>
@@ -6464,7 +6393,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../tutorials/jax/lab_tutorials/montecarlo/" title="MonteCarlo" class="md-nav__link">
+    <a href="../../jax/lab_tutorials/montecarlo/" title="MonteCarlo" class="md-nav__link">
       MonteCarlo
     </a>
   </li>
@@ -6476,7 +6405,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../tutorials/jax/lab_tutorials/pairwise/" title="Pairwise" class="md-nav__link">
+    <a href="../../jax/lab_tutorials/pairwise/" title="Pairwise" class="md-nav__link">
       Pairwise
     </a>
   </li>
@@ -6488,7 +6417,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../tutorials/jax/lab_tutorials/resources/" title="Resources" class="md-nav__link">
+    <a href="../../jax/lab_tutorials/resources/" title="Resources" class="md-nav__link">
       Resources
     </a>
   </li>
@@ -6535,7 +6464,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../tutorials/jupyter_vscode/vscode_jupyter/" title="Using Jupyter Notebooks for VSCode Remote Computing" class="md-nav__link">
+    <a href="../../jupyter_vscode/vscode_jupyter/" title="Using Jupyter Notebooks for VSCode Remote Computing" class="md-nav__link">
       Using Jupyter Notebooks for VSCode Remote Computing
     </a>
   </li>
@@ -6577,7 +6506,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../tutorials/manifold_learning/3_ssma/" title="Semisupervised Manifold Alignment" class="md-nav__link">
+    <a href="../../manifold_learning/3_ssma/" title="Semisupervised Manifold Alignment" class="md-nav__link">
       Semisupervised Manifold Alignment
     </a>
   </li>
@@ -6589,7 +6518,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../tutorials/manifold_learning/6_laplacian_eigenmaps/" title="6 laplacian eigenmaps" class="md-nav__link">
+    <a href="../../manifold_learning/6_laplacian_eigenmaps/" title="6 laplacian eigenmaps" class="md-nav__link">
       6 laplacian eigenmaps
     </a>
   </li>
@@ -6604,10 +6533,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-12-7" type="checkbox" id="nav-12-7">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-12-7" type="checkbox" id="nav-12-7" checked>
     
     <label class="md-nav__link" for="nav-12-7">
       Pytorch nns
@@ -6631,7 +6562,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../tutorials/pytorch_nns/1_nn_from_scratch/" title="NN from scratch" class="md-nav__link">
+    <a href="../1_nn_from_scratch/" title="NN from scratch" class="md-nav__link">
       NN from scratch
     </a>
   </li>
@@ -6643,7 +6574,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../tutorials/pytorch_nns/2_refactor/" title="Refactoring" class="md-nav__link">
+    <a href="../2_refactor/" title="Refactoring" class="md-nav__link">
       Refactoring
     </a>
   </li>
@@ -6653,11 +6584,60 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../../../../tutorials/pytorch_nns/4_sweeps/" title="Sweeps using Weights and Biases" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Sweeps using Weights and Biases
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Sweeps using Weights and Biases" class="md-nav__link md-nav__link--active">
       Sweeps using Weights and Biases
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#import-libraries" class="md-nav__link">
+    Import Libraries
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ml-model" class="md-nav__link">
+    ML Model
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -6667,7 +6647,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../tutorials/pytorch_nns/_ideas/" title="PyTorch Ideas" class="md-nav__link">
+    <a href="../_ideas/" title="PyTorch Ideas" class="md-nav__link">
       PyTorch Ideas
     </a>
   </li>
@@ -6679,7 +6659,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../tutorials/pytorch_nns/lightining/" title="PyTorch Lightning" class="md-nav__link">
+    <a href="../lightining/" title="PyTorch Lightning" class="md-nav__link">
       PyTorch Lightning
     </a>
   </li>
@@ -6721,7 +6701,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../tutorials/remote_computing/copying_files/" title="Copying Files" class="md-nav__link">
+    <a href="../../remote_computing/copying_files/" title="Copying Files" class="md-nav__link">
       Copying Files
     </a>
   </li>
@@ -6733,7 +6713,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../tutorials/remote_computing/documentation/" title="Documentation" class="md-nav__link">
+    <a href="../../remote_computing/documentation/" title="Documentation" class="md-nav__link">
       Documentation
     </a>
   </li>
@@ -6745,7 +6725,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../tutorials/remote_computing/vscode_jlab/" title="Remote Machines: JupyterLab + VSCode" class="md-nav__link">
+    <a href="../../remote_computing/vscode_jlab/" title="Remote Machines: JupyterLab + VSCode" class="md-nav__link">
       Remote Machines: JupyterLab + VSCode
     </a>
   </li>
@@ -6787,7 +6767,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../tutorials/tf2/slides/" title="Slides" class="md-nav__link">
+    <a href="../../tf2/slides/" title="Slides" class="md-nav__link">
       Slides
     </a>
   </li>
@@ -6874,7 +6854,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../tutorials/tf2/docs/css/theme/" title="Index" class="md-nav__link">
+    <a href="../../tf2/docs/css/theme/" title="Index" class="md-nav__link">
       Index
     </a>
   </li>
@@ -6946,7 +6926,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../tutorials/tf2/docs/plugin/markdown/example/" title="Markdown Demo" class="md-nav__link">
+    <a href="../../tf2/docs/plugin/markdown/example/" title="Markdown Demo" class="md-nav__link">
       Markdown Demo
     </a>
   </li>
@@ -6991,6 +6971,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon">
@@ -7001,36 +6983,16 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#variational-gp-regression" class="md-nav__link">
-    Variational GP Regression
+  <a href="#import-libraries" class="md-nav__link">
+    Import Libraries
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#vgp-w-uncertain-inputs" class="md-nav__link">
-    VGP w. Uncertain Inputs
+  <a href="#ml-model" class="md-nav__link">
+    ML Model
   </a>
-  
-    <nav class="md-nav" aria-label="VGP w. Uncertain Inputs">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#method-0-standard-prior" class="md-nav__link">
-    Method 0 - Standard Prior
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#method-iii-bayesian-prior" class="md-nav__link">
-    Method III - Bayesian Prior
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -7046,487 +7008,49 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/jejjohnson/research_journal/edit/master/docs/projects/ErrorGPs/Variational/egp_pyro_vgp/egp_pyro_vgp.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/jejjohnson/research_journal/edit/master/docs/tutorials/pytorch_nns/4_sweeps.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z" /></svg>
                   </a>
                 
                 
                   
-                    
-
-
-  
-
-
-<a href="https://github.com/jejjohnson/research_journal/docs/projects/ErrorGPs/Variational/egp_pyro_sgp.md" title="egp_pyro_sgp.md" class="md-content__button md-icon">
-  Source
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
-</a>
-                  
                 
                 
-                  <h1>eVGP 1D Demo</h1>
-                
-                <div class="highlight"><pre><span></span><code><span class="c1">#@title Package Install</span>
-<span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">pyro</span><span class="o">-</span><span class="n">ppl</span> 
+                <h1 id="sweeps-using-weights-and-biases">Sweeps using Weights and Biases<a class="headerlink" href="#sweeps-using-weights-and-biases" title="Permanent link">&para;</a></h1>
+<p>In this tutorial, we're going to do a simple script which will allow us to do sweeps using weights and biases. </p>
+<h3 id="import-libraries">Import Libraries<a class="headerlink" href="#import-libraries" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pytorch_lightning</span> <span class="k">as</span> <span class="nn">pl</span>
+<span class="kn">from</span> <span class="nn">pytorch_lightning.loggers</span> <span class="kn">import</span> <span class="n">WandbLogger</span>
 </code></pre></div>
 
-<div class="codehilite"><pre><span></span><code>Collecting pyro-ppl
-[?25l  Downloading https://files.pythonhosted.org/packages/c0/77/4db4946f6b5bf0601869c7b7594def42a7197729167484e1779fff5ca0d6/pyro_ppl-1.3.1-py3-none-any.whl (520kB)
-[K     |████████████████████████████████| 522kB 6.4MB/s eta 0:00:01
-[?25hRequirement already satisfied: opt-einsum&gt;=2.3.2 in /usr/local/lib/python3.6/dist-packages (from pyro-ppl) (3.2.1)
-Requirement already satisfied: numpy&gt;=1.7 in /usr/local/lib/python3.6/dist-packages (from pyro-ppl) (1.18.3)
-Requirement already satisfied: tqdm&gt;=4.36 in /usr/local/lib/python3.6/dist-packages (from pyro-ppl) (4.38.0)
-Requirement already satisfied: torch&gt;=1.4.0 in /usr/local/lib/python3.6/dist-packages (from pyro-ppl) (1.4.0)
-Collecting pyro-api&gt;=0.1.1
-  Downloading https://files.pythonhosted.org/packages/c2/bc/6cdbd1929e32fff62a33592633c2cc0393c7f7739131ccc9c9c4e28ac8dd/pyro_api-0.1.1-py3-none-any.whl
-Installing collected packages: pyro-api, pyro-ppl
-Successfully installed pyro-api-0.1.1 pyro-ppl-1.3.1
+<h3 id="ml-model">ML Model<a class="headerlink" href="#ml-model" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code> <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+   <span class="nb">super</span><span class="p">(</span><span class="n">LightningMNISTClassifier</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+
+   <span class="c1"># mnist images are (1, 28, 28) (channels, width, height)</span>
+   <span class="bp">self</span><span class="o">.</span><span class="n">layer_1</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">28</span> <span class="o">*</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">128</span><span class="p">)</span>
+   <span class="bp">self</span><span class="o">.</span><span class="n">layer_2</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="mi">256</span><span class="p">)</span>
+   <span class="bp">self</span><span class="o">.</span><span class="n">layer_3</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">256</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+ <span class="k">def</span> <span class="nf">prepare_data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+   <span class="c1"># prepare transforms standard to MNIST</span>
+   <span class="n">MNIST</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="n">train</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">download</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+   <span class="n">MNIST</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="n">train</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">download</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+ <span class="k">def</span> <span class="nf">train_dataloader</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+   <span class="c1">#Load the dataset</span>
+   <span class="n">mnist_train</span> <span class="o">=</span> <span class="n">DataLoader</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mnist_train</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">64</span><span class="p">)</span>
+   <span class="k">return</span> <span class="n">mnist_train</span>
+
+ <span class="k">def</span> <span class="nf">val_dataloader</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+   <span class="c1">#Load val dataset</span>
+   <span class="n">mnist_val</span> <span class="o">=</span> <span class="n">DataLoader</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mnist_val</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">64</span><span class="p">)</span>
+   <span class="k">return</span> <span class="n">mnist_val</span>
+
+ <span class="k">def</span> <span class="nf">test_dataloader</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+   <span class="c1">#Load test data</span>
+   <span class="n">mnist_test</span> <span class="o">=</span> <span class="n">DataLoader</span><span class="p">(</span><span class="n">mnist_test</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">64</span><span class="p">)</span>
+   <span class="k">return</span> <span class="n">mnist_test</span>
 </code></pre></div>
-
-
-<div class="highlight"><pre><span></span><code><span class="c1">#@title Import Packages</span>
-<span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">time</span>
-<span class="kn">import</span> <span class="nn">torch</span>
-<span class="kn">from</span> <span class="nn">torch.nn</span> <span class="kn">import</span> <span class="n">Parameter</span>
-<span class="kn">import</span> <span class="nn">pyro</span>
-<span class="kn">import</span> <span class="nn">pyro.contrib.gp</span> <span class="k">as</span> <span class="nn">gp</span>
-<span class="kn">import</span> <span class="nn">pyro.distributions</span> <span class="k">as</span> <span class="nn">dist</span>
-<span class="kn">from</span> <span class="nn">pyro.nn</span> <span class="kn">import</span> <span class="n">PyroSample</span><span class="p">,</span> <span class="n">PyroParam</span>
-<span class="kn">from</span> <span class="nn">scipy.cluster.vq</span> <span class="kn">import</span> <span class="n">kmeans2</span>
-
-<span class="n">smoke_test</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;CI&#39;</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">)</span>  <span class="c1"># ignore; used to check code integrity in the Pyro repo</span>
-<span class="c1"># assert pyro.__version__.startswith(&#39;0.5.1&#39;)</span>
-<span class="n">pyro</span><span class="o">.</span><span class="n">enable_validation</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>       <span class="c1"># can help with debugging</span>
-<span class="n">pyro</span><span class="o">.</span><span class="n">set_rng_seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-
-<span class="c1"># import matplotlib.pyplot as plt</span>
-<span class="c1"># plt.style.use([&#39;seaborn-darkgrid&#39;, &#39;seaborn-notebook&#39;])</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-
-<span class="n">sns</span><span class="o">.</span><span class="n">reset_defaults</span><span class="p">()</span>
-<span class="c1">#sns.set_style(&#39;whitegrid&#39;)</span>
-<span class="c1">#sns.set_context(&#39;talk&#39;)</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">set_context</span><span class="p">(</span><span class="n">context</span><span class="o">=</span><span class="s1">&#39;talk&#39;</span><span class="p">,</span><span class="n">font_scale</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
-<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
-</code></pre></div>
-
-<div class="codehilite"><pre><span></span><code>/usr/local/lib/python3.6/dist-packages/statsmodels/tools/_testing.py:19: FutureWarning: pandas.util.testing is deprecated. Use the functions in the public API at pandas.testing instead.
-  import pandas.util.testing as tm
-</code></pre></div>
-
-
-<div class="highlight"><pre><span></span><code><span class="c1">#@title Plot Utils</span>
-<span class="c1"># note that this helper function does three different things:</span>
-<span class="c1"># (i) plots the observed data;</span>
-<span class="c1"># (ii) plots the predictions from the learned GP after conditioning on data;</span>
-<span class="c1"># (iii) plots samples from the GP prior (with no conditioning on observed data)</span>
-
-<span class="k">def</span> <span class="nf">plot</span><span class="p">(</span><span class="n">plot_observed_data</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">plot_predictions</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">n_prior_samples</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
-         <span class="n">model</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">kernel</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">n_test</span><span class="o">=</span><span class="mi">500</span><span class="p">):</span>
-
-    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
-    <span class="k">if</span> <span class="n">plot_observed_data</span><span class="p">:</span>
-        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">numpy</span><span class="p">(),</span> <span class="n">y</span><span class="o">.</span><span class="n">numpy</span><span class="p">(),</span> <span class="s1">&#39;kx&#39;</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">plot_predictions</span><span class="p">:</span>
-        <span class="n">Xtest</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">,</span> <span class="n">n_test</span><span class="p">)</span>  <span class="c1"># test inputs</span>
-        <span class="c1"># compute predictive mean and variance</span>
-        <span class="k">with</span> <span class="n">torch</span><span class="o">.</span><span class="n">no_grad</span><span class="p">():</span>
-            <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">model</span><span class="p">)</span> <span class="o">==</span> <span class="n">gp</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">VariationalSparseGP</span><span class="p">:</span>
-                <span class="n">mean</span><span class="p">,</span> <span class="n">cov</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="n">Xtest</span><span class="p">,</span> <span class="n">full_cov</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-            <span class="k">else</span><span class="p">:</span>
-                <span class="k">try</span><span class="p">:</span>
-                    <span class="n">mean</span><span class="p">,</span> <span class="n">cov</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="n">Xtest</span><span class="p">,</span> <span class="n">full_cov</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">noiseless</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-                <span class="k">except</span><span class="p">:</span>
-                    <span class="n">mean</span><span class="p">,</span> <span class="n">cov</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="n">Xtest</span><span class="p">)</span>
-        <span class="n">sd</span> <span class="o">=</span> <span class="n">cov</span><span class="o">.</span><span class="n">diag</span><span class="p">()</span><span class="o">.</span><span class="n">sqrt</span><span class="p">()</span>  <span class="c1"># standard deviation at each input point x</span>
-        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Xtest</span><span class="o">.</span><span class="n">numpy</span><span class="p">(),</span> <span class="n">mean</span><span class="o">.</span><span class="n">numpy</span><span class="p">(),</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># plot the mean</span>
-        <span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">Xtest</span><span class="o">.</span><span class="n">numpy</span><span class="p">(),</span>  <span class="c1"># plot the two-sigma uncertainty about the mean</span>
-                         <span class="p">(</span><span class="n">mean</span> <span class="o">-</span> <span class="mf">2.0</span> <span class="o">*</span> <span class="n">sd</span><span class="p">)</span><span class="o">.</span><span class="n">numpy</span><span class="p">(),</span>
-                         <span class="p">(</span><span class="n">mean</span> <span class="o">+</span> <span class="mf">2.0</span> <span class="o">*</span> <span class="n">sd</span><span class="p">)</span><span class="o">.</span><span class="n">numpy</span><span class="p">(),</span>
-                         <span class="n">color</span><span class="o">=</span><span class="s1">&#39;C0&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">n_prior_samples</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># plot samples from the GP prior</span>
-        <span class="n">Xtest</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">,</span> <span class="n">n_test</span><span class="p">)</span>  <span class="c1"># test inputs</span>
-        <span class="n">noise</span> <span class="o">=</span> <span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">noise</span> <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">model</span><span class="p">)</span> <span class="o">!=</span> <span class="n">gp</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">VariationalSparseGP</span>
-                 <span class="k">else</span> <span class="n">model</span><span class="o">.</span><span class="n">likelihood</span><span class="o">.</span><span class="n">variance</span><span class="p">)</span>
-        <span class="n">cov</span> <span class="o">=</span> <span class="n">kernel</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">Xtest</span><span class="p">)</span> <span class="o">+</span> <span class="n">noise</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="n">n_test</span><span class="p">)</span><span class="o">.</span><span class="n">diag</span><span class="p">()</span>
-        <span class="n">samples</span> <span class="o">=</span> <span class="n">dist</span><span class="o">.</span><span class="n">MultivariateNormal</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_test</span><span class="p">),</span> <span class="n">covariance_matrix</span><span class="o">=</span><span class="n">cov</span><span class="p">)</span>\
-                      <span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">sample_shape</span><span class="o">=</span><span class="p">(</span><span class="n">n_prior_samples</span><span class="p">,))</span>
-        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Xtest</span><span class="o">.</span><span class="n">numpy</span><span class="p">(),</span> <span class="n">samples</span><span class="o">.</span><span class="n">numpy</span><span class="p">()</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
-
-    <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1">#@title Data</span>
-<span class="n">n_samples</span> <span class="o">=</span> <span class="mi">100</span>
-<span class="n">t_samples</span> <span class="o">=</span> <span class="mi">1_000</span>
-<span class="n">x_var</span> <span class="o">=</span> <span class="mf">0.1</span>
-<span class="n">y_var</span> <span class="o">=</span> <span class="mf">0.05</span> 
-<span class="n">X_mu</span> <span class="o">=</span> <span class="n">dist</span><span class="o">.</span><span class="n">Uniform</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">)</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">sample_shape</span><span class="o">=</span><span class="p">(</span><span class="n">n_samples</span><span class="p">,))</span> 
-<span class="n">X_test</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">0.05</span><span class="p">,</span> <span class="mf">5.05</span><span class="p">,</span> <span class="n">t_samples</span><span class="p">)</span>
-<span class="n">y_mu</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.5</span> <span class="o">*</span> <span class="n">torch</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mf">1.6</span> <span class="o">*</span> <span class="n">X_mu</span><span class="p">)</span> 
-
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X_mu</span><span class="o">.</span><span class="n">numpy</span><span class="p">(),</span> <span class="n">y_mu</span><span class="o">.</span><span class="n">numpy</span><span class="p">())</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Clean Dataset&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;$\mu_x$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;$y$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</code></pre></div>
-
-<p><img alt="png" src="../output_4_0.png" /></p>
-<div class="highlight"><pre><span></span><code><span class="c1">#@title Plot Noisy Data</span>
-<span class="n">X</span> <span class="o">=</span> <span class="n">X_mu</span> <span class="o">+</span> <span class="n">dist</span><span class="o">.</span><span class="n">Normal</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">x_var</span><span class="p">)</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">sample_shape</span><span class="o">=</span><span class="p">(</span><span class="n">n_samples</span><span class="p">,))</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">y_mu</span> <span class="o">+</span> <span class="n">dist</span><span class="o">.</span><span class="n">Normal</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">y_var</span><span class="p">)</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">sample_shape</span><span class="o">=</span><span class="p">(</span><span class="n">n_samples</span><span class="p">,))</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">numpy</span><span class="p">(),</span> <span class="n">y</span><span class="o">.</span><span class="n">numpy</span><span class="p">())</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Noisy Dataset&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;$X = \mu_x + \epsilon_x$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;$y + \epsilon_y$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-
-<span class="n">X</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
-<span class="n">X_test</span> <span class="o">=</span> <span class="n">X_test</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
-</code></pre></div>
-
-<p><img alt="png" src="../output_5_0.png" /></p>
-<h2 id="variational-gp-regression">Variational GP Regression<a class="headerlink" href="#variational-gp-regression" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="c1">#@title Model</span>
-<span class="c1"># initialize the kernel and model</span>
-<span class="n">kernel</span> <span class="o">=</span> <span class="n">gp</span><span class="o">.</span><span class="n">kernels</span><span class="o">.</span><span class="n">RBF</span><span class="p">(</span><span class="n">input_dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">likelihood</span> <span class="o">=</span> <span class="n">gp</span><span class="o">.</span><span class="n">likelihoods</span><span class="o">.</span><span class="n">Gaussian</span><span class="p">()</span>
-
-<span class="c1"># we increase the jitter for better numerical stability</span>
-<span class="n">vgp</span> <span class="o">=</span> <span class="n">gp</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">VariationalGP</span><span class="p">(</span>
-    <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">kernel</span><span class="p">,</span> <span class="n">likelihood</span><span class="o">=</span><span class="n">likelihood</span><span class="p">,</span> <span class="n">whiten</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">jitter</span><span class="o">=</span><span class="mf">1e-3</span>
-<span class="p">)</span>
-
-<span class="n">vgp</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
-</code></pre></div>
-
-<div class="codehilite"><pre><span></span><code>VariationalGP(
-  (kernel): RBF()
-  (likelihood): Gaussian()
-)
-</code></pre></div>
-
-
-<div class="highlight"><pre><span></span><code><span class="c1">#@title Inference</span>
-
-<span class="c1"># the way we setup inference is similar to above</span>
-<span class="n">elbo</span> <span class="o">=</span> <span class="n">pyro</span><span class="o">.</span><span class="n">infer</span><span class="o">.</span><span class="n">TraceMeanField_ELBO</span><span class="p">()</span>
-<span class="n">loss_fn</span> <span class="o">=</span> <span class="n">elbo</span><span class="o">.</span><span class="n">differentiable_loss</span>
-<span class="n">optimizer</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">Adam</span><span class="p">(</span><span class="n">vgp</span><span class="o">.</span><span class="n">parameters</span><span class="p">(),</span> <span class="n">lr</span><span class="o">=</span><span class="mf">0.01</span><span class="p">)</span>
-
-<span class="n">num_steps</span> <span class="o">=</span> <span class="mi">2_000</span>
-<span class="n">t0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-<span class="n">losses</span> <span class="o">=</span> <span class="n">gp</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="n">vgp</span><span class="p">,</span> <span class="n">num_steps</span><span class="o">=</span><span class="n">num_steps</span><span class="p">,</span> <span class="n">loss_fn</span><span class="o">=</span><span class="n">loss_fn</span><span class="p">,</span> <span class="n">optimizer</span><span class="o">=</span><span class="n">optimizer</span><span class="p">)</span>
-<span class="n">t1</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">t0</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Time Taken: </span><span class="si">{</span><span class="n">t1</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> secs&quot;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="codehilite"><pre><span></span><code>Time Taken: 29.33 secs
-</code></pre></div>
-
-
-<div class="highlight"><pre><span></span><code><span class="c1">#@title Losses</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">losses</span><span class="p">);</span>
-</code></pre></div>
-
-<p><img alt="png" src="../output_9_0.png" /></p>
-<div class="highlight"><pre><span></span><code><span class="c1">#@title Predictions</span>
-<span class="n">X_plot</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">X</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-<span class="k">with</span> <span class="n">torch</span><span class="o">.</span><span class="n">no_grad</span><span class="p">():</span>
-    <span class="n">mean</span><span class="p">,</span> <span class="n">cov</span> <span class="o">=</span> <span class="n">vgp</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">full_cov</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">std</span> <span class="o">=</span> <span class="n">cov</span><span class="o">.</span><span class="n">diag</span><span class="p">()</span><span class="o">.</span><span class="n">sqrt</span><span class="p">()</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1">#@title Plots</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
-
-<span class="c1"># Training Data</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">cpu</span><span class="p">()</span><span class="o">.</span><span class="n">numpy</span><span class="p">(),</span> <span class="n">y</span><span class="o">.</span><span class="n">cpu</span><span class="p">()</span><span class="o">.</span><span class="n">numpy</span><span class="p">(),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Training Data&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-
-<span class="c1"># Test Data</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X_test</span><span class="o">.</span><span class="n">cpu</span><span class="p">()</span><span class="o">.</span><span class="n">numpy</span><span class="p">(),</span> <span class="n">mean</span><span class="o">.</span><span class="n">cpu</span><span class="p">()</span><span class="o">.</span><span class="n">numpy</span><span class="p">(),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Predictive Mean&#39;</span><span class="p">)</span>  <span class="c1"># plot the mean</span>
-
-<span class="c1"># Inducing Points</span>
-<span class="c1"># plt.scatter(vsgp.Xu.cpu().detach().numpy(), -0.75 * torch.ones(int(n_inducing)).cpu().numpy(), color=&#39;g&#39;, marker=&#39;*&#39;, s=200, label=&#39;Inducing Inputs&#39;)</span>
-
-<span class="c1"># Confidence Intervals</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span>
-    <span class="n">X_test</span><span class="o">.</span><span class="n">cpu</span><span class="p">()</span><span class="o">.</span><span class="n">numpy</span><span class="p">(),</span>  <span class="c1"># plot the two-sigma uncertainty about the mean</span>
-    <span class="p">(</span><span class="n">mean</span> <span class="o">-</span> <span class="mf">2.0</span> <span class="o">*</span> <span class="n">std</span><span class="p">)</span><span class="o">.</span><span class="n">cpu</span><span class="p">()</span><span class="o">.</span><span class="n">numpy</span><span class="p">(),</span>
-    <span class="p">(</span><span class="n">mean</span> <span class="o">+</span> <span class="mf">2.0</span> <span class="o">*</span> <span class="n">std</span><span class="p">)</span><span class="o">.</span><span class="n">cpu</span><span class="p">()</span><span class="o">.</span><span class="n">numpy</span><span class="p">(),</span>
-    <span class="n">color</span><span class="o">=</span><span class="s1">&#39;C0&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span>
-    <span class="n">label</span><span class="o">=</span><span class="s1">&#39;2 Stddev&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Variational GP&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</code></pre></div>
-
-<p><img alt="png" src="../output_11_0.png" /></p>
-<p>So virtually no error bars. There have been reports that error bars in regression datasets is a problem. But this is a bit ridiculous.</p>
-<h2 id="vgp-w-uncertain-inputs">VGP w. Uncertain Inputs<a class="headerlink" href="#vgp-w-uncertain-inputs" title="Permanent link">&para;</a></h2>
-<h3 id="method-0-standard-prior">Method 0 - Standard Prior<a class="headerlink" href="#method-0-standard-prior" title="Permanent link">&para;</a></h3>
-<p>In this method I will be imposing the following constraints:</p>
-<div>
-<div class="MathJax_Preview">
-\begin{aligned}
-p(\mathbf{X}) &amp;\sim \mathcal{N}(\mu_x, \mathbf{I})\\
-q(\mathbf{X}) &amp;\sim \mathcal{N}(\mathbf{m,S})
-\end{aligned}
-</div>
-<script type="math/tex; mode=display">
-\begin{aligned}
-p(\mathbf{X}) &\sim \mathcal{N}(\mu_x, \mathbf{I})\\
-q(\mathbf{X}) &\sim \mathcal{N}(\mathbf{m,S})
-\end{aligned}
-</script>
-</div>
-<p>where <span><span class="MathJax_Preview">\mathbf{S}</span><script type="math/tex">\mathbf{S}</script></span> is a free parameter.</p>
-<div class="highlight"><pre><span></span><code><span class="c1">#@title Model</span>
-<span class="c1"># make X a latent variable</span>
-<span class="n">Xmu</span> <span class="o">=</span> <span class="n">Parameter</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">clone</span><span class="p">(),</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-
-<span class="c1"># initialize the kernel and model</span>
-<span class="n">kernel</span> <span class="o">=</span> <span class="n">gp</span><span class="o">.</span><span class="n">kernels</span><span class="o">.</span><span class="n">RBF</span><span class="p">(</span><span class="n">input_dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">likelihood</span> <span class="o">=</span> <span class="n">gp</span><span class="o">.</span><span class="n">likelihoods</span><span class="o">.</span><span class="n">Gaussian</span><span class="p">()</span>
-
-<span class="c1"># we increase the jitter for better numerical stability</span>
-<span class="n">evgp</span> <span class="o">=</span> <span class="n">gp</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">VariationalGP</span><span class="p">(</span>
-    <span class="n">Xmu</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">kernel</span><span class="p">,</span> <span class="n">likelihood</span><span class="o">=</span><span class="n">likelihood</span><span class="p">,</span> <span class="n">whiten</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">jitter</span><span class="o">=</span><span class="mf">1e-3</span>
-<span class="p">)</span>
-
-<span class="c1"># ==============================</span>
-<span class="c1"># Prior Distribution, p(X)</span>
-<span class="c1"># ==============================</span>
-
-<span class="c1"># create priors mu_x, sigma_x </span>
-<span class="n">X_prior_mean</span> <span class="o">=</span> <span class="n">Parameter</span><span class="p">(</span><span class="n">Xmu</span><span class="o">.</span><span class="n">clone</span><span class="p">(),</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
-<span class="n">X_prior_std</span> <span class="o">=</span> <span class="n">Parameter</span><span class="p">(</span><span class="mf">0.1</span> <span class="o">*</span> <span class="n">torch</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">Xmu</span><span class="o">.</span><span class="n">size</span><span class="p">()),</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
-
-<span class="c1"># set prior distribution for p(X) as N(Xmu, diag(0.1))</span>
-<span class="n">evgp</span><span class="o">.</span><span class="n">X</span> <span class="o">=</span> <span class="n">PyroSample</span><span class="p">(</span>
-    <span class="n">dist</span><span class="o">.</span><span class="n">Normal</span><span class="p">(</span>     <span class="c1"># Normal Distribution</span>
-    <span class="n">X_prior_mean</span><span class="p">,</span>    <span class="c1"># Prior Mean </span>
-    <span class="n">X_prior_std</span>      <span class="c1"># Prior Variance</span>
-    <span class="p">)</span><span class="o">.</span><span class="n">to_event</span><span class="p">())</span>
-
-
-<span class="c1"># ==============================</span>
-<span class="c1"># Variational Distribution, q(X)</span>
-<span class="c1"># ============================== </span>
-
-<span class="c1"># create guide, i.e. variational parameters</span>
-<span class="n">evgp</span><span class="o">.</span><span class="n">autoguide</span><span class="p">(</span><span class="s2">&quot;X&quot;</span><span class="p">,</span> <span class="n">dist</span><span class="o">.</span><span class="n">Normal</span><span class="p">)</span>
-
-<span class="c1"># create priors for variational parameters</span>
-<span class="n">X_var_loc</span> <span class="o">=</span> <span class="n">Parameter</span><span class="p">(</span><span class="n">Xmu</span><span class="o">.</span><span class="n">clone</span><span class="p">(),</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
-<span class="n">X_var_scale</span> <span class="o">=</span> <span class="n">Parameter</span><span class="p">(</span><span class="n">x_var</span> <span class="o">*</span> <span class="n">torch</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="n">Xmu</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])),</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
-
-<span class="c1"># set quide (variational params) to be N(mu_q, sigma_q)</span>
-<span class="n">evgp</span><span class="o">.</span><span class="n">X_loc</span> <span class="o">=</span> <span class="n">X_var_loc</span>
-<span class="n">evgp</span><span class="o">.</span><span class="n">X_scale</span> <span class="o">=</span> <span class="n">PyroParam</span><span class="p">(</span><span class="n">X_var_scale</span><span class="p">,</span> <span class="n">dist</span><span class="o">.</span><span class="n">constraints</span><span class="o">.</span><span class="n">positive</span><span class="p">)</span>
-<span class="c1"># evgp.set_constraint(&quot;X_scale&quot;, dist.constraints.positive)</span>
-
-<span class="c1"># Convert to CUDA</span>
-<span class="n">evgp</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
-</code></pre></div>
-
-<div class="codehilite"><pre><span></span><code>VariationalGP(
-  (kernel): RBF()
-  (likelihood): Gaussian()
-)
-</code></pre></div>
-
-
-<div class="highlight"><pre><span></span><code><span class="c1">#@title Inference</span>
-
-<span class="c1"># the way we setup inference is similar to above</span>
-<span class="n">elbo</span> <span class="o">=</span> <span class="n">pyro</span><span class="o">.</span><span class="n">infer</span><span class="o">.</span><span class="n">TraceMeanField_ELBO</span><span class="p">()</span>
-<span class="n">loss_fn</span> <span class="o">=</span> <span class="n">elbo</span><span class="o">.</span><span class="n">differentiable_loss</span>
-<span class="n">optimizer</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">Adam</span><span class="p">(</span><span class="n">evgp</span><span class="o">.</span><span class="n">parameters</span><span class="p">(),</span> <span class="n">lr</span><span class="o">=</span><span class="mf">0.01</span><span class="p">)</span>
-
-<span class="n">num_steps</span> <span class="o">=</span> <span class="mi">2_000</span>
-<span class="n">t0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-<span class="n">losses</span> <span class="o">=</span> <span class="n">gp</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="n">evgp</span><span class="p">,</span> <span class="n">num_steps</span><span class="o">=</span><span class="n">num_steps</span><span class="p">,</span> <span class="n">loss_fn</span><span class="o">=</span><span class="n">loss_fn</span><span class="p">,</span> <span class="n">optimizer</span><span class="o">=</span><span class="n">optimizer</span><span class="p">)</span>
-<span class="n">t1</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">t0</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Time Taken: </span><span class="si">{</span><span class="n">t1</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> secs&quot;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="codehilite"><pre><span></span><code>Time Taken: 34.96 secs
-</code></pre></div>
-
-
-<div class="highlight"><pre><span></span><code><span class="c1">#@title Losses</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">losses</span><span class="p">);</span>
-</code></pre></div>
-
-<p><img alt="png" src="../output_17_0.png" /></p>
-<div class="highlight"><pre><span></span><code><span class="c1">#@title Predictive Mean, Var</span>
-
-<span class="n">X_plot</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">X</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-<span class="k">with</span> <span class="n">torch</span><span class="o">.</span><span class="n">no_grad</span><span class="p">():</span>
-    <span class="n">mean</span><span class="p">,</span> <span class="n">cov</span> <span class="o">=</span> <span class="n">evgp</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">full_cov</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="n">std</span> <span class="o">=</span> <span class="n">cov</span><span class="o">.</span><span class="n">sqrt</span><span class="p">()</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
-
-<span class="c1"># Training Data</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">cpu</span><span class="p">()</span><span class="o">.</span><span class="n">numpy</span><span class="p">(),</span> <span class="n">y</span><span class="o">.</span><span class="n">cpu</span><span class="p">()</span><span class="o">.</span><span class="n">numpy</span><span class="p">(),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Training Data&#39;</span><span class="p">)</span>
-
-<span class="c1"># Test Data</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X_test</span><span class="o">.</span><span class="n">cpu</span><span class="p">()</span><span class="o">.</span><span class="n">numpy</span><span class="p">(),</span> <span class="n">mean</span><span class="o">.</span><span class="n">cpu</span><span class="p">()</span><span class="o">.</span><span class="n">numpy</span><span class="p">(),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Predictive Mean&#39;</span><span class="p">)</span>  <span class="c1"># plot the mean</span>
-
-<span class="c1"># Confidence Intervals</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span>
-    <span class="n">X_test</span><span class="o">.</span><span class="n">cpu</span><span class="p">()</span><span class="o">.</span><span class="n">numpy</span><span class="p">(),</span>  <span class="c1"># plot the two-sigma uncertainty about the mean</span>
-    <span class="p">(</span><span class="n">mean</span> <span class="o">-</span> <span class="mf">2.0</span> <span class="o">*</span> <span class="n">std</span><span class="p">)</span><span class="o">.</span><span class="n">cpu</span><span class="p">()</span><span class="o">.</span><span class="n">numpy</span><span class="p">(),</span>
-    <span class="p">(</span><span class="n">mean</span> <span class="o">+</span> <span class="mf">2.0</span> <span class="o">*</span> <span class="n">std</span><span class="p">)</span><span class="o">.</span><span class="n">cpu</span><span class="p">()</span><span class="o">.</span><span class="n">numpy</span><span class="p">(),</span>
-    <span class="n">color</span><span class="o">=</span><span class="s1">&#39;C0&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span>
-    <span class="n">label</span><span class="o">=</span><span class="s1">&#39;2 Stddev&#39;</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Variational GP, Standard Prior&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</code></pre></div>
-
-<p><img alt="png" src="../output_18_0.png" /></p>
-<h3 id="method-iii-bayesian-prior">Method III - Bayesian Prior<a class="headerlink" href="#method-iii-bayesian-prior" title="Permanent link">&para;</a></h3>
-<p>In this method I will be imposing the following constraints:</p>
-<div>
-<div class="MathJax_Preview">
-\begin{aligned}
-p(\mathbf{X}) &amp;\sim \mathcal{N}(\mu_x, \Sigma_x)\\
-q(\mathbf{X}) &amp;\sim \mathcal{N}(\mathbf{m,S})
-\end{aligned}
-</div>
-<script type="math/tex; mode=display">
-\begin{aligned}
-p(\mathbf{X}) &\sim \mathcal{N}(\mu_x, \Sigma_x)\\
-q(\mathbf{X}) &\sim \mathcal{N}(\mathbf{m,S})
-\end{aligned}
-</script>
-</div>
-<p>where <span><span class="MathJax_Preview">\mathbf{S}</span><script type="math/tex">\mathbf{S}</script></span> is a free parameter.</p>
-<div class="highlight"><pre><span></span><code><span class="c1">#@title Model</span>
-<span class="c1"># make X a latent variable</span>
-<span class="n">Xmu</span> <span class="o">=</span> <span class="n">Parameter</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">clone</span><span class="p">(),</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-
-<span class="c1"># initialize the kernel and model</span>
-<span class="n">kernel</span> <span class="o">=</span> <span class="n">gp</span><span class="o">.</span><span class="n">kernels</span><span class="o">.</span><span class="n">RBF</span><span class="p">(</span><span class="n">input_dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">likelihood</span> <span class="o">=</span> <span class="n">gp</span><span class="o">.</span><span class="n">likelihoods</span><span class="o">.</span><span class="n">Gaussian</span><span class="p">()</span>
-
-<span class="c1"># we increase the jitter for better numerical stability</span>
-<span class="n">evgp</span> <span class="o">=</span> <span class="n">gp</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">VariationalGP</span><span class="p">(</span>
-    <span class="n">Xmu</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">kernel</span><span class="p">,</span> <span class="n">likelihood</span><span class="o">=</span><span class="n">likelihood</span><span class="p">,</span> <span class="n">whiten</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">jitter</span><span class="o">=</span><span class="mf">1e-3</span>
-<span class="p">)</span>
-
-<span class="c1"># ==============================</span>
-<span class="c1"># Prior Distribution, p(X)</span>
-<span class="c1"># ==============================</span>
-
-<span class="c1"># set prior distribution to X to be N(Xmu,I)</span>
-<span class="n">X_prior_mean</span> <span class="o">=</span> <span class="n">Parameter</span><span class="p">(</span><span class="n">Xmu</span><span class="o">.</span><span class="n">clone</span><span class="p">(),</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
-<span class="n">X_prior_std</span> <span class="o">=</span> <span class="n">Parameter</span><span class="p">(</span><span class="n">x_var</span> <span class="o">*</span> <span class="n">torch</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">Xmu</span><span class="o">.</span><span class="n">size</span><span class="p">()),</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
-<span class="n">evgp</span><span class="o">.</span><span class="n">X</span> <span class="o">=</span> <span class="n">PyroSample</span><span class="p">(</span>
-    <span class="n">dist</span><span class="o">.</span><span class="n">Normal</span><span class="p">(</span>     <span class="c1"># Normal Distribution</span>
-    <span class="n">X_prior_mean</span><span class="p">,</span>    <span class="c1"># Prior Mean </span>
-    <span class="n">X_prior_std</span>      <span class="c1"># Prior Variance</span>
-    <span class="p">)</span><span class="o">.</span><span class="n">to_event</span><span class="p">())</span>
-
-
-<span class="c1"># ==============================</span>
-<span class="c1"># Variational Distribution, q(X)</span>
-<span class="c1"># ============================== </span>
-
-<span class="c1"># create guide, i.e. variational parameters</span>
-<span class="n">evgp</span><span class="o">.</span><span class="n">autoguide</span><span class="p">(</span><span class="s2">&quot;X&quot;</span><span class="p">,</span> <span class="n">dist</span><span class="o">.</span><span class="n">Normal</span><span class="p">)</span>
-
-<span class="c1"># create priors for variational parameters</span>
-<span class="n">X_var_loc</span> <span class="o">=</span> <span class="n">Parameter</span><span class="p">(</span><span class="n">Xmu</span><span class="o">.</span><span class="n">clone</span><span class="p">(),</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
-<span class="n">X_var_scale</span> <span class="o">=</span> <span class="n">Parameter</span><span class="p">(</span><span class="n">x_var</span> <span class="o">*</span> <span class="n">torch</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="n">Xmu</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])),</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
-
-<span class="c1"># set quide (variational params) to be N(mu_q, sigma_q)</span>
-<span class="n">evgp</span><span class="o">.</span><span class="n">X_loc</span> <span class="o">=</span> <span class="n">X_var_loc</span>
-<span class="n">evgp</span><span class="o">.</span><span class="n">X_scale</span> <span class="o">=</span> <span class="n">PyroParam</span><span class="p">(</span><span class="n">X_var_scale</span><span class="p">,</span> <span class="n">dist</span><span class="o">.</span><span class="n">constraints</span><span class="o">.</span><span class="n">positive</span><span class="p">)</span>
-
-<span class="c1"># Convert to CUDA</span>
-<span class="n">evgp</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
-</code></pre></div>
-
-<div class="codehilite"><pre><span></span><code>VariationalGP(
-  (kernel): RBF()
-  (likelihood): Gaussian()
-)
-</code></pre></div>
-
-
-<div class="highlight"><pre><span></span><code><span class="c1">#@title Inference</span>
-
-<span class="c1"># the way we setup inference is similar to above</span>
-<span class="n">optimizer</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">Adam</span><span class="p">(</span><span class="n">evgp</span><span class="o">.</span><span class="n">parameters</span><span class="p">(),</span> <span class="n">lr</span><span class="o">=</span><span class="mf">0.01</span><span class="p">)</span>
-
-<span class="n">num_steps</span> <span class="o">=</span> <span class="mi">2_000</span>
-<span class="n">t0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-<span class="n">losses</span> <span class="o">=</span> <span class="n">gp</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="n">evgp</span><span class="p">,</span> <span class="n">num_steps</span><span class="o">=</span><span class="n">num_steps</span><span class="p">,</span> <span class="n">loss_fn</span><span class="o">=</span><span class="n">loss_fn</span><span class="p">,</span> <span class="n">optimizer</span><span class="o">=</span><span class="n">optimizer</span><span class="p">)</span>
-<span class="n">t1</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">t0</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Time Taken: </span><span class="si">{</span><span class="n">t1</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> secs&quot;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="codehilite"><pre><span></span><code>Time Taken: 35.74 secs
-</code></pre></div>
-
-
-<div class="highlight"><pre><span></span><code><span class="c1">#@title Losses</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">losses</span><span class="p">);</span>
-</code></pre></div>
-
-<p><img alt="png" src="../output_22_0.png" /></p>
-<div class="highlight"><pre><span></span><code><span class="c1">#@title Predictive Mean, Var</span>
-<span class="n">X_plot</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">X</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-<span class="k">with</span> <span class="n">torch</span><span class="o">.</span><span class="n">no_grad</span><span class="p">():</span>
-    <span class="n">mean</span><span class="p">,</span> <span class="n">cov</span> <span class="o">=</span> <span class="n">evgp</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">full_cov</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="n">std</span> <span class="o">=</span> <span class="n">cov</span><span class="o">.</span><span class="n">sqrt</span><span class="p">()</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
-
-<span class="c1"># Training Data</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">cpu</span><span class="p">()</span><span class="o">.</span><span class="n">numpy</span><span class="p">(),</span> <span class="n">y</span><span class="o">.</span><span class="n">cpu</span><span class="p">()</span><span class="o">.</span><span class="n">numpy</span><span class="p">(),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Training Data&#39;</span><span class="p">)</span>
-
-<span class="c1"># Test Data</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X_test</span><span class="o">.</span><span class="n">cpu</span><span class="p">()</span><span class="o">.</span><span class="n">numpy</span><span class="p">(),</span> <span class="n">mean</span><span class="o">.</span><span class="n">cpu</span><span class="p">()</span><span class="o">.</span><span class="n">numpy</span><span class="p">(),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Predictive Mean&#39;</span><span class="p">)</span>  <span class="c1"># plot the mean</span>
-
-<span class="c1"># # Inducing Points</span>
-<span class="c1"># plt.scatter(vsgp.Xu.cpu().detach().numpy(), -0.75 * torch.ones(int(n_inducing)).cpu().numpy(), color=&#39;g&#39;, marker=&#39;*&#39;, s=200, label=&#39;Inducing Inputs&#39;)</span>
-
-<span class="c1"># Confidence Intervals</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span>
-    <span class="n">X_test</span><span class="o">.</span><span class="n">cpu</span><span class="p">()</span><span class="o">.</span><span class="n">numpy</span><span class="p">(),</span>  <span class="c1"># plot the two-sigma uncertainty about the mean</span>
-    <span class="p">(</span><span class="n">mean</span> <span class="o">-</span> <span class="mf">2.0</span> <span class="o">*</span> <span class="n">std</span><span class="p">)</span><span class="o">.</span><span class="n">cpu</span><span class="p">()</span><span class="o">.</span><span class="n">numpy</span><span class="p">(),</span>
-    <span class="p">(</span><span class="n">mean</span> <span class="o">+</span> <span class="mf">2.0</span> <span class="o">*</span> <span class="n">std</span><span class="p">)</span><span class="o">.</span><span class="n">cpu</span><span class="p">()</span><span class="o">.</span><span class="n">numpy</span><span class="p">(),</span>
-    <span class="n">color</span><span class="o">=</span><span class="s1">&#39;C0&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span>
-    <span class="n">label</span><span class="o">=</span><span class="s1">&#39;2 Stddev&#39;</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Variational GP, Bayesian Prior&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</code></pre></div>
-
-<p><img alt="png" src="../output_23_0.png" /></p>
-                
-                  
                 
               
               
@@ -7545,7 +7069,7 @@ q(\mathbf{X}) &\sim \mathcal{N}(\mathbf{m,S})
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../../egp_pyro_svgp/egp_pyro_svgp/" title="eSVGP 1D Demo" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../2_refactor/" title="Refactoring" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
             </div>
@@ -7554,19 +7078,19 @@ q(\mathbf{X}) &\sim \mathcal{N}(\mathbf{m,S})
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                eSVGP 1D Demo
+                Refactoring
               </div>
             </div>
           </a>
         
         
-          <a href="../../../monte_carlo/demo/" title="MCMC eGP" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../_ideas/" title="PyTorch Ideas" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                MCMC eGP
+                PyTorch Ideas
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
@@ -7625,20 +7149,20 @@ q(\mathbf{X}) &\sim \mathcal{N}(\mathbf{m,S})
       
     </div>
     
-      <script src="../../../../../assets/javascripts/vendor.f81b9e8b.min.js"></script>
-      <script src="../../../../../assets/javascripts/bundle.23546af0.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../../../assets/javascripts/vendor.f81b9e8b.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.23546af0.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
       <script>
         app = initialize({
-          base: "../../../../..",
+          base: "../../..",
           features: [],
           search: Object.assign({
-            worker: "../../../../../assets/javascripts/worker/search.58d22e8e.min.js"
+            worker: "../../../assets/javascripts/worker/search.58d22e8e.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
       
-        <script src="../../../../../javascripts/extra.js"></script>
+        <script src="../../../javascripts/extra.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
