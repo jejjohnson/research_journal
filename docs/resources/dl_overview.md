@@ -3,19 +3,6 @@
 * Author: J. Emmanuel Johnson
 * Email: jemanjohnson34@gmail.com
 * Last Updated: 18-Jan-2020
-
----
-
-- [What is Deep Learning?](#what-is-deep-learning)
-- [Anatomy of good DL software](#anatomy-of-good-dl-software)
-- [Convergence of the Libraries](#convergence-of-the-libraries)
-- [So what to choose?](#so-what-to-choose)
-- [List of Software](#list-of-software)
-  - [Core Packages](#core-packages)
-    - [TensorFlow (TF)](#tensorflow-tf)
-    - [PyTorch](#pytorch)
-  - [Other Packages](#other-packages)
-
 ---
 
 ## What is Deep Learning?

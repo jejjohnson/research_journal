@@ -1,3 +1,29 @@
+# Monte Carlo
+
+
+## Algorithms
+
+* Monte Carlo (MC)
+* Markov Chain Monte Carlo (MCMC)
+* Metropolish-Hastings
+* Affine-Variant Sampling
+* Ensemble Sampling
+* Nested Sampling
+* Slice Sampling
+* Hamiltonian Monte Carlo (HMC)
+  * No U-Turn Sampler (NUTS)
+* Sequential Monte Carlo (SMC)
+* Importance Sampling
+
+
+
+
+---
+## Software
+
+
+
+
 ---
 ### Monte Carlo Sampling
 

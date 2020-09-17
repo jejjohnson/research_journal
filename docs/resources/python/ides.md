@@ -98,8 +98,11 @@ I would suggest that you learn VIM and hack your way into creating an IDE for yo
 
 If you're coming from MATLAB and want to minimize the amount of changes you do during the transition, then I recommend that you start with [Spyder](https://www.spyder-ide.org/). It is the most complete environment available to date for people who like working with everything at their fingertips in front of them; i.e. script, terminal, variable explorer, etc. It was put on hiatus for a while but it is now sponsored by QuantSight and NumFOCUS which means it has a proper team of devs. 
 
-![Screenshot](https://docs.spyder-ide.org/_images/mainwindow_default_1610.png)
+<center>
 
+![Screenshot](https://pbs.twimg.com/media/D7HozakXoAEeaWC.png)
+
+</center>
 
 **Source**: [Spyder Blog](https://www.spyder-ide.org/)
 
