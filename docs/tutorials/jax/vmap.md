@@ -116,10 +116,127 @@ Personally, I find this one more readable than the standard Jax implementation. 
 
 Well, even if you are going to write your code in a way that supports batch sizes, you're probably using this so that you can calculate gradients using the `jax.grad` function. You can only take a gradients of functions that output a scalar value. So this is the only way you can vectorize the computation without doing explicit loops.
 
-### Kernel Matrices
+## Practical Example: Kernel Matrices
+
+
+$$
+k(x,y) = \exp(-\gamma ||x-y||_2^2)
+$$
+
+1. Distance Matrix, $d(\mathbf{x,y})=||\mathbf{x} - \mathbf{x}||_2^2$
+2. Kernel Function, $\exp(-\gamma d(\mathbf{x,y}))$
+3. Gram Matrix, $\mathbf{K}$
+
+#### Distance Matrices
+
+
+$$
+d(x,y) = \sum_{i=1}^N (x_i - y_i)^2
+$$
+
+
+#### Vector Representation
+
+```python
+def sqeuclidean_distances(x: np.ndarray, y: np.ndarray) -> float:
+    return np.sum( (x - y) ** 2)
+```
+
+---
+
+#### Numpy Implementation
+
+```python
+d(x,y) = np.sqrt(np.dot(x, x) - 2.0 * np.dot(x, y) + np.dot(y, y))
+```
+
+* [Density Ratio Example](https://github.com/JohnYKiyo/density_ratio_estimation/blob/master/src/densityratio/densityratio.py#L187)
+  > Pairwise euclidean distances with einsum, dot project and vmap.
+
+
+
+---
+
+#### Einsum
+
+```python
+XX = np.einsum("ik,ik->i", x, x)
+YY = np.einsum("ik,ik->i", y, y)
+XY = np.einsum("ik,jk->ij", x, y)
+
+if not square:
+    dists = np.sqrt(XX[:, np.newaxis] + YY[np.newaxis, :] - 2*XY)
+else:
+    dists = XX[:, np.newaxis] + YY[np.newaxis, :] - 2*XY
+```
+
+---
+
+#### Dot Products
+
+```python
+XX = np.dot(x, x)
+YY = np.dot(y, y)
+XY = np.dot(x, y)
+
+if not square:
+    dists = np.sqrt(XX + YY - 2*XY)
+else:
+    dists = XX + YY - 2*XY
+```
+
+---
+
+#### Pairwise Distances
+
+```python
+dists = jit(vmap(vmap(partial(dist, **arg), in_axes=(None, 0)), in_axes=(0, None)))
+```
+
+
+
+
+### RBF Kernel
+
+$$
+k(x,y) = \exp(-\gamma ||x-y||_2^2)
+$$
+
+```python
+def rbf_kernel(params, x: np.ndarray, y: np.ndarray) -> float:
+    """The RBF Kernel"""
+    # calculate the kernel
+    return np.exp(- params['gamma'] * (sqeuclidean_distances(x, y)) )
+```
+
+### Gram Matrix
 
 ```python
 vv = lambda x,y: np.vdot(x, y)
 mv = jax.vmap(vv, (0, None), 0)
 mm = vmap(mv, (None, 1), 1)
 ```
+
+
+
+**Method I** - single call
+
+```python
+def gram(kernel_func, params, X, Y=None):
+    if Y is None:
+        return vmap(lambda x: vmap(lambda y: kernel_func(params, x, y))(X))(X)
+    else:
+        return vmap(lambda x: vmap(lambda y: kernel_func(params, x, y))(Y))(X)
+
+```
+
+**Method II** - multiple calls
+
+```python
+# Covariance Matrix
+def covariance_matrix(kernel_func, x, y):
+    mapx1 = jax.vmap(lambda x, y: kernel_func(x, y), in_axes=(0, None), out_axes=0)
+    mapx2 = jax.vmap(lambda x, y: mapx1(x, y), in_axes=(None, 0), out_axes=1)
+    return mapx2(x, y)
+```
+
