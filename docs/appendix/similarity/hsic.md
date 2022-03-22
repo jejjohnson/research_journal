@@ -117,7 +117,7 @@ $$
         &= tr\left[ (\Phi^\top \Psi)^\top (\Phi^\top \Psi)\right] \\
         &= tr \left[ \Psi^\top \Phi \Phi^\top \Psi\right] \\
         &= tr \left[ \Psi \Psi^\top \Phi \Phi^\top \right] \\
-        &= tr (K_{\mathbf{x}}K_{\mathbf{x}})
+        &= tr (K_{\mathbf{y}}K_{\mathbf{x}})
         \end{aligned}
         $$
 
