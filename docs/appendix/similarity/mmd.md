@@ -141,7 +141,8 @@ $$
 
 This is only good for Gaussian kernels. But we can empirically estimate this as:
 
-$$\text{D}_{ED}(\mathbb{P,Q}) 
+$$
+\text{D}_{ED}(\mathbb{P,Q}) 
 = \frac{1}{N_x^2} 
 \sum_{i=1}^{N_x}\sum_{j=1}^{N_x} 
 \text{G}(\mathbf{x}_i, \mathbf{x}_j) +
