@@ -1,3 +1,10 @@
+# WARNING
+
+THIS REPO IS IN ARCHIVE FORMAT NOW. 
+
+I have since moved my notes (most of them) to my new repo: [jejjohnson/research_notebook](https://github.com/jejjohnson/research_notebook).
+
+---
 # Overview
 
 * Author: J. Emmanuel Johnson
